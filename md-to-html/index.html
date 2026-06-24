@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📝</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown to HTML Converter — MicroVenture Labs</title>
+    <meta name="description" content="Convert Markdown to HTML instantly. Free, no signup required. Live preview, copy, and export." />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="header-left">
+          <span class="logo">📝</span>
+          <h1>Markdown to HTML</h1>
+        </div>
+        <div class="header-right">
+          <a href="https://gumroad.com/l/mdtohtmlpro" target="_blank" class="pro-btn" title="Unlock Pro features">⭐ Go Pro</a>
+        </div>
+      </header>
+
+      <main>
+        <div class="editor-panel">
+          <div class="panel-header">
+            <label for="md-input">Markdown</label>
+            <span class="word-count" id="word-count">0 words</span>
+          </div>
+          <textarea id="md-input" placeholder="Type or paste Markdown here...&#10;&#10;# Hello World&#10;This is **bold** and *italic* text.&#10;&#10;- List item 1&#10;- List item 2&#10;&#10;Check out the [docs](https://marked.js.org/)"># Markdown to HTML Converter
+
+**Instant** conversion. No signup required.
+
+## Features
+
+- Live preview as you type
+- Copy HTML to clipboard
+- Download as `.html` file
+- Clean, semantic output
+
+## How to Use
+
+1. Type Markdown on the **left**
+2. See HTML on the **right**
+3. Copy or download your output
+
+---
+
+> Built for creators who need quick, clean HTML.</textarea>
+          <div class="editor-actions">
+            <button id="clear-btn" class="btn btn-secondary" title="Clear editor">🗑️ Clear</button>
+            <button id="insert-sample-btn" class="btn btn-secondary" title="Insert sample markdown">📄 Sample</button>
+          </div>
+        </div>
+
+        <div class="preview-panel">
+          <div class="panel-header">
+            <label>HTML Preview</label>
+            <div class="preview-actions">
+              <button id="copy-html-btn" class="btn btn-small" title="Copy HTML to clipboard">📋 Copy HTML</button>
+              <button id="download-btn" class="btn btn-small" title="Download as .html file">⬇️ Download</button>
+            </div>
+          </div>
+          <div id="html-output" class="html-output"></div>
+        </div>
+      </main>
+
+      <aside id="pro-upsell" class="pro-upsell">
+        <div class="pro-content">
+          <span class="pro-star">⭐</span>
+          <div>
+            <strong>Go Pro</strong> — Unlock advanced features:
+            <span class="pro-features">Export as PDF · Batch convert · Custom CSS themes · API access</span>
+          </div>
+          <a href="https://gumroad.com/l/mdtohtmlpro" target="_blank" class="btn btn-pro">Upgrade — $9</a>
+        </div>
+      </aside>
+
+      <footer>
+        <p>A <a href="#">MicroVenture Labs</a> tool · Free for creators · <a href="https://gumroad.com/l/mdtohtmlpro" target="_blank">Support development</a></p>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Title & Hashtag Optimizer — MicroVenture Labs</title>
+    <meta name="description" content="Generate YouTube title ideas and trending hashtags for your videos. Free tool for content creators." />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="header-left">
+          <span class="logo">🎬</span>
+          <h1>Title &amp; Hashtag Optimizer</h1>
+        </div>
+        <div class="header-right">
+          <a href="https://gumroad.com/l/ytoptpro" target="_blank" class="pro-btn" title="Unlock Pro features">⭐ Go Pro</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="input-section">
+          <div class="input-card">
+            <label for="topic-input">What's your video about?</label>
+            <div class="input-row">
+              <input type="text" id="topic-input" placeholder="e.g. Python for beginners, keto diet, gaming setups..." />
+              <button id="generate-btn" class="btn btn-primary">✨ Generate</button>
+            </div>
+            <p class="input-hint">Enter a topic or keyword and get optimized YouTube titles and trending hashtags.</p>
+          </div>
+        </section>
+
+        <section id="results" class="results-section hidden">
+          <!-- Title Suggestions -->
+          <div class="result-card">
+            <div class="result-header">
+              <h2>📺 Title Suggestions</h2>
+              <button id="copy-titles-btn" class="btn btn-small">📋 Copy All Titles</button>
+            </div>
+            <ul id="titles-list" class="suggestions-list">
+              <!-- Populated by JS -->
+            </ul>
+          </div>
+
+          <!-- Trending Hashtags -->
+          <div class="result-card">
+            <div class="result-header">
+              <h2>🏷️ Trending Hashtags</h2>
+              <button id="copy-hashtags-btn" class="btn btn-small">📋 Copy All Hashtags</button>
+            </div>
+            <div id="hashtags-grid" class="hashtags-grid">
+              <!-- Populated by JS -->
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <aside id="pro-upsell" class="pro-upsell">
+        <div class="pro-content">
+          <span class="pro-star">⭐</span>
+          <div>
+            <strong>Go Pro</strong> — Get more titles, deeper hashtag analysis, and batch processing:
+            <span class="pro-features">50 title variations · Competitor analysis · Thumbnail color tips · CSV export</span>
+          </div>
+          <a href="https://gumroad.com/l/ytoptpro" target="_blank" class="btn btn-pro">Upgrade — $12</a>
+        </div>
+      </aside>
+
+      <footer>
+        <p>
+          A <a href="#">MicroVenture Labs</a> tool ·
+          <a href="https://www.buymeacoffee.com/microventure" target="_blank">☕ Buy us a coffee</a> ·
+          <a href="https://clickbank.com/editing-tools" target="_blank" rel="sponsored">🎥 Recommended video tools</a>
+        </p>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
