@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anime Life Wisdom — Digital Art Collection</title>
+    <meta name="description" content="Discover 9 high-resolution anime digital art pieces blending Neo-Tokyo lofi aesthetics with powerful life wisdom and mentorship themes." />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="hero-badge">Digital Art Collection</span>
+        <h1>Anime Life Wisdom</h1>
+        <p class="hero-subtitle">9 high-resolution digital art pieces — Neo-Tokyo lofi aesthetics meets timeless mentorship wisdom</p>
+        <a href="https://microventurelabs.gumroad.com" target="_blank" class="btn-buy">🛍️ Buy the Collection — $15</a>
+      </div>
+    </header>
+
+    <!-- Gallery -->
+    <main>
+      <section class="gallery-section">
+        <h2>The Collection</h2>
+        <p class="section-sub">Click any piece to explore the wisdom within</p>
+        <div id="gallery-grid" class="gallery-grid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section">
+        <h2>Ready to Own the Collection?</h2>
+        <p>9 premium digital art pieces. One low price. Instant download.</p>
+        <a href="https://microventurelabs.gumroad.com" target="_blank" class="btn-buy btn-buy-large">🛍️ Buy on Gumroad — $15</a>
+      </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox hidden">
+      <div class="lightbox-overlay" id="lightbox-close"></div>
+      <div class="lightbox-content">
+        <button id="lightbox-close-btn" class="lightbox-close" aria-label="Close">&times;</button>
+        <div class="lightbox-image-wrapper">
+          <img id="lightbox-image" src="" alt="" />
+        </div>
+        <div class="lightbox-info">
+          <h3 id="lightbox-title"></h3>
+          <p class="lightbox-quote" id="lightbox-quote"></p>
+          <p class="lightbox-desc" id="lightbox-desc"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <p>A <a href="https://microventurelabs.gumroad.com">MicroVenture Labs</a> creation</p>
+        <div class="footer-links">
+          <a href="https://microventurelabs.gumroad.com" target="_blank">🛍️ Gumroad Store</a>
+          <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank">☕ Buy us a coffee</a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
