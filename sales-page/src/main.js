@@ -11,7 +11,7 @@ const TEMPLATES = [
     desc: 'A minimalist Notion dashboard for task management, goal tracking, weekly reviews, and second brain — designed for solopreneurs.',
     price: '$15',
     img: '/images/focus-os.png',
-    href: 'https://microventurelabs.gumroad.com',
+    href: 'https://buy.stripe.com/cNi7sL5uc8Bk80YbH80ZW02',
     badge: 'Notion Template'
   },
   {
@@ -21,7 +21,7 @@ const TEMPLATES = [
     desc: 'Content operating system for TikTok & YouTube Shorts creators. Viral hook library, trend tracker, and multi-platform scheduling.',
     price: '$19',
     img: '/images/viralflow.png',
-    href: 'https://microventurelabs.gumroad.com',
+    href: 'https://buy.stripe.com/cNi5kD9KsdVEgxuaD40ZW03',
     badge: 'Notion Template'
   },
   {
@@ -31,7 +31,7 @@ const TEMPLATES = [
     desc: 'High-yield reference for med students & residents. Lab values, mnemonics, anatomy cheat sheets, and pharmacology guides.',
     price: '$15',
     img: '/images/mednotes.png',
-    href: 'https://microventurelabs.gumroad.com',
+    href: 'https://buy.stripe.com/14A00je0I6tcftq26y0ZW04',
     badge: 'Notion + PDF'
   },
   {
@@ -39,9 +39,9 @@ const TEMPLATES = [
     title: 'JS Interview Prep',
     subtitle: 'JavaScript Interview Dashboard',
     desc: '150+ interview questions, LeetCode tracker, code snippet library, and progress tracker — your complete JS interview system.',
-    price: '$19',
+    price: '$15',
     img: '/images/js-mastery.png',
-    href: 'https://microventurelabs.gumroad.com',
+    href: 'https://buy.stripe.com/4gM28r2i0aJs5SQeTk0ZW05',
     badge: 'Notion Template'
   }
 ];
@@ -55,7 +55,6 @@ const ART_COLLECTIONS = [
     price: '$15',
     img: '/images/anime-wisdom.png',
     href: 'https://buy.stripe.com/8x228r6yg8Bk2GEfXo0ZW00',
-    hrefAlt: 'https://microventurelabs.gumroad.com',
     badge: 'Digital Art'
   },
   {
@@ -65,7 +64,7 @@ const ART_COLLECTIONS = [
     desc: '9 enchanting hand-painted watercolor pieces inspired by classic anime. Gentle wisdom for your digital space.',
     price: '$19',
     img: '/images/ghibli-wisdom.png',
-    href: 'https://microventurelabs.gumroad.com',
+    href: 'https://buy.stripe.com/4gMeVd8Go3h080Y3aC0ZW06',
     badge: 'Digital Art'
   }
 ];
@@ -86,14 +85,6 @@ const TOOLS = [
     icon: '🎬',
     href: 'https://yt-title-optimizer.vercel.app',
     badge: 'Free Tool'
-  },
-  {
-    id: 'nft-gallery',
-    title: 'Anime Life Wisdom Gallery',
-    desc: 'Browse the full collection with lightbox previews. Click any piece to see the wisdom quote and description.',
-    icon: '🖼️',
-    href: 'https://nft-gallery-beige.vercel.app',
-    badge: 'Live Gallery'
   }
 ];
 
@@ -102,13 +93,7 @@ function renderCards(gridId, items, cardType) {
   const grid = document.getElementById(gridId);
   grid.innerHTML = items.map(item => {
     if (cardType === 'product') {
-      const buyBtn = item.href.startsWith('http')
-        ? `<a href="${item.href}" target="_blank" class="btn-buy">🛍️ Buy Now — ${item.price}</a>`
-        : `<span class="btn-buy" style="opacity:0.5;cursor:default">Coming Soon</span>`;
-
-      const altBtn = item.hrefAlt
-        ? `<a href="${item.hrefAlt}" target="_blank" class="btn-outline">Also on Gumroad</a>`
-        : '';
+      const buyBtn = `<a href="${item.href}" target="_blank" class="btn-buy">🛍️ Buy Now — ${item.price}</a>`;
 
       return `
         <div class="product-card">
@@ -119,7 +104,6 @@ function renderCards(gridId, items, cardType) {
             <p class="product-card-desc">${item.desc}</p>
             <div class="product-card-price">${item.price}</div>
             ${buyBtn}
-            ${altBtn}
           </div>
         </div>
       `;
