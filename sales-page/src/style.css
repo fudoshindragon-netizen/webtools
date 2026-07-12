@@ -65,17 +65,12 @@ a:hover { color: var(--accent-hover); }
 .free-title { font-size: 20px; font-weight: 700; color: var(--text-heading); margin-bottom: 8px; }
 .free-desc { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
 
-/* === Newsletter === */
+/* === Community Section === */
 .newsletter-section { max-width: none; padding: 0; background: linear-gradient(180deg, transparent, rgba(107,197,255,0.04) 50%, transparent); }
 .newsletter-card { max-width: 600px; margin: 0 auto; padding: 60px 20px; text-align: center; }
 .newsletter-card h2 { font-size: 28px; font-weight: 700; color: var(--text-heading); margin-bottom: 12px; }
 .newsletter-card p { color: var(--text-muted); margin-bottom: 24px; }
-.newsletter-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto 12px; }
-@media (max-width: 500px) { .newsletter-form { flex-direction: column; } }
-.newsletter-input { flex: 1; padding: 14px 18px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-card); color: var(--text-heading); font-size: 15px; outline: none; transition: border-color 0.2s; }
-.newsletter-input:focus { border-color: var(--neon-blue); }
-.newsletter-input::placeholder { color: var(--text-muted); }
-.newsletter-note { font-size: 12px; color: var(--text-muted); opacity: 0.7; }
+.newsletter-note { font-size: 13px; color: var(--text-muted); opacity: 0.7; }
 
 /* === Product Grid === */
 .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; }
