@@ -4,15 +4,11 @@
 
 // ─── PRODUCT DATA ───────────────────────────────────────────────
 const TEMPLATES = [
-  { id: 'focus-os', title: 'Focus OS', subtitle: 'The All-in-One Productivity Hub', desc: 'A minimalist Notion dashboard for task management, goal tracking, weekly reviews, and second brain — designed for solopreneurs.', price: '$15', img: '/images/focus-os.png', href: 'https://buy.stripe.com/cNi7sL5uc8Bk80YbH80ZW02', badge: 'Notion Template' },
-  { id: 'viralflow', title: 'ViralFlow', subtitle: 'Faceless Content Calendar', desc: 'Content operating system for TikTok & YouTube Shorts. Viral hook library, trend tracker, and multi-platform scheduling.', price: '$19', img: '/images/viralflow.png', href: 'https://buy.stripe.com/cNi5kD9KsdVEgxuaD40ZW03', badge: 'Notion Template' },
-  { id: 'mednotes', title: 'MedNotes', subtitle: 'Medical Student Pocket Guide', desc: 'High-yield reference for med students & residents. Lab values, mnemonics, anatomy cheat sheets, and pharmacology guides.', price: '$15', img: '/images/mednotes.png', href: 'https://buy.stripe.com/14A00je0I6tcftq26y0ZW04', badge: 'Notion + PDF' },
-  { id: 'js-mastery', title: 'JS Interview Prep', subtitle: 'JavaScript Interview Dashboard', desc: '150+ interview questions, LeetCode tracker, code snippet library, and progress tracker — your complete JS interview system.', price: '$15', img: '/images/js-mastery.png', href: 'https://buy.stripe.com/4gM28r2i0aJs5SQeTk0ZW05', badge: 'Notion Template' },
-  { id: 'college-os', title: 'College OS', subtitle: 'The Ultimate Notion Student Planner', desc: 'Organize classes, homework, exams, GPA, and study schedule using active recall and spaced repetition study schedules.', price: '$15', img: '/images/college-os.png', href: 'https://microventurelabs.gumroad.com/l/collegeos', badge: 'Notion Template' },
-  { id: 'work-os', title: 'Work OS', subtitle: 'The Professional Workspace', desc: 'All-in-one professional workspace to manage projects, Kanban task boards, client CRM, meeting logs, and knowledge databases.', price: '$19', img: '/images/work-os.png', href: 'https://microventurelabs.gumroad.com/l/workos', badge: 'Notion Template' },
-  { id: 'project-planner', title: 'Project Planner', subtitle: 'Timeline & Milestone Dashboard', desc: 'Map out timelines, set milestones, track budget resources, and view interactive project Gantt charts and progress meters.', price: '$15', img: '/images/project-planner.png', href: 'https://microventurelabs.gumroad.com/l/projectplanner', badge: 'Notion Template' },
-  { id: 'med-student-os', title: 'Med Student OS', subtitle: 'Clinical Rotation & Study Hub', desc: 'Master preclinical study and clinical rotations. Spaced repetition engine, USMLE prep, clinical logbook, and study calendar.', price: '$19', img: '/images/med-student-os.png', href: 'https://microventurelabs.gumroad.com/l/medstudentos', badge: 'Notion Template' }
-];
+      { id: 'focus-os', title: 'Focus OS', subtitle: 'The All-in-One Productivity Hub', desc: 'A minimalist Notion dashboard for task management, goal tracking, weekly reviews, and second brain — designed for solopreneurs.', price: '$15', img: '/images/focus-os.png', href: 'https://buy.stripe.com/cNi7sL5uc8Bk80YbH80ZW02', badge: 'Notion Template' },
+      { id: 'viralflow', title: 'ViralFlow', subtitle: 'Faceless Content Calendar', desc: 'Content operating system for TikTok & YouTube Shorts. Viral hook library, trend tracker, and multi-platform scheduling.', price: '$19', img: '/images/viralflow.png', href: 'https://buy.stripe.com/cNi5kD9KsdVEgxuaD40ZW03', badge: 'Notion Template' },
+      { id: 'mednotes', title: 'MedNotes', subtitle: 'Medical Student Pocket Guide', desc: 'High-yield reference for med students & residents. Lab values, mnemonics, anatomy cheat sheets, and pharmacology guides.', price: '$15', img: '/images/mednotes.png', href: 'https://buy.stripe.com/14A00je0I6tcftq26y0ZW04', badge: 'Notion + PDF' },
+      { id: 'js-mastery', title: 'JS Interview Prep', subtitle: 'JavaScript Interview Dashboard', desc: '150+ interview questions, LeetCode tracker, code snippet library, and progress tracker — your complete JS interview system.', price: '$15', img: '/images/js-mastery.png', href: 'https://buy.stripe.com/4gM28r2i0aJs5SQeTk0ZW05', badge: 'Notion Template' }
+    ];
 
 const ART_COLLECTIONS = [
   { id: 'anime-wisdom', title: 'Anime Life Wisdom', subtitle: 'Neo-Tokyo Lofi Art Collection', desc: '9 high-res digital art pieces blending anime aesthetics with powerful life lessons. Discipline, Growth, Resilience & more.', price: '$15', img: '/images/anime-wisdom.png', href: 'https://buy.stripe.com/8x228r6yg8Bk2GEfXo0ZW00', badge: 'Digital Art' },
@@ -36,10 +32,10 @@ const FREE_RESOURCES = [
 
 // ─── BLOG / RESOURCES CONTENT ──────────────────────────────────
 const BLOG_POSTS = [
-  { id: 'notion-tips', title: '5 Notion Hacks That Saved Me 10 Hours/Week', desc: 'Simple database views, linked databases, and automation tricks every Notion user should know.', icon: '📘', href: 'https://www.buymeacoffee.com/microventurelabs' },
-  { id: 'faceless-content', title: 'How to Start a Faceless Channel in 2026', desc: 'The exact system we use at MicroVenture Labs to script, produce, and publish faceless content at scale.', icon: '🎥', href: 'https://www.buymeacoffee.com/microventurelabs' },
-  { id: 'med-study', title: 'How I Passed the USMLE with Digital Notes', desc: 'Why analog study methods are failing and how a simple Notion dashboard can 2x your retention rate.', icon: '📚', href: 'https://www.buymeacoffee.com/microventurelabs' }
-];
+      { id: 'notion-tips', title: '5 Notion Organization Ideas for Busy Creators', desc: 'Simple database views, linked databases, and automation tricks every Notion user should know.', icon: '📘', href: 'https://www.buymeacoffee.com/microventurelabs' },
+      { id: 'faceless-content', title: 'How to Start a Faceless Channel in 2026', desc: 'A practical guide to scripting, producing, and publishing faceless content at scale.', icon: '🎥', href: 'https://www.buymeacoffee.com/microventurelabs' },
+      { id: 'med-study', title: 'How to Organize Medical Notes Digitally', desc: 'Tips for using digital tools and templates to organize study materials, track progress, and review efficiently.', icon: '📚', href: 'https://www.buymeacoffee.com/microventurelabs' }
+    ];
 
 // ─── SOCIAL SHARE URL HELPER ───────────────────────────────────
 function getShareLinks(title, url) {
@@ -132,7 +128,7 @@ function injectStructuredData() {
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "USD",
-      "lowPrice": "15",
+      "lowPrice": "9",
       "highPrice": "19"
     }
   });
