@@ -4,15 +4,18 @@
 
 // ─── PRODUCT DATA ───────────────────────────────────────────────
 const TEMPLATES = [
-  { id: 'focus-os', title: 'Focus OS', subtitle: 'The All-in-One Productivity Hub', desc: 'A minimalist Notion dashboard for task management, goal tracking, weekly reviews, and second brain — designed for solopreneurs.', price: '$15', img: '/images/focus-os.png', href: 'https://buy.stripe.com/cNi7sL5uc8Bk80YbH80ZW02', badge: 'Notion Template' },
-  { id: 'viralflow', title: 'ViralFlow', subtitle: 'Faceless Content Calendar', desc: 'Content operating system for TikTok & YouTube Shorts. Viral hook library, trend tracker, and multi-platform scheduling.', price: '$19', img: '/images/viralflow.png', href: 'https://buy.stripe.com/cNi5kD9KsdVEgxuaD40ZW03', badge: 'Notion Template' },
-  { id: 'mednotes', title: 'MedNotes', subtitle: 'Medical Student Pocket Guide', desc: 'High-yield reference for med students & residents. Lab values, mnemonics, anatomy cheat sheets, and pharmacology guides.', price: '$15', img: '/images/mednotes.png', href: 'https://buy.stripe.com/14A00je0I6tcftq26y0ZW04', badge: 'Notion + PDF' },
-  { id: 'js-mastery', title: 'JS Interview Prep', subtitle: 'JavaScript Interview Dashboard', desc: '150+ interview questions, LeetCode tracker, code snippet library, and progress tracker — your complete JS interview system.', price: '$15', img: '/images/js-mastery.png', href: 'https://buy.stripe.com/4gM28r2i0aJs5SQeTk0ZW05', badge: 'Notion Template' }
-];
+      { id: 'focus-os', title: 'Focus OS', subtitle: 'The All-in-One Productivity Hub', desc: 'A minimalist Notion dashboard for task management, goal tracking, weekly reviews, and second brain — designed for solopreneurs.', price: '$15', img: '/images/focus-os.png', href: 'https://buy.stripe.com/cNi7sL5uc8Bk80YbH80ZW02', badge: 'Notion Template' },
+      { id: 'viralflow', title: 'ViralFlow', subtitle: 'Faceless Content Calendar', desc: 'Content operating system for TikTok & YouTube Shorts. Viral hook library, trend tracker, and multi-platform scheduling.', price: '$19', img: '/images/viralflow.png', href: 'https://buy.stripe.com/cNi5kD9KsdVEgxuaD40ZW03', badge: 'Notion Template' },
+      { id: 'mednotes', title: 'MedNotes', subtitle: 'Medical Student Pocket Guide', desc: 'High-yield reference for med students & residents. Lab values, mnemonics, anatomy cheat sheets, and pharmacology guides.', price: '$15', img: '/images/mednotes.png', href: 'https://buy.stripe.com/14A00je0I6tcftq26y0ZW04', badge: 'Notion + PDF' },
+      { id: 'js-mastery', title: 'JS Interview Prep', subtitle: 'JavaScript Interview Dashboard', desc: '150+ interview questions, LeetCode tracker, code snippet library, and progress tracker — your complete JS interview system.', price: '$15', img: '/images/js-mastery.png', href: 'https://buy.stripe.com/4gM28r2i0aJs5SQeTk0ZW05', badge: 'Notion Template' }
+    ];
 
 const ART_COLLECTIONS = [
   { id: 'anime-wisdom', title: 'Anime Life Wisdom', subtitle: 'Neo-Tokyo Lofi Art Collection', desc: '9 high-res digital art pieces blending anime aesthetics with powerful life lessons. Discipline, Growth, Resilience & more.', price: '$15', img: '/images/anime-wisdom.png', href: 'https://buy.stripe.com/8x228r6yg8Bk2GEfXo0ZW00', badge: 'Digital Art' },
-  { id: 'ghibli-wisdom', title: 'Ghibli Wisdom', subtitle: 'Watercolor Art & Mentorship Bundle', desc: '9 enchanting hand-painted watercolor pieces inspired by classic anime. Gentle wisdom for your digital space.', price: '$19', img: '/images/ghibli-wisdom.png', href: 'https://buy.stripe.com/00w3cvaOwcRA80Y26y0ZW01', badge: 'Digital Art' }
+  { id: 'ghibli-wisdom', title: 'Ghibli Wisdom', subtitle: 'Watercolor Art & Mentorship Bundle', desc: '9 enchanting hand-painted watercolor pieces inspired by classic anime. Gentle wisdom for your digital space.', price: '$19', img: '/images/ghibli-wisdom.png', href: 'https://buy.stripe.com/00w3cvaOwcRA80Y26y0ZW01', badge: 'Digital Art' },
+  { id: 'dark-academia', title: 'Dark Academia Wisdom', subtitle: 'Moody Art & Literature Collection', desc: '9 atmospheric vintage-style art pieces with literary quotes. Moody academia aesthetic at its finest.', price: '$15', img: '/images/dark-academia.png', href: 'https://buy.stripe.com/dRmeVdbSA18SgxuaD40ZW07', badge: 'Digital Art' },
+  { id: 'faceless-motivation', title: 'Faceless Motivation', subtitle: 'Cyberpunk Hustle & Grind Art', desc: '9 bold cyberpunk motivation cards with faceless silhouettes and powerful text. Hustle culture meets aesthetic design.', price: '$12', img: '/images/faceless-motivation.png', href: 'https://buy.stripe.com/bJe28r8GobNw2GEbH80ZW09', badge: 'Digital Art' },
+  { id: 'relatable-struggles', title: 'Relatable Life Struggles', subtitle: 'Humorous Meme Art Collection', desc: '9 hilarious anime-style meme pieces about everyday struggles. Monday mornings, procrastination, adulting fails, and more.', price: '$9', img: '/images/relatable-struggles.png', href: 'https://buy.stripe.com/4gM6oH5uccRAa964eG0ZW08', badge: 'Meme Art' }
 ];
 
 const TOOLS = [
@@ -22,17 +25,17 @@ const TOOLS = [
 
 // ─── FREE DOWNLOADS (Traffic Bait) ─────────────────────────────
 const FREE_RESOURCES = [
-  { id: 'lab-values', title: 'Essential Lab Values Cheat Sheet', desc: 'Quick-reference guide for medical students — CBC, BMP, ABG, cardiac markers, and more. Print it, keep it in your pocket.', icon: '🩺', file: '/downloads/mednotes-lab-values.md', cta: '📥 Download Free PDF' },
-  { id: 'js-cheatsheet', title: 'JavaScript Interview Cheatsheet', desc: 'Top 10 JS concepts explained: closures, promises, this, prototypes, event loop, and more. Perfect for last-minute interview prep.', icon: '💻', file: '#', cta: '📥 Download Free Guide' },
-  { id: 'productivity', title: 'The Solopreneur Daily System', desc: 'A one-page productivity framework for solo founders. Plan your week, track priorities, and get more done without burnout.', icon: '⚡', file: '#', cta: '📥 Download Free Template' }
+  { id: 'lab-values', title: 'Essential Lab Values Cheat Sheet', desc: 'Quick-reference guide for medical students — CBC, BMP, ABG, cardiac markers, and more. Print it, keep it in your pocket.', icon: '🩺', file: '/downloads/mednotes-lab-values.md', cta: '📥 Download Free Cheat Sheet' },
+  { id: 'js-cheatsheet', title: 'JavaScript Interview Cheatsheet', desc: 'Top 10 JS concepts explained: closures, promises, this, prototypes, event loop, and more. Perfect for last-minute interview prep.', icon: '💻', file: '/downloads/js-interview-cheatsheet.md', cta: '📥 Download Free Guide' },
+  { id: 'productivity', title: 'The Solopreneur Daily System', desc: 'A one-page productivity framework for solo founders. Plan your week, track priorities, and get more done without burnout.', icon: '⚡', file: '/downloads/solopreneur-daily-system.md', cta: '📥 Download Free System' }
 ];
 
 // ─── BLOG / RESOURCES CONTENT ──────────────────────────────────
 const BLOG_POSTS = [
-  { id: 'notion-tips', title: '5 Notion Hacks That Saved Me 10 Hours/Week', desc: 'Simple database views, linked databases, and automation tricks every Notion user should know.', icon: '📘', href: 'https://www.buymeacoffee.com/microventurelabs' },
-  { id: 'faceless-content', title: 'How to Start a Faceless Channel in 2026', desc: 'The exact system we use at MicroVenture Labs to script, produce, and publish faceless content at scale.', icon: '🎥', href: 'https://www.buymeacoffee.com/microventurelabs' },
-  { id: 'med-study', title: 'How I Passed the USMLE with Digital Notes', desc: 'Why analog study methods are failing and how a simple Notion dashboard can 2x your retention rate.', icon: '📚', href: 'https://www.buymeacoffee.com/microventurelabs' }
-];
+      { id: 'notion-tips', title: '5 Notion Organization Ideas for Busy Creators', desc: 'Simple database views, linked databases, and automation tricks every Notion user should know.', icon: '📘', href: 'https://www.buymeacoffee.com/microventurelabs' },
+      { id: 'faceless-content', title: 'How to Start a Faceless Channel in 2026', desc: 'A practical guide to scripting, producing, and publishing faceless content at scale.', icon: '🎥', href: 'https://www.buymeacoffee.com/microventurelabs' },
+      { id: 'med-study', title: 'How to Organize Medical Notes Digitally', desc: 'Tips for using digital tools and templates to organize study materials, track progress, and review efficiently.', icon: '📚', href: 'https://www.buymeacoffee.com/microventurelabs' }
+    ];
 
 // ─── SOCIAL SHARE URL HELPER ───────────────────────────────────
 function getShareLinks(title, url) {
@@ -125,7 +128,7 @@ function injectStructuredData() {
     "offers": {
       "@type": "AggregateOffer",
       "priceCurrency": "USD",
-      "lowPrice": "15",
+      "lowPrice": "9",
       "highPrice": "19"
     }
   });
