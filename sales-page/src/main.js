@@ -17,6 +17,9 @@ const ART_COLLECTIONS = [
   { id: 'faceless-motivation', title: 'Faceless Motivation', subtitle: 'Cyberpunk Hustle & Grind Art', desc: '9 bold cyberpunk motivation cards with faceless silhouettes and powerful text. Hustle culture meets aesthetic design.', price: '$12', img: '/images/faceless-motivation.png', href: 'https://buy.stripe.com/bJe28r8GobNw2GEbH80ZW09', badge: 'Digital Art' },
   { id: 'relatable-struggles', title: 'Relatable Life Struggles', subtitle: 'Humorous Meme Art Collection', desc: '9 hilarious anime-style meme pieces about everyday struggles. Monday mornings, procrastination, adulting fails, and more.', price: '$9', img: '/images/relatable-struggles.png', href: 'https://buy.stripe.com/4gM6oH5uccRAa964eG0ZW08', badge: 'Meme Art' }
 ];
+const SAFETY_GUIDES = [
+  { id: 'safety-guide', title: 'Electrical Safety Quick Reference Guide', subtitle: 'OSHA, NEC & NFPA Field Planning Aid', desc: 'Plain-English U.S. electrical safety quick-reference covering OSHA, NEC (2026), NFPA 70E (2027), and NFPA 70B (2026), with a printable one-page field checklist for toolbox talks, pre-job briefs, and maintenance planning.', note: 'Not legal advice, not certified training, not a substitute for official standards or AHJ/employer requirements.', price: '$15', img: '/images/safety-guide.png', href: 'https://buy.stripe.com/aFacN509Sg3Mepm6mO0ZW0a', badge: 'Safety Guide' }
+];
 
 const TOOLS = [
   { id: 'md-to-html', title: 'Markdown → HTML Converter', desc: 'Paste Markdown, get clean HTML. Copy to clipboard or download as an .html file. Free, no signup.', icon: '📝', href: 'https://md-to-html-one.vercel.app' },
@@ -79,6 +82,7 @@ function renderCards(gridId, items, cardType) {
   grid.innerHTML = items.map(item => {
     if (cardType === 'product') {
       const shareLinks = getShareLinks(`${item.title} — ${item.price}`, null);
+      const noteHtml = item.note ? `<p class="product-card-note">${item.note}</p>` : '';
       return `
         <div class="product-card">
           <img class="product-card-image" src="${item.img}" alt="${item.title}" loading="lazy" />
@@ -86,6 +90,7 @@ function renderCards(gridId, items, cardType) {
             <span class="product-card-badge">${item.badge}</span>
             <h3 class="product-card-title">${item.title}</h3>
             <p class="product-card-desc">${item.desc}</p>
+            ${noteHtml}
             <div class="product-card-price">${item.price}</div>
             <a href="${item.href}" target="_blank" class="btn-buy">🛍️ Buy Now — ${item.price}</a>
             <details class="share-toggle">
@@ -141,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderBlog();
   renderCards('templates-grid', TEMPLATES, 'product');
   renderCards('art-grid', ART_COLLECTIONS, 'product');
+  renderCards('safety-grid', SAFETY_GUIDES, 'product');
   renderCards('tools-grid', TOOLS, 'tool');
   injectStructuredData();
 });
