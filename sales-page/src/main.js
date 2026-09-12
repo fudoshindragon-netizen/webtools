@@ -120,26 +120,6 @@ function renderCards(gridId, items, cardType) {
   }).join('');
 }
 
-// ─── STRUCTURED DATA (JSON-LD) ────────────────────────────────
-function injectStructuredData() {
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "MicroVenture Labs",
-    "url": "https://generationwealthforever.com",
-    "description": "Digital products for creators, students, and solopreneurs — Notion templates, art collections, and free web tools.",
-    "offers": {
-      "@type": "AggregateOffer",
-      "priceCurrency": "USD",
-      "lowPrice": "9",
-      "highPrice": "19"
-    }
-  });
-  document.head.appendChild(script);
-}
-
 // ─── INIT ────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   renderFreeResources();
@@ -148,5 +128,4 @@ document.addEventListener('DOMContentLoaded', () => {
   renderCards('art-grid', ART_COLLECTIONS, 'product');
   renderCards('safety-grid', SAFETY_GUIDES, 'product');
   renderCards('tools-grid', TOOLS, 'tool');
-  injectStructuredData();
 });
