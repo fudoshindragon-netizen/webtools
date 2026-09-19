@@ -6,13 +6,263 @@
   },
   "topics": [
     {
+      "id": "structure-bonding",
+      "title": "Structure & Bonding",
+      "icon": "⚛️",
+      "concept": "Organic chemistry is the study of carbon compounds, and almost everything about how a molecule behaves follows from how its atoms are connected. Carbon has four valence electrons and completes its octet by forming four bonds. A Lewis structure shows this sharing: lines are bonding pairs and dots are lone pairs. You can check a structure's charge with formal charge = (valence electrons) − (lone-pair electrons) − ½(bonding electrons).\n\nHybridization explains molecular shape. When carbon forms four single bonds, it uses four equivalent sp³ orbitals arranged tetrahedrally, with bond angles of 109.5° (methane, CH₄). A carbon with a double bond is sp² hybridized: three orbitals lie in a plane 120° apart (trigonal planar) and one unhybridized p orbital forms the π bond (ethene, C₂H₄). A carbon with a triple bond is sp hybridized and linear at 180° (ethyne, C₂H₂). Lone pairs also matter: nitrogen in ammonia (NH₃) is sp³ with a ~107° angle, and oxygen in water (H₂O) is sp³ with a ~104.5° angle, because lone pairs occupy more space and squeeze the bonds together.\n\nBond polarity comes from electronegativity — an atom's pull on shared electrons. On the Pauling scale, the key values are F 4.0, O 3.5, N 3.0, Cl 3.2, C 2.5, and H 2.2. A bond between atoms of different electronegativity is polar covalent: the more electronegative atom carries a partial negative charge (δ−) and the other a partial positive charge (δ+). The size of the difference tells you how polar the bond is, which in turn helps predict reactivity and whether a molecule has a net dipole moment.",
+      "diagram": {
+        "smiles": "C",
+        "caption": "Methane (CH₄) — tetrahedral, sp³"
+      },
+      "resources": [
+        {
+          "title": "Structure and bonding (Khan Academy)",
+          "url": "https://www.khanacademy.org/science/organic-chemistry"
+        },
+        {
+          "title": "Organic Chemistry (LibreTexts)",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
+        },
+        {
+          "title": "Organic Chemistry (OpenStax)",
+          "url": "https://openstax.org/details/books/organic-chemistry"
+        }
+      ],
+      "questions": [
+        {
+          "id": "structure-bonding-q1",
+          "type": "multiple-choice",
+          "prompt": "What is the hybridization of the carbon atom in methane (CH₄)?",
+          "options": [
+            "sp",
+            "sp²",
+            "sp³",
+            "sp³d"
+          ],
+          "answer": 2,
+          "explanation": "Methane's carbon forms four single bonds, so it has four electron groups. Four groups = sp³ hybridization, which gives a tetrahedral geometry."
+        },
+        {
+          "id": "structure-bonding-q2",
+          "type": "multiple-choice",
+          "prompt": "What is the approximate H–C–H bond angle around a tetrahedral (sp³) carbon?",
+          "options": [
+            "90°",
+            "109.5°",
+            "120°",
+            "180°"
+          ],
+          "answer": 1,
+          "explanation": "Tetrahedral geometry places the four bonds as far apart as possible, giving 109.5° bond angles."
+        },
+        {
+          "id": "structure-bonding-q3",
+          "type": "multiple-choice",
+          "prompt": "Each carbon in ethene (C₂H₄) is sp² hybridized. What shape does this produce around each carbon?",
+          "options": [
+            "Linear",
+            "Tetrahedral",
+            "Trigonal planar",
+            "Octahedral"
+          ],
+          "answer": 2,
+          "explanation": "sp² gives three orbitals in a plane 120° apart (trigonal planar). The remaining unhybridized p orbital forms the π bond of the C=C double bond."
+        },
+        {
+          "id": "structure-bonding-q4",
+          "type": "multiple-choice",
+          "prompt": "Which element has the highest electronegativity on the Pauling scale?",
+          "options": [
+            "Oxygen",
+            "Nitrogen",
+            "Carbon",
+            "Fluorine"
+          ],
+          "answer": 3,
+          "explanation": "Fluorine is the most electronegative element (about 4.0). The order is F > O (3.5) > N (3.0) > C (2.5)."
+        },
+        {
+          "id": "structure-bonding-q5",
+          "type": "short-answer",
+          "prompt": "What is the hybridization of each carbon atom in ethyne (HC≡CH)?",
+          "answer": "sp",
+          "explanation": "Ethyne has a C≡C triple bond. Each carbon has two electron groups (one σ bond to the other carbon and one to hydrogen), so it is sp hybridized and linear at 180°."
+        },
+        {
+          "id": "structure-bonding-q6",
+          "type": "multiple-choice",
+          "prompt": "How many valence electrons does a neutral carbon atom have?",
+          "options": [
+            "2",
+            "4",
+            "6",
+            "8"
+          ],
+          "answer": 1,
+          "explanation": "Carbon is in group 14, so it has four valence electrons and forms four bonds to complete its octet."
+        },
+        {
+          "id": "structure-bonding-q7",
+          "type": "multiple-choice",
+          "prompt": "What is the formal charge on the nitrogen atom in NH₄⁺ (ammonium)?",
+          "options": [
+            "0",
+            "+1",
+            "−1",
+            "+2"
+          ],
+          "answer": 1,
+          "explanation": "Formal charge = valence − (lone-pair electrons) − ½(bonding electrons). Nitrogen has 5 valence electrons, 0 lone pairs, and 4 bonds (8 bonding electrons, half = 4): 5 − 0 − 4 = +1."
+        },
+        {
+          "id": "structure-bonding-q8",
+          "type": "multiple-choice",
+          "prompt": "Which of these bonds is the most polar?",
+          "options": [
+            "C–C",
+            "C–H",
+            "O–H",
+            "C–Cl"
+          ],
+          "answer": 2,
+          "explanation": "Polarity follows the electronegativity difference. O–H (3.5 − 2.2 = 1.3) is larger than C–Cl (3.2 − 2.5 = 0.7), C–H (0.3), and C–C (0)."
+        }
+      ]
+    },
+    {
       "id": "nomenclature",
       "title": "Nomenclature",
       "icon": "🔤",
-      "concept": "IUPAC nomenclature is the systematic way to name organic molecules. You identify the longest continuous carbon chain as the parent, number it to give substituents the lowest possible numbers, then name substituents as prefixes and the parent functional group as a suffix. The root tells you the number of carbons (meth- = 1, eth- = 2, prop- = 3, but- = 4, pent- = 5, hex- = 6, hept- = 7, oct- = 8), and the suffix tells you the family (e.g. -ane for alkanes, -ene for alkenes, -ol for alcohols).",
+      "concept": "IUPAC nomenclature is a systematic way to name organic molecules so that each name describes an unambiguous structure. To name an alkane, you find the longest continuous carbon chain (the parent), number it so that substituents get the lowest possible numbers, then name each substituent as a prefix and the chain as a suffix.\n\nThe root gives the number of carbons in the parent chain: meth- (1), eth- (2), prop- (3), but- (4), pent- (5), hex- (6), hept- (7), oct- (8), non- (9), dec- (10). The suffix gives the family: -ane for alkanes (all single bonds), -ene for alkenes (a C=C double bond), -yne for alkynes (a C≡C triple bond), -ol for alcohols, -al for aldehydes, -one for ketones, and -oic acid for carboxylic acids.\n\nSubstituents are named from their own carbon count with the ending -yl (methyl = CH₃–, ethyl = CH₃CH₂–, propyl = CH₃CH₂CH₂–). When a substituent appears more than once, use the prefixes di- (2), tri- (3), tetra- (4). Numbers (locants) tell you where each substituent or functional group sits on the chain, and substituent names are listed in alphabetical order (ignoring di-/tri- prefixes).\n\nFor example, CH₃CH₂CH₃ is propane (three carbons, saturated). CH₃CH₂OH is ethanol (two carbons plus an –OH). CH₃CH=CH₂ is propene. The branched molecule (CH₃)₂CHCH₃ has a three-carbon parent (propane) with a methyl on carbon 2, so it is 2-methylpropane.",
+      "diagram": {
+        "smiles": "CCC",
+        "caption": "Propane (CH₃CH₂CH₃)"
+      },
       "resources": [
         {
-          "title": "IUPAC nomenclature of organic chemistry",
+          "title": "IUPAC nomenclature (LibreTexts)",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
+        },
+        {
+          "title": "IUPAC (International Union of Pure and Applied Chemistry)",
+          "url": "https://iupac.org/"
+        },
+        {
+          "title": "Naming alkanes (Khan Academy)",
+          "url": "https://www.khanacademy.org/science/organic-chemistry"
+        }
+      ],
+      "questions": [
+        {
+          "id": "nomenclature-q1",
+          "type": "multiple-choice",
+          "prompt": "What is the IUPAC name for CH₃CH₂CH₃?",
+          "options": [
+            "Ethane",
+            "Propane",
+            "Butane",
+            "Methane"
+          ],
+          "answer": 1,
+          "explanation": "The longest chain has three carbons, so the root is 'prop-'. It has only single bonds, so the suffix is '-ane': propane."
+        },
+        {
+          "id": "nomenclature-q2",
+          "type": "multiple-choice",
+          "prompt": "How many carbon atoms are in the parent chain of 2-methylpentane?",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "2"
+          ],
+          "answer": 1,
+          "explanation": "The root 'pent-' means five carbons. The '2-methyl' is a one-carbon substituent attached to carbon 2 of that five-carbon chain."
+        },
+        {
+          "id": "nomenclature-q3",
+          "type": "short-answer",
+          "prompt": "Give the IUPAC name for CH₃CH₂OH.",
+          "answer": "ethanol",
+          "explanation": "A two-carbon chain (eth-) with an –OH group (alcohol) gives the suffix '-ol': ethanol."
+        },
+        {
+          "id": "nomenclature-q4",
+          "type": "multiple-choice",
+          "prompt": "What does the suffix '-ene' indicate?",
+          "options": [
+            "An alkane (all single bonds)",
+            "An alkene (a C=C double bond)",
+            "An alcohol",
+            "A carboxylic acid"
+          ],
+          "answer": 1,
+          "explanation": "'-ene' indicates a carbon–carbon double bond (an alkene). '-ane' = alkane, '-ol' = alcohol, '-oic acid' = carboxylic acid."
+        },
+        {
+          "id": "nomenclature-q5",
+          "type": "multiple-choice",
+          "prompt": "What is the IUPAC name for CH₃CH₂CH₂CH₃?",
+          "options": [
+            "Propane",
+            "Butane",
+            "Pentane",
+            "2-methylpropane"
+          ],
+          "answer": 1,
+          "explanation": "Four carbons in a continuous chain give the root 'but-', and all single bonds give '-ane': butane."
+        },
+        {
+          "id": "nomenclature-q6",
+          "type": "short-answer",
+          "prompt": "Give the IUPAC name for CH₃CH=CH₂ (a three-carbon chain with a double bond).",
+          "diagram": {
+            "smiles": "C=CC",
+            "caption": "Propene (CH₃CH=CH₂)"
+          },
+          "answer": "propene",
+          "explanation": "Three carbons (prop-) plus a C=C double bond (-ene): propene. The double bond position is unambiguous here, so no locant is required."
+        },
+        {
+          "id": "nomenclature-q7",
+          "type": "multiple-choice",
+          "prompt": "How many carbon atoms total are in 2,3-dimethylbutane?",
+          "options": [
+            "4",
+            "5",
+            "6",
+            "8"
+          ],
+          "answer": 2,
+          "explanation": "The 'butane' parent has four carbons, plus two methyl substituents (one carbon each) = six carbons total (C₆H₁₄)."
+        },
+        {
+          "id": "nomenclature-q8",
+          "type": "multiple-choice",
+          "prompt": "Which root indicates a seven-carbon chain?",
+          "options": [
+            "hex-",
+            "hept-",
+            "oct-",
+            "non-"
+          ],
+          "answer": 1,
+          "explanation": "hept- = 7 carbons (hex- = 6, oct- = 8, non- = 9)."
+        }
+      ]
+    },
+    {
+      "id": "functional-groups",
+      "title": "Functional Groups",
+      "icon": "⚗️",
+      "concept": "A functional group is a specific atom or group of atoms that gives a molecule its characteristic chemical reactions. Recognizing these groups is the single most important skill in organic chemistry, because molecules are classified and named by them.\n\nThe most common groups to know: an alcohol has an –OH group bonded to carbon (R–OH). A carboxylic acid has a –COOH group — a carbonyl (C=O) bonded to an –OH (R–COOH). An amine contains nitrogen bonded to carbon and/or hydrogen (R–NH₂, R₂NH, or R₃N). A ketone has a carbonyl (C=O) bonded to two carbons (R–CO–R′), while an aldehyde has the carbonyl bonded to at least one hydrogen (R–CHO). An ester has R–COO–R′ (a carbonyl bonded to an oxygen that is also bonded to carbon), and an amide has R–CO–NR₂ (a carbonyl bonded to a nitrogen). An ether is simply an oxygen bonded to two carbons (R–O–R′), and an alkyl halide has a halogen bonded to carbon (R–X).\n\nThe difference between an aldehyde and a ketone is easy to miss: in an aldehyde the carbonyl carbon is bonded to one hydrogen and one carbon; in a ketone it is bonded to two carbons. That single hydrogen changes the naming (suffix -al vs -one) and the chemistry. Similarly, the difference between an ester and an ether is that an ester always contains a carbonyl, while an ether does not.",
+      "diagram": {
+        "smiles": "CC(=O)O",
+        "caption": "Acetic acid (CH₃COOH) — carboxylic acid"
+      },
+      "resources": [
+        {
+          "title": "Functional groups (Khan Academy)",
           "url": "https://www.khanacademy.org/science/organic-chemistry"
         },
         {
@@ -22,69 +272,17 @@
       ],
       "questions": [
         {
-          "id": "nomenclature-q1",
-          "type": "multiple-choice",
-          "prompt": "What is the IUPAC name for this molecule?",
-          "diagram": {
-            "smiles": "CCC",
-            "caption": "A 3-carbon straight-chain alkane"
-          },
-          "options": ["Ethane", "Propane", "Butane", "Methane"],
-          "answer": 1,
-          "explanation": "The longest continuous chain has 3 carbons, so the root is 'prop-'. It has only single bonds, so the suffix is '-ane': propane."
-        },
-        {
-          "id": "nomenclature-q2",
-          "type": "multiple-choice",
-          "prompt": "How many carbon atoms are in the parent chain of 2-methylpentane?",
-          "options": ["4", "5", "6", "2"],
-          "answer": 1,
-          "explanation": "The root 'pent-' means 5 carbons. The '2-methyl' is a substituent attached to carbon 2 of the 5-carbon parent chain."
-        },
-        {
-          "id": "nomenclature-q3",
-          "type": "short-answer",
-          "prompt": "Give the IUPAC name for CH₃CH₂OH.",
-          "answer": "ethanol",
-          "explanation": "A 2-carbon chain (eth-) with an -OH group (alcohol) gives the suffix '-ol': ethanol."
-        },
-        {
-          "id": "nomenclature-q4",
-          "type": "multiple-choice",
-          "prompt": "What does the suffix '-ene' indicate?",
-          "options": ["An alkane", "An alkene (contains a C=C double bond)", "An alcohol", "A carboxylic acid"],
-          "answer": 1,
-          "explanation": "'-ene' indicates the presence of a carbon–carbon double bond (an alkene). '-ane' = alkane, '-ol' = alcohol."
-        }
-      ]
-    },
-    {
-      "id": "functional-groups",
-      "title": "Functional Groups",
-      "icon": "⚗️",
-      "concept": "A functional group is a specific atom or group of atoms that gives a molecule its characteristic chemical reactions. Recognizing common groups is the key skill in organic chemistry. Alcohols have an -OH group. Carboxylic acids have a -COOH group. Amines contain nitrogen (R-NH₂, R₂NH, or R₃N). Ketones and aldehydes both contain a carbonyl (C=O), but in aldehydes the carbonyl carbon is bonded to at least one hydrogen, while in ketones it is bonded to two carbons.",
-      "diagram": {
-        "smiles": "CCO",
-        "caption": "Ethanol (CH₃CH₂OH) — an alcohol"
-      },
-      "resources": [
-        {
-          "title": "Functional groups (Khan Academy)",
-          "url": "https://www.khanacademy.org/science/organic-chemistry"
-        }
-      ],
-      "questions": [
-        {
           "id": "functional-groups-q1",
           "type": "multiple-choice",
-          "prompt": "Which functional group does this molecule contain?",
-          "diagram": {
-            "smiles": "CC(=O)O",
-            "caption": "A 2-carbon molecule with a -COOH group"
-          },
-          "options": ["Alcohol", "Carboxylic acid", "Ketone", "Amine"],
+          "prompt": "Which functional group does CH₃COOH contain?",
+          "options": [
+            "Alcohol",
+            "Carboxylic acid",
+            "Ketone",
+            "Amine"
+          ],
           "answer": 1,
-          "explanation": "The -COOH group is a carboxylic acid: a carbonyl (C=O) bonded to an -OH group."
+          "explanation": "The –COOH group is a carboxylic acid: a carbonyl (C=O) bonded to an –OH group."
         },
         {
           "id": "functional-groups-q2",
@@ -97,28 +295,205 @@
             "There is no difference"
           ],
           "answer": 1,
-          "explanation": "In an aldehyde (R-CHO), the carbonyl carbon is bonded to a hydrogen and one carbon. In a ketone (R-CO-R'), it is bonded to two carbons.",
-          "resources": [
-            {
-              "title": "Aldehydes and ketones (LibreTexts)",
-              "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
-            }
-          ]
+          "explanation": "In an aldehyde (R–CHO), the carbonyl carbon is bonded to a hydrogen and one carbon. In a ketone (R–CO–R′), it is bonded to two carbons."
         },
         {
           "id": "functional-groups-q3",
           "type": "short-answer",
           "prompt": "Name the functional group in CH₃OH.",
           "answer": "alcohol",
-          "explanation": "CH₃OH has an -OH group bonded to a carbon, which is the alcohol functional group."
+          "explanation": "CH₃OH has an –OH group bonded to a carbon, which is the alcohol functional group (methanol)."
         },
         {
           "id": "functional-groups-q4",
           "type": "multiple-choice",
           "prompt": "Which of these is an amine?",
-          "options": ["CH₃CH₂OH", "CH₃NH₂", "CH₃COOH", "CH₃COCH₃"],
+          "options": [
+            "CH₃CH₂OH",
+            "CH₃NH₂",
+            "CH₃COOH",
+            "CH₃COCH₃"
+          ],
           "answer": 1,
-          "explanation": "CH₃NH₂ contains nitrogen bonded to carbon and hydrogen — an amine. The others are alcohol, carboxylic acid, and ketone."
+          "explanation": "CH₃NH₂ contains nitrogen bonded to carbon and hydrogen — an amine. The others are an alcohol, a carboxylic acid, and a ketone."
+        },
+        {
+          "id": "functional-groups-q5",
+          "type": "multiple-choice",
+          "prompt": "What functional group is present in CH₃COCH₃ (acetone)?",
+          "diagram": {
+            "smiles": "CC(=O)C",
+            "caption": "Acetone (CH₃COCH₃)"
+          },
+          "options": [
+            "Aldehyde",
+            "Ketone",
+            "Ester",
+            "Ether"
+          ],
+          "answer": 1,
+          "explanation": "Acetone has a carbonyl (C=O) bonded to two carbon atoms (one on each side), which is a ketone."
+        },
+        {
+          "id": "functional-groups-q6",
+          "type": "short-answer",
+          "prompt": "Name the functional group in CH₃OCH₃.",
+          "answer": "ether",
+          "explanation": "An oxygen bonded to two carbon atoms (R–O–R′) is an ether. CH₃OCH₃ is dimethyl ether."
+        },
+        {
+          "id": "functional-groups-q7",
+          "type": "multiple-choice",
+          "prompt": "Which structure contains an ester group?",
+          "diagram": {
+            "smiles": "CC(=O)OC",
+            "caption": "Methyl acetate (CH₃COOCH₃)"
+          },
+          "options": [
+            "CH₃CH₂OH",
+            "CH₃COOCH₃",
+            "CH₃COCH₃",
+            "CH₃CH₂NH₂"
+          ],
+          "answer": 1,
+          "explanation": "An ester has the form R–COO–R′ (a carbonyl bonded to an oxygen that is also bonded to carbon). CH₃COOCH₃ (methyl acetate) is an ester; the others are an alcohol, a ketone, and an amine."
+        },
+        {
+          "id": "functional-groups-q8",
+          "type": "multiple-choice",
+          "prompt": "An amide group contains a carbonyl (C=O) bonded to…",
+          "options": [
+            "An oxygen and a carbon",
+            "A nitrogen atom",
+            "Two hydrogen atoms",
+            "A halogen"
+          ],
+          "answer": 1,
+          "explanation": "An amide has R–CO–NR₂: a carbonyl carbon bonded to a nitrogen atom (for example, acetamide CH₃CONH₂)."
+        }
+      ]
+    },
+    {
+      "id": "stereochemistry",
+      "title": "Stereochemistry",
+      "icon": "🪞",
+      "concept": "Stereochemistry is the study of how molecules are arranged in three-dimensional space. Two molecules can have the same atoms connected in the same order yet still be different, because those atoms point in different directions in space.\n\nA carbon atom bonded to four different groups is called a chiral center (or stereocenter). A molecule with a chiral center is chiral: it is not superimposable on its mirror image, just like your left and right hands. The two mirror-image forms are enantiomers. Enantiomers have identical physical properties (boiling point, solubility) except that they rotate plane-polarized light in opposite directions. A 50:50 mixture of enantiomers is a racemic mixture and is optically inactive because the rotations cancel.\n\nStereoisomers that are not mirror images are diastereomers; unlike enantiomers, diastereomers generally have different physical properties.\n\nTo name the arrangement at a chiral center, chemists use the Cahn–Ingold–Prelog (CIP) rules. Assign each substituent a priority based on the atomic number of the atom directly attached to the stereocenter (higher atomic number = higher priority). Orient the lowest-priority group away from you, then trace 1 → 2 → 3: clockwise is R (rectus) and counterclockwise is S (sinister).\n\nFor alkenes, E/Z notation describes which side the higher-priority groups occupy: E (entgegen, 'opposite') means they are on opposite sides of the double bond, and Z (zusammen, 'together') means they are on the same side. A meso compound has chiral centers but also an internal mirror plane, making the whole molecule achiral.",
+      "diagram": {
+        "smiles": "CC(O)CC",
+        "caption": "2-Butanol — carbon 2 is a chiral center (four different groups)"
+      },
+      "resources": [
+        {
+          "title": "Stereochemistry (Khan Academy)",
+          "url": "https://www.khanacademy.org/science/organic-chemistry"
+        },
+        {
+          "title": "Organic Chemistry (LibreTexts)",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
+        },
+        {
+          "title": "Stereochemistry tutorials (Master Organic Chemistry)",
+          "url": "https://www.masterorganicchemistry.com/"
+        }
+      ],
+      "questions": [
+        {
+          "id": "stereochemistry-q1",
+          "type": "multiple-choice",
+          "prompt": "A carbon atom is a chiral center (stereocenter) when it is bonded to…",
+          "options": [
+            "Four identical groups",
+            "Four different groups",
+            "Two double bonds",
+            "A hydrogen and three carbons"
+          ],
+          "answer": 1,
+          "explanation": "A stereocenter is a carbon bonded to four different groups, which makes the molecule non-superimposable on its mirror image."
+        },
+        {
+          "id": "stereochemistry-q2",
+          "type": "multiple-choice",
+          "prompt": "Enantiomers are best described as…",
+          "options": [
+            "Constitutional isomers",
+            "Non-superimposable mirror images",
+            "Identical molecules",
+            "Resonance forms"
+          ],
+          "answer": 1,
+          "explanation": "Enantiomers are stereoisomers that are non-superimposable mirror images of each other."
+        },
+        {
+          "id": "stereochemistry-q3",
+          "type": "multiple-choice",
+          "prompt": "In the Cahn–Ingold–Prelog system, the first (highest) priority is assigned to the substituent with…",
+          "options": [
+            "The lowest atomic number",
+            "The highest atomic number",
+            "The longest chain",
+            "The most hydrogen atoms"
+          ],
+          "answer": 1,
+          "explanation": "Priority is based on the atomic number of the atom directly attached to the stereocenter — higher atomic number means higher priority (O > N > C > H)."
+        },
+        {
+          "id": "stereochemistry-q4",
+          "type": "multiple-choice",
+          "prompt": "How are diastereomers different from enantiomers?",
+          "options": [
+            "Diastereomers are mirror images",
+            "Diastereomers are stereoisomers that are NOT mirror images",
+            "Diastereomers are the same molecule",
+            "Diastereomers are constitutional isomers"
+          ],
+          "answer": 1,
+          "explanation": "Diastereomers are stereoisomers that are not mirror images of each other, and they generally have different physical properties."
+        },
+        {
+          "id": "stereochemistry-q5",
+          "type": "multiple-choice",
+          "prompt": "In alkene E/Z notation, 'E' means the two higher-priority groups are…",
+          "options": [
+            "On the same side of the double bond",
+            "On opposite sides of the double bond",
+            "Both attached to the same carbon",
+            "Bonded to each other"
+          ],
+          "answer": 1,
+          "explanation": "E (from the German 'entgegen', meaning opposite) means the higher-priority group on each double-bond carbon is on the opposite side. Z ('zusammen') means the same side."
+        },
+        {
+          "id": "stereochemistry-q6",
+          "type": "short-answer",
+          "prompt": "How many chiral centers does 2-butanol (CH₃CH(OH)CH₂CH₃) contain?",
+          "answer": "1",
+          "explanation": "Only carbon 2 is bonded to four different groups (–OH, –CH₃, –CH₂CH₃, and –H), so it is the single chiral center."
+        },
+        {
+          "id": "stereochemistry-q7",
+          "type": "multiple-choice",
+          "prompt": "A racemic mixture is…",
+          "options": [
+            "A pure single enantiomer",
+            "A 50:50 mixture of enantiomers (optically inactive)",
+            "A mixture of diastereomers",
+            "A meso compound"
+          ],
+          "answer": 1,
+          "explanation": "A racemic mixture is a 50:50 mix of enantiomers. The equal-and-opposite rotations cancel, so it is optically inactive."
+        },
+        {
+          "id": "stereochemistry-q8",
+          "type": "multiple-choice",
+          "prompt": "A meso compound is…",
+          "options": [
+            "Chiral with no mirror image",
+            "Achiral despite containing chiral centers (internal mirror plane)",
+            "Always optically active",
+            "A cis-alkene only"
+          ],
+          "answer": 1,
+          "explanation": "A meso compound contains chiral centers but also an internal plane of symmetry, which makes the overall molecule achiral and optically inactive."
         }
       ]
     }
