@@ -225,6 +225,112 @@ body {
   font-size: 15px;
 }
 
+/* Diagram (future-proof placeholder / image) */
+.diagram-box {
+  margin-top: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.diagram-image {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.diagram-caption {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.diagram-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px dashed var(--accent);
+  padding: 12px 14px;
+}
+
+.diagram-placeholder-icon {
+  font-size: 26px;
+}
+
+.diagram-placeholder-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.diagram-smiles {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.diagram-note {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.diagram-note-muted {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.diagram-box code {
+  background: var(--surface-alt);
+  padding: 1px 6px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+}
+
+/* Curated resources */
+.resources-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+
+.resources-heading {
+  margin: 0 0 10px;
+  font-size: 15px;
+  color: var(--accent-strong);
+}
+
+.resources-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.resources-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resources-list a:hover {
+  text-decoration: underline;
+}
+
+.resource-source {
+  color: var(--text-muted);
+  font-size: 12px;
+  margin-left: 4px;
+}
+
 /* Questions */
 .questions-heading {
   font-size: 18px;

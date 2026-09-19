@@ -117,6 +117,54 @@ function updateOverallMastery() {
 }
 
 // ─── Rendering: topic detail ───────────────────────────────────
+// Future-proof diagram hook. A topic may carry an optional `diagram`
+// object with either a SMILES string (type "smiles" + a `render` hint)
+// or an image URL (type "image"). Rendering SMILES→image is NOT implemented
+// yet; we display a clean placeholder so the schema is wired end-to-end.
+function renderDiagram(topic) {
+  const d = topic.diagram;
+  if (!d) return '';
+
+  if (d.type === 'image' && d.value) {
+    return `
+      <div class="diagram-box">
+        <img class="diagram-image" src="${escapeHtml(d.value)}" alt="${escapeHtml(d.label || 'diagram')}" loading="lazy" />
+        ${d.label ? `<div class="diagram-caption">${escapeHtml(d.label)}</div>` : ''}
+      </div>`;
+  }
+
+  // SMILES (default): show a placeholder until a renderer is wired in.
+  const renderHint = d.render || 'smiles';
+  return `
+    <div class="diagram-box diagram-placeholder" data-smiles="${escapeHtml(d.value)}" data-render="${escapeHtml(renderHint)}">
+      <div class="diagram-placeholder-icon">🧬</div>
+      <div class="diagram-placeholder-text">
+        <div class="diagram-smiles">SMILES: <code>${escapeHtml(d.value)}</code></div>
+        <div class="diagram-note">${escapeHtml(d.label || 'Structure renderer coming soon')}</div>
+        <div class="diagram-note-muted">render hint: <code>${escapeHtml(renderHint)}</code></div>
+      </div>
+    </div>`;
+}
+
+// Future-proof curated resources hook: an optional `resources` array
+// of free tutorial links rendered as an external "Learn more" list.
+function renderResources(topic) {
+  const r = topic.resources;
+  if (!Array.isArray(r) || r.length === 0) return '';
+  return `
+    <div class="resources-box">
+      <h3 class="resources-heading">📚 Learn more (free)</h3>
+      <ul class="resources-list">
+        ${r
+          .map((res) => {
+            const src = res.source ? `<span class="resource-source">${escapeHtml(res.source)}</span>` : '';
+            return `<li><a href="${escapeHtml(res.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(res.title)}</a> ${src}</li>`;
+          })
+          .join('')}
+      </ul>
+    </div>`;
+}
+
 function openTopic(topicId) {
   currentTopicId = topicId;
   const topic = content.topics.find((t) => t.id === topicId);
@@ -134,7 +182,9 @@ function openTopic(topicId) {
     <div class="concept-box">
       <h3>Concept</h3>
       <p>${topic.concept}</p>
+      ${renderDiagram(topic)}
     </div>
+    ${renderResources(topic)}
     <h3 class="questions-heading">Practice Questions</h3>
     <div id="questions-container"></div>
   `;

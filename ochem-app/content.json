@@ -10,6 +10,24 @@
       "title": "Nomenclature",
       "icon": "🔤",
       "concept": "IUPAC nomenclature is the systematic way to name organic molecules. You identify the longest continuous carbon chain as the parent, number it to give substituents the lowest possible numbers, then name substituents as prefixes and the parent functional group as a suffix. The root tells you the number of carbons (meth- = 1, eth- = 2, prop- = 3, but- = 4, pent- = 5, hex- = 6, hept- = 7, oct- = 8), and the suffix tells you the family (e.g. -ane for alkanes, -ene for alkenes, -ol for alcohols).",
+      "diagram": {
+        "type": "smiles",
+        "value": "CCC",
+        "render": "smiles",
+        "label": "Propane (CH₃CH₂CH₃) — structure renderer coming soon"
+      },
+      "resources": [
+        {
+          "title": "IUPAC nomenclature of organic chemistry",
+          "url": "https://www.khanacademy.org/science/organic-chemistry",
+          "source": "Khan Academy"
+        },
+        {
+          "title": "Organic Chemistry (LibreTexts)",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry",
+          "source": "LibreTexts"
+        }
+      ],
       "questions": [
         {
           "id": "nomenclature-q1",
@@ -49,6 +67,19 @@
       "title": "Functional Groups",
       "icon": "⚗️",
       "concept": "A functional group is a specific atom or group of atoms that gives a molecule its characteristic chemical reactions. Recognizing common groups is the key skill in organic chemistry. Alcohols have an -OH group. Carboxylic acids have a -COOH group. Amines contain nitrogen (R-NH₂, R₂NH, or R₃N). Ketones and aldehydes both contain a carbonyl (C=O), but in aldehydes the carbonyl carbon is bonded to at least one hydrogen, while in ketones it is bonded to two carbons.",
+      "diagram": {
+        "type": "smiles",
+        "value": "CCO",
+        "render": "smiles",
+        "label": "Ethanol (CH₃CH₂OH) — structure renderer coming soon"
+      },
+      "resources": [
+        {
+          "title": "Functional groups (Khan Academy)",
+          "url": "https://www.khanacademy.org/science/organic-chemistry",
+          "source": "Khan Academy"
+        }
+      ],
       "questions": [
         {
           "id": "functional-groups-q1",
