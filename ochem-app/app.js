@@ -116,6 +116,64 @@ function updateOverallMastery() {
   document.getElementById('overall-percent').textContent = pct + '%';
 }
 
+// ─── Rendering: SMILES diagrams + resources ────────────────────
+// Uses SmilesDrawer (MIT, vendored at vendor/smiles-drawer.min.js) to render
+// a SMILES string as a 2D structure client-side. Returns a placeholder <div>
+// with a data-smiles attribute; drawDiagrams() paints it after it's in the DOM.
+function diagramPlaceholder(diagram) {
+  if (!diagram || !diagram.smiles) return '';
+  return `
+    <div class="diagram-box">
+      <div class="diagram-canvas" data-smiles="${escapeHtml(diagram.smiles)}"></div>
+      ${diagram.caption ? `<div class="diagram-caption">${escapeHtml(diagram.caption)}</div>` : ''}
+    </div>`;
+}
+
+// Draws every pending [data-smiles] element under `root` into an inline SVG.
+function drawDiagrams(root) {
+  const targets = root.querySelectorAll('.diagram-canvas[data-smiles]');
+  targets.forEach((el) => {
+    const smiles = el.getAttribute('data-smiles');
+    // Idempotent: skip canvases already painted (child SVG present).
+    if (el.querySelector('svg')) return;
+    if (!window.SmilesDrawer) {
+      el.innerHTML = `<code class="diagram-fallback">${escapeHtml(smiles)}</code>`;
+      return;
+    }
+    try {
+      const drawer = new SmilesDrawer.SvgDrawer({ width: 360, height: 220, padding: 22 });
+      SmilesDrawer.parse(
+        smiles,
+        (tree) => {
+          const svg = drawer.draw(tree, null, 'light');
+          el.appendChild(svg);
+        },
+        (err) => {
+          el.innerHTML = `<code class="diagram-fallback">${escapeHtml(smiles)}</code>`;
+          console.error('SMILES render error:', smiles, err);
+        }
+      );
+    } catch (e) {
+      el.innerHTML = `<code class="diagram-fallback">${escapeHtml(smiles)}</code>`;
+      console.error('SMILES render error:', smiles, e);
+    }
+  });
+}
+
+// Curated free tutorial links (target=_blank, rel="noopener nofollow").
+function resourcesList(resources) {
+  if (!Array.isArray(resources) || resources.length === 0) return '';
+  return `
+    <div class="resources-box">
+      <div class="resources-heading">📚 Learn more (free)</div>
+      <ul class="resources-list">
+        ${resources
+          .map((res) => `<li><a href="${escapeHtml(res.url)}" target="_blank" rel="noopener nofollow">${escapeHtml(res.title)}</a></li>`)
+          .join('')}
+      </ul>
+    </div>`;
+}
+
 // ─── Rendering: topic detail ───────────────────────────────────
 function openTopic(topicId) {
   currentTopicId = topicId;
@@ -134,7 +192,9 @@ function openTopic(topicId) {
     <div class="concept-box">
       <h3>Concept</h3>
       <p>${topic.concept}</p>
+      ${diagramPlaceholder(topic.diagram)}
     </div>
+    ${resourcesList(topic.resources)}
     <h3 class="questions-heading">Practice Questions</h3>
     <div id="questions-container"></div>
   `;
@@ -145,6 +205,9 @@ function openTopic(topicId) {
   topic.questions.forEach((q) => {
     qc.appendChild(renderQuestion(q, topic.id, progress));
   });
+
+  // Paint any SMILES diagrams now that they're in the DOM.
+  drawDiagrams(container);
 }
 
 function renderQuestion(q, topicId, progress) {
@@ -175,10 +238,14 @@ function renderQuestion(q, topicId, progress) {
   card.innerHTML = `
     <p class="question-prompt">${q.prompt}</p>
     <div class="question-type">${typeLabel}</div>
+    ${diagramPlaceholder(q.diagram)}
     ${body}
     <button class="check-btn" type="button" ${answered ? 'disabled' : ''}>Check answer</button>
     <div class="feedback" id="feedback-${q.id}"></div>
   `;
+
+  // Paint any question-level SMILES diagram now that it's in the DOM.
+  drawDiagrams(card);
 
   // If already answered, show the stored result immediately.
   if (answered) {
@@ -257,6 +324,7 @@ function showFeedback(q, isCorrect, alreadyAnswered) {
     <div class="feedback-head ${isCorrect ? 'correct' : 'wrong'}">${head}</div>
     <p class="worked"><strong>Worked solution:</strong> ${q.explanation}</p>
     ${!isCorrect ? `<p class="worked"><strong>Correct answer:</strong> ${q.type === 'multiple-choice' ? q.options[q.answer] : escapeHtml(q.answer)}</p>` : ''}
+    ${resourcesList(q.resources)}
   `;
 }
 

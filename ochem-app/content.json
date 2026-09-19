@@ -10,11 +10,25 @@
       "title": "Nomenclature",
       "icon": "🔤",
       "concept": "IUPAC nomenclature is the systematic way to name organic molecules. You identify the longest continuous carbon chain as the parent, number it to give substituents the lowest possible numbers, then name substituents as prefixes and the parent functional group as a suffix. The root tells you the number of carbons (meth- = 1, eth- = 2, prop- = 3, but- = 4, pent- = 5, hex- = 6, hept- = 7, oct- = 8), and the suffix tells you the family (e.g. -ane for alkanes, -ene for alkenes, -ol for alcohols).",
+      "resources": [
+        {
+          "title": "IUPAC nomenclature of organic chemistry",
+          "url": "https://www.khanacademy.org/science/organic-chemistry"
+        },
+        {
+          "title": "Organic Chemistry (LibreTexts)",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
+        }
+      ],
       "questions": [
         {
           "id": "nomenclature-q1",
           "type": "multiple-choice",
-          "prompt": "What is the IUPAC name for CH₃CH₂CH₃?",
+          "prompt": "What is the IUPAC name for this molecule?",
+          "diagram": {
+            "smiles": "CCC",
+            "caption": "A 3-carbon straight-chain alkane"
+          },
           "options": ["Ethane", "Propane", "Butane", "Methane"],
           "answer": 1,
           "explanation": "The longest continuous chain has 3 carbons, so the root is 'prop-'. It has only single bonds, so the suffix is '-ane': propane."
@@ -49,11 +63,25 @@
       "title": "Functional Groups",
       "icon": "⚗️",
       "concept": "A functional group is a specific atom or group of atoms that gives a molecule its characteristic chemical reactions. Recognizing common groups is the key skill in organic chemistry. Alcohols have an -OH group. Carboxylic acids have a -COOH group. Amines contain nitrogen (R-NH₂, R₂NH, or R₃N). Ketones and aldehydes both contain a carbonyl (C=O), but in aldehydes the carbonyl carbon is bonded to at least one hydrogen, while in ketones it is bonded to two carbons.",
+      "diagram": {
+        "smiles": "CCO",
+        "caption": "Ethanol (CH₃CH₂OH) — an alcohol"
+      },
+      "resources": [
+        {
+          "title": "Functional groups (Khan Academy)",
+          "url": "https://www.khanacademy.org/science/organic-chemistry"
+        }
+      ],
       "questions": [
         {
           "id": "functional-groups-q1",
           "type": "multiple-choice",
-          "prompt": "Which functional group does CH₃COOH contain?",
+          "prompt": "Which functional group does this molecule contain?",
+          "diagram": {
+            "smiles": "CC(=O)O",
+            "caption": "A 2-carbon molecule with a -COOH group"
+          },
           "options": ["Alcohol", "Carboxylic acid", "Ketone", "Amine"],
           "answer": 1,
           "explanation": "The -COOH group is a carboxylic acid: a carbonyl (C=O) bonded to an -OH group."
@@ -69,7 +97,13 @@
             "There is no difference"
           ],
           "answer": 1,
-          "explanation": "In an aldehyde (R-CHO), the carbonyl carbon is bonded to a hydrogen and one carbon. In a ketone (R-CO-R'), it is bonded to two carbons."
+          "explanation": "In an aldehyde (R-CHO), the carbonyl carbon is bonded to a hydrogen and one carbon. In a ketone (R-CO-R'), it is bonded to two carbons.",
+          "resources": [
+            {
+              "title": "Aldehydes and ketones (LibreTexts)",
+              "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
+            }
+          ]
         },
         {
           "id": "functional-groups-q3",
