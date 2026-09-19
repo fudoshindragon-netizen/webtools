@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "Organic Chemistry Practice",
+    "subtitle": "Free study & practice drills",
+    "disclaimer": "Study aid only — not a substitute for your course, textbook, or instructor. Content may contain errors; verify against your course materials."
+  },
+  "topics": [
+    {
+      "id": "nomenclature",
+      "title": "Nomenclature",
+      "icon": "🔤",
+      "concept": "IUPAC nomenclature is the systematic way to name organic molecules. You identify the longest continuous carbon chain as the parent, number it to give substituents the lowest possible numbers, then name substituents as prefixes and the parent functional group as a suffix. The root tells you the number of carbons (meth- = 1, eth- = 2, prop- = 3, but- = 4, pent- = 5, hex- = 6, hept- = 7, oct- = 8), and the suffix tells you the family (e.g. -ane for alkanes, -ene for alkenes, -ol for alcohols).",
+      "questions": [
+        {
+          "id": "nomenclature-q1",
+          "type": "multiple-choice",
+          "prompt": "What is the IUPAC name for CH₃CH₂CH₃?",
+          "options": ["Ethane", "Propane", "Butane", "Methane"],
+          "answer": 1,
+          "explanation": "The longest continuous chain has 3 carbons, so the root is 'prop-'. It has only single bonds, so the suffix is '-ane': propane."
+        },
+        {
+          "id": "nomenclature-q2",
+          "type": "multiple-choice",
+          "prompt": "How many carbon atoms are in the parent chain of 2-methylpentane?",
+          "options": ["4", "5", "6", "2"],
+          "answer": 1,
+          "explanation": "The root 'pent-' means 5 carbons. The '2-methyl' is a substituent attached to carbon 2 of the 5-carbon parent chain."
+        },
+        {
+          "id": "nomenclature-q3",
+          "type": "short-answer",
+          "prompt": "Give the IUPAC name for CH₃CH₂OH.",
+          "answer": "ethanol",
+          "explanation": "A 2-carbon chain (eth-) with an -OH group (alcohol) gives the suffix '-ol': ethanol."
+        },
+        {
+          "id": "nomenclature-q4",
+          "type": "multiple-choice",
+          "prompt": "What does the suffix '-ene' indicate?",
+          "options": ["An alkane", "An alkene (contains a C=C double bond)", "An alcohol", "A carboxylic acid"],
+          "answer": 1,
+          "explanation": "'-ene' indicates the presence of a carbon–carbon double bond (an alkene). '-ane' = alkane, '-ol' = alcohol."
+        }
+      ]
+    },
+    {
+      "id": "functional-groups",
+      "title": "Functional Groups",
+      "icon": "⚗️",
+      "concept": "A functional group is a specific atom or group of atoms that gives a molecule its characteristic chemical reactions. Recognizing common groups is the key skill in organic chemistry. Alcohols have an -OH group. Carboxylic acids have a -COOH group. Amines contain nitrogen (R-NH₂, R₂NH, or R₃N). Ketones and aldehydes both contain a carbonyl (C=O), but in aldehydes the carbonyl carbon is bonded to at least one hydrogen, while in ketones it is bonded to two carbons.",
+      "questions": [
+        {
+          "id": "functional-groups-q1",
+          "type": "multiple-choice",
+          "prompt": "Which functional group does CH₃COOH contain?",
+          "options": ["Alcohol", "Carboxylic acid", "Ketone", "Amine"],
+          "answer": 1,
+          "explanation": "The -COOH group is a carboxylic acid: a carbonyl (C=O) bonded to an -OH group."
+        },
+        {
+          "id": "functional-groups-q2",
+          "type": "multiple-choice",
+          "prompt": "What is the key structural difference between an aldehyde and a ketone?",
+          "options": [
+            "Aldehydes contain nitrogen; ketones do not",
+            "The carbonyl carbon in an aldehyde is bonded to at least one hydrogen; in a ketone it is bonded to two carbons",
+            "Ketones are always cyclic",
+            "There is no difference"
+          ],
+          "answer": 1,
+          "explanation": "In an aldehyde (R-CHO), the carbonyl carbon is bonded to a hydrogen and one carbon. In a ketone (R-CO-R'), it is bonded to two carbons."
+        },
+        {
+          "id": "functional-groups-q3",
+          "type": "short-answer",
+          "prompt": "Name the functional group in CH₃OH.",
+          "answer": "alcohol",
+          "explanation": "CH₃OH has an -OH group bonded to a carbon, which is the alcohol functional group."
+        },
+        {
+          "id": "functional-groups-q4",
+          "type": "multiple-choice",
+          "prompt": "Which of these is an amine?",
+          "options": ["CH₃CH₂OH", "CH₃NH₂", "CH₃COOH", "CH₃COCH₃"],
+          "answer": 1,
+          "explanation": "CH₃NH₂ contains nitrogen bonded to carbon and hydrogen — an amine. The others are alcohol, carboxylic acid, and ketone."
+        }
+      ]
+    }
+  ]
+}
