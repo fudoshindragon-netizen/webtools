@@ -225,6 +225,76 @@ body {
   font-size: 15px;
 }
 
+/* SMILES diagrams (rendered by SmilesDrawer) */
+.diagram-box {
+  margin-top: 16px;
+}
+
+.diagram-canvas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 8px;
+  min-height: 120px;
+}
+
+.diagram-canvas svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.diagram-caption {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 6px;
+  text-align: center;
+}
+
+.diagram-fallback {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* Curated resources */
+.resources-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+}
+
+.resources-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-strong);
+  margin-bottom: 8px;
+}
+
+.resources-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.resources-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.resources-list a:hover {
+  text-decoration: underline;
+}
+
 /* Questions */
 .questions-heading {
   font-size: 18px;
