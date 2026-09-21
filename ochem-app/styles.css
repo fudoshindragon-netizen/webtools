@@ -510,6 +510,17 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
+.upsell-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.upsell-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 .upsell-soon-note {
   color: rgba(255, 255, 255, 0.8);
   font-size: 13px;
