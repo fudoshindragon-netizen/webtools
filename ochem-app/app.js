@@ -10,23 +10,25 @@ let content = null;
 let currentTopicId = null;
 
 // ─── Monetization config ───────────────────────────────────────
-// OChem Mastery Pack upsell. When the paid pack launches, set
-// MASTERY_PACK.checkoutUrl to its live Stripe Payment Link and the
-// upsell CTA becomes a real "Buy" button. Until then it renders an
-// honest "coming soon" state — never a fake purchase link.
+// OChem Mastery Pack upsell. checkoutUrl is the live Stripe Payment
+// Link; the CTA renders a real "Buy" button with the price. If the
+// link ever needs to change, update it here only.
 const MASTERY_PACK = {
-  checkoutUrl: '',          // ← Stripe Payment Link (e.g. https://buy.stripe.com/…)
-  downloadUrl: 'download.html',
-  learnMoreText: 'Learn more'
+  checkoutUrl: 'https://buy.stripe.com/4gMeVde0I3h0ftqfXo0ZW0b',
+  price: '$15',
+  downloadUrl: 'mastery-pack/'
 };
 
 function renderUpsell() {
   const cta = document.getElementById('upsell-cta');
   if (!cta) return;
   if (MASTERY_PACK.checkoutUrl) {
-    cta.innerHTML = `<a class="upsell-btn" href="${MASTERY_PACK.checkoutUrl}" target="_blank" rel="noopener">Get the Mastery Pack →</a>`;
+    cta.innerHTML = `
+      <a class="upsell-btn" href="${MASTERY_PACK.checkoutUrl}" target="_blank" rel="noopener">Get the Mastery Pack — ${MASTERY_PACK.price}</a>
+      <a class="upsell-link" href="${MASTERY_PACK.downloadUrl}">Already purchased? Find your downloads →</a>
+    `;
   } else {
-    cta.innerHTML = `<a class="upsell-btn upsell-btn-soon" href="${MASTERY_PACK.downloadUrl}" rel="noopener">${MASTERY_PACK.learnMoreText}</a><span class="upsell-soon-note">Full pack coming soon — the drills stay free.</span>`;
+    cta.innerHTML = `<span class="upsell-soon-note">Full pack coming soon — the drills stay free.</span>`;
   }
 }
 

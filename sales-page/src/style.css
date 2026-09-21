@@ -55,6 +55,30 @@ a:hover { color: var(--accent-hover); }
 .section-title { font-size: 32px; font-weight: 700; color: var(--text-heading); text-align: center; margin-bottom: 8px; }
 .section-sub { text-align: center; color: var(--text-muted); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
+/* === Free OChem promo === */
+.ochem-promo-section { padding-top: 24px; }
+.ochem-promo-card {
+  background: linear-gradient(135deg, rgba(74,222,128,0.10), rgba(107,197,255,0.08));
+  border: 1px solid rgba(74,222,128,0.35);
+  border-radius: var(--radius);
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.ochem-promo-badge {
+  display: inline-block; padding: 4px 12px; border-radius: 999px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.4);
+  margin-bottom: 12px;
+}
+.ochem-promo-copy { flex: 1; min-width: 280px; }
+.ochem-promo-copy .section-title { text-align: left; margin-bottom: 8px; }
+.ochem-promo-copy .section-sub { text-align: left; margin: 0; max-width: none; }
+.ochem-promo-cta { flex-shrink: 0; }
+
 /* === Free Resources (Traffic Bait) === */
 .section-free { background: linear-gradient(180deg, rgba(74,222,128,0.04) 0%, transparent 100%); }
 .free-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
