@@ -496,6 +496,524 @@
           "explanation": "A meso compound contains chiral centers but also an internal plane of symmetry, which makes the overall molecule achiral and optically inactive."
         }
       ]
+    },
+    {
+      "id": "substitution",
+      "title": "Nucleophilic Substitution (SN1 vs SN2)",
+      "icon": "🔄",
+      "concept": "Nucleophilic substitution replaces a leaving group on an electrophilic carbon with a nucleophile. There are two mechanisms.\n\nSN2 (Substitution, Nucleophilic, Bimolecular) is a single concerted step: the nucleophile attacks from the backside, 180° from the leaving group, while the leaving group departs. The rate law is rate = k[nucleophile][substrate] (second order). Because the attack comes from behind, configuration is inverted (Walden inversion). SN2 needs a strong nucleophile, a good leaving group, a polar aprotic solvent, and an unhindered substrate — reactivity follows methyl > primary > secondary, while tertiary substrates are essentially unreactive.\n\nSN1 (Substitution, Nucleophilic, Unimolecular) is a two-step process: the leaving group departs first to form a planar carbocation (the slow, rate-determining step), then the nucleophile attacks from either face. The rate law is rate = k[substrate] (first order). The planar carbocation usually leads to racemization. SN1 requires a stable carbocation, so tertiary substrates react fastest and methyl/primary do not undergo SN1. Polar protic solvents and weak nucleophiles are fine, and carbocation rearrangements can occur.\n\nThe quick comparison: SN2 = bimolecular, concerted, inversion, prefers 1° substrates and strong nucleophiles; SN1 = unimolecular, carbocation, racemization, prefers 3° substrates and polar protic solvents.",
+      "diagram": {
+        "smiles": "CC(C)Br",
+        "caption": "2-Bromopropane — a secondary substrate that reacts by SN1 or SN2 depending on conditions"
+      },
+      "resources": [
+        {
+          "title": "Substitution and elimination reactions (Khan Academy)",
+          "url": "https://www.khanacademy.org/science/organic-chemistry/substitution-elimination-reactions"
+        },
+        {
+          "title": "SN1/SN2/E1/E2 guides (Master Organic Chemistry)",
+          "url": "https://www.masterorganicchemistry.com/"
+        },
+        {
+          "title": "Organic Chemistry (LibreTexts)",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
+        }
+      ],
+      "questions": [
+        {
+          "id": "substitution-q1",
+          "type": "multiple-choice",
+          "prompt": "What does 'SN2' stand for?",
+          "options": [
+            "Substitution, Nucleophilic, Bimolecular",
+            "Substitution, Neutral, Second-order",
+            "Elimination, Nucleophilic, Bimolecular",
+            "Addition, Nucleophilic, Bimolecular"
+          ],
+          "answer": 0,
+          "explanation": "SN2 = Substitution (one group replaces another), Nucleophilic (an electron-rich nucleophile attacks), Bimolecular (both reactants appear in the rate law)."
+        },
+        {
+          "id": "substitution-q2",
+          "type": "multiple-choice",
+          "prompt": "Which rate law corresponds to an SN2 reaction?",
+          "options": [
+            "rate = k[substrate]",
+            "rate = k[nucleophile][substrate]",
+            "rate = k[nucleophile]",
+            "rate = k[substrate]²"
+          ],
+          "answer": 1,
+          "explanation": "SN2 is bimolecular, so the rate depends on both the nucleophile and the substrate: rate = k[Nu][RX] (second order)."
+        },
+        {
+          "id": "substitution-q3",
+          "type": "multiple-choice",
+          "prompt": "What is the stereochemical outcome of SN2 vs SN1?",
+          "options": [
+            "SN2 = inversion; SN1 = racemization",
+            "SN2 = racemization; SN1 = inversion",
+            "Both give inversion",
+            "Both give racemization"
+          ],
+          "answer": 0,
+          "explanation": "SN2 inverts configuration (backside attack). SN1 goes through a planar carbocation attacked from either face, giving racemization."
+        },
+        {
+          "id": "substitution-q4",
+          "type": "multiple-choice",
+          "prompt": "A tertiary alkyl halide is most likely to undergo which substitution mechanism?",
+          "options": [
+            "SN2",
+            "SN1",
+            "Neither — it only eliminates",
+            "Radical substitution"
+          ],
+          "answer": 1,
+          "explanation": "Tertiary substrates form stable carbocations, so SN1 is favored. SN2 is blocked by steric hindrance from the three alkyl groups."
+        },
+        {
+          "id": "substitution-q5",
+          "type": "multiple-choice",
+          "prompt": "A methyl halide with a strong nucleophile reacts by which mechanism?",
+          "options": [
+            "SN1",
+            "SN2",
+            "E1",
+            "E2"
+          ],
+          "answer": 1,
+          "explanation": "Methyl substrates are unhindered and cannot form a stable carbocation, so they react by SN2 with a strong nucleophile."
+        },
+        {
+          "id": "substitution-q6",
+          "type": "multiple-choice",
+          "prompt": "Which intermediate is formed only in SN1 (not SN2)?",
+          "options": [
+            "A carbocation",
+            "A carbanion",
+            "A five-coordinate transition state",
+            "A free radical"
+          ],
+          "answer": 0,
+          "explanation": "SN1 forms a planar carbocation after the leaving group departs. SN2 is concerted and has no carbocation — only a five-coordinate transition state."
+        },
+        {
+          "id": "substitution-q7",
+          "type": "multiple-choice",
+          "prompt": "Which of these is the BEST leaving group?",
+          "options": [
+            "Fluoride (F⁻)",
+            "Hydroxide (OH⁻)",
+            "Iodide (I⁻)",
+            "Amide (NH₂⁻)"
+          ],
+          "answer": 2,
+          "explanation": "A good leaving group is a weak, stable base. Iodide is the weakest base listed and the best leaving group (I⁻ > Br⁻ > Cl⁻ > F⁻; OH⁻ and NH₂⁻ are poor)."
+        },
+        {
+          "id": "substitution-q8",
+          "type": "multiple-choice",
+          "prompt": "Which set of conditions favors SN2 over SN1?",
+          "options": [
+            "Strong nucleophile + polar aprotic solvent",
+            "Weak nucleophile + polar protic solvent",
+            "Tertiary substrate + water",
+            "Heat + a weak base"
+          ],
+          "answer": 0,
+          "explanation": "A strong nucleophile and a polar aprotic solvent (which leaves the nucleophile 'naked' and reactive) favor the bimolecular SN2 pathway."
+        }
+      ]
+    },
+    {
+      "id": "elimination",
+      "title": "Elimination Reactions (E1 vs E2)",
+      "icon": "💨",
+      "concept": "Elimination reactions convert a substrate into an alkene by removing a leaving group and a hydrogen from an adjacent (β) carbon. There are two mechanisms.\n\nE2 is bimolecular and concerted: a strong base removes the β-hydrogen at the same time the leaving group departs, forming the C=C double bond in one step. The rate law is rate = k[base][substrate]. E2 requires an anti-periplanar geometry — the departing hydrogen and leaving group must be 180° apart — which controls stereochemistry. With a small or unhindered base, E2 follows Zaitsev's rule and gives the more substituted (more stable) alkene. Bulky bases such as tert-butoxide (t-BuO⁻) instead give the less substituted 'Hofmann' product because they cannot easily reach the more hindered β-hydrogen.\n\nE1 is unimolecular and stepwise. The leaving group departs first to form a carbocation (the rate-determining step, rate = k[substrate]), and then a weak base removes a β-hydrogen to form the alkene. E1 also follows Zaitsev's rule and, like SN1, can involve carbocation rearrangements. E1 competes with SN1 (both share the carbocation intermediate), while E2 competes with SN2 (both are bimolecular). Heat, a strong base, and hindered bases favor elimination, while a strong nucleophile favors substitution.",
+      "diagram": {
+        "smiles": "CCC(C)Br",
+        "caption": "2-Bromobutane — elimination gives but-2-ene (Zaitsev) and but-1-ene"
+      },
+      "resources": [
+        {
+          "title": "Substitution and elimination reactions (Khan Academy)",
+          "url": "https://www.khanacademy.org/science/organic-chemistry/substitution-elimination-reactions"
+        },
+        {
+          "title": "E1/E2 guides (Master Organic Chemistry)",
+          "url": "https://www.masterorganicchemistry.com/"
+        },
+        {
+          "title": "Organic Chemistry (LibreTexts)",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
+        }
+      ],
+      "questions": [
+        {
+          "id": "elimination-q1",
+          "type": "multiple-choice",
+          "prompt": "What is the rate law for an E2 reaction?",
+          "options": [
+            "rate = k[substrate]",
+            "rate = k[base][substrate]",
+            "rate = k[base]",
+            "rate = k[substrate]²"
+          ],
+          "answer": 1,
+          "explanation": "E2 is bimolecular: both the base and the substrate appear in the rate law, so rate = k[base][substrate] (second order)."
+        },
+        {
+          "id": "elimination-q2",
+          "type": "multiple-choice",
+          "prompt": "What is the rate law for an E1 reaction?",
+          "options": [
+            "rate = k[substrate]",
+            "rate = k[base][substrate]",
+            "rate = k[base]",
+            "rate = k[substrate][nucleophile]"
+          ],
+          "answer": 0,
+          "explanation": "E1 is unimolecular: only the substrate is in the rate law, so rate = k[substrate] (first order)."
+        },
+        {
+          "id": "elimination-q3",
+          "type": "multiple-choice",
+          "prompt": "Zaitsev's rule predicts that the major elimination product is…",
+          "options": [
+            "The less substituted alkene",
+            "The more substituted (more stable) alkene",
+            "The alkane",
+            "The alkyne"
+          ],
+          "answer": 1,
+          "explanation": "Zaitsev's rule: the major product is the more substituted alkene, which is more stable because alkyl groups stabilize the double bond."
+        },
+        {
+          "id": "elimination-q4",
+          "type": "multiple-choice",
+          "prompt": "What geometry between the β-hydrogen and the leaving group is required for E2?",
+          "options": [
+            "Syn-periplanar (0°)",
+            "Anti-periplanar (180°)",
+            "Gauche (60°)",
+            "Any geometry works"
+          ],
+          "answer": 1,
+          "explanation": "E2 requires anti-periplanar geometry: the departing H and leaving group are 180° apart, which allows the forming π bond to overlap properly."
+        },
+        {
+          "id": "elimination-q5",
+          "type": "multiple-choice",
+          "prompt": "Which base favors the Hofmann (less substituted) elimination product?",
+          "options": [
+            "Hydroxide (OH⁻)",
+            "Methoxide (CH₃O⁻)",
+            "A bulky base like tert-butoxide (t-BuO⁻)",
+            "Water"
+          ],
+          "answer": 2,
+          "explanation": "Bulky bases such as t-BuO⁻ cannot reach the more hindered β-hydrogen, so they favor removal of the less hindered hydrogen, giving the less substituted (Hofmann) alkene."
+        },
+        {
+          "id": "elimination-q6",
+          "type": "multiple-choice",
+          "prompt": "Which intermediate is formed in an E1 reaction?",
+          "options": [
+            "A carbanion",
+            "A carbocation",
+            "A free radical",
+            "A cyclic transition state only"
+          ],
+          "answer": 1,
+          "explanation": "E1 is stepwise: the leaving group departs first to form a carbocation, then a base removes a β-hydrogen to form the alkene."
+        },
+        {
+          "id": "elimination-q7",
+          "type": "multiple-choice",
+          "prompt": "E2 elimination of 2-bromobutane with a small base gives which MAJOR product?",
+          "options": [
+            "But-1-ene",
+            "But-2-ene",
+            "Butane",
+            "But-1-yne"
+          ],
+          "answer": 1,
+          "explanation": "Zaitsev's rule favors the more substituted alkene. But-2-ene (two substituents on the double bond) is more stable than but-1-ene (one substituent)."
+        },
+        {
+          "id": "elimination-q8",
+          "type": "multiple-choice",
+          "prompt": "What do E1 and SN1 reactions have in common?",
+          "options": [
+            "Both are bimolecular",
+            "Both proceed through a carbocation intermediate",
+            "Both require a strong base",
+            "Both give inversion of configuration"
+          ],
+          "answer": 1,
+          "explanation": "E1 and SN1 share the same first step — formation of a carbocation — and both are first-order (unimolecular). They then diverge: substitution vs elimination."
+        }
+      ]
+    },
+    {
+      "id": "alkene-addition",
+      "title": "Alkene Addition Reactions",
+      "icon": "➕",
+      "concept": "Alkenes react by electrophilic addition: the π electrons of the C=C double bond attack an electrophile, and two groups add across the double bond to give a saturated product. Regiochemistry is governed by Markovnikov's rule: when HX or water adds to an unsymmetrical alkene, the hydrogen adds to the carbon that already has more hydrogens (the less substituted carbon), so the more substituted carbon bears the other group — because that forms the more stable carbocation.\n\nThe most important addition reactions:\n• Hydrogenation (H₂ with a Pt, Pd, or Ni catalyst) adds two hydrogens in a syn fashion to give an alkane.\n• Hydrohalogenation (HBr, HCl, HI) adds H and X with Markovnikov regiochemistry through a carbocation.\n• Acid-catalyzed hydration (H₂O/H₂SO₄) adds water with Markovnikov regiochemistry to give an alcohol, but the carbocation can rearrange.\n• Halogenation (Br₂ or Cl₂) gives a vicinal dihalide by anti addition through a cyclic halonium ion.\n• Halohydrin formation (X₂ in water) places the halogen on the less substituted carbon and the OH on the more substituted carbon, with anti stereochemistry.\n• Hydroboration-oxidation (BH₃ then H₂O₂/NaOH) adds water with anti-Markovnikov regiochemistry and syn stereochemistry.\n• Oxymercuration-demercuration achieves Markovnikov hydration without carbocation rearrangements.",
+      "diagram": {
+        "smiles": "C=CC",
+        "caption": "Propene (CH₃CH=CH₂) — an unsymmetrical alkene used to test Markovnikov's rule"
+      },
+      "resources": [
+        {
+          "title": "Alkene reactions (Khan Academy)",
+          "url": "https://www.khanacademy.org/science/organic-chemistry/alkenes-alkynes"
+        },
+        {
+          "title": "Organic Chemistry (LibreTexts)",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
+        },
+        {
+          "title": "Organic Chemistry (OpenStax)",
+          "url": "https://openstax.org/details/books/organic-chemistry"
+        }
+      ],
+      "questions": [
+        {
+          "id": "alkene-addition-q1",
+          "type": "multiple-choice",
+          "prompt": "Markovnikov's rule states that in HX addition to an unsymmetrical alkene…",
+          "options": [
+            "The H adds to the more substituted carbon",
+            "The H adds to the less substituted carbon (more hydrogens) and X to the more substituted carbon",
+            "The X adds to the less substituted carbon",
+            "The H and X add to the same carbon"
+          ],
+          "answer": 1,
+          "explanation": "Markovnikov's rule: the hydrogen adds to the carbon with more hydrogens (less substituted), so the halogen ends up on the more substituted carbon, via the more stable carbocation."
+        },
+        {
+          "id": "alkene-addition-q2",
+          "type": "short-answer",
+          "prompt": "What is the major product of adding HBr to propene (CH₃CH=CH₂)?",
+          "diagram": {
+            "smiles": "C=CC",
+            "caption": "Propene (CH₃CH=CH₂)"
+          },
+          "answer": "2-bromopropane",
+          "explanation": "The H adds to the terminal CH₂ carbon and Br adds to the more substituted (middle) carbon, giving 2-bromopropane (CH₃CHBrCH₃). Its common name is isopropyl bromide."
+        },
+        {
+          "id": "alkene-addition-q3",
+          "type": "multiple-choice",
+          "prompt": "Halogenation of an alkene with Br₂ gives…",
+          "options": [
+            "Syn addition of two bromines",
+            "Anti addition to form a vicinal dibromide",
+            "A bromonium radical",
+            "An alkyl bromide with Markovnikov regiochemistry"
+          ],
+          "answer": 1,
+          "explanation": "Br₂ forms a cyclic bromonium ion, then bromide attacks from the opposite face, giving anti addition and a 1,2-dibromide (vicinal dibromide)."
+        },
+        {
+          "id": "alkene-addition-q4",
+          "type": "multiple-choice",
+          "prompt": "Hydroboration-oxidation (BH₃ then H₂O₂/NaOH) adds water with…",
+          "options": [
+            "Markovnikov regiochemistry and anti stereochemistry",
+            "Anti-Markovnikov regiochemistry and syn stereochemistry",
+            "Markovnikov regiochemistry and syn stereochemistry",
+            "No stereochemical preference"
+          ],
+          "answer": 1,
+          "explanation": "Hydroboration-oxidation places the OH on the less substituted carbon (anti-Markovnikov) with syn addition, because B and H add to the same face."
+        },
+        {
+          "id": "alkene-addition-q5",
+          "type": "multiple-choice",
+          "prompt": "Hydrogenation of an alkene with H₂ and a Pt/Pd/Ni catalyst produces…",
+          "options": [
+            "An alcohol",
+            "An alkane (syn addition of H₂)",
+            "A vicinal dihalide",
+            "An epoxide"
+          ],
+          "answer": 1,
+          "explanation": "Hydrogenation adds H₂ across the double bond (syn addition) to give the saturated alkane."
+        },
+        {
+          "id": "alkene-addition-q6",
+          "type": "multiple-choice",
+          "prompt": "Acid-catalyzed hydration of an alkene (H₂O/H₂SO₄) proceeds through which intermediate?",
+          "options": [
+            "A carbanion",
+            "A carbocation",
+            "A free radical",
+            "A halonium ion"
+          ],
+          "answer": 1,
+          "explanation": "Protonation of the alkene forms the more stable carbocation, which water then attacks to give a Markovnikov alcohol. Rearrangement is possible."
+        },
+        {
+          "id": "alkene-addition-q7",
+          "type": "multiple-choice",
+          "prompt": "In halohydrin formation (Br₂ in water), where does the OH group end up?",
+          "options": [
+            "On the less substituted carbon",
+            "On the more substituted carbon",
+            "On both carbons equally",
+            "On the halogen"
+          ],
+          "answer": 1,
+          "explanation": "The bromonium ion is opened by water at the more substituted carbon (where positive charge is better stabilized), so OH adds there and Br adds to the less substituted carbon."
+        },
+        {
+          "id": "alkene-addition-q8",
+          "type": "multiple-choice",
+          "prompt": "What is the advantage of oxymercuration-demercuration over acid-catalyzed hydration?",
+          "options": [
+            "It gives the anti-Markovnikov product",
+            "It achieves Markovnikov hydration without carbocation rearrangements",
+            "It requires no water",
+            "It adds hydrogen"
+          ],
+          "answer": 1,
+          "explanation": "Oxymercuration-demercuration (Hg(OAc)₂/H₂O then NaBH₄) gives Markovnikov hydration but avoids a free carbocation, so no rearrangements occur."
+        }
+      ]
+    },
+    {
+      "id": "sn-e-predict",
+      "title": "SN vs E: Predicting the Mechanism",
+      "icon": "🧭",
+      "concept": "Given a substrate, a reagent, and a solvent, you can predict whether substitution or elimination dominates — and which mechanism (SN1, SN2, E1, or E2) — using a few rules.\n\nFirst look at the substrate. Methyl and primary substrates do not form stable carbocations, so they cannot go through SN1/E1; with a good nucleophile they react by SN2 (or E2 if the base is bulky). Tertiary substrates are too hindered for SN2, so they react by SN1/E1 with a weak base/nucleophile, or by E2 with a strong base. Secondary substrates sit in the middle and can follow any pathway depending on the reagent.\n\nNext look at the reagent. A strong nucleophile that is a weak base (such as I⁻, Br⁻, CN⁻, N₃⁻, or RS⁻) favors substitution (SN2). A strong base — especially a bulky one like tert-butoxide (t-BuO⁻) — favors elimination (E2). A weak nucleophile/weak base (water, alcohols) favors the unimolecular pathways (SN1/E1).\n\nFinally, look at conditions. Polar aprotic solvents and strong nucleophiles favor SN2; polar protic solvents favor SN1/E1. Heat favors elimination (E1/E2) because elimination increases entropy and has a larger activation energy, while lower temperature favors substitution.\n\nA useful shorthand: strong nucleophile → substitution; strong base → elimination; weak nucleophile/base → SN1/E1; bulky base → E2; heat → elimination.",
+      "diagram": {
+        "smiles": "CC(C)(C)Br",
+        "caption": "tert-Butyl bromide — a 3° substrate whose pathway depends on the base and conditions"
+      },
+      "resources": [
+        {
+          "title": "Substitution and elimination reactions (Khan Academy)",
+          "url": "https://www.khanacademy.org/science/organic-chemistry/substitution-elimination-reactions"
+        },
+        {
+          "title": "SN1/SN2/E1/E2 decision guide (Master Organic Chemistry)",
+          "url": "https://www.masterorganicchemistry.com/"
+        },
+        {
+          "title": "Organic Chemistry (LibreTexts)",
+          "url": "https://chem.libretexts.org/Bookshelves/Organic_Chemistry"
+        }
+      ],
+      "questions": [
+        {
+          "id": "sn-e-predict-q1",
+          "type": "multiple-choice",
+          "prompt": "A primary alkyl halide with a strong nucleophile (e.g., NaCN) in a polar aprotic solvent mainly undergoes…",
+          "options": [
+            "SN2",
+            "SN1",
+            "E1",
+            "E2"
+          ],
+          "answer": 0,
+          "explanation": "Primary substrates are unhindered and cannot form stable carbocations, so a strong nucleophile drives SN2."
+        },
+        {
+          "id": "sn-e-predict-q2",
+          "type": "multiple-choice",
+          "prompt": "A tertiary alkyl halide treated with a strong, bulky base (t-BuOK) mainly undergoes…",
+          "options": [
+            "SN1",
+            "SN2",
+            "E2",
+            "E1"
+          ],
+          "answer": 2,
+          "explanation": "A bulky strong base is a poor nucleophile (steric hindrance) but a good base, so it removes a β-hydrogen and gives E2 elimination."
+        },
+        {
+          "id": "sn-e-predict-q3",
+          "type": "multiple-choice",
+          "prompt": "A tertiary alkyl halide in water (a weak nucleophile/base) mainly undergoes…",
+          "options": [
+            "SN2",
+            "SN1/E1 (via a carbocation)",
+            "E2",
+            "No reaction"
+          ],
+          "answer": 1,
+          "explanation": "Tertiary substrates form stable carbocations, and a weak nucleophile/base cannot do SN2 or E2, so the reaction goes through SN1/E1."
+        },
+        {
+          "id": "sn-e-predict-q4",
+          "type": "multiple-choice",
+          "prompt": "Which condition generally shifts the balance toward elimination rather than substitution?",
+          "options": [
+            "Low temperature",
+            "A strong nucleophile that is a weak base",
+            "Heat and a strong (often bulky) base",
+            "A polar aprotic solvent alone"
+          ],
+          "answer": 2,
+          "explanation": "Heat favors elimination (higher entropy, higher activation energy), and a strong base removes β-hydrogens, favoring E1/E2 over substitution."
+        },
+        {
+          "id": "sn-e-predict-q5",
+          "type": "multiple-choice",
+          "prompt": "A secondary alkyl halide with NaI in acetone mainly undergoes…",
+          "options": [
+            "E2",
+            "SN1",
+            "SN2",
+            "E1"
+          ],
+          "answer": 2,
+          "explanation": "Iodide is a strong nucleophile but a weak base, and acetone is polar aprotic, so SN2 substitution is favored over elimination."
+        },
+        {
+          "id": "sn-e-predict-q6",
+          "type": "multiple-choice",
+          "prompt": "Why can't methyl and primary substrates undergo SN1 or E1?",
+          "options": [
+            "They are too hindered",
+            "They would form unstable carbocations",
+            "They have no β-hydrogens",
+            "They are too polar"
+          ],
+          "answer": 1,
+          "explanation": "SN1/E1 require a carbocation, and methyl/primary carbocations are too unstable to form. So these substrates use SN2/E2 instead."
+        },
+        {
+          "id": "sn-e-predict-q7",
+          "type": "multiple-choice",
+          "prompt": "Which type of reagent favors substitution (SN2) over elimination?",
+          "options": [
+            "A strong nucleophile that is a weak base (e.g., I⁻, CN⁻)",
+            "A bulky strong base (t-BuO⁻)",
+            "A weak nucleophile and weak base (H₂O)",
+            "A strong base with no nucleophilicity"
+          ],
+          "answer": 0,
+          "explanation": "Strong nucleophiles that are weak bases (I⁻, Br⁻, CN⁻, N₃⁻, RS⁻) attack carbon efficiently but do not remove β-hydrogens well, favoring SN2."
+        },
+        {
+          "id": "sn-e-predict-q8",
+          "type": "multiple-choice",
+          "prompt": "What is the general effect of increasing temperature on SN/E competition?",
+          "options": [
+            "It favors substitution",
+            "It favors elimination",
+            "It has no effect",
+            "It stops all reactions"
+          ],
+          "answer": 1,
+          "explanation": "Higher temperature favors elimination (E1/E2) because elimination has a larger activation energy and produces more molecules (favorable entropy)."
+        }
+      ]
     }
   ]
 }
