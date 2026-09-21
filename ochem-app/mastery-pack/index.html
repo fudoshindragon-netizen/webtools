@@ -27,15 +27,21 @@
       .mp-item .meta { flex: 1; min-width: 220px; }
       .mp-item h3 { margin: 0 0 4px; font-size: 16px; }
       .mp-item p { margin: 0; font-size: 14px; color: var(--text-muted); }
-      .mp-state {
-        font-size: 13px;
-        font-weight: 600;
-        color: var(--text-muted);
-        background: var(--surface-alt);
-        border: 1px solid var(--border);
+      .mp-download {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        background: var(--accent);
+        border: 1px solid var(--accent);
         border-radius: 999px;
-        padding: 6px 14px;
+        padding: 8px 18px;
         white-space: nowrap;
+        text-decoration: none;
+      }
+      .mp-download:hover {
+        background: var(--accent-strong);
+        color: #fff;
+        text-decoration: none;
       }
       .mp-note {
         background: var(--accent-soft);
@@ -64,24 +70,24 @@
 
     <main class="mp-page">
       <h1>OChem Mastery Pack — Your Downloads</h1>
-      <p class="mp-intro">Thanks for purchasing the Mastery Pack. Your files will appear below.</p>
+      <p class="mp-intro">Thanks for purchasing the Mastery Pack. Your files are ready below — download them any time (lifetime access).</p>
 
       <div class="mp-item">
         <div class="icon">📘</div>
         <div class="meta">
           <h3>High-Yield Study Guide</h3>
-          <p>Condensed concept summaries and the reactions &amp; mechanisms that show up on exams. (PDF)</p>
+          <p>Condensed concept summaries and the reactions &amp; mechanisms that show up on exams. (Markdown)</p>
         </div>
-        <span class="mp-state">File being added</span>
+        <a class="mp-download" href="study-guide.md" download>Download</a>
       </div>
 
       <div class="mp-item">
         <div class="icon">🧾</div>
         <div class="meta">
           <h3>Printable Reaction Summary Sheets</h3>
-          <p>One-page cheat sheets for the key reaction families. (PDF)</p>
+          <p>One-page cheat sheets for the key reaction families. (Markdown)</p>
         </div>
-        <span class="mp-state">File being added</span>
+        <a class="mp-download" href="reaction-summary-sheets.md" download>Download</a>
       </div>
 
       <div class="mp-item">
@@ -90,11 +96,11 @@
           <h3>Flashcard Deck</h3>
           <p>Anki-importable deck for active recall of structures, names, and mechanisms. (CSV)</p>
         </div>
-        <span class="mp-state">File being added</span>
+        <a class="mp-download" href="flashcards.csv" download>Download</a>
       </div>
 
       <div class="mp-note">
-        <strong>Heads up:</strong> the deliverable PDF/CSV files are being finalized and will be posted right here. Check back shortly — your purchase gives you lifetime access to this page. If you don't see your files soon, reach out with your receipt via <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">Buy Me a Coffee</a>.
+        <strong>How to use:</strong> open the study guide and summary sheets in any Markdown reader or text editor (or print them). Import <code>flashcards.csv</code> into Anki (File → Import, choose "Basic" note type, map the <em>Front</em> and <em>Back</em> columns). If anything is missing or you have trouble, reach out with your receipt via <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">Buy Me a Coffee</a>.
       </div>
 
       <a class="back-link" href="../index.html">← Back to free practice drills</a>
