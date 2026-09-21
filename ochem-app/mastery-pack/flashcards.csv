@@ -1,0 +1,89 @@
+Front,Back
+Hybridization of carbon in methane (CH4)?,sp3 (four single bonds)
+Bond angle in a tetrahedral (sp3) carbon?,109.5 degrees
+Hybridization + geometry of carbons in ethene (C2H4)?,"sp2, trigonal planar (120 degrees)"
+Hybridization + geometry of carbons in ethyne (HC≡CH)?,"sp, linear (180 degrees)"
+Most electronegative element (Pauling scale)?,Fluorine (~4.0)
+"Pauling electronegativity order: F, O, N, C, H?",F 4.0 > O 3.5 > N 3.0 > C 2.5 > H 2.2
+Formal charge formula?,valence − (lone-pair e−) − ½(bonding e−)
+Formal charge on nitrogen in NH4+?,+1 (5 − 0 − 4)
+Valence electrons in a neutral carbon atom?,4
+Which bond is more polar: O–H or C–Cl?,O–H (ΔEN ~1.3 vs ~0.7)
+Water (H2O) bond angle?,~104.5 degrees (two lone pairs)
+Ammonia (NH3) bond angle?,~107 degrees (one lone pair)
+IUPAC root for a 5-carbon chain?,pent-
+IUPAC root for a 7-carbon chain?,hept-
+Suffix for an alkane (all single bonds)?,-ane
+Suffix for an alkene (C=C)?,-ene
+Suffix for an alcohol (–OH)?,-ol
+Suffix for a carboxylic acid (–COOH)?,-oic acid
+IUPAC name of CH3CH2CH3?,propane
+IUPAC name of CH3CH2OH?,ethanol
+IUPAC name of CH3CH2CH2CH3?,butane
+IUPAC name of CH3CH=CH2?,propene
+"Total carbons in 2,3-dimethylbutane?",6 (4 parent + 2 methyl)
+Numbering rule for substituents on the parent chain?,lowest possible locants (numbers)
+Functional group in CH3COOH?,Carboxylic acid (–COOH)
+Functional group in CH3OH?,Alcohol (–OH)
+Functional group in CH3NH2?,Amine (–NH2)
+Functional group in CH3COCH3 (acetone)?,Ketone (C=O bonded to two carbons)
+Functional group in CH3OCH3?,Ether (R–O–R)
+Functional group in CH3COOCH3 (methyl acetate)?,Ester (R–COO–R')
+An amide contains a carbonyl bonded to what?,A nitrogen (–CO–NR2)
+Aldehyde vs ketone: key structural difference?,Aldehyde carbonyl C bonded to H; ketone to two carbons
+Functional group in CH3CHO (acetaldehyde)?,Aldehyde
+Functional group in CH3CH2Br?,Alkyl halide (R–X)
+Ester vs ether: what does an ester have that an ether lacks?,A carbonyl (C=O)
+Suffix for a ketone?,-one
+A carbon is a chiral center when bonded to what?,4 different groups
+Enantiomers are...?,Non-superimposable mirror images
+Diastereomers are...?,Stereoisomers that are NOT mirror images
+CIP priority is assigned by...?,Highest atomic number of the attached atom
+"R vs S (lowest priority away, trace 1-2-3)?",R = clockwise; S = counterclockwise
+E vs Z (higher-priority groups on a double bond)?,E = opposite sides; Z = same side
+A racemic mixture is...?,50:50 enantiomers (optically inactive)
+A meso compound is...?,Achiral despite chiral centers (internal mirror plane)
+Number of chiral centers in 2-butanol?,1 (carbon 2)
+Do enantiomers have identical physical properties?,Yes (except direction of optical rotation)
+"CIP priority order of –OH, –NH2, –CH3, –H?",OH > NH2 > CH3 > H
+What makes a molecule chiral?,It is not superimposable on its mirror image
+SN2 stands for?,"Substitution, Nucleophilic, Bimolecular"
+SN2 rate law?,rate = k[nucleophile][substrate]
+SN1 rate law?,rate = k[substrate]
+SN2 stereochemistry?,Inversion (Walden inversion)
+SN1 stereochemistry?,Racemization
+SN2 substrate preference?,methyl > primary > secondary (tertiary unreactive)
+SN1 substrate preference?,tertiary > secondary (primary/methyl unreactive)
+Best leaving group?,"Iodide (I−), a weak base"
+Leaving group order (best to worst)?,I− > Br− > Cl− > F−
+SN2 preferred solvent?,"Polar aprotic (DMSO, acetone)"
+SN1 preferred solvent?,"Polar protic (water, alcohol)"
+SN1 intermediate?,Carbocation
+E2 rate law?,rate = k[base][substrate]
+E1 rate law?,rate = k[substrate]
+E2 required geometry?,Anti-periplanar (beta-H and LG 180 degrees apart)
+Zaitsev's rule gives which alkene?,More substituted (more stable) alkene
+Bulky base (t-BuO−) gives which alkene?,Hofmann (less substituted)
+E1 intermediate?,Carbocation
+E2 of 2-bromobutane (small base) major product?,But-2-ene (Zaitsev)
+What do E1 and SN1 share?,Carbocation intermediate (both first-order)
+Markovnikov's rule (HX addition)?,H to less substituted C; X to more substituted C
+HBr + propene major product?,2-bromopropane
+Halogenation (Br2) stereochemistry?,Anti addition (vicinal dibromide)
+Halogenation (Br2) intermediate?,Cyclic bromonium ion
+Hydroboration-oxidation regiochemistry?,Anti-Markovnikov (syn addition)
+Hydrogenation (H2/Pt) product?,Alkane (syn addition)
+Acid-catalyzed hydration intermediate?,Carbocation
+Halohydrin (Br2/H2O): OH on which carbon?,More substituted carbon
+Oxymercuration-demercuration advantage?,Markovnikov hydration without rearrangement
+Hydrohalogenation regiochemistry?,Markovnikov
+Which additions are syn?,Hydrogenation and hydroboration-oxidation
+Which additions are anti?,Halogenation and halohydrin formation
+Primary substrate + strong nucleophile?,SN2
+Tertiary substrate + bulky strong base?,E2
+Tertiary substrate + weak nucleophile/base?,SN1/E1
+Heat favors which pathway?,Elimination (E1/E2)
+"Strong nucleophile + weak base (I−, CN−) favors?",SN2 (substitution)
+Why can't methyl/primary do SN1/E1?,They would form unstable carbocations
+Secondary substrate + NaI/acetone?,SN2
+Increasing temperature effect on SN vs E?,Favors elimination
