@@ -444,6 +444,77 @@ body {
   margin: 0;
 }
 
+/* Mastery Pack upsell */
+.upsell-section {
+  margin-top: 32px;
+}
+
+.upsell-inner {
+  background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #40916c 100%);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 24px rgba(27, 67, 50, 0.22);
+}
+
+.upsell-copy {
+  flex: 1;
+  min-width: 240px;
+}
+
+.upsell-title {
+  color: #fff;
+  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.upsell-desc {
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  font-size: 15px;
+}
+
+.upsell-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.upsell-btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 22px;
+  border-radius: 10px;
+  white-space: nowrap;
+  transition: transform 0.08s ease, box-shadow 0.12s ease;
+}
+
+.upsell-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.upsell-btn-soon {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.upsell-soon-note {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+}
+
 /* Footer */
 .app-footer {
   border-top: 1px solid var(--border);

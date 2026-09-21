@@ -9,6 +9,27 @@ const STORAGE_KEY = 'ochem-practice-progress-v1';
 let content = null;
 let currentTopicId = null;
 
+// ─── Monetization config ───────────────────────────────────────
+// OChem Mastery Pack upsell. When the paid pack launches, set
+// MASTERY_PACK.checkoutUrl to its live Stripe Payment Link and the
+// upsell CTA becomes a real "Buy" button. Until then it renders an
+// honest "coming soon" state — never a fake purchase link.
+const MASTERY_PACK = {
+  checkoutUrl: '',          // ← Stripe Payment Link (e.g. https://buy.stripe.com/…)
+  downloadUrl: 'download.html',
+  learnMoreText: 'Learn more'
+};
+
+function renderUpsell() {
+  const cta = document.getElementById('upsell-cta');
+  if (!cta) return;
+  if (MASTERY_PACK.checkoutUrl) {
+    cta.innerHTML = `<a class="upsell-btn" href="${MASTERY_PACK.checkoutUrl}" target="_blank" rel="noopener">Get the Mastery Pack →</a>`;
+  } else {
+    cta.innerHTML = `<a class="upsell-btn upsell-btn-soon" href="${MASTERY_PACK.downloadUrl}" rel="noopener">${MASTERY_PACK.learnMoreText}</a><span class="upsell-soon-note">Full pack coming soon — the drills stay free.</span>`;
+  }
+}
+
 // ─── State / localStorage ──────────────────────────────────────
 function loadProgress() {
   try {
@@ -338,6 +359,8 @@ function escapeHtml(s) {
 
 // ─── Init ───────────────────────────────────────────────────────
 function init() {
+  renderUpsell();
+
   fetch('content.json')
     .then((res) => {
       if (!res.ok) throw new Error('content.json failed to load');
