@@ -4,7 +4,7 @@ Reuses the OChem study-app architecture (static SPA: `index.html` + `app.js` +
 `styles.css` + `content.json`). No backend, no API keys, $0 to run.
 
 ## File structure
-- `index.html` — static shell (header, topic list, topic detail, Master Class upsell, disclaimer footer).
+- `index.html` — static shell (header, topic list, topic detail, Electrical Deeper Understanding upsell, disclaimer footer).
 - `app.js` — loads `content.json`, renders topics/questions, checks answers, persists progress in `localStorage`.
 - `styles.css` — light theme, electrical-blue accent.
 - `content.json` — all study content (see below).
@@ -97,12 +97,12 @@ Curated free tutorial links, rendered as clickable links
 normalizer strips whitespace/case/punctuation, so `"30"` matches `"30"` but not
 `"30 ohms"`. Phrase prompts to ask for the bare value (e.g. "Enter a number.").
 
-## Monetization (Master Class)
-`app.js` has a `MASTER_CLASS` config. The paid companion is a **Master Class**
+## Monetization (Electrical Deeper Understanding)
+`app.js` has a `MASTER_CLASS` config. The paid companion is a **Electrical Deeper Understanding**
 (study guide + formula/reference sheets + flashcard deck), mirroring the OChem
 free-app → Mastery Pack model.
 - `checkoutUrl` is currently **empty** → the upsell renders an honest
-  "Master Class coming soon — the drills stay free." note.
+  "Electrical Deeper Understanding coming soon — the drills stay free." note.
 - When a live Stripe Payment Link exists, set `checkoutUrl` + `price`, and add a
   `master-class/` download page (analogous to `ochem-app/mastery-pack/`).
 
