@@ -14,12 +14,12 @@ let content = null;
 let currentTopicId = null;
 
 // ─── Monetization config ───────────────────────────────────────
-// 8P2 "Master Class" paid companion. checkoutUrl is left empty until
-// a live Stripe Payment Link exists; the CTA then renders an honest
-// "coming soon" note. When it's ready, set checkoutUrl + price here.
+// 8P2 "Master Class" paid companion. checkoutUrl is the live Stripe
+// Payment Link ($15 one-time); the CTA renders a real Buy button.
+// Post-payment Stripe redirects here to `master-class/` (downloads).
 const MASTER_CLASS = {
-  checkoutUrl: '',        // e.g. 'https://buy.stripe.com/...'
-  price: '',              // e.g. '$29' — shown on the Buy button
+  checkoutUrl: 'https://buy.stripe.com/bJe8wP2i09Fo1CAeTk0ZW0c',
+  price: '$15',
   downloadUrl: 'master-class/'
 };
 
