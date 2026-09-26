@@ -1,6 +1,6 @@
 # Electrical Deeper Understanding — Formula & Reference Sheets (Printable)
 
-> **Study aid only** — not a substitute for your course, employer training, or current codes and standards. Print this reference for quick recall during practice. Verify against your course materials and the latest standards.
+> **Study aid only** — not a substitute for your course, employer training, or governing standards (NEC, NFPA 70E, OSHA). Print for quick recall during practice. Verify against your course materials and the latest standards.
 
 ---
 
@@ -30,7 +30,7 @@
 | Series R–L | **Z = R + jXL** |
 | Series R–C | **Z = R − jXC** |
 
-**Phase:** pure **inductor** → current **lags** voltage 90°. Pure **capacitor** → current **leads** voltage 90°.
+**Phase:** inductor → current **lags** voltage 90°. Capacitor → current **leads** voltage 90°.
 **Frequency:** XL **↑** with ƒ (DC → short, high ƒ → open). XC **↓** with ƒ (DC → open, high ƒ → short).
 
 ---
@@ -42,7 +42,7 @@
 | **Series** | Rₜ = R₁ + R₂ + … | Same everywhere | Divides |
 | **Parallel** | 1/Rₜ = 1/R₁ + 1/R₂ + … | Divides | Same across branches |
 
-Two resistors in parallel shortcut: **Rₜ = (R₁·R₂) / (R₁ + R₂)**. Two equal resistors in parallel → **half** of one.
+Two resistors in parallel: **Rₜ = (R₁·R₂) / (R₁ + R₂)**. Two equal resistors in parallel → **half** of one.
 
 ---
 
@@ -171,14 +171,24 @@ Quick values: 480 V wye winding ≈ **277 V**; 208 V wye winding ≈ **120 V**.
 
 ---
 
-## Sheet 13 — Binary Place Values
+## Sheet 13 — Binary, Hex & Bit-Weight Reference
 
-| Bit (MSB → LSB) | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
+**Binary place values (8 bits, MSB → LSB):**
+
+| Bit | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 |---|---|---|---|---|---|---|---|---|
-| Place value | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+| Weight | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
 
-8 bits = 1 byte = **256** distinct values. Convert by summing the place values of every set (1) bit.
+8 bits = 1 byte = **256** distinct values; a **nibble** is 4 bits (0–15).
+
+**Hex ↔ binary nibble:**
+
+| Hex | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Binary | 0000 | 0001 | 0010 | 0011 | 0100 | 0101 | 0110 | 0111 | 1000 | 1001 | 1010 | 1011 | 1100 | 1101 | 1110 | 1111 |
+
+Convert binary → hex by grouping bits into nibbles from the right.
 
 ---
 
-*For worked examples and full explanations, see `study-guide.md`. Drill recall with `flashcards.csv`.*
+*For worked examples and pitfalls, see `study-guide.md`. Drill recall with `flashcards.csv`.*

@@ -1,5 +1,5 @@
-Front,Back
 How many bits are in a byte?,8
+How many bits are in a nibble?,4
 Place value of the MSB in an 8-bit byte?,128
 How many distinct values can 8 bits represent?,256
 Binary 1010 in decimal?,10
@@ -7,6 +7,7 @@ Decimal 13 in 4-bit binary?,1101
 Ohm's Law?,V = I × R
 Power formula?,P = V × I
 Power from current and resistance?,P = I² × R
+Power from voltage and resistance?,P = V² ÷ R
 Current drawn by 6 Ω on 24 V?,4 A
 Power of 10 A on 120 V?,"1,200 W"
 Inductive reactance formula?,XL = 2πƒL
@@ -15,13 +16,16 @@ In a pure inductor current ___ voltage by 90°?,lags
 In a pure capacitor current ___ voltage by 90°?,leads
 Impedance magnitude formula?,|Z| = √(R² + X²)
 Series R-L impedance?,Z = R + jXL
+Series R-C impedance?,Z = R - jXC
 Total resistance of two 10 Ω in series?,20 Ω
 Total resistance of two 10 Ω in parallel?,5 Ω
 Quantity that is the same in a series circuit?,current
 Quantity that is the same across parallel branches?,voltage
 Two equal resistors in parallel give?,half of one
+Three 30 Ω resistors in series?,90 Ω
 Transformer turns ratio?,Np/Ns = Vp/Vs
 Step-up transformer turns?,Ns > Np
+Step-down transformer turns?,Ns < Np
 Ideal transformer power relation?,Vp·Ip = Vs·Is
 Power factor formula?,PF = W / VA = cos θ
 Apparent power formula?,VA = W / PF
@@ -32,8 +36,10 @@ Wye motor winding voltage?,V_line ÷ √3
 Delta motor winding voltage?,V_line (full line voltage)
 Balanced three-phase power formula?,P = √3 × V_line × I_line × PF
 Phase voltage of a 480 V wye motor?,277 V
+Phase voltage of a 208 V wye motor?,120 V
 Motor service factor definition?,multiplier on rated horsepower indicating sustained overload capacity
 Continuous HP of a 10 HP motor at SF 1.15?,11.5 HP
+Typical service factor values?,1.0 or 1.15
 Induction motor inrush current magnitude?,several times (often ~6×) full-load current
 As a motor spins up its inrush current?,decays
 Weakening the field of a shunt motor?,raises speed
@@ -41,17 +47,20 @@ Reducing armature voltage of a shunt motor?,lowers speed
 VFD power flow?,AC → DC → AC
 Motor synchronous speed formula?,n ≈ 120·f / poles
 Synchronous speed of a 4-pole motor at 60 Hz?,"1,800 rpm"
+To slow an AC motor with a VFD?,reduce the output frequency
 Dynamic braking dissipates energy as?,heat in a braking resistor
 During dynamic braking the motor acts as?,a generator
 Fuse interrupting (AIC) rating?,maximum fault current it can safely clear
+Fuse continuous current rating?,the current it can carry continuously
 Fuse type that rides through motor inrush?,dual-element (time-delay)
+Fuse type for sensitive loads without inrush?,fast-acting
 Typical CT secondary current?,5 A or 1 A
 Never do this to an energized CT secondary?,open-circuit it
-A CT steps a large primary current?,down to a smaller secondary current
 SPST stands for?,"Single Pole, Single Throw"
 SPDT routes a common terminal to?,one of two outputs
 DPDT stands for?,"Double Pole, Double Throw"
 Number of separate circuits a switch controls?,poles
+Number of output positions per pole?,throws
 Purpose of a grounding switch?,connect equipment to ground for maintenance
 AND gate outputs 1 when?,both inputs are 1
 OR gate outputs 1 when?,at least one input is 1
@@ -60,19 +69,32 @@ XOR gate outputs 1 when?,inputs differ
 NAND equals?,NOT-AND
 NOR equals?,NOT-OR
 XNOR equals?,NOT-XOR
+XNOR outputs 1 when?,inputs are equal
 In ladder logic a coil is an?,output
 NO contact is true when?,its input is energized
 NC contact is true when?,its input is NOT energized
 Seal-in circuit keeps coil on via?,a contact driven by the output coil in parallel with Start
-16-bit signed INT range?,"−32,768 to 32,767"
+16-bit signed INT range?,"-32,768 to 32,767"
 Single-bit data type?,BOOL
 REAL data type?,32-bit floating point
+Sourcing (PNP) output?,supplies current out
 Counts from a 12-bit converter?,"4,096"
 Counts from a 16-bit converter?,"65,536"
 Analog input resolution per count?,full-scale span ÷ 2ⁿ
-Resolution of 0–10 V on 12-bit?,~2.44 mV
-Analog scaling formula?,EU = (raw − raw_min)/(raw_max − raw_min) × (EU_max − EU_min) + EU_min
+Resolution of 0-10 V on 12-bit?,~2.44 mV
+Analog scaling formula?,EU = (raw - raw_min)/(raw_max - raw_min) × (EU_max - EU_min) + EU_min
+An analog input card converts a signal to?,a digital count
+An n-bit converter gives how many counts?,2ⁿ
 Overload contact position in a start/stop rung?,in series with the coil
 Pressing Stop (NC) does what?,opens the rung and de-energizes the coil
 Start button contact type?,NO (normally open)
 Seal-in contact is placed?,in parallel with Start
+Purpose of the overload contact?,protect the motor from sustained overcurrent
+Hex digit A in binary?,1010
+Hex digit F in binary?,1111
+Number of distinct values in a 4-bit nibble?,16
+Sinking (NPN) output?,receives current in
+A sinking input expects a ___ device?,sourcing
+UINT data type range?,"0 to 65,535"
+Shunt motor field connection?,in parallel with the armature
+8-bit binary for decimal 255?,11111111
