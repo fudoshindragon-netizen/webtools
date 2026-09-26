@@ -1,0 +1,150 @@
+{
+  "app": {
+    "title": "8P2 Electrical Controls & Power",
+    "subtitle": "Free study & practice drills",
+    "disclaimer": "Study aid only — not a substitute for your course, employer training, or current codes and standards. Content may contain errors; verify against your course materials and the latest standards."
+  },
+  "topics": [
+    {
+      "id": "ohms-law",
+      "title": "Ohm's Law & Power",
+      "icon": "⚡",
+      "concept": "Ohm's Law relates voltage, current, and resistance: V = I × R (volts = amps × ohms). Rearranged, I = V ÷ R and R = V ÷ I. Electrical power is P = V × I; combined with Ohm's Law that gives P = I² × R and P = V² ÷ R. These relationships underpin conductor sizing, fusing, and load calculations.",
+      "diagram": {
+        "type": "text",
+        "caption": "The core relationships",
+        "code": "V = I × R      (volts = amps × ohms)\nI = V ÷ R      (amps = volts ÷ ohms)\nR = V ÷ I      (ohms = volts ÷ amps)\n\nP = V × I      (watts = volts × amps)\nP = I² × R     (watts = amps² × ohms)\nP = V² ÷ R     (watts = volts² ÷ ohms)"
+      },
+      "resources": [],
+      "questions": [
+        {
+          "id": "ohms-law-q1",
+          "type": "multiple-choice",
+          "prompt": "A load with a resistance of 6 Ω is connected across a 24 V supply. How much current flows?",
+          "options": ["0.25 A", "4 A", "144 A", "30 A"],
+          "answer": 1,
+          "explanation": "Use I = V ÷ R = 24 V ÷ 6 Ω = 4 A. (The 144 A trap multiplies V × R instead of dividing.)"
+        },
+        {
+          "id": "ohms-law-q2",
+          "type": "multiple-choice",
+          "prompt": "A heater draws 10 A on a 120 V circuit. What is its power draw?",
+          "options": ["12 W", "120 W", "1,200 W", "12,000 W"],
+          "answer": 2,
+          "explanation": "P = V × I = 120 V × 10 A = 1,200 W (1.2 kW)."
+        },
+        {
+          "id": "ohms-law-q3",
+          "type": "short-answer",
+          "prompt": "A 240 V supply drives 8 A through a load. What is the load's resistance in ohms? (Enter a number.)",
+          "answer": "30",
+          "explanation": "R = V ÷ I = 240 V ÷ 8 A = 30 Ω."
+        }
+      ]
+    },
+    {
+      "id": "binary",
+      "title": "Binary Numbers",
+      "icon": "🔢",
+      "concept": "PLCs and computers store numbers in binary (base 2). Each bit position is a power of two, reading right to left: 1, 2, 4, 8, 16, 32, 64, 128 … A 1 means that place value is included; a 0 means it is not. To convert binary to decimal, add the place values of every position holding a 1.",
+      "diagram": {
+        "type": "table",
+        "caption": "4-bit binary vs. decimal",
+        "headers": ["Binary", "Decimal"],
+        "rows": [
+          ["0000", "0"],
+          ["0001", "1"],
+          ["0010", "2"],
+          ["0011", "3"],
+          ["0100", "4"],
+          ["0101", "5"],
+          ["0110", "6"],
+          ["0111", "7"],
+          ["1000", "8"],
+          ["1001", "9"],
+          ["1010", "10"],
+          ["1011", "11"],
+          ["1100", "12"],
+          ["1101", "13"],
+          ["1110", "14"],
+          ["1111", "15"]
+        ]
+      },
+      "resources": [
+        {
+          "title": "Learn how to read binary in 5 minutes",
+          "url": "https://medium.com/@LindaVivah/learn-how-to-read-binary-in-5-minutes-dac1feb991e"
+        }
+      ],
+      "questions": [
+        {
+          "id": "binary-q1",
+          "type": "multiple-choice",
+          "prompt": "What decimal number does the binary value 1010 represent?",
+          "options": ["6", "8", "10", "12"],
+          "answer": 2,
+          "explanation": "1010 = (1 × 8) + (0 × 4) + (1 × 2) + (0 × 1) = 8 + 2 = 10."
+        },
+        {
+          "id": "binary-q2",
+          "type": "multiple-choice",
+          "prompt": "What is the decimal number 13 in 4-bit binary?",
+          "options": ["1011", "1101", "1110", "1001"],
+          "answer": 1,
+          "explanation": "13 = 8 + 4 + 1, so the bits for 8, 4, and 1 are set: 1101."
+        },
+        {
+          "id": "binary-q3",
+          "type": "multiple-choice",
+          "prompt": "In an 8-bit byte, what place value does the most significant (leftmost) bit represent?",
+          "options": ["2", "64", "128", "256"],
+          "answer": 2,
+          "explanation": "The leftmost bit of an 8-bit byte is 2⁷ = 128. The eight positions (right to left) are 1, 2, 4, 8, 16, 32, 64, 128."
+        }
+      ]
+    },
+    {
+      "id": "series-parallel",
+      "title": "Series & Parallel Circuits",
+      "icon": "🔀",
+      "concept": "In a series circuit, components share one path: the same current flows through each, total resistance is the sum (Rₜ = R₁ + R₂ + …), and voltage divides across them. In a parallel circuit, components share the same two nodes: voltage is equal across every branch, current divides, and total resistance follows 1/Rₜ = 1/R₁ + 1/R₂ + … (two equal resistors in parallel give half of one).",
+      "diagram": {
+        "type": "svg",
+        "caption": "Series (top) vs. parallel (bottom)",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 360' font-family='sans-serif' font-size='14' role='img' aria-label='Series and parallel resistor circuits'><g stroke='#1a2333' stroke-width='2' fill='none'><text x='12' y='22' stroke='none' fill='#1a2333' font-weight='700'>Series</text><line x1='50' y1='60' x2='50' y2='120'/><line x1='66' y1='72' x2='66' y2='108' stroke-width='4'/><line x1='50' y1='60' x2='50' y2='36'/><line x1='50' y1='36' x2='160' y2='36'/><line x1='240' y1='36' x2='280' y2='36'/><line x1='360' y1='36' x2='470' y2='36'/><line x1='470' y1='36' x2='470' y2='144'/><line x1='470' y1='144' x2='66' y2='144'/><line x1='66' y1='144' x2='66' y2='108'/><polyline points='160,36 170,26 180,46 190,26 200,46 210,26 220,46 230,26 240,36'/><polyline points='280,36 290,26 300,46 310,26 320,46 330,26 340,46 350,26 360,36'/><text x='200' y='20' stroke='none' fill='#1a2333' font-weight='600'>R1</text><text x='320' y='20' stroke='none' fill='#1a2333' font-weight='600'>R2</text><text x='14' y='98' stroke='none' fill='#1a2333'>Vₛ</text><text x='12' y='202' stroke='none' fill='#1a2333' font-weight='700'>Parallel</text><line x1='50' y1='240' x2='50' y2='300'/><line x1='66' y1='252' x2='66' y2='288' stroke-width='4'/><line x1='50' y1='240' x2='50' y2='216'/><line x1='50' y1='216' x2='470' y2='216'/><line x1='470' y1='216' x2='470' y2='324'/><line x1='470' y1='324' x2='66' y2='324'/><line x1='66' y1='324' x2='66' y2='288'/><polyline points='180,216 192,232 168,248 192,264 168,280 192,296 168,312 180,324'/><polyline points='330,216 342,232 318,248 342,264 318,280 342,296 318,312 330,324'/><text x='202' y='275' stroke='none' fill='#1a2333' font-weight='600'>R1</text><text x='352' y='275' stroke='none' fill='#1a2333' font-weight='600'>R2</text><text x='14' y='278' stroke='none' fill='#1a2333'>Vₛ</text></g></svg>"
+      },
+      "resources": [
+        {
+          "title": "Understanding series and parallel circuits (free lecture chapter)",
+          "url": "https://www.oakton.edu/user/1/agero/elt101/presentations/Chapter06.pdf"
+        }
+      ],
+      "questions": [
+        {
+          "id": "series-parallel-q1",
+          "type": "multiple-choice",
+          "prompt": "Two 10 Ω resistors are connected in series. What is the total resistance?",
+          "options": ["5 Ω", "10 Ω", "20 Ω", "100 Ω"],
+          "answer": 2,
+          "explanation": "Series resistances add: Rₜ = 10 Ω + 10 Ω = 20 Ω."
+        },
+        {
+          "id": "series-parallel-q2",
+          "type": "multiple-choice",
+          "prompt": "Two 10 Ω resistors are connected in parallel. What is the total resistance?",
+          "options": ["5 Ω", "10 Ω", "20 Ω", "100 Ω"],
+          "answer": 0,
+          "explanation": "1/Rₜ = 1/10 + 1/10 = 2/10, so Rₜ = 10/2 = 5 Ω. Two equal resistors in parallel give half of one."
+        },
+        {
+          "id": "series-parallel-q3",
+          "type": "multiple-choice",
+          "prompt": "In a series circuit, which quantity is the same through every component?",
+          "options": ["Voltage", "Current", "Resistance", "Power"],
+          "answer": 1,
+          "explanation": "A series circuit provides a single path, so the same current flows through every component. Voltage divides across them."
+        }
+      ]
+    }
+  ]
+}
