@@ -14,9 +14,9 @@ let content = null;
 let currentTopicId = null;
 
 // ─── Monetization config ───────────────────────────────────────
-// 8P2 "Master Class" paid companion. checkoutUrl is the live Stripe
-// Payment Link ($15 one-time); the CTA renders a real Buy button.
-// Post-payment Stripe redirects here to `master-class/` (downloads).
+// "Electrical Deeper Understanding" paid companion. checkoutUrl is the
+// live Stripe Payment Link ($15 one-time); the CTA renders a real Buy
+// button. Post-payment Stripe redirects here to `master-class/` (downloads).
 const MASTER_CLASS = {
   checkoutUrl: 'https://buy.stripe.com/bJe8wP2i09Fo1CAeTk0ZW0c',
   price: '$15',
@@ -29,11 +29,11 @@ function renderUpsell() {
   if (MASTER_CLASS.checkoutUrl) {
     const price = MASTER_CLASS.price ? ` — ${MASTER_CLASS.price}` : '';
     cta.innerHTML = `
-      <a class="upsell-btn" href="${MASTER_CLASS.checkoutUrl}" target="_blank" rel="noopener">Get the Master Class${price}</a>
+      <a class="upsell-btn" href="${MASTER_CLASS.checkoutUrl}" target="_blank" rel="noopener">Get Electrical Deeper Understanding${price}</a>
       <a class="upsell-link" href="${MASTER_CLASS.downloadUrl}">Already purchased? Find your downloads →</a>
     `;
   } else {
-    cta.innerHTML = `<span class="upsell-soon-note">Master Class coming soon — the drills stay free.</span>`;
+    cta.innerHTML = `<span class="upsell-soon-note">Electrical Deeper Understanding coming soon — the drills stay free.</span>`;
   }
 }
 
