@@ -2,51 +2,14 @@
   "app": {
     "title": "8P2 Electrical Controls & Power",
     "subtitle": "Free study & practice drills",
-    "disclaimer": "Study aid only — not a substitute for your course, employer training, or current codes and standards. Content may contain errors; verify against your course materials and the latest standards."
+    "disclaimer": "This study app is a self-study aid only. It is not a substitute for a formal course, your employer's or state's required training, on-the-job instruction, the National Electrical Code, NFPA 70E, OSHA requirements, or any certification exam. Neither MicroVenture Labs nor the author is providing legal advice, engineering certification, or exam-preparation guarantees. Content may contain errors; verify against your course materials and the latest standards. Always follow your employer's and local authority having jurisdiction (AHJ) requirements for actual electrical work."
   },
   "topics": [
     {
-      "id": "ohms-law",
-      "title": "Ohm's Law & Power",
-      "icon": "⚡",
-      "concept": "Ohm's Law relates voltage, current, and resistance: V = I × R (volts = amps × ohms). Rearranged, I = V ÷ R and R = V ÷ I. Electrical power is P = V × I; combined with Ohm's Law that gives P = I² × R and P = V² ÷ R. These relationships underpin conductor sizing, fusing, and load calculations.",
-      "diagram": {
-        "type": "text",
-        "caption": "The core relationships",
-        "code": "V = I × R      (volts = amps × ohms)\nI = V ÷ R      (amps = volts ÷ ohms)\nR = V ÷ I      (ohms = volts ÷ amps)\n\nP = V × I      (watts = volts × amps)\nP = I² × R     (watts = amps² × ohms)\nP = V² ÷ R     (watts = volts² ÷ ohms)"
-      },
-      "resources": [],
-      "questions": [
-        {
-          "id": "ohms-law-q1",
-          "type": "multiple-choice",
-          "prompt": "A load with a resistance of 6 Ω is connected across a 24 V supply. How much current flows?",
-          "options": ["0.25 A", "4 A", "144 A", "30 A"],
-          "answer": 1,
-          "explanation": "Use I = V ÷ R = 24 V ÷ 6 Ω = 4 A. (The 144 A trap multiplies V × R instead of dividing.)"
-        },
-        {
-          "id": "ohms-law-q2",
-          "type": "multiple-choice",
-          "prompt": "A heater draws 10 A on a 120 V circuit. What is its power draw?",
-          "options": ["12 W", "120 W", "1,200 W", "12,000 W"],
-          "answer": 2,
-          "explanation": "P = V × I = 120 V × 10 A = 1,200 W (1.2 kW)."
-        },
-        {
-          "id": "ohms-law-q3",
-          "type": "short-answer",
-          "prompt": "A 240 V supply drives 8 A through a load. What is the load's resistance in ohms? (Enter a number.)",
-          "answer": "30",
-          "explanation": "R = V ÷ I = 240 V ÷ 8 A = 30 Ω."
-        }
-      ]
-    },
-    {
       "id": "binary",
-      "title": "Binary Numbers",
+      "title": "Binary & Number Systems",
       "icon": "🔢",
-      "concept": "PLCs and computers store numbers in binary (base 2). Each bit position is a power of two, reading right to left: 1, 2, 4, 8, 16, 32, 64, 128 … A 1 means that place value is included; a 0 means it is not. To convert binary to decimal, add the place values of every position holding a 1.",
+      "concept": "PLCs and computers store numbers in binary (base 2). Each bit position is a power of two, reading right to left: 1, 2, 4, 8, 16, 32, 64, 128 … A 1 means that place value is included; a 0 means it is not. The leftmost bit is the most significant bit (MSB) and the rightmost is the least significant bit (LSB). A single binary digit is a bit; 8 bits make a byte. An n-bit value can represent 2ⁿ distinct numbers, so an 8-bit byte can represent 256 values. To convert binary to decimal, add the place values of every position holding a 1.",
       "diagram": {
         "type": "table",
         "caption": "4-bit binary vs. decimal",
@@ -72,8 +35,8 @@
       },
       "resources": [
         {
-          "title": "Learn how to read binary in 5 minutes",
-          "url": "https://medium.com/@LindaVivah/learn-how-to-read-binary-in-5-minutes-dac1feb991e"
+          "title": "Numbers and Symbols (All About Circuits)",
+          "url": "https://www.allaboutcircuits.com/textbook/digital/chpt-1/numbers-and-symbols/"
         }
       ],
       "questions": [
@@ -100,6 +63,146 @@
           "options": ["2", "64", "128", "256"],
           "answer": 2,
           "explanation": "The leftmost bit of an 8-bit byte is 2⁷ = 128. The eight positions (right to left) are 1, 2, 4, 8, 16, 32, 64, 128."
+        },
+        {
+          "id": "binary-q4",
+          "type": "short-answer",
+          "prompt": "What decimal number does the binary value 1100 represent? (Enter a number.)",
+          "answer": "12",
+          "explanation": "1100 = (1 × 8) + (1 × 4) + (0 × 2) + (0 × 1) = 8 + 4 = 12."
+        },
+        {
+          "id": "binary-q5",
+          "type": "multiple-choice",
+          "prompt": "How many distinct values can an 8-bit byte represent?",
+          "options": ["128", "256", "512", "1,024"],
+          "answer": 1,
+          "explanation": "An n-bit value has 2ⁿ distinct combinations, so 8 bits give 2⁸ = 256 values."
+        }
+      ]
+    },
+    {
+      "id": "ohms-law",
+      "title": "Ohm's Law, Power & Energy",
+      "icon": "⚡",
+      "concept": "Ohm's Law relates voltage, current, and resistance: V = I × R (volts = amps × ohms). Rearranged, I = V ÷ R and R = V ÷ I. Electrical power is P = V × I; combined with Ohm's Law that gives P = I² × R and P = V² ÷ R. These relationships underpin conductor sizing, fusing, and load calculations.",
+      "diagram": {
+        "type": "text",
+        "caption": "The core relationships",
+        "code": "V = I × R      (volts = amps × ohms)\nI = V ÷ R      (amps = volts ÷ ohms)\nR = V ÷ I      (ohms = volts ÷ amps)\n\nP = V × I      (watts = volts × amps)\nP = I² × R     (watts = amps² × ohms)\nP = V² ÷ R     (watts = volts² ÷ ohms)"
+      },
+      "resources": [
+        {
+          "title": "Ohm's Law Tutorial and Power in Electrical Circuits (Electronics Tutorials)",
+          "url": "https://www.electronics-tutorials.ws/dccircuits/dcp_2.html"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ohms-law-q1",
+          "type": "multiple-choice",
+          "prompt": "A load with a resistance of 6 Ω is connected across a 24 V supply. How much current flows?",
+          "options": ["0.25 A", "4 A", "144 A", "30 A"],
+          "answer": 1,
+          "explanation": "Use I = V ÷ R = 24 V ÷ 6 Ω = 4 A. (The 144 A trap multiplies V × R instead of dividing.)"
+        },
+        {
+          "id": "ohms-law-q2",
+          "type": "multiple-choice",
+          "prompt": "A heater draws 10 A on a 120 V circuit. What is its power draw?",
+          "options": ["12 W", "120 W", "1,200 W", "12,000 W"],
+          "answer": 2,
+          "explanation": "P = V × I = 120 V × 10 A = 1,200 W (1.2 kW)."
+        },
+        {
+          "id": "ohms-law-q3",
+          "type": "short-answer",
+          "prompt": "A 240 V supply drives 8 A through a load. What is the load's resistance in ohms? (Enter a number.)",
+          "answer": "30",
+          "explanation": "R = V ÷ I = 240 V ÷ 8 A = 30 Ω."
+        },
+        {
+          "id": "ohms-law-q4",
+          "type": "multiple-choice",
+          "prompt": "A 100 W lamp is connected to a 120 V supply. About how much current does it draw?",
+          "options": ["0.83 A", "8.3 A", "1.2 A", "12 A"],
+          "answer": 0,
+          "explanation": "I = P ÷ V = 100 W ÷ 120 V ≈ 0.83 A."
+        },
+        {
+          "id": "ohms-law-q5",
+          "type": "short-answer",
+          "prompt": "A resistor dissipates 48 W while 4 A flows through it. What is its resistance in ohms? (Enter a number.)",
+          "answer": "3",
+          "explanation": "P = I² × R, so R = P ÷ I² = 48 W ÷ (4 A)² = 48 ÷ 16 = 3 Ω."
+        }
+      ]
+    },
+    {
+      "id": "reactance-impedance",
+      "title": "Reactance & Impedance",
+      "icon": "📐",
+      "concept": "Inductors and capacitors oppose AC current with reactance. An inductor produces inductive reactance XL = 2πƒL, where current LAGS voltage by 90°; XL rises with frequency, so at DC an ideal inductor looks like a short and at high frequency like an open. A capacitor produces capacitive reactance XC = 1/(2πƒC), where current LEADS voltage by 90°; XC falls as frequency rises. Impedance Z is the total opposition: Z = R + jX, with magnitude |Z| = √(R² + X²). For a series R-L circuit Z = R + jXL; for a series R-C circuit Z = R − jXC.",
+      "diagram": {
+        "type": "text",
+        "caption": "Reactance and impedance",
+        "code": "XL = 2πƒL        (inductive reactance, ohms)\nXC = 1 / (2πƒC)   (capacitive reactance, ohms)\n\nZ = R + jX\n|Z| = √(R² + X²)\n\nSeries R–L:  Z = R + jXL\nSeries R–C:  Z = R − jXC"
+      },
+      "resources": [
+        {
+          "title": "AC Inductance and Inductive Reactance (Electronics Tutorials)",
+          "url": "https://www.electronics-tutorials.ws/accircuits/ac-inductance.html"
+        },
+        {
+          "title": "AC Capacitance and Capacitive Reactance (Electronics Tutorials)",
+          "url": "https://www.electronics-tutorials.ws/accircuits/ac-capacitance.html"
+        }
+      ],
+      "questions": [
+        {
+          "id": "reactance-impedance-q1",
+          "type": "multiple-choice",
+          "prompt": "What is the inductive reactance of a 0.5 H inductor at 60 Hz?",
+          "options": ["18.8 Ω", "188 Ω", "1,885 Ω", "5.2 Ω"],
+          "answer": 1,
+          "explanation": "XL = 2πƒL = 2 × π × 60 × 0.5 ≈ 188.5 Ω."
+        },
+        {
+          "id": "reactance-impedance-q2",
+          "type": "multiple-choice",
+          "prompt": "In a pure inductor, the current ___ the voltage by 90°.",
+          "options": ["leads", "lags", "equals", "doubles"],
+          "answer": 1,
+          "explanation": "Current through a pure inductor LAGS the voltage by 90° (ELI the ICE man — in an inductor (L), voltage (E) leads current (I))."
+        },
+        {
+          "id": "reactance-impedance-q3",
+          "type": "short-answer",
+          "prompt": "A 2 H inductor is connected to a 50 Hz supply. What is its inductive reactance in ohms? (Round to the nearest whole number; enter a number.)",
+          "answer": "628",
+          "explanation": "XL = 2πƒL = 2 × π × 50 × 2 ≈ 628.3 Ω, which rounds to 628 Ω."
+        },
+        {
+          "id": "reactance-impedance-q4",
+          "type": "multiple-choice",
+          "prompt": "As frequency increases, capacitive reactance (XC) ___.",
+          "options": ["increases", "decreases", "stays the same", "becomes negative"],
+          "answer": 1,
+          "explanation": "XC = 1/(2πƒC), so XC is inversely proportional to frequency: as ƒ rises, XC falls."
+        },
+        {
+          "id": "reactance-impedance-q5",
+          "type": "short-answer",
+          "prompt": "What is the capacitive reactance of a 10 µF capacitor at 50 Hz, in ohms? (Round to the nearest whole number; enter a number.)",
+          "answer": "318",
+          "explanation": "XC = 1/(2πƒC) = 1/(2 × π × 50 × 10×10⁻⁶) ≈ 318.3 Ω, which rounds to 318 Ω."
+        },
+        {
+          "id": "reactance-impedance-q6",
+          "type": "short-answer",
+          "prompt": "A series R-L circuit has R = 3 Ω and XL = 4 Ω. What is the magnitude of its impedance in ohms? (Enter a number.)",
+          "answer": "5",
+          "explanation": "|Z| = √(R² + XL²) = √(3² + 4²) = √25 = 5 Ω."
         }
       ]
     },
@@ -107,7 +210,7 @@
       "id": "series-parallel",
       "title": "Series & Parallel Circuits",
       "icon": "🔀",
-      "concept": "In a series circuit, components share one path: the same current flows through each, total resistance is the sum (Rₜ = R₁ + R₂ + …), and voltage divides across them. In a parallel circuit, components share the same two nodes: voltage is equal across every branch, current divides, and total resistance follows 1/Rₜ = 1/R₁ + 1/R₂ + … (two equal resistors in parallel give half of one).",
+      "concept": "In a series circuit, components share one path: the same current flows through each, total resistance is the sum (Rₜ = R₁ + R₂ + …), and voltage divides across them. In a parallel circuit, components share the same two nodes: voltage is equal across every branch, current divides, and total resistance follows 1/Rₜ = 1/R₁ + 1/R₂ + …. For exactly two parallel resistors, Rₜ = (R₁·R₂)/(R₁+R₂), and two equal resistors in parallel give half of one.",
       "diagram": {
         "type": "svg",
         "caption": "Series (top) vs. parallel (bottom)",
@@ -115,7 +218,7 @@
       },
       "resources": [
         {
-          "title": "Understanding series and parallel circuits (free lecture chapter)",
+          "title": "Series and Parallel Circuits — ELT101 Chapter 6 (Oakton Community College, free PDF)",
           "url": "https://www.oakton.edu/user/1/agero/elt101/presentations/Chapter06.pdf"
         }
       ],
@@ -143,6 +246,707 @@
           "options": ["Voltage", "Current", "Resistance", "Power"],
           "answer": 1,
           "explanation": "A series circuit provides a single path, so the same current flows through every component. Voltage divides across them."
+        },
+        {
+          "id": "series-parallel-q4",
+          "type": "short-answer",
+          "prompt": "Three 30 Ω resistors are connected in series. What is the total resistance in ohms? (Enter a number.)",
+          "answer": "90",
+          "explanation": "Series resistances add: Rₜ = 30 + 30 + 30 = 90 Ω."
+        },
+        {
+          "id": "series-parallel-q5",
+          "type": "multiple-choice",
+          "prompt": "In a parallel circuit, which quantity is the same across every branch?",
+          "options": ["Voltage", "Current", "Resistance", "Power"],
+          "answer": 0,
+          "explanation": "Parallel branches share the same two nodes, so the voltage across each branch is equal. Current divides among the branches."
+        }
+      ]
+    },
+    {
+      "id": "transformers-power-factor",
+      "title": "Transformers & Power Factor",
+      "icon": "🔼",
+      "concept": "A transformer transfers AC power between circuits by magnetic coupling. The turns ratio sets the voltage ratio: Np/Ns = Vp/Vs. A step-up transformer has more secondary turns (Ns > Np), raising voltage; a step-down has fewer. An ideal transformer conserves power (Vp·Ip = Vs·Is), so a voltage step-up comes with a current step-down. Power factor (PF) is the ratio of real power (watts) to apparent power (volt-amps): PF = W/VA = cos θ, so VA = W/PF. A low PF means more current is drawn for the same real power.",
+      "diagram": {
+        "type": "text",
+        "caption": "Transformer and power-factor relationships",
+        "code": "Turns ratio:  Np / Ns = Vp / Vs\n\nStep-up  →  Ns > Np  →  Vs > Vp  and  Is < Ip\nIdeal power:  Vp·Ip = Vs·Is\n\nPF = W / VA = cos θ\nVA = W / PF"
+      },
+      "resources": [
+        {
+          "title": "Transformer Basics and Transformer Principles (Electronics Tutorials)",
+          "url": "https://www.electronics-tutorials.ws/transformer/transformer-basics.html"
+        },
+        {
+          "title": "Power Factor Formula (Fluke)",
+          "url": "https://www.fluke.com/en-us/learn/blog/power-quality/power-factor-formula"
+        }
+      ],
+      "questions": [
+        {
+          "id": "transformers-power-factor-q1",
+          "type": "multiple-choice",
+          "prompt": "A transformer has 100 primary turns and 1,000 secondary turns, with a 120 V primary. What is the secondary voltage?",
+          "options": ["12 V", "120 V", "1,200 V", "12,000 V"],
+          "answer": 2,
+          "explanation": "Vs = Vp × (Ns/Np) = 120 × (1,000/100) = 1,200 V."
+        },
+        {
+          "id": "transformers-power-factor-q2",
+          "type": "multiple-choice",
+          "prompt": "In an ideal step-up transformer, which is true?",
+          "options": ["Voltage increases and current decreases", "Voltage increases and current increases", "Voltage decreases and current increases", "Voltage and current both stay the same"],
+          "answer": 0,
+          "explanation": "An ideal transformer conserves power (Vp·Ip = Vs·Is), so a voltage step-up comes with a proportional current step-down."
+        },
+        {
+          "id": "transformers-power-factor-q3",
+          "type": "multiple-choice",
+          "prompt": "In a step-up transformer, how do the primary and secondary turns compare?",
+          "options": ["Ns > Np", "Ns < Np", "Ns = Np", "It depends on the current"],
+          "answer": 0,
+          "explanation": "A step-up transformer has more secondary turns than primary turns (Ns > Np), which raises the voltage."
+        },
+        {
+          "id": "transformers-power-factor-q4",
+          "type": "multiple-choice",
+          "prompt": "Power factor is the ratio of ___ to ___.",
+          "options": ["real power to apparent power", "voltage to current", "real power to reactive power", "energy to time"],
+          "answer": 0,
+          "explanation": "PF = W / VA — real power (watts) divided by apparent power (volt-amps)."
+        },
+        {
+          "id": "transformers-power-factor-q5",
+          "type": "short-answer",
+          "prompt": "A load draws 1,200 W at a power factor of 0.8. What is its apparent power in VA? (Enter a number.)",
+          "answer": "1500",
+          "explanation": "VA = W / PF = 1,200 / 0.8 = 1,500 VA."
+        },
+        {
+          "id": "transformers-power-factor-q6",
+          "type": "multiple-choice",
+          "prompt": "A low power factor means ___ for the same real power.",
+          "options": ["more current", "less current", "higher voltage", "no change"],
+          "answer": 0,
+          "explanation": "At a given real power, a lower PF requires more apparent power (VA) and therefore more current."
+        }
+      ]
+    },
+    {
+      "id": "delta-wye",
+      "title": "Three-phase: Delta & Wye",
+      "icon": "🔺",
+      "concept": "Three-phase systems connect loads or motor windings in either wye (Y) or delta (Δ). Wye: line voltage = √3 × phase voltage, and line current = phase current. Delta: line voltage = phase voltage, and line current = √3 × phase current. A three-phase motor in wye puts only phase voltage (line ÷ √3) across each winding, while in delta each winding sees full line voltage. Balanced three-phase real power is P = √3 × V_line × I_line × PF.",
+      "diagram": {
+        "type": "svg",
+        "caption": "Delta (left) and wye (right) three-phase connections",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 300' font-family='sans-serif' font-size='14' role='img' aria-label='Delta and wye three-phase connections'><g stroke='#1a2333' stroke-width='2' fill='none'><text x='30' y='26' stroke='none' fill='#1a2333' font-weight='700'>Delta (Δ)</text><polygon points='90,200 210,200 150,90'/><polyline points='100,190 110,176 120,190 130,176 140,190'/><polyline points='158,100 172,112 158,124 172,136 158,146 166,152'/><polyline points='192,190 202,178 200,168 210,178'/><line x1='90' y1='200' x2='90' y2='250'/><line x1='210' y1='200' x2='210' y2='250'/><line x1='150' y1='90' x2='150' y2='50'/><text x='82' y='270' stroke='none' fill='#1a2333'>A</text><text x='202' y='270' stroke='none' fill='#1a2333'>B</text><text x='142' y='42' stroke='none' fill='#1a2333'>C</text><text x='330' y='26' stroke='none' fill='#1a2333' font-weight='700'>Wye (Y)</text><line x1='440' y1='120' x2='370' y2='180'/><line x1='440' y1='120' x2='440' y2='180'/><line x1='440' y1='120' x2='510' y2='180'/><polyline points='380,140 390,150 380,160 390,170'/><polyline points='434,140 444,150 434,160 444,170'/><polyline points='470,170 480,160 490,170 500,160'/><line x1='370' y1='180' x2='370' y2='250'/><line x1='440' y1='180' x2='440' y2='250'/><line x1='510' y1='180' x2='510' y2='250'/><text x='362' y='270' stroke='none' fill='#1a2333'>A</text><text x='432' y='270' stroke='none' fill='#1a2333'>B</text><text x='502' y='270' stroke='none' fill='#1a2333'>C</text><text x='452' y='132' stroke='none' fill='#1a2333'>N</text></g></svg>"
+      },
+      "resources": [
+        {
+          "title": "Understanding the Basics of Delta Transformer Calculations (EC&M)",
+          "url": "https://www.ecmweb.com/content/article/20887773/understanding-the-basics-of-delta-transformer-calculations"
+        },
+        {
+          "title": "Delta and Wye — phase and line relationships (video)",
+          "url": "https://www.youtube.com/watch?v=ky7cs1NYvCI"
+        }
+      ],
+      "questions": [
+        {
+          "id": "delta-wye-q1",
+          "type": "multiple-choice",
+          "prompt": "In a balanced wye (Y) connection, the line voltage is ___ the phase voltage.",
+          "options": ["√3 times", "equal to", "1/√3 times", "2 times"],
+          "answer": 0,
+          "explanation": "In wye, V_line = √3 × V_phase."
+        },
+        {
+          "id": "delta-wye-q2",
+          "type": "multiple-choice",
+          "prompt": "In a balanced delta (Δ) connection, the line current is ___ the phase current.",
+          "options": ["√3 times", "equal to", "1/√3 times", "2 times"],
+          "answer": 0,
+          "explanation": "In delta, I_line = √3 × I_phase."
+        },
+        {
+          "id": "delta-wye-q3",
+          "type": "multiple-choice",
+          "prompt": "Balanced three-phase real power is calculated as ___.",
+          "options": ["√3 × V_line × I_line × PF", "V_line × I_line × PF", "3 × V_line × I_line", "√3 × V_phase × I_phase"],
+          "answer": 0,
+          "explanation": "P = √3 × V_line × I_line × PF for a balanced three-phase load."
+        },
+        {
+          "id": "delta-wye-q4",
+          "type": "multiple-choice",
+          "prompt": "In a wye-connected three-phase motor, each winding sees ___.",
+          "options": ["line voltage ÷ √3", "full line voltage", "line voltage × √3", "zero volts"],
+          "answer": 0,
+          "explanation": "In wye, each winding is connected line-to-neutral, so it sees the phase voltage = line voltage ÷ √3."
+        },
+        {
+          "id": "delta-wye-q5",
+          "type": "multiple-choice",
+          "prompt": "In a delta-connected motor, each winding sees ___.",
+          "options": ["full line voltage", "line voltage ÷ √3", "line voltage × √3", "half the line voltage"],
+          "answer": 0,
+          "explanation": "In delta, each winding is connected directly across two lines, so it sees the full line voltage."
+        },
+        {
+          "id": "delta-wye-q6",
+          "type": "short-answer",
+          "prompt": "A 480 V three-phase supply feeds a wye-connected motor. What is the phase voltage across each winding in volts, rounded to the nearest volt? (Enter a number.)",
+          "answer": "277",
+          "explanation": "V_phase = V_line ÷ √3 = 480 ÷ 1.732 ≈ 277 V."
+        }
+      ]
+    },
+    {
+      "id": "motors",
+      "title": "Motors: Service Factor, Inrush & Shunt Speed",
+      "icon": "⚙️",
+      "concept": "Service factor (SF) is the NEMA-defined multiplier on a motor's rated horsepower that indicates how much sustained overload it can tolerate under nameplate conditions — typical values are 1.0 or 1.15, so a 10 HP motor with SF 1.15 can run continuously to about 11.5 HP (relying on SF reduces insulation/life margin). On starting, an AC induction motor briefly draws an inrush (locked-rotor) current several times (often about 6×) full-load current, decaying as it spins up. A DC shunt motor (field winding parallel to the armature) is speed-controlled by field or armature voltage: weakening the field raises speed, and reducing armature voltage lowers speed.",
+      "diagram": {
+        "type": "text",
+        "caption": "Motor key relationships",
+        "code": "Service factor:  continuous HP ≈ rated HP × SF\n  (SF 1.15 @ 10 HP → ~11.5 HP)\n\nInrush current:  ~ several × (often ~6×) full-load,\n  decaying as the motor spins up\n\nShunt motor:  weaken field → ↑ speed\n               reduce armature voltage → ↓ speed"
+      },
+      "resources": [
+        {
+          "title": "What is inrush current in an AC motor? (Motion Control Tips)",
+          "url": "https://www.motioncontroltips.com/what-is-inrush-current-in-an-ac-motor-and-why-does-it-matter/"
+        },
+        {
+          "title": "Speed Control of DC Shunt Motor (Your Electrical Guide)",
+          "url": "https://www.yourelectricalguide.com/2017/09/speed-control-of-dc-shunt-motor.html"
+        },
+        {
+          "title": "Motor Service Factor (SF) defined by NEMA (Electrical Engineering Portal)",
+          "url": "https://electrical-engineering-portal.com/motor-service-factor-sf-defined-by-nema"
+        }
+      ],
+      "questions": [
+        {
+          "id": "motors-q1",
+          "type": "multiple-choice",
+          "prompt": "A 10 HP motor has a service factor of 1.15. Under nameplate rated conditions, up to what sustained load can it run continuously?",
+          "options": ["10 HP", "11.5 HP", "15 HP", "20 HP"],
+          "answer": 1,
+          "explanation": "Continuous capacity ≈ rated HP × SF = 10 × 1.15 = 11.5 HP."
+        },
+        {
+          "id": "motors-q2",
+          "type": "multiple-choice",
+          "prompt": "What does a service factor greater than 1.0 indicate about a motor?",
+          "options": ["It has overload margin above its rated HP", "It is damaged", "It is more efficient", "It has a higher voltage rating"],
+          "answer": 0,
+          "explanation": "SF > 1.0 means the motor has some overload margin above rated HP under the nameplate conditions."
+        },
+        {
+          "id": "motors-q3",
+          "type": "multiple-choice",
+          "prompt": "When an AC induction motor starts, it briefly draws ___ its full-load current.",
+          "options": ["several times (often ~6×)", "exactly equal to", "less than", "zero"],
+          "answer": 0,
+          "explanation": "Starting (inrush) current is commonly several times full-load current, often around 6×, before decaying."
+        },
+        {
+          "id": "motors-q4",
+          "type": "multiple-choice",
+          "prompt": "As an induction motor spins up to speed, its inrush current ___.",
+          "options": ["decays", "increases", "stays constant", "reverses"],
+          "answer": 0,
+          "explanation": "Inrush is highest at standstill (locked rotor) and decays as the motor accelerates toward operating speed."
+        },
+        {
+          "id": "motors-q5",
+          "type": "multiple-choice",
+          "prompt": "Weakening the field (reducing field current) of a shunt motor ___ its speed.",
+          "options": ["raises", "lowers", "does not change", "reverses"],
+          "answer": 0,
+          "explanation": "Reducing field flux causes the armature to speed up to maintain back-EMF balance, so speed rises."
+        },
+        {
+          "id": "motors-q6",
+          "type": "multiple-choice",
+          "prompt": "Reducing the armature voltage of a shunt motor ___ its speed.",
+          "options": ["lowers", "raises", "does not change", "doubles"],
+          "answer": 0,
+          "explanation": "Armature voltage control lowers the applied voltage, reducing speed."
+        }
+      ]
+    },
+    {
+      "id": "ac-drives-braking",
+      "title": "AC Drives & Dynamic Braking",
+      "icon": "🔀",
+      "concept": "A variable-frequency drive (VFD) controls AC motor speed by converting fixed line AC to DC (rectifier) and then back to variable-frequency AC (inverter). Because a motor's synchronous speed is proportional to applied frequency (n ≈ 120·f / poles), changing the VFD output frequency changes speed. Dynamic braking stops a motor by dissipating its kinetic energy as heat in a braking resistor: during braking the motor temporarily acts as a generator, and the generated energy is dumped into the resistor to produce retarding torque.",
+      "diagram": {
+        "type": "text",
+        "caption": "VFD flow and dynamic braking",
+        "code": "VFD:  AC in → rectifier → DC bus → inverter → variable-freq AC out\n\nSpeed:  n ≈ 120·ƒ / poles   (lower ƒ → lower speed)\n\nDynamic braking:\nmotor acts as generator → energy dumped into braking\nresistor → dissipated as heat → retarding torque"
+      },
+      "resources": [
+        {
+          "title": "AC Drive Working Principle (ACDrive.org)",
+          "url": "http://www.acdrive.org/ac-drive-working-principle.html"
+        },
+        {
+          "title": "What is Dynamic Braking? (Wolf Automation)",
+          "url": "https://www.wolfautomation.com/blog/what-is-dynamic-braking/"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ac-drives-braking-q1",
+          "type": "multiple-choice",
+          "prompt": "What is the correct power-flow sequence through a VFD?",
+          "options": ["AC → DC → AC", "DC → AC → DC", "AC → AC → DC", "DC → DC → AC"],
+          "answer": 0,
+          "explanation": "A VFD rectifies line AC to DC, then inverts the DC back to variable-frequency AC for the motor."
+        },
+        {
+          "id": "ac-drives-braking-q2",
+          "type": "multiple-choice",
+          "prompt": "A 4-pole induction motor runs near its synchronous speed at 60 Hz. What is that synchronous speed?",
+          "options": ["900 rpm", "1,200 rpm", "1,800 rpm", "3,600 rpm"],
+          "answer": 2,
+          "explanation": "n ≈ 120·f / poles = 120 × 60 / 4 = 1,800 rpm."
+        },
+        {
+          "id": "ac-drives-braking-q3",
+          "type": "multiple-choice",
+          "prompt": "To slow an AC motor with a VFD, you primarily ___.",
+          "options": ["reduce the output frequency", "increase the output voltage", "add series resistance", "increase the output frequency"],
+          "answer": 0,
+          "explanation": "Motor speed is proportional to applied frequency, so reducing the VFD's output frequency reduces speed."
+        },
+        {
+          "id": "ac-drives-braking-q4",
+          "type": "multiple-choice",
+          "prompt": "Dynamic braking stops a motor by dissipating its kinetic energy as ___.",
+          "options": ["heat in a resistor", "sound", "light", "stored charge"],
+          "answer": 0,
+          "explanation": "The motor's rotational energy is dumped into a braking resistor and dissipated as heat."
+        },
+        {
+          "id": "ac-drives-braking-q5",
+          "type": "multiple-choice",
+          "prompt": "During dynamic braking, the motor temporarily acts as a ___.",
+          "options": ["generator", "transformer", "rectifier", "capacitor"],
+          "answer": 0,
+          "explanation": "The spinning rotor generates voltage, so the motor acts briefly as a generator whose output is dissipated."
+        }
+      ]
+    },
+    {
+      "id": "circuit-protection",
+      "title": "Circuit Protection: Fusing & Current Transformers",
+      "icon": "🔌",
+      "concept": "Fuses protect conductors and equipment from overcurrent. A fuse has three key ratings: its continuous current rating (amps it carries), its voltage rating (the circuit voltage class), and its interrupting (AIC) rating (the maximum fault current it can safely clear). Time-delay (dual-element) fuses combine a short-circuit element with a thermal element, so they tolerate motor starting inrush while still opening on sustained overload; fast-acting fuses suit sensitive loads without inrush. A current transformer (CT) steps a large primary current down to a smaller, safer secondary current — typically 5 A or 1 A — for metering and protection relays. Safety rule: never open-circuit an energized CT secondary; it must always be shorted or connected to a burden.",
+      "diagram": {
+        "type": "text",
+        "caption": "Fuse ratings and CT rules",
+        "code": "Fuse ratings:\n• Current (A)     → continuous carry\n• Voltage (V)     → circuit voltage class\n• Interrupting (AIC/kA) → fault current it can safely clear\n\nTime-delay (dual-element) → rides through motor inrush\n\nCT:  steps primary current down to ~5 A or 1 A\n⚠ NEVER open-circuit an energized CT secondary"
+      },
+      "resources": [
+        {
+          "title": "Current Transformer Protection (Metrosil)",
+          "url": "https://metrosil.com/applications/current-transformer-protection/"
+        }
+      ],
+      "questions": [
+        {
+          "id": "circuit-protection-q1",
+          "type": "multiple-choice",
+          "prompt": "Which fuse type is typically used on motor circuits to ride through starting inrush?",
+          "options": ["Fast-acting", "Dual-element (time-delay)", "Semiconductor", "Current-limiting only"],
+          "answer": 1,
+          "explanation": "Dual-element (time-delay) fuses combine a thermal element with a short-circuit element, so they tolerate motor inrush while still clearing sustained overloads."
+        },
+        {
+          "id": "circuit-protection-q2",
+          "type": "multiple-choice",
+          "prompt": "A fuse's interrupting (AIC) rating describes ___.",
+          "options": ["the maximum fault current it can safely clear", "its continuous current-carrying capacity", "its operating voltage", "its time delay"],
+          "answer": 0,
+          "explanation": "The interrupting rating (amperes interrupting capacity, AIC) is the highest fault current the fuse can interrupt without damage."
+        },
+        {
+          "id": "circuit-protection-q3",
+          "type": "multiple-choice",
+          "prompt": "What is a typical standard secondary current for a current transformer?",
+          "options": ["5 A", "50 A", "500 A", "0.5 A"],
+          "answer": 0,
+          "explanation": "Standard CT secondary currents are typically 5 A or 1 A, chosen to be safe for meters and relays."
+        },
+        {
+          "id": "circuit-protection-q4",
+          "type": "multiple-choice",
+          "prompt": "What must you NEVER do to an energized CT secondary?",
+          "options": ["Open-circuit it", "Short it", "Connect a burden", "Measure it with a clamp meter"],
+          "answer": 0,
+          "explanation": "Opening an energized CT secondary can produce a dangerously high voltage. It must always be shorted or connected to a burden."
+        },
+        {
+          "id": "circuit-protection-q5",
+          "type": "multiple-choice",
+          "prompt": "The primary purpose of a CT is to ___ a large primary current for metering and protection.",
+          "options": ["step down", "step up", "isolate from ground", "rectify"],
+          "answer": 0,
+          "explanation": "A CT steps a large current down to a smaller, standardized secondary current for instruments and relays."
+        }
+      ]
+    },
+    {
+      "id": "switches",
+      "title": "Switches & Grounding",
+      "icon": "🔘",
+      "concept": "A switch's poles are the number of separate circuits it controls, and its throws are the number of output positions per pole. SPST (single pole, single throw) is a simple on/off. SPDT (single pole, double throw) routes a common terminal to one of two outputs. DPDT (double pole, double throw) controls two circuits, each with a common and two outputs. A grounding switch is used to safely connect a conductor or piece of equipment to ground for maintenance.",
+      "diagram": {
+        "type": "table",
+        "caption": "Common switch types",
+        "headers": ["Type", "Poles", "Throws", "Function"],
+        "rows": [
+          ["SPST", "1", "1", "Simple on / off"],
+          ["SPDT", "1", "2", "Common to one of two outputs"],
+          ["DPDT", "2", "2", "Two circuits, each common to two outputs"]
+        ]
+      },
+      "resources": [
+        {
+          "title": "Switch Types (All About Circuits)",
+          "url": "https://www.allaboutcircuits.com/textbook/direct-current/chpt-4/switch-types/"
+        }
+      ],
+      "questions": [
+        {
+          "id": "switches-q1",
+          "type": "multiple-choice",
+          "prompt": "What does SPST stand for?",
+          "options": ["Single Pole, Single Throw", "Single Pole, Single Terminal", "Series Pole, Single Throw", "Single Phase, Single Throw"],
+          "answer": 0,
+          "explanation": "SPST = Single Pole, Single Throw — a simple on/off switch."
+        },
+        {
+          "id": "switches-q2",
+          "type": "multiple-choice",
+          "prompt": "An SPDT switch routes a common terminal to ___.",
+          "options": ["one of two outputs", "on or off only", "two circuits simultaneously", "ground only"],
+          "answer": 0,
+          "explanation": "SPDT (single pole, double throw) has one common and two throws, so it selects one of two outputs."
+        },
+        {
+          "id": "switches-q3",
+          "type": "multiple-choice",
+          "prompt": "What is the purpose of a grounding switch?",
+          "options": ["Safely connect a conductor or equipment to ground for maintenance", "Turn equipment on", "Step up voltage", "Measure current"],
+          "answer": 0,
+          "explanation": "A grounding switch connects a conductor or equipment to ground so it can be worked on safely."
+        },
+        {
+          "id": "switches-q4",
+          "type": "multiple-choice",
+          "prompt": "What does DPDT stand for?",
+          "options": ["Double Pole, Double Throw", "Double Pole, Double Terminal", "Dual Phase, Double Throw", "Double Pole, Single Throw"],
+          "answer": 0,
+          "explanation": "DPDT = Double Pole, Double Throw — two poles, each switching between two outputs."
+        },
+        {
+          "id": "switches-q5",
+          "type": "multiple-choice",
+          "prompt": "The number of separate circuits a switch controls is its number of ___.",
+          "options": ["poles", "throws", "terminals", "positions"],
+          "answer": 0,
+          "explanation": "Poles = separate circuits controlled; throws = output positions per pole."
+        }
+      ]
+    },
+    {
+      "id": "logic-gates",
+      "title": "Logic Gates",
+      "icon": "🚪",
+      "concept": "Logic gates are the building blocks of digital circuits. AND outputs 1 only when all inputs are 1. OR outputs 1 when at least one input is 1. NOT inverts its single input. XOR (exclusive-OR) outputs 1 when its inputs differ. NAND, NOR, and XNOR are the inverses of AND, OR, and XOR respectively (NAND = NOT-AND, NOR = NOT-OR, XNOR = NOT-XOR).",
+      "diagram": {
+        "type": "table",
+        "caption": "Two-input truth tables (0 = false, 1 = true)",
+        "headers": ["A", "B", "AND", "OR", "XOR"],
+        "rows": [
+          ["0", "0", "0", "0", "0"],
+          ["0", "1", "0", "1", "1"],
+          ["1", "0", "0", "1", "1"],
+          ["1", "1", "1", "1", "0"]
+        ]
+      },
+      "resources": [
+        {
+          "title": "Logic gates: AND, OR, XOR, NOT, NAND, NOR, XNOR (TechTarget)",
+          "url": "https://www.techtarget.com/whatis/definition/logic-gate-AND-OR-XOR-NOT-NAND-NOR-and-XNOR"
+        }
+      ],
+      "questions": [
+        {
+          "id": "logic-gates-q1",
+          "type": "multiple-choice",
+          "prompt": "A two-input AND gate outputs 1 when ___.",
+          "options": ["both inputs are 1", "at least one input is 1", "the inputs differ", "both inputs are 0"],
+          "answer": 0,
+          "explanation": "AND outputs 1 only when every input is 1 (0·1 = 0, 1·1 = 1)."
+        },
+        {
+          "id": "logic-gates-q2",
+          "type": "multiple-choice",
+          "prompt": "A two-input XOR gate outputs 1 when ___.",
+          "options": ["the inputs differ", "both inputs are 1", "both inputs are 0", "either input is 0"],
+          "answer": 0,
+          "explanation": "XOR (exclusive-OR) is true only when exactly one input is 1 — i.e., the inputs differ."
+        },
+        {
+          "id": "logic-gates-q3",
+          "type": "multiple-choice",
+          "prompt": "NAND is ___.",
+          "options": ["NOT-AND (the inverse of AND)", "NOT-OR", "the same as AND", "the same as XOR"],
+          "answer": 0,
+          "explanation": "NAND = NOT-AND: it outputs the inverse of an AND gate."
+        },
+        {
+          "id": "logic-gates-q4",
+          "type": "multiple-choice",
+          "prompt": "A two-input OR gate outputs 1 when ___.",
+          "options": ["at least one input is 1", "both inputs are 0", "both inputs are 1", "the inputs differ"],
+          "answer": 0,
+          "explanation": "OR outputs 1 when any input is 1 (0+1 = 1, 1+1 = 1)."
+        },
+        {
+          "id": "logic-gates-q5",
+          "type": "multiple-choice",
+          "prompt": "A NOT gate with input 1 outputs ___.",
+          "options": ["0", "1", "depends on a second input", "undefined"],
+          "answer": 0,
+          "explanation": "NOT inverts its single input: 1 → 0."
+        },
+        {
+          "id": "logic-gates-q6",
+          "type": "multiple-choice",
+          "prompt": "An XNOR gate outputs 1 when ___.",
+          "options": ["the inputs are equal", "the inputs differ", "both inputs are 0", "at least one input is 1"],
+          "answer": 0,
+          "explanation": "XNOR = NOT-XOR, so it is true when the inputs are the same (both 0 or both 1)."
+        }
+      ]
+    },
+    {
+      "id": "plc-fundamentals",
+      "title": "PLC Fundamentals: Contacts, Data Types, Sinking/Sourcing",
+      "icon": "🧠",
+      "concept": "In ladder logic, a coil is an output instruction (energized when its rung logic is true), while contacts are input conditions: a normally-open (NO) contact is true when its input is energized, and a normally-closed (NC) contact is true when its input is NOT energized. A seal-in circuit holds a coil on after a momentary start releases by placing a contact driven by the output coil in parallel with the start. PLC data is typed: BOOL (1 bit), INT (16-bit signed, −32,768…32,767), DINT (32-bit signed), REAL (32-bit float), plus unsigned UINT/UDINT. Sinking and sourcing describe DC current direction: a sourcing (PNP) output supplies current out, while a sinking (NPN) output receives current in — and an input module is described from the opposite perspective.",
+      "diagram": {
+        "type": "table",
+        "caption": "Ladder instructions and data types",
+        "headers": ["Item", "Detail"],
+        "rows": [
+          ["NO contact ─┤ ├─", "True when input energized"],
+          ["NC contact ─┤/├─", "True when input NOT energized"],
+          ["Coil ─( )─", "Output; energized when rung true"],
+          ["BOOL / INT / DINT / REAL", "1-bit / 16-bit / 32-bit / 32-bit float"],
+          ["Sourcing (PNP)", "Supplies current OUT"],
+          ["Sinking (NPN)", "Receives current IN"]
+        ]
+      },
+      "resources": [
+        {
+          "title": "Ladder Logic Tutorial (PLC Academy)",
+          "url": "https://www.plcacademy.com/ladder-logic-tutorial/"
+        },
+        {
+          "title": "PLC Handbook (AutomationDirect)",
+          "url": "https://library.automationdirect.com/plc-handbook/"
+        },
+        {
+          "title": "Sink vs. Source Logic (Oriental Motor)",
+          "url": "https://blog.orientalmotor.com/what-is-the-difference-between-sink-and-source-logic"
+        },
+        {
+          "title": "Data Types in PLC (Instrumentation Tools)",
+          "url": "https://instrumentationtools.com/data-types-in-plc/"
+        }
+      ],
+      "questions": [
+        {
+          "id": "plc-fundamentals-q1",
+          "type": "multiple-choice",
+          "prompt": "In ladder logic, a coil represents an ___.",
+          "options": ["output", "input condition", "timer", "counter"],
+          "answer": 0,
+          "explanation": "A coil is an output instruction — it is energized when the rung's logic is true."
+        },
+        {
+          "id": "plc-fundamentals-q2",
+          "type": "multiple-choice",
+          "prompt": "A normally-closed (NC) contact is true when its input is ___.",
+          "options": ["not energized", "energized", "in fault", "at zero"],
+          "answer": 0,
+          "explanation": "NC contacts pass logic when the input is NOT energized; energizing the input opens them."
+        },
+        {
+          "id": "plc-fundamentals-q3",
+          "type": "multiple-choice",
+          "prompt": "A sourcing (PNP) output ___ current to the load.",
+          "options": ["supplies (sources out)", "receives (sinks in)", "alternates", "blocks"],
+          "answer": 0,
+          "explanation": "A sourcing output pushes current out to the load; it is the source of the current."
+        },
+        {
+          "id": "plc-fundamentals-q4",
+          "type": "multiple-choice",
+          "prompt": "What is the value range of a 16-bit signed INT?",
+          "options": ["−32,768 to 32,767", "0 to 65,535", "−128 to 127", "0 to 4,294,967,295"],
+          "answer": 0,
+          "explanation": "A 16-bit signed integer ranges from −2¹⁵ to 2¹⁵ − 1, i.e., −32,768 to 32,767."
+        },
+        {
+          "id": "plc-fundamentals-q5",
+          "type": "multiple-choice",
+          "prompt": "Which data type stores true/false values in a single bit?",
+          "options": ["BOOL", "INT", "REAL", "DINT"],
+          "answer": 0,
+          "explanation": "BOOL is a single-bit value: true (1) or false (0)."
+        },
+        {
+          "id": "plc-fundamentals-q6",
+          "type": "multiple-choice",
+          "prompt": "A seal-in (latch) circuit keeps the coil on after the momentary start releases by placing ___ in parallel with the start contact.",
+          "options": ["a contact driven by the output coil", "another stop button", "an overload contact", "a timer"],
+          "answer": 0,
+          "explanation": "The seal-in contact (an aux contact of the output coil) closes when the coil energizes, holding the rung true after the start releases."
+        }
+      ]
+    },
+    {
+      "id": "analog-scaling",
+      "title": "Analog Inputs & Scaling",
+      "icon": "📏",
+      "concept": "An analog input card converts a continuous signal (such as 4–20 mA or 0–10 V) into a digital count. The bit depth sets how finely it can resolve the signal: an n-bit converter gives 2ⁿ counts (12-bit = 4,096 counts, 16-bit = 65,536 counts). Resolution per count is approximately the full-scale span divided by 2ⁿ. To scale raw counts to engineering units, use EU = (raw − raw_min)/(raw_max − raw_min) × (EU_max − EU_min) + EU_min.",
+      "diagram": {
+        "type": "text",
+        "caption": "Resolution and scaling",
+        "code": "n-bit converter → 2ⁿ counts\n  12-bit = 4096 counts\n  16-bit = 65536 counts\n\nResolution ≈ full-scale span / 2ⁿ\n\nEU = (raw − raw_min)/(raw_max − raw_min)\n       × (EU_max − EU_min) + EU_min"
+      },
+      "resources": [
+        {
+          "title": "Analog Input Card Resolution & Effects on Accuracy (Instrumentation Tools)",
+          "url": "https://instrumentationtools.com/analog-input-card-resolution-effects-on-accuracy/"
+        }
+      ],
+      "questions": [
+        {
+          "id": "analog-scaling-q1",
+          "type": "multiple-choice",
+          "prompt": "A 12-bit analog-to-digital converter gives how many counts?",
+          "options": ["1,024", "2,048", "4,096", "65,536"],
+          "answer": 2,
+          "explanation": "2¹² = 4,096 counts."
+        },
+        {
+          "id": "analog-scaling-q2",
+          "type": "short-answer",
+          "prompt": "How many counts does a 16-bit analog-to-digital converter provide? (Enter a number.)",
+          "answer": "65536",
+          "explanation": "2¹⁶ = 65,536 counts."
+        },
+        {
+          "id": "analog-scaling-q3",
+          "type": "multiple-choice",
+          "prompt": "What is the resolution per count of a 0–10 V signal read by a 12-bit input (4,096 counts)?",
+          "options": ["~2.44 mV", "~24.4 mV", "~0.244 mV", "~244 mV"],
+          "answer": 0,
+          "explanation": "Resolution ≈ 10 V / 4,096 ≈ 0.00244 V ≈ 2.44 mV per count."
+        },
+        {
+          "id": "analog-scaling-q4",
+          "type": "multiple-choice",
+          "prompt": "An analog input card converts a continuous signal such as 4–20 mA into ___.",
+          "options": ["a digital count", "a higher current", "a relay contact", "a resistance"],
+          "answer": 0,
+          "explanation": "The card samples the analog signal and converts it to a digital count proportional to the signal level."
+        },
+        {
+          "id": "analog-scaling-q5",
+          "type": "multiple-choice",
+          "prompt": "To convert raw counts to engineering units, you use ___.",
+          "options": ["a linear scaling formula", "a truth table", "Ohm's law", "the turns ratio"],
+          "answer": 0,
+          "explanation": "Scaling maps the raw range to the engineering range with a linear formula: EU = (raw − raw_min)/(raw_max − raw_min) × (EU_max − EU_min) + EU_min."
+        }
+      ]
+    },
+    {
+      "id": "ladder-logic",
+      "title": "Ladder Logic & Application",
+      "icon": "🪜",
+      "concept": "This is an original motor start/stop rung. The momentary Start (NO) button energizes the Run coil. A seal-in contact driven by the Run coil is wired in parallel with Start, so the coil stays energized after Start releases. The Stop (NC) button and the overload (NC) contact sit in series with the coil: opening either one de-energizes the motor. Pressing Stop (or an overload trip) breaks the rung and drops the Run coil. This same pattern appears throughout motor-control and PLC logic.",
+      "diagram": {
+        "type": "svg",
+        "caption": "Start/stop rung with seal-in and overload (original)",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 320' font-family='sans-serif' font-size='14' role='img' aria-label='Motor start/stop ladder rung with seal-in and overload'><g stroke='#1a2333' stroke-width='2' fill='none'><line x1='40' y1='30' x2='40' y2='290'/><line x1='520' y1='30' x2='520' y2='290'/><line x1='40' y1='30' x2='520' y2='30'/><line x1='40' y1='290' x2='520' y2='290'/><line x1='40' y1='120' x2='80' y2='120'/><line x1='80' y1='120' x2='80' y2='170'/><line x1='80' y1='170' x2='92' y2='170'/><line x1='92' y1='154' x2='92' y2='186'/><line x1='106' y1='154' x2='106' y2='186'/><line x1='92' y1='170' x2='106' y2='170'/><line x1='106' y1='170' x2='170' y2='170'/><line x1='170' y1='170' x2='170' y2='120'/><line x1='90' y1='120' x2='104' y2='120'/><line x1='104' y1='105' x2='104' y2='135'/><line x1='90' y1='105' x2='90' y2='135'/><line x1='80' y1='120' x2='90' y2='120'/><line x1='104' y1='120' x2='170' y2='120'/><line x1='170' y1='120' x2='250' y2='120'/><line x1='250' y1='105' x2='250' y2='135'/><line x1='264' y1='105' x2='264' y2='135'/><line x1='243' y1='135' x2='271' y2='105'/><line x1='250' y1='120' x2='264' y2='120'/><line x1='264' y1='120' x2='330' y2='120'/><line x1='330' y1='105' x2='330' y2='135'/><line x1='344' y1='105' x2='344' y2='135'/><line x1='323' y1='135' x2='351' y2='105'/><line x1='330' y1='120' x2='344' y2='120'/><line x1='344' y1='120' x2='410' y2='120'/><circle cx='432' cy='120' r='14'/><line x1='446' y1='120' x2='520' y2='120'/></g><g font-size='13' fill='#1a2333' stroke='none'><text x='52' y='195'>Start (NO)</text><text x='118' y='210'>Seal-in</text><text x='238' y='95'>Stop (NC)</text><text x='318' y='95'>OL (NC)</text><text x='408' y='95'>Run</text><text x='28' y='20'>L1</text><text x='500' y='20'>L2</text></g></svg>"
+      },
+      "resources": [
+        {
+          "title": "Ladder Logic Tutorial (PLC Academy)",
+          "url": "https://www.plcacademy.com/ladder-logic-tutorial/"
+        }
+      ],
+      "questions": [
+        {
+          "id": "ladder-logic-q1",
+          "type": "multiple-choice",
+          "prompt": "What keeps the Run coil energized after the momentary Start button is released?",
+          "options": ["The seal-in contact (an aux contact of the Run coil) in parallel with Start", "The Stop button", "The overload contact", "A second power supply"],
+          "answer": 0,
+          "explanation": "The seal-in contact closes when the Run coil energizes, holding the rung true after Start releases."
+        },
+        {
+          "id": "ladder-logic-q2",
+          "type": "multiple-choice",
+          "prompt": "Where is the overload (OL) contact typically placed in a motor start/stop rung?",
+          "options": ["In series with the Run coil", "In parallel with Start", "In parallel with Stop", "In the power supply"],
+          "answer": 0,
+          "explanation": "The OL NC contact is in series with the coil, so an overload trip opens it and drops the motor out."
+        },
+        {
+          "id": "ladder-logic-q3",
+          "type": "multiple-choice",
+          "prompt": "What happens when the NC Stop button is pressed?",
+          "options": ["It opens and de-energizes the Run coil", "It closes and energizes the Run coil", "It seals in the coil", "It has no effect"],
+          "answer": 0,
+          "explanation": "The Stop button is normally-closed; pressing it opens the rung, removing power from the Run coil."
+        },
+        {
+          "id": "ladder-logic-q4",
+          "type": "multiple-choice",
+          "prompt": "A transformer has 200 primary turns and 50 secondary turns, with a 480 V primary. What is the secondary voltage?",
+          "options": ["120 V", "240 V", "960 V", "1,920 V"],
+          "answer": 0,
+          "explanation": "Vs = Vp × (Ns/Np) = 480 × (50/200) = 120 V."
+        },
+        {
+          "id": "ladder-logic-q5",
+          "type": "multiple-choice",
+          "prompt": "A 208 V three-phase supply is applied to a wye-connected motor. What is the phase voltage across each winding?",
+          "options": ["~120 V", "208 V", "~360 V", "~277 V"],
+          "answer": 0,
+          "explanation": "In wye, each winding sees V_phase = V_line ÷ √3 = 208 ÷ 1.732 ≈ 120 V."
+        },
+        {
+          "id": "ladder-logic-q6",
+          "type": "multiple-choice",
+          "prompt": "A balanced three-phase load draws 10 A per line at 480 V line with a power factor of 0.9. Its real power is about ___.",
+          "options": ["~7.5 kW", "~4.3 kW", "~15 kW", "~2.5 kW"],
+          "answer": 0,
+          "explanation": "P = √3 × V_line × I_line × PF = 1.732 × 480 × 10 × 0.9 ≈ 7.48 kW."
         }
       ]
     }
