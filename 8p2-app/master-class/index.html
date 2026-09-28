@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8P2 Master Class — Your Downloads</title>
-    <meta name="description" content="Download your 8P2 Master Class files — high-yield study guide, formula/reference sheets, and flashcard deck." />
+    <title>Electrical Deeper Understanding — Your Downloads</title>
+    <meta name="description" content="Download your Electrical Deeper Understanding files — high-yield study guide, formula/reference sheets, and flashcard deck." />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
     <style>
@@ -27,15 +27,21 @@
       .mp-item .meta { flex: 1; min-width: 220px; }
       .mp-item h3 { margin: 0 0 4px; font-size: 16px; }
       .mp-item p { margin: 0; font-size: 14px; color: var(--text-muted); }
-      .mp-soon {
-        font-size: 13px;
+      .mp-download {
+        font-size: 14px;
         font-weight: 700;
-        color: var(--text-muted);
-        background: var(--surface-alt);
-        border: 1px solid var(--border);
+        color: #fff;
+        background: var(--accent);
+        border: 1px solid var(--accent);
         border-radius: 999px;
-        padding: 7px 16px;
+        padding: 8px 18px;
         white-space: nowrap;
+        text-decoration: none;
+      }
+      .mp-download:hover {
+        background: var(--accent-strong);
+        color: #fff;
+        text-decoration: none;
       }
       .mp-note {
         background: var(--accent-soft);
@@ -56,32 +62,32 @@
           <span class="brand-icon">⚡</span>
           <div>
             <h1>8P2 Electrical Controls &amp; Power</h1>
-            <p class="subtitle">Master Class — downloads</p>
+            <p class="subtitle">Electrical Deeper Understanding — downloads</p>
           </div>
         </div>
       </div>
     </header>
 
     <main class="mp-page">
-      <h1>8P2 Master Class — Your Downloads</h1>
-      <p class="mp-intro">Thanks for purchasing the Master Class. Your three downloadable files are being finalized — they'll appear here as soon as they're posted, and you'll have lifetime access.</p>
+      <h1>Electrical Deeper Understanding — Your Downloads</h1>
+      <p class="mp-intro">Thanks for purchasing Electrical Deeper Understanding. Your files are ready below — download them any time (lifetime access).</p>
 
       <div class="mp-item">
         <div class="icon">📘</div>
         <div class="meta">
           <h3>High-Yield Study Guide</h3>
-          <p>Condensed concept summaries across all 25 topics. (Markdown)</p>
+          <p>Exam-focused concept summaries, key concepts, and worked examples across all 14 topics. (Markdown)</p>
         </div>
-        <span class="mp-soon">Being prepared</span>
+        <a class="mp-download" href="study-guide.md" download>Download</a>
       </div>
 
       <div class="mp-item">
         <div class="icon">🧾</div>
         <div class="meta">
-          <h3>Formula &amp; Reference Sheets</h3>
-          <p>One-page cheat sheets of the key formulas (Ohm's Law, reactance, delta/wye, three-phase power, and more). (Markdown)</p>
+          <h3>Printable Formula &amp; Reference Sheets</h3>
+          <p>One-page cheat sheets of every key formula — Ohm's Law, reactance, transformers, delta/wye, three-phase power, and more. (Markdown)</p>
         </div>
-        <span class="mp-soon">Being prepared</span>
+        <a class="mp-download" href="formula-sheets.md" download>Download</a>
       </div>
 
       <div class="mp-item">
@@ -90,11 +96,11 @@
           <h3>Flashcard Deck</h3>
           <p>Anki-importable deck for active recall across every topic. (CSV)</p>
         </div>
-        <span class="mp-soon">Being prepared</span>
+        <a class="mp-download" href="flashcards.csv" download>Download</a>
       </div>
 
       <div class="mp-note">
-        <strong>What happens next:</strong> your files are added to this page automatically as soon as they're ready — no second purchase needed. In the meantime, the <a href="../index.html">free practice drills</a> cover the same 25 topics. If anything looks wrong or you need your files sooner, reach out with your receipt via <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">Buy Me a Coffee</a>.
+        <strong>How to use:</strong> open the study guide and formula sheets in any Markdown reader or text editor (or print them). Import <code>flashcards.csv</code> into Anki (File → Import, choose "Basic" note type, map the <em>Front</em> and <em>Back</em> columns). If anything is missing or you have trouble, reach out with your receipt via <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">Buy Me a Coffee</a>.
       </div>
 
       <a class="back-link" href="../index.html">← Back to free practice drills</a>
