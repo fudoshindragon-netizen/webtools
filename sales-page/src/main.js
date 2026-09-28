@@ -24,7 +24,8 @@ const SAFETY_GUIDES = [
 const TOOLS = [
   { id: 'md-to-html', title: 'Markdown → HTML Converter', desc: 'Paste Markdown, get clean HTML. Copy to clipboard or download as an .html file. Free, no signup.', icon: '📝', href: 'https://md-to-html-one.vercel.app' },
   { id: 'yt-optimizer', title: 'YouTube Title Optimizer', desc: 'Get 5 optimized title suggestions + trending hashtags for any video topic. Built for creators.', icon: '🎬', href: 'https://yt-title-optimizer.vercel.app' },
-  { id: 'ochem-app', title: 'Organic Chemistry Practice', desc: 'Free study app — concept summaries, 32 practice questions with worked solutions, and real molecule diagrams. No signup.', icon: '🧪', href: 'https://ochem-app.vercel.app' }
+  { id: 'ochem-app', title: 'Organic Chemistry Practice', desc: 'Free study app — concept summaries, 64 practice questions with worked solutions, and real molecule diagrams. No signup.', icon: '🧪', href: 'https://ochem-app.vercel.app' },
+  { id: 'electrical-app', title: 'Electrical Controls & Power Practice', desc: 'Free study app — 14 topics and 77 practice questions with worked solutions covering electrical controls and power systems. No signup.', icon: '⚡', href: 'https://8p2-app.vercel.app' }
 ];
 
 // ─── FREE DOWNLOADS (Traffic Bait) ─────────────────────────────

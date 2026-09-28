@@ -55,29 +55,43 @@ a:hover { color: var(--accent-hover); }
 .section-title { font-size: 32px; font-weight: 700; color: var(--text-heading); text-align: center; margin-bottom: 8px; }
 .section-sub { text-align: center; color: var(--text-muted); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
-/* === Free OChem promo === */
-.ochem-promo-section { padding-top: 24px; }
-.ochem-promo-card {
-  background: linear-gradient(135deg, rgba(74,222,128,0.10), rgba(107,197,255,0.08));
-  border: 1px solid rgba(74,222,128,0.35);
+/* === Free Study Apps promo === */
+.study-promo-section { padding-top: 24px; }
+.study-promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 24px;
+}
+.study-card {
   border-radius: var(--radius);
   padding: 36px 40px;
   display: flex;
-  align-items: center;
-  gap: 32px;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
-.ochem-promo-badge {
+.study-card--ochem {
+  background: linear-gradient(135deg, rgba(74,222,128,0.10), rgba(107,197,255,0.08));
+  border: 1px solid rgba(74,222,128,0.35);
+}
+.study-card--electrical {
+  background: linear-gradient(135deg, rgba(255,196,0,0.10), rgba(107,197,255,0.08));
+  border: 1px solid rgba(107,197,255,0.35);
+}
+.study-badge {
   display: inline-block; padding: 4px 12px; border-radius: 999px;
   font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
-  background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.4);
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
-.ochem-promo-copy { flex: 1; min-width: 280px; }
-.ochem-promo-copy .section-title { text-align: left; margin-bottom: 8px; }
-.ochem-promo-copy .section-sub { text-align: left; margin: 0; max-width: none; }
-.ochem-promo-cta { flex-shrink: 0; }
+.study-badge--ochem {
+  background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.4);
+}
+.study-badge--electrical {
+  background: rgba(107,197,255,0.15); color: var(--neon-blue); border: 1px solid rgba(107,197,255,0.4);
+}
+.study-card .section-title { text-align: left; margin-bottom: 0; }
+.study-card .section-sub { text-align: left; margin: 0; max-width: none; }
+.study-card-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
 
 /* === Free Resources (Traffic Bait) === */
 .section-free { background: linear-gradient(180deg, rgba(74,222,128,0.04) 0%, transparent 100%); }
