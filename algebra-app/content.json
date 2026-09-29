@@ -1,0 +1,165 @@
+{
+  "app": {
+    "title": "Algebra, Functions & Data Analysis",
+    "subtitle": "Grade 11 free study & practice drills",
+    "disclaimer": "This study app is a free self-study aid only. It is not a substitute for your teacher, a formal math course, a textbook, or official state standards. Content may contain errors; always verify against your course materials and check your work independently. Practice with additional problems from your own textbook."
+  },
+  "topics": [
+    {
+      "id": "solving-linear-equations",
+      "title": "Solving Linear Equations (for x)",
+      "icon": "➗",
+      "concept": "A linear equation has the variable raised only to the first power, with no variables multiplied together (for example, 3x + 5 = 14). \"Solving for x\" means finding the value of x that makes the equation true. Do it by applying the SAME operation to both sides, working through a fixed, repeatable order. Always check your answer by substituting it back into the original equation.",
+      "diagram": {
+        "type": "text",
+        "caption": "The method, one step per line",
+        "code": "METHOD — Solve a linear equation for x\n1) Simplify each side (distribute, then combine like terms).\n2) Collect every x-term on one side (add or subtract).\n3) Collect every constant term on the other side.\n4) Divide both sides by the coefficient of x.\n5) Check: substitute your answer back into the original."
+      },
+      "resources": [
+        { "title": "Solving linear equations (Khan Academy)", "url": "https://www.khanacademy.org/math/algebra" },
+        { "title": "Solving linear equations (OpenStax)", "url": "https://openstax.org/details/books/elementary-algebra-2e" }
+      ],
+      "questions": [
+        {
+          "id": "linear-q1",
+          "type": "multiple-choice",
+          "prompt": "Solve 2x + 6 = 14.",
+          "options": ["x = 3", "x = 4", "x = 8", "x = 10"],
+          "answer": 1,
+          "explanation": "Step 1: subtract 6 from both sides → 2x = 8. Step 2: divide both sides by 2 → x = 4. Check: 2(4) + 6 = 8 + 6 = 14 ✓."
+        },
+        {
+          "id": "linear-q2",
+          "type": "multiple-choice",
+          "prompt": "Solve 5x − 3 = 2x + 6.",
+          "options": ["x = 1", "x = 2", "x = 3", "x = 9"],
+          "answer": 2,
+          "explanation": "Collect x-terms on one side and constants on the other: 5x − 2x = 6 + 3, so 3x = 9, and x = 3. Check: 5(3) − 3 = 12 and 2(3) + 6 = 12 ✓."
+        },
+        {
+          "id": "linear-q3",
+          "type": "short-answer",
+          "prompt": "Solve 7x = 42. Enter the value of x.",
+          "answer": "6",
+          "explanation": "Divide both sides by the coefficient 7: x = 42 ÷ 7 = 6."
+        },
+        {
+          "id": "linear-q4",
+          "type": "short-answer",
+          "prompt": "Solve x/4 + 2 = 5. Enter the value of x.",
+          "answer": "12",
+          "explanation": "Subtract 2 from both sides: x/4 = 3. Then multiply both sides by 4: x = 12."
+        },
+        {
+          "id": "linear-q5",
+          "type": "multiple-choice",
+          "prompt": "Solve 3(x + 2) = 21.",
+          "options": ["x = 5", "x = 6", "x = 7", "x = 19"],
+          "answer": 0,
+          "explanation": "First divide both sides by 3 (or distribute first): x + 2 = 7, so x = 5. Check: 3(5 + 2) = 3(7) = 21 ✓."
+        }
+      ]
+    },
+    {
+      "id": "function-tables",
+      "title": "Function Tables & Evaluating f(x)",
+      "icon": "🧮",
+      "concept": "Function notation f(x) is read \"f of x.\" To evaluate f(a), substitute a in for every x, then simplify. A function table lists chosen x-inputs alongside their matching f(x) outputs — one row per input/output pair. Evaluating f(x) is simply substitution followed by arithmetic, in a fixed order.",
+      "diagram": {
+        "type": "table",
+        "caption": "Values of f(x) = 2x + 3",
+        "headers": ["x", "f(x) = 2x + 3"],
+        "rows": [
+          ["-2", "-1"],
+          ["-1", "1"],
+          ["0", "3"],
+          ["1", "5"],
+          ["2", "7"]
+        ]
+      },
+      "resources": [
+        { "title": "Evaluating functions (Khan Academy)", "url": "https://www.khanacademy.org/math/algebra" },
+        { "title": "Functions and function notation (OpenStax)", "url": "https://openstax.org/details/books/elementary-algebra-2e" }
+      ],
+      "questions": [
+        {
+          "id": "fn-q1",
+          "type": "multiple-choice",
+          "prompt": "If f(x) = 3x + 1, what is f(2)?",
+          "options": ["5", "6", "7", "8"],
+          "answer": 2,
+          "explanation": "Substitute 2 for x: f(2) = 3(2) + 1 = 6 + 1 = 7."
+        },
+        {
+          "id": "fn-q2",
+          "type": "multiple-choice",
+          "prompt": "If g(x) = x² − 2, what is g(3)?",
+          "options": ["4", "7", "9", "11"],
+          "answer": 1,
+          "explanation": "Substitute 3 for x: g(3) = 3² − 2 = 9 − 2 = 7."
+        },
+        {
+          "id": "fn-q3",
+          "type": "short-answer",
+          "prompt": "If h(x) = 5x − 4, what is h(2)? Enter a number.",
+          "answer": "6",
+          "explanation": "Substitute 2 for x: h(2) = 5(2) − 4 = 10 − 4 = 6."
+        },
+        {
+          "id": "fn-q4",
+          "type": "short-answer",
+          "prompt": "Using the table above, what is f(0) when f(x) = 2x + 3? Enter a number.",
+          "answer": "3",
+          "explanation": "From the table, when x = 0 the output is 3. Directly: f(0) = 2(0) + 3 = 3."
+        }
+      ]
+    },
+    {
+      "id": "graphing-linear-equation",
+      "title": "Graphing a Linear Equation",
+      "icon": "📈",
+      "concept": "A linear equation such as y = 2x + 1 graphs as a straight line. In slope-intercept form y = mx + b, m is the slope (rise over run) and b is the y-intercept (where the line crosses the y-axis). To graph: plot the y-intercept, then use the slope to plot a second point, then draw a straight line through both.",
+      "diagram": {
+        "type": "svg",
+        "caption": "Graph of y = 2x + 1 (slope 2, y-intercept 1)",
+        "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' role='img' aria-label='Coordinate plane showing the line y equals 2x plus 1'><g stroke='#e6ebf2' stroke-width='1'><line x1='40' y1='40' x2='40' y2='360'/><line x1='80' y1='40' x2='80' y2='360'/><line x1='120' y1='40' x2='120' y2='360'/><line x1='160' y1='40' x2='160' y2='360'/><line x1='240' y1='40' x2='240' y2='360'/><line x1='280' y1='40' x2='280' y2='360'/><line x1='320' y1='40' x2='320' y2='360'/><line x1='360' y1='40' x2='360' y2='360'/><line x1='40' y1='40' x2='360' y2='40'/><line x1='40' y1='80' x2='360' y2='80'/><line x1='40' y1='120' x2='360' y2='120'/><line x1='40' y1='160' x2='360' y2='160'/><line x1='40' y1='240' x2='360' y2='240'/><line x1='40' y1='280' x2='360' y2='280'/><line x1='40' y1='320' x2='360' y2='320'/><line x1='40' y1='360' x2='360' y2='360'/></g><g stroke='#1a2333' stroke-width='2'><line x1='20' y1='200' x2='380' y2='200'/><line x1='200' y1='20' x2='200' y2='380'/></g><polygon points='380,200 371,195 371,205' fill='#1a2333'/><polygon points='200,20 195,29 205,29' fill='#1a2333'/><line x1='120' y1='320' x2='260' y2='40' stroke='#1a56db' stroke-width='2.5'/><circle cx='200' cy='160' r='4' fill='#1a56db'/><circle cx='240' cy='80' r='4' fill='#1a56db'/><g fill='#1a2333' font-family='system-ui, sans-serif' font-size='12'><text x='372' y='216'>x</text><text x='212' y='28'>y</text><text x='210' y='152'>(0, 1)</text><text x='248' y='76'>(1, 3)</text><text x='116' y='216' text-anchor='middle'>-2</text><text x='156' y='216' text-anchor='middle'>-1</text><text x='238' y='216' text-anchor='middle'>1</text><text x='278' y='216' text-anchor='middle'>2</text><text x='190' y='284' text-anchor='end'>-2</text><text x='190' y='244' text-anchor='end'>-1</text><text x='190' y='164' text-anchor='end'>1</text><text x='190' y='124' text-anchor='end'>2</text><text x='188' y='216' text-anchor='end'>0</text></g></svg>"
+      },
+      "resources": [
+        { "title": "Graphing linear equations (Khan Academy)", "url": "https://www.khanacademy.org/math/algebra" },
+        { "title": "Graphing linear equations (OpenStax)", "url": "https://openstax.org/details/books/elementary-algebra-2e" }
+      ],
+      "questions": [
+        {
+          "id": "graph-q1",
+          "type": "multiple-choice",
+          "prompt": "In the equation y = 2x + 1, what is the slope?",
+          "options": ["1", "2", "2x", "0"],
+          "answer": 1,
+          "explanation": "In slope-intercept form y = mx + b, m is the slope (the coefficient of x) and b is the y-intercept. Here m = 2."
+        },
+        {
+          "id": "graph-q2",
+          "type": "multiple-choice",
+          "prompt": "In y = 2x + 1, what are the coordinates of the y-intercept?",
+          "options": ["(0, 1)", "(1, 0)", "(2, 1)", "(0, 2)"],
+          "answer": 0,
+          "explanation": "The y-intercept is where x = 0: y = 2(0) + 1 = 1, so the line crosses the y-axis at (0, 1)."
+        },
+        {
+          "id": "graph-q3",
+          "type": "short-answer",
+          "prompt": "For y = 2x + 1, find y when x = 3. Enter a number.",
+          "answer": "7",
+          "explanation": "Substitute 3 for x: y = 2(3) + 1 = 6 + 1 = 7."
+        },
+        {
+          "id": "graph-q4",
+          "type": "short-answer",
+          "prompt": "For y = 2x + 1, find y when x = 4. Enter a number.",
+          "answer": "9",
+          "explanation": "Substitute 4 for x: y = 2(4) + 1 = 8 + 1 = 9."
+        }
+      ]
+    }
+  ]
+}

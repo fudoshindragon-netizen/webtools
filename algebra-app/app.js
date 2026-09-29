@@ -1,43 +1,18 @@
 /**
- * Algebra, Functions & Data Analysis (grade 11) — single-page study app.
+ * Algebra, Functions & Data Analysis (grade 11) — free single-page study app.
  * Loads content from content.json, renders topics + questions,
- * and persists progress in localStorage. No backend, no API keys.
+ * and persists progress in localStorage. No backend, no API keys, no
+ * monetization (no upsell, no paid companion, no Stripe).
  *
  * Reuses the 8P2 electrical app architecture (which itself reused OChem).
  * Math "diagrams" are coordinate planes / graphs as original SVG, plus
  * monospace formula/method blocks and tables — NOT molecules (no SmilesDrawer).
  */
 
-const STORAGE_KEY = 'math-practice-progress-v1';
+const STORAGE_KEY = 'algebra-practice-progress-v1';
 
 let content = null;
 let currentTopicId = null;
-
-// ─── Monetization config ───────────────────────────────────────
-// "Algebra Mastery Pack" paid companion (working name). checkoutUrl is
-// empty for now, so the CTA renders an honest "coming soon" note (the
-// drills stay free). When a live Stripe Payment Link exists ($15 one-time),
-// set checkoutUrl + price and add a `mastery-pack/` download page
-// (analogous to ochem-app/mastery-pack/ and 8p2-app/master-class/).
-const MASTER_CLASS = {
-  checkoutUrl: '',
-  price: '$15',
-  downloadUrl: 'mastery-pack/'
-};
-
-function renderUpsell() {
-  const cta = document.getElementById('upsell-cta');
-  if (!cta) return;
-  if (MASTER_CLASS.checkoutUrl) {
-    const price = MASTER_CLASS.price ? ` — ${MASTER_CLASS.price}` : '';
-    cta.innerHTML = `
-      <a class="upsell-btn" href="${MASTER_CLASS.checkoutUrl}" target="_blank" rel="noopener">Get the Algebra Mastery Pack${price}</a>
-      <a class="upsell-link" href="${MASTER_CLASS.downloadUrl}">Already purchased? Find your downloads →</a>
-    `;
-  } else {
-    cta.innerHTML = `<span class="upsell-soon-note">The Algebra Mastery Pack (printable companion) is coming soon — the drills stay free.</span>`;
-  }
-}
 
 // ─── State / localStorage ──────────────────────────────────────
 function loadProgress() {
@@ -347,8 +322,6 @@ function escapeHtml(s) {
 
 // ─── Init ───────────────────────────────────────────────────────
 function init() {
-  renderUpsell();
-
   fetch('content.json')
     .then((res) => {
       if (!res.ok) throw new Error('content.json failed to load');
