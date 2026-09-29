@@ -83,8 +83,8 @@ function renderTopicList() {
     card.setAttribute('role', 'button');
     card.tabIndex = 0;
     card.innerHTML = `
-      <div class="topic-card-icon">${topic.icon}</div>
-      <div class="topic-card-title">${topic.title}</div>
+      <div class="topic-card-icon">${escapeHtml(topic.icon)}</div>
+      <div class="topic-card-title">${escapeHtml(topic.title)}</div>
       <div class="topic-card-meta">
         <span>${stats.attempted}/${stats.total} attempted</span>
         <span class="topic-mastery-badge" title="Topic mastery">${badge}</span>
@@ -176,12 +176,12 @@ function openTopic(topicId) {
   const container = document.getElementById('topic-detail');
   container.innerHTML = `
     <div class="topic-detail-header">
-      <span class="topic-detail-icon">${topic.icon}</span>
-      <h2>${topic.title}</h2>
+      <span class="topic-detail-icon">${escapeHtml(topic.icon)}</span>
+      <h2>${escapeHtml(topic.title)}</h2>
     </div>
     <div class="concept-box">
       <h3>Concept</h3>
-      <p>${topic.concept}</p>
+      <p>${escapeHtml(topic.concept)}</p>
       ${diagramBox(topic.diagram)}
     </div>
     ${resourcesList(topic.resources)}
@@ -214,7 +214,7 @@ function renderQuestion(q, topicId, progress) {
         return `
           <label class="option" data-index="${i}">
             <input type="radio" name="${q.id}" value="${i}" ${answered && prevAnswer === i ? 'checked' : ''} ${answered ? 'disabled' : ''} />
-            <span>${opt}</span>
+            <span>${escapeHtml(opt)}</span>
           </label>`;
       })
       .join('')}</div>`;
@@ -223,7 +223,7 @@ function renderQuestion(q, topicId, progress) {
   }
 
   card.innerHTML = `
-    <p class="question-prompt">${q.prompt}</p>
+    <p class="question-prompt">${escapeHtml(q.prompt)}</p>
     <div class="question-type">${typeLabel}</div>
     ${diagramBox(q.diagram)}
     ${body}
@@ -306,8 +306,8 @@ function showFeedback(q, isCorrect, alreadyAnswered) {
   const head = isCorrect ? '✓ Correct' : '✗ Not quite';
   fb.innerHTML = `
     <div class="feedback-head ${isCorrect ? 'correct' : 'wrong'}">${head}</div>
-    <p class="worked"><strong>Worked solution:</strong> ${q.explanation}</p>
-    ${!isCorrect ? `<p class="worked"><strong>Correct answer:</strong> ${q.type === 'multiple-choice' ? q.options[q.answer] : escapeHtml(q.answer)}</p>` : ''}
+    <p class="worked"><strong>Worked solution:</strong> ${escapeHtml(q.explanation)}</p>
+    ${!isCorrect ? `<p class="worked"><strong>Correct answer:</strong> ${q.type === 'multiple-choice' ? escapeHtml(q.options[q.answer]) : escapeHtml(q.answer)}</p>` : ''}
     ${resourcesList(q.resources)}
   `;
 }
