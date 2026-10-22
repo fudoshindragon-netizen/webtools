@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quadratic Functions &amp; Transformations — Interactive Explainer</title>
+    <meta name="description" content="Free interactive quadratic-function explainer: type an equation in standard, vertex, or factored form and see the how and why of every feature — plus a graph." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="header-inner">
+        <div class="brand">
+          <span class="brand-icon">📈</span>
+          <div>
+            <h1>Quadratic Functions &amp; Transformations</h1>
+            <p class="subtitle">Interactive explainer — type an equation, see the how <em>and</em> the why</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <!-- Input -->
+      <section class="input-card" aria-label="Equation input">
+        <label class="input-label" for="equation-input">Enter a quadratic equation</label>
+        <div class="input-row">
+          <input
+            id="equation-input"
+            type="text"
+            inputmode="text"
+            autocomplete="off"
+            spellcheck="false"
+            placeholder="e.g. y = 2(x - 3)^2 + 4"
+            aria-describedby="input-help error-msg"
+          />
+          <button id="analyze-btn" type="button" class="primary-btn">Analyze</button>
+        </div>
+        <p id="input-help" class="input-help">
+          Accepts <strong>vertex form</strong> (y = 2(x − 3)² + 4), <strong>standard form</strong> (y = 2x² − 12x + 22), and <strong>factored form</strong> (y = 2(x − 1)(x − 5)). Use <code>^</code> for exponents.
+        </p>
+        <div id="error-msg" class="error hidden" role="alert" aria-live="polite"></div>
+        <div class="examples" aria-label="Example equations">
+          <span class="examples-label">Try an example:</span>
+          <button type="button" class="example-chip" data-eq="y = 2(x - 3)^2 + 4">y = 2(x − 3)² + 4</button>
+          <button type="button" class="example-chip" data-eq="y = 2x^2 - 12x + 22">y = 2x² − 12x + 22</button>
+          <button type="button" class="example-chip" data-eq="y = 2(x - 1)(x - 5)">y = 2(x − 1)(x − 5)</button>
+          <button type="button" class="example-chip" data-eq="y = -(x + 1)^2 - 5">y = −(x + 1)² − 5</button>
+        </div>
+      </section>
+
+      <!-- Parent reference (always visible) -->
+      <section class="parent-ref" aria-label="Parent function reference">
+        <div class="parent-head">
+          <h2>Parent function: <span class="mono">y = x²</span></h2>
+          <button id="toggle-parent-btn" type="button" class="ghost-btn" aria-pressed="true">Hide parent overlay</button>
+        </div>
+        <div class="parent-body">
+          <div class="parent-graph" id="parent-graph" aria-hidden="true"></div>
+          <div class="parent-facts">
+            <ul>
+              <li><strong>Domain:</strong> (−∞, ∞) — every real x can be squared.</li>
+              <li><strong>Range:</strong> [0, ∞) — squaring never gives a negative.</li>
+              <li><strong>Vertex:</strong> (0, 0) — 0² = 0 is the minimum.</li>
+              <li><strong>Axis of symmetry:</strong> x = 0.</li>
+            </ul>
+            <p class="parent-why">
+              <strong>Why it's symmetric:</strong> because (−x)² = x², a point any distance left of the y-axis sits at the same height as the matching point the same distance right of it — that's the mirror symmetry.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Results (hidden until first analyze) -->
+      <section id="results" class="results hidden" aria-live="polite">
+        <div id="detected-form" class="detected"></div>
+        <div id="conversion" class="conversion"></div>
+        <div class="graph-card" id="graph-card">
+          <h3 class="card-heading">Graph</h3>
+          <div id="graph" class="graph" aria-label="Graph of the function and parent"></div>
+          <p class="graph-caption" id="graph-caption"></p>
+        </div>
+        <div id="concepts"></div>
+        <div id="sources" class="sources"></div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <p id="app-disclaimer"></p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
