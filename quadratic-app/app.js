@@ -312,6 +312,13 @@ function buildConcepts(r) {
       ? '<span class="calc">a = ' + fmt(a) + ' &gt; 0</span> (opens up), so the vertex is the <strong>minimum</strong> → range = <span class="calc">[' + fmt(k) + ', ∞)</span>.'
       : '<span class="calc">a = ' + fmt(a) + ' &lt; 0</span> (opens down), so the vertex is the <strong>maximum</strong> → range = <span class="calc">(−∞, ' + fmt(k) + ']</span>.';
 
+  // Concept 8 — intervals of increasing and decreasing
+  const c8How =
+    (a > 0
+      ? '<span class="calc">a = ' + fmt(a) + ' &gt; 0</span> (opens up, vertex is a <strong>minimum</strong>): <strong>Decreasing on (−∞, ' + fmt(h) + ')</strong> — as x moves left→right toward the vertex, y falls to the minimum. <strong>Increasing on (' + fmt(h) + ', ∞)</strong> — after the vertex, y rises without bound.'
+      : '<span class="calc">a = ' + fmt(a) + ' &lt; 0</span> (opens down, vertex is a <strong>maximum</strong>): <strong>Increasing on (−∞, ' + fmt(h) + ')</strong> — as x moves toward the vertex, y rises to the maximum. <strong>Decreasing on (' + fmt(h) + ', ∞)</strong> — after the vertex, y falls without bound.')
+    + ' The vertex <span class="calc">x = ' + fmt(h) + '</span> is the <strong>single turning point</strong>, so both intervals are <strong>open</strong> at ' + fmt(h) + ' (they exclude ' + fmt(h) + ').';
+
   const concepts = [
     {
       title: '1. Vertical scale / stretch — a',
@@ -361,6 +368,17 @@ function buildConcepts(r) {
       what: 'The set of all outputs <span class="calc">y</span> the function can produce.',
       how: c7How,
       why: 'From the vertex reasoning, <span class="calc">k</span> is the lowest (or highest) possible output, hit at x = h; outputs grow without bound in the direction the parabola opens.'
+    },
+    {
+      title: '8. Intervals of increasing and decreasing',
+      sub: 'where the graph rises vs falls',
+      what: 'The x-axis intervals where the output <strong>rises</strong> as x increases (increasing) or <strong>falls</strong> as x increases (decreasing). Always stated in terms of x (the domain), using interval notation.',
+      how: c8How,
+      why: 'The vertex is the one place the direction changes. Because the parabola is symmetric about <span class="calc">x = ' + fmt(h) + '</span>, the two sides behave as mirror opposites: the graph always moves <em>toward</em> the vertex on one side and <em>away</em> from it on the other. ' +
+        (a > 0
+          ? 'Here the vertex is a <strong>minimum</strong>, so the graph descends into it (decreasing) then climbs out (increasing).'
+          : 'Here the vertex is a <strong>maximum</strong>, so it climbs in (increasing) then descends out (decreasing).') +
+        ' At <span class="calc">x = ' + fmt(h) + '</span> exactly, the slope is flat (the function is neither increasing nor decreasing), which is why ' + fmt(h) + ' is excluded from both intervals.'
     }
   ];
 
@@ -470,6 +488,24 @@ function buildGraphSVG(a, h, k, showParent) {
     grid.push('<line x1="' + padL + '" y1="' + py.toFixed(1) + '" x2="' + (W - padR) + '" y2="' + py.toFixed(1) + '" stroke="#eef2f7" stroke-width="1"/>');
   }
   parts.push('<g>' + grid.join('') + '</g>');
+
+  // Increasing / decreasing region tint (behind axes and curves)
+  const decFill = '#fde2e2', incFill = '#dcfce7';
+  const decText = '#b91c1c', incText = '#15803d';
+  const leftIsDec = a > 0;
+  const leftLabel = leftIsDec ? 'decreasing' : 'increasing';
+  const rightLabel = leftIsDec ? 'increasing' : 'decreasing';
+  const leftFill = leftIsDec ? decFill : incFill;
+  const rightFill = leftIsDec ? incFill : decFill;
+  const leftTextCol = leftIsDec ? decText : incText;
+  const rightTextCol = leftIsDec ? incText : decText;
+  const hx = X(h);
+  const leftW = hx - padL;
+  const rightW = (padL + plotW) - hx;
+  parts.push('<rect x="' + padL + '" y="' + padT + '" width="' + leftW.toFixed(1) + '" height="' + plotH + '" fill="' + leftFill + '" opacity="0.5"/>');
+  parts.push('<rect x="' + hx.toFixed(1) + '" y="' + padT + '" width="' + rightW.toFixed(1) + '" height="' + plotH + '" fill="' + rightFill + '" opacity="0.5"/>');
+  parts.push('<text x="' + (padL + leftW / 2).toFixed(1) + '" y="' + (padT + 24) + '" text-anchor="middle" font-size="12" font-weight="600" fill="' + leftTextCol + '">' + leftLabel + '</text>');
+  parts.push('<text x="' + (hx + rightW / 2).toFixed(1) + '" y="' + (padT + 24) + '" text-anchor="middle" font-size="12" font-weight="600" fill="' + rightTextCol + '">' + rightLabel + '</text>');
 
   // Axes
   parts.push('<line x1="' + padL + '" y1="' + Y(0).toFixed(1) + '" x2="' + (W - padR) + '" y2="' + Y(0).toFixed(1) + '" stroke="#5a6b82" stroke-width="1.5"/>');
