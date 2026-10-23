@@ -554,3 +554,32 @@ body {
     font-size: 16px;
   }
 }
+
+/* Study-guide teaser inside the upsell */
+.pack-teaser {
+  margin-top: 1.1rem;
+  padding: 1rem 1.1rem;
+  background: #f6f8fb;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  text-align: left;
+}
+.pack-teaser h4 {
+  margin: 0.6rem 0 0.35rem;
+  font-size: 0.98rem;
+}
+.pack-teaser h4:first-child { margin-top: 0; }
+.pack-teaser ul {
+  margin: 0.25rem 0 0.6rem;
+  padding-left: 1.1rem;
+}
+.pack-teaser li {
+  margin: 0.2rem 0;
+  line-height: 1.45;
+}
+.teaser-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: #64748b;
+  font-style: italic;
+}
