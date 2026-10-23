@@ -263,7 +263,7 @@ function describeA(a) {
   const parts = [];
   if (absA > 1) parts.push('|a| = ' + fmt(absA) + ' &gt; 1 → <strong>vertical stretch</strong> (narrower)');
   else if (absA < 1) parts.push('0 &lt; |a| = ' + fmt(absA) + ' &lt; 1 → <strong>vertical compression</strong> (wider)');
-  else parts.push('a = 1 → <strong>no vertical scaling</strong> (same width as the parent)');
+  else parts.push('|a| = 1 → <strong>no vertical scaling</strong> (same width as the parent)');
   if (a < 0) parts.push('a &lt; 0 → <strong>reflection across the x-axis</strong> (opens downward)');
   return parts.join('. ');
 }
@@ -332,7 +332,7 @@ function buildConcepts(r) {
       sub: 'the "inside" constant',
       what: 'In <span class="calc">y = a(x − h)² + k</span>, <span class="calc">h</span> is the horizontal shift (the "inside" constant).',
       how: c2How,
-      why: 'Replacing x with (x − h) makes the input reach its "zero" (the center) at <span class="calc">x = h</span> instead of x = 0. To reproduce any parent output at x = t you now need x = h + t, so every point slides right by h. The minus sign <em>looks</em> like a left shift but actually moves it right, because you\'re subtracting h from x <em>before</em> squaring.'
+      why: 'Replacing x with (x − h) makes the input reach its "zero" (the center) at <span class="calc">x = h</span> instead of x = 0. To reproduce any parent output at x = t you now need x = h + t, so every point shifts by exactly h in the x-direction — right when h &gt; 0, left when h &lt; 0. The sign inside the parentheses is <em>opposite</em> to the shift direction, because you\'re subtracting h from x <em>before</em> squaring.'
     },
     {
       title: '3. Vertical shift — k',
@@ -455,13 +455,9 @@ function buildGraphSVG(a, h, k, showParent) {
   let yMin = Math.min(k, yEdge);
   let yMax = Math.max(k, yEdge);
 
-  // Include parent y=x² only if its vertex (0,0) is in the x-range, to keep both comparable;
-  // otherwise keep the user function framed and let the parent be a clipped ghost.
-  if (showParent && xMin <= 0 && xMax >= 0) {
-    const pEdge = Math.max(xMin * xMin, xMax * xMax);
-    yMin = Math.min(yMin, 0);
-    yMax = Math.max(yMax, pEdge);
-  }
+  // Frame the y-range on the USER function (the thing being studied). The parent
+  // y = x² is drawn as a clipped dashed reference and must not distort the scale —
+  // otherwise a shifted/downward parabola gets squashed against the unshifted parent.
 
   const pad = Math.max((yMax - yMin) * 0.12, (yMax - yMin) === 0 ? 1 : 0.5);
   yMin -= pad;
