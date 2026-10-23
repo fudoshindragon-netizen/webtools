@@ -89,6 +89,20 @@ a:hover { color: var(--accent-hover); }
 .study-badge--electrical {
   background: rgba(107,197,255,0.15); color: var(--neon-blue); border: 1px solid rgba(107,197,255,0.4);
 }
+.study-card--algebra {
+  background: linear-gradient(135deg, rgba(176,107,255,0.10), rgba(107,197,255,0.08));
+  border: 1px solid rgba(176,107,255,0.35);
+}
+.study-card--quadratic {
+  background: linear-gradient(135deg, rgba(251,191,36,0.10), rgba(176,107,255,0.08));
+  border: 1px solid rgba(251,191,36,0.35);
+}
+.study-badge--algebra {
+  background: rgba(176,107,255,0.15); color: var(--neon-purple); border: 1px solid rgba(176,107,255,0.4);
+}
+.study-badge--quadratic {
+  background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.4);
+}
 .study-card .section-title { text-align: left; margin-bottom: 0; }
 .study-card .section-sub { text-align: left; margin: 0; max-width: none; }
 .study-card-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
