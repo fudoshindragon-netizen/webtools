@@ -180,6 +180,36 @@ footer { border-top: 1px solid var(--border); padding: 32px 20px; }
 .footer-links a { color: var(--text-muted); }
 .footer-links a:hover { color: var(--text-heading); }
 
+/* === Footer Legal / Trust === */
+.footer-legal {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+.footer-about { margin-bottom: 12px; line-height: 1.5; }
+.footer-legal-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: baseline; }
+.footer-legal-row a { color: var(--text-muted); }
+.footer-legal-row a:hover { color: var(--text-heading); }
+.footer-legal-row details { position: relative; }
+.footer-legal-row summary {
+  cursor: pointer; user-select: none; color: var(--text-muted);
+  list-style: none; display: inline-flex; align-items: center; gap: 4px;
+}
+.footer-legal-row summary::-webkit-details-marker { display: none; }
+.footer-legal-row summary:hover { color: var(--text-heading); }
+.footer-legal-row details[open] summary { color: var(--text-heading); }
+.footer-legal-row details p {
+  position: absolute; top: 100%; left: 0; z-index: 20;
+  margin-top: 8px; width: max-content; max-width: 360px;
+  padding: 12px 14px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: 8px;
+  line-height: 1.5; color: var(--text);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
 /* === Scrollbar === */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
@@ -189,14 +219,35 @@ footer { border-top: 1px solid var(--border); padding: 32px 20px; }
 .pack-teaser-mini {
   margin: 0.85rem 0 0;
   padding: 0.7rem 0.85rem;
-  background: rgba(255,255,255,0.7);
-  border: 1px solid var(--border, #e2e8f0);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
   border-radius: 8px;
   font-size: 0.9rem;
   line-height: 1.45;
   text-align: left;
+  color: var(--text);
+}
+.pack-teaser-mini ul {
+  list-style: none;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.pack-teaser-mini li {
+  position: relative;
+  padding-left: 1.15rem;
+  color: var(--text);
+}
+.pack-teaser-mini li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
 }
 .teaser-label {
   font-weight: 700;
-  color: var(--accent, #1a56db);
+  color: var(--accent);
 }

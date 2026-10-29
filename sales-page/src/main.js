@@ -12,7 +12,7 @@ const TEMPLATES = [
 
 const ART_COLLECTIONS = [
   { id: 'anime-wisdom', title: 'Anime Life Wisdom', subtitle: 'Neo-Tokyo Lofi Art Collection', desc: '9 high-res digital art pieces blending anime aesthetics with powerful life lessons. Discipline, Growth, Resilience & more.', price: '$15', img: '/images/anime-wisdom.png', href: 'https://buy.stripe.com/8x228r6yg8Bk2GEfXo0ZW00', badge: 'Digital Art' },
-  { id: 'ghibli-wisdom', title: 'Ghibli Wisdom', subtitle: 'Watercolor Art & Mentorship Bundle', desc: '9 enchanting hand-painted watercolor pieces inspired by classic anime. Gentle wisdom for your digital space.', price: '$19', img: '/images/ghibli-wisdom.png', href: 'https://buy.stripe.com/00w3cvaOwcRA80Y26y0ZW01', badge: 'Digital Art' },
+  { id: 'ghibli-wisdom', title: 'Watercolor Wisdom', subtitle: 'Watercolor Art & Mentorship Bundle', desc: '9 enchanting hand-painted watercolor pieces inspired by classic anime. Gentle wisdom for your digital space.', price: '$19', img: '/images/ghibli-wisdom.png', href: 'https://buy.stripe.com/00w3cvaOwcRA80Y26y0ZW01', badge: 'Digital Art' },
   { id: 'dark-academia', title: 'Dark Academia Wisdom', subtitle: 'Moody Art & Literature Collection', desc: '9 atmospheric vintage-style art pieces with literary quotes. Moody academia aesthetic at its finest.', price: '$15', img: '/images/dark-academia.png', href: 'https://buy.stripe.com/dRmeVdbSA18SgxuaD40ZW07', badge: 'Digital Art' },
   { id: 'faceless-motivation', title: 'Faceless Motivation', subtitle: 'Cyberpunk Hustle & Grind Art', desc: '9 bold cyberpunk motivation cards with faceless silhouettes and powerful text. Hustle culture meets aesthetic design.', price: '$12', img: '/images/faceless-motivation.png', href: 'https://buy.stripe.com/bJe28r8GobNw2GEbH80ZW09', badge: 'Digital Art' },
   { id: 'relatable-struggles', title: 'Relatable Life Struggles', subtitle: 'Humorous Meme Art Collection', desc: '9 hilarious anime-style meme pieces about everyday struggles. Monday mornings, procrastination, adulting fails, and more.', price: '$9', img: '/images/relatable-struggles.png', href: 'https://buy.stripe.com/4gM6oH5uccRAa964eG0ZW08', badge: 'Meme Art' }
@@ -23,11 +23,7 @@ const SAFETY_GUIDES = [
 
 const TOOLS = [
   { id: 'md-to-html', title: 'Markdown → HTML Converter', desc: 'Paste Markdown, get clean HTML. Copy to clipboard or download as an .html file. Free, no signup.', icon: '📝', href: 'https://md-to-html-one.vercel.app' },
-  { id: 'yt-optimizer', title: 'YouTube Title Optimizer', desc: 'Get 5 optimized title suggestions + trending hashtags for any video topic. Built for creators.', icon: '🎬', href: 'https://yt-title-optimizer.vercel.app' },
-  { id: 'ochem-app', title: 'Organic Chemistry Practice', desc: 'Free study app — concept summaries, 64 practice questions with worked solutions, and real molecule diagrams. No signup.', icon: '🧪', href: 'https://ochem-app.vercel.app' },
-  { id: 'electrical-app', title: 'Electrical Controls & Power Practice', desc: 'Free study app — 14 topics and 77 practice questions with worked solutions covering electrical controls and power systems. No signup.', icon: '⚡', href: 'https://8p2-app.vercel.app' },
-  { id: 'algebra-app', title: 'Algebra, Functions & Data Analysis Practice', desc: 'Free study app — 12 topics and 64 practice questions with step-by-step methods and source-verified references. No signup.', icon: '📐', href: 'https://algebra-app-seven.vercel.app' },
-  { id: 'quadratic-app', title: 'Quadratic Functions Explainer', desc: 'Free interactive tool — type any quadratic equation for a full breakdown with a live graph. No signup.', icon: '📈', href: 'https://quadratic-app.vercel.app' }
+  { id: 'yt-optimizer', title: 'YouTube Title Optimizer', desc: 'Get 5 optimized title suggestions + trending hashtags for any video topic. Built for creators.', icon: '🎬', href: 'https://yt-title-optimizer.vercel.app' }
 ];
 
 // ─── FREE DOWNLOADS (Traffic Bait) ─────────────────────────────
