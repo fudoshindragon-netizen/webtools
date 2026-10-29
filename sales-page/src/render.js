@@ -29,7 +29,9 @@ export function renderProductCards(gridId, items) {
           <p class="product-card-desc">${item.desc}</p>
           ${noteHtml}
           <div class="product-card-price">${item.price}</div>
-          <a href="${item.href}" target="_blank" rel="noopener" class="btn-buy">🛍️ Buy Now — ${item.price}</a>
+          ${item.available === false
+            ? `<span class="btn-coming-soon">⏳ Coming soon</span>`
+            : `<a href="${item.href}" target="_blank" rel="noopener" class="btn-buy">🛍️ Buy Now — ${item.price}</a>`}
           <details class="share-toggle">
             <summary class="share-summary">🔗 Share this product</summary>
             <div class="share-links">
