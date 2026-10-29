@@ -14,6 +14,47 @@ body { min-height: 100vh; overflow-x: hidden; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent-hover); }
 
+/* === Shared Top Nav === */
+.site-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+}
+.site-brand {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-heading) !important;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+.site-brand:hover { color: var(--accent) !important; }
+.site-nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.site-nav-link {
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted) !important;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.site-nav-link:hover { border-color: var(--accent); color: var(--text-heading) !important; }
+.site-nav-link[aria-current="page"] {
+  background: linear-gradient(135deg, var(--accent), var(--neon-purple));
+  color: #fff !important;
+  border-color: transparent;
+}
+
+/* Spacing between stacked grids in the Study Hub sections */
+.study-products-spacer, .free-study-spacer { margin-top: 24px; }
+
 /* === Floating Support Button === */
 .float-support {
   position: fixed; bottom: 24px; right: 24px; z-index: 998;
