@@ -9,7 +9,7 @@
 // teaser boxes), so they are NOT in this array.
 export const STUDY_PRODUCTS = [
   { id: 'safety-guide', title: 'Electrical Safety Quick Reference Guide', subtitle: 'OSHA, NEC & NFPA Field Planning Aid', desc: 'Plain-English U.S. electrical safety quick-reference covering OSHA, NEC (2026), NFPA 70E (2027), and NFPA 70B (2026), with a printable one-page field checklist for toolbox talks, pre-job briefs, and maintenance planning.', note: 'Not legal advice, not certified training, not a substitute for official standards or AHJ/employer requirements.', price: '$15', img: '/images/safety-guide.png', href: 'https://buy.stripe.com/aFacN509Sg3Mepm6mO0ZW0a', badge: 'Safety Guide' },
-  { id: 'js-mastery', title: 'JS Interview Prep', subtitle: 'JavaScript Interview Dashboard', desc: '150+ interview questions, LeetCode tracker, code snippet library, and progress tracker — your complete JS interview system.', price: '$15', img: '/images/js-mastery.png', href: 'https://buy.stripe.com/4gM28r2i0aJs5SQeTk0ZW05', badge: 'Notion Template' },
+  { id: 'js-mastery', title: 'JS Interview Prep', subtitle: 'JavaScript Interview Dashboard', desc: '150+ interview questions, LeetCode tracker, code snippet library, and progress tracker — your complete JS interview system.', price: '$15', img: '/images/js-mastery.png', available: false, badge: 'Notion Template' },
   { id: 'mednotes', title: 'MedNotes', subtitle: 'Medical Student Pocket Guide', desc: 'High-yield reference for med students & residents. Lab values, mnemonics, anatomy cheat sheets, and pharmacology guides.', price: '$15', img: '/images/mednotes.png', href: 'https://buy.stripe.com/14A00je0I6tcftq26y0ZW04', badge: 'Notion + PDF' },
 ];
 
@@ -29,8 +29,8 @@ export const FREE_STUDY_RESOURCES = [
 
 // ─── FOCUS & FLOW · Digital templates ────────────────────────────
 export const TEMPLATES = [
-  { id: 'viralflow', title: 'ViralFlow', subtitle: 'Faceless Content Calendar', desc: 'Content operating system for TikTok & YouTube Shorts. Viral hook library, trend tracker, and multi-platform scheduling.', price: '$19', img: '/images/viralflow.png', href: 'https://buy.stripe.com/cNi5kD9KsdVEgxuaD40ZW03', badge: 'Notion Template' },
-  { id: 'focus-os', title: 'Focus OS', subtitle: 'The All-in-One Productivity Hub', desc: 'A minimalist Notion dashboard for task management, goal tracking, weekly reviews, and second brain — designed for solopreneurs.', price: '$15', img: '/images/focus-os.png', href: 'https://buy.stripe.com/cNi7sL5uc8Bk80YbH80ZW02', badge: 'Notion Template' },
+  { id: 'viralflow', title: 'ViralFlow', subtitle: 'Faceless Content Calendar', desc: 'Content operating system for TikTok & YouTube Shorts. Viral hook library, trend tracker, and multi-platform scheduling.', price: '$19', img: '/images/viralflow.png', available: false, badge: 'Notion Template' },
+  { id: 'focus-os', title: 'Focus OS', subtitle: 'The All-in-One Productivity Hub', desc: 'A minimalist Notion dashboard for task management, goal tracking, weekly reviews, and second brain — designed for solopreneurs.', price: '$15', img: '/images/focus-os.png', available: false, badge: 'Notion Template' },
 ];
 
 // ─── FOCUS & FLOW · Art collections (Watercolor Wisdom leads) ────
