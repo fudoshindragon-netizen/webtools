@@ -8,6 +8,8 @@ export default defineConfig({
       input: {
         main: fileURLToPath(new URL('./index.html', import.meta.url)),
         focusFlow: fileURLToPath(new URL('./focus-flow.html', import.meta.url)),
+        nobodyRuns: fileURLToPath(new URL('./nobody-runs.html', import.meta.url)),
+        nobodyRunsDownload: fileURLToPath(new URL('./nobody-runs-download.html', import.meta.url)),
       },
     },
   },

@@ -293,3 +293,29 @@ footer { border-top: 1px solid var(--border); padding: 32px 20px; }
   font-weight: 700;
   color: var(--accent);
 }
+
+/* === NOBODY RUNS — homepage feature block === */
+.nr-home-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 28px;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(251,191,36,0.10), rgba(107,197,255,0.08));
+  border: 1px solid rgba(251,191,36,0.35);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  text-decoration: none !important;
+  transition: all 0.3s;
+}
+.nr-home-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); border-color: #fbbf24; }
+.nr-home-cover { width: 100%; border-radius: var(--radius-sm); border: 1px solid var(--border); display: block; }
+.nr-home-title { font-size: 24px; font-weight: 800; color: var(--text-heading); line-height: 1.25; margin: 8px 0 10px; }
+.nr-home-desc { font-size: 14px; color: var(--text); line-height: 1.65; margin-bottom: 16px; }
+.nr-home-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.nr-home-note { font-size: 13px; color: var(--text-muted); }
+@media (max-width: 720px) {
+  .nr-home-card { grid-template-columns: 1fr; gap: 18px; padding: 24px; text-align: center; }
+  .nr-home-cover { max-width: 180px; margin: 0 auto; }
+  .nr-home-ctas { justify-content: center; }
+  .nr-home-title { font-size: 20px; }
+}
