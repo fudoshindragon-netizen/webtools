@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How Much Water Should You Actually Store? The Honest Arithmetic | MicroVenture Labs</title>
+    <meta name="description" content="One gallon per person per day is the federal floor; two is the working figure. Here is what ninety days of that actually weighs, why it does not fit in an apartment, and the store, harvest, treat and ration-by-activity model that replaces it." />
+    <meta name="author" content="MicroVenture Labs" />
+    <meta property="og:title" content="How Much Water Should You Actually Store? The Honest Arithmetic" />
+    <meta property="og:description" content="The federal one-gallon floor, the weight of ninety days of it, and the four-verb model that beats a bigger drum." />
+    <meta property="og:url" content="https://generationwealthforever.com/how-much-water-to-store.html" />
+    <meta property="og:type" content="article" />
+    <link rel="canonical" href="https://generationwealthforever.com/how-much-water-to-store.html" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --bg: #0a0a12; --bg-card: #12121e; --bg-alt: #0e0e1a; --border: #1e1e32;
+        --text: #b8b8d0; --text-heading: #e8e8f0; --text-muted: #7c7c9a;
+        --accent: #ff6b9d; --accent-hover: #ff8ab0; --accent-glow: rgba(255,107,157,0.3);
+        --neon-blue: #6bc5ff; --neon-purple: #b06bff; --green: #4ade80;
+        --radius: 12px; --radius-sm: 8px;
+        --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font: 16px/1.6 var(--sans); color: var(--text); background: var(--bg);
+        -webkit-font-smoothing: antialiased; scroll-behavior: smooth;
+      }
+      body { min-height: 100vh; overflow-x: hidden; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: var(--accent-hover); }
+      .site-nav { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+      .site-brand { font-size: 18px; font-weight: 800; color: var(--text-heading) !important; text-decoration: none; letter-spacing: -0.3px; }
+      .site-brand:hover { color: var(--accent) !important; }
+      .site-nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+      .site-nav-link { padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--text-muted) !important; border: 1px solid var(--border); text-decoration: none; transition: all 0.2s; }
+      .site-nav-link:hover { border-color: var(--accent); color: var(--text-heading) !important; }
+      .site-nav-link[aria-current="page"] { background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; border-color: transparent; }
+      .float-support { position: fixed; bottom: 24px; right: 24px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; font-size: 28px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(255,107,157,0.4); transition: all 0.3s; text-decoration: none !important; }
+      .float-support:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(255,107,157,0.6); }
+      .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 700; background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
+      .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 600; background: transparent; color: var(--text-heading) !important; border: 1px solid var(--border); cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .btn-secondary:hover { border-color: var(--accent); color: var(--accent) !important; }
+      .btn-large { font-size: 18px; padding: 16px 40px; }
+
+      .g-wrap { max-width: 780px; margin: 0 auto; padding: 0 20px 72px; }
+      .g-eyebrow { display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: rgba(107,197,255,0.12); color: var(--neon-blue); border: 1px solid rgba(107,197,255,0.35); margin-bottom: 16px; }
+      .g-title { font-size: 38px; line-height: 1.14; font-weight: 800; letter-spacing: -1px; color: var(--text-heading); margin-bottom: 14px; }
+      @media (max-width: 600px) { .g-title { font-size: 28px; } }
+      .g-standfirst { font-size: 18px; line-height: 1.65; color: var(--text); margin-bottom: 12px; }
+      .g-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; }
+      .g-hero { padding: 44px 0 8px; }
+      .g-h2 { font-size: 24px; font-weight: 700; color: var(--text-heading); margin: 34px 0 12px; }
+      .g-h3 { font-size: 18px; font-weight: 700; color: var(--text-heading); margin: 24px 0 8px; }
+      .g-body p { margin-bottom: 16px; line-height: 1.75; }
+      .g-body ul, .g-body ol { margin: 0 0 18px 0; padding-left: 22px; }
+      .g-body li { margin-bottom: 9px; line-height: 1.65; }
+      .g-body li strong, .g-body p strong { color: var(--text-heading); }
+      .g-cite { color: var(--text-muted); font-size: 14px; }
+      .g-table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 15px; }
+      .g-table th, .g-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+      .g-table th { color: var(--text-heading); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+      .g-callout { background: rgba(251,191,36,0.07); border: 1px solid rgba(251,191,36,0.3); border-radius: var(--radius); padding: 20px 22px; margin: 0 0 22px; }
+      .g-callout p { margin-bottom: 12px; }
+      .g-callout p:last-child { margin-bottom: 0; }
+      .g-callout strong { color: #fbbf24; }
+      .g-free { background: linear-gradient(135deg, rgba(74,222,128,0.12), rgba(107,197,255,0.07)); border: 1px solid rgba(74,222,128,0.45); border-radius: var(--radius); padding: 30px; margin: 36px 0 0; }
+      .g-free-eyebrow { display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.45); margin-bottom: 14px; }
+      .g-free-title { font-size: 24px; font-weight: 800; line-height: 1.2; color: var(--text-heading); margin-bottom: 10px; }
+      .g-free p { font-size: 15px; line-height: 1.65; margin-bottom: 14px; }
+      .g-free-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 30px; border-radius: var(--radius-sm); font-size: 17px; font-weight: 800; background: var(--green); color: #06121a !important; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .g-free-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(74,222,128,0.35); }
+      .g-free-note { font-size: 13px; color: var(--text-muted); }
+      .g-paid { background: linear-gradient(135deg, rgba(255,107,157,0.10), rgba(107,197,255,0.08)); border: 1px solid rgba(255,107,157,0.35); border-radius: var(--radius); padding: 30px; margin: 20px 0 0; }
+      .g-paid h2 { font-size: 22px; color: var(--text-heading); margin-bottom: 8px; }
+      .g-paid p { font-size: 15px; line-height: 1.65; margin-bottom: 16px; }
+      .g-paid-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+      .g-more { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 24px; }
+      .g-more h2 { font-size: 18px; color: var(--text-heading); margin-bottom: 12px; }
+      .g-more ul { list-style: none; padding: 0; margin: 0; }
+      .g-more li { margin-bottom: 8px; line-height: 1.6; }
+      .g-disclaimer { border-top: 1px solid var(--border); margin-top: 32px; padding-top: 20px; font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+      footer { border-top: 1px solid var(--border); padding: 32px 20px; }
+      .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--text-muted); flex-wrap: wrap; gap: 16px; }
+      .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+      .footer-links a { color: var(--text-muted); }
+      .footer-links a:hover { color: var(--text-heading); }
+      .footer-guides { max-width: 1200px; margin: 18px auto 0; font-size: 13px; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; align-items: baseline; }
+      .footer-guides strong { color: var(--text-heading); font-size: 13px; }
+      .footer-guides a { color: var(--text-muted); }
+      .footer-guides a:hover { color: var(--text-heading); }
+      .footer-legal { max-width: 1200px; margin: 24px auto 0; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+      .footer-about { margin-bottom: 12px; line-height: 1.5; }
+      .footer-legal-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: baseline; }
+      .footer-legal-row a { color: var(--text-muted); }
+      .footer-legal-row a:hover { color: var(--text-heading); }
+      .footer-legal-row summary { cursor: pointer; color: var(--text-muted); list-style: none; }
+      .footer-legal-row summary::-webkit-details-marker { display: none; }
+      .footer-legal-row summary:hover { color: var(--text-heading); }
+      .footer-legal-row details p { margin-top: 8px; max-width: 460px; line-height: 1.5; color: var(--text); }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener" class="float-support" aria-label="Support us on Buy Me a Coffee">☕</a>
+
+    <nav class="site-nav">
+      <a href="index.html" class="site-brand">🚀 MicroVenture Labs</a>
+      <div class="site-nav-links">
+        <a href="index.html" class="site-nav-link">📚 Study Hub</a>
+        <a href="focus-flow.html" class="site-nav-link">🧭 Focus &amp; Flow</a>
+        <a href="nobody-runs.html" class="site-nav-link">🛡️ NOBODY RUNS</a>
+      </div>
+    </nav>
+
+    <div class="g-wrap">
+      <header class="g-hero">
+        <span class="g-eyebrow">🛡️ Guide · Water</span>
+        <h1 class="g-title">How much water should you actually store?</h1>
+        <p class="g-standfirst">Start with the federal figure, then do the arithmetic that most water advice skips: what that figure weighs, and whether it fits in the building you live in. All figures here are printed in the NOBODY RUNS water chapter (Document 02), sourced to Ready.gov, the EPA and the CDC.</p>
+        <p class="g-meta">Version 1.0 · Errata date 2026-11-02 · Written for households in the United States</p>
+      </header>
+
+      <article class="g-body">
+        <h2 class="g-h2">The floor: one gallon per person per day</h2>
+        <p>Ready.gov gives <strong>one gallon (≈3.8 L) per person per day</strong> for drinking and sanitation, and breaks it down: <strong>¾ gallon (≈2.8 L) is drinking fluid</strong>, with the remainder for food preparation and basic sanitation (Document 02, §2.1). That is the federal household planning figure, and it assumes a few days — not a season.</p>
+        <p>The program's working figure is <strong>2 gallons (≈7.6 L) per person per day</strong>. Ready.gov states that hot temperatures, exertion and specific needs can <strong>double</strong> the requirement, and the book uses 2 gallons for three reasons of its own judgement: the household includes children and older adults, and the same guidance flags both as needing more; sheltering in place in a city is not a camping trip, because a household with no running water uses water to flush and to wash hands; and a long outage has no resupply guarantee, so planning the floor means planning a crisis. In a heat emergency it prints <strong>2.5 gallons (≈9.5 L)</strong> per person per day (Document 02, §2.1).</p>
+
+        <table class="g-table">
+          <thead>
+            <tr><th>Household, 90 days</th><th>1 gal floor</th><th>2 gal working</th><th>2.5 gal hot</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 adult</td><td>90 gal (341 L)</td><td>180 gal (681 L)</td><td>225 gal (852 L)</td></tr>
+            <tr><td>2 adults</td><td>180 gal (681 L)</td><td>360 gal (1,363 L)</td><td>450 gal (1,703 L)</td></tr>
+            <tr><td>4 people</td><td>360 gal (1,363 L)</td><td>720 gal (2,725 L)</td><td>900 gal (3,407 L)</td></tr>
+            <tr><td>5 people</td><td>450 gal (1,703 L)</td><td>900 gal (3,407 L)</td><td>1,125 gal (4,259 L)</td></tr>
+          </tbody>
+        </table>
+        <p class="g-cite">As printed in Document 02, §2.1.</p>
+
+        <h2 class="g-h2">What one gallon does and does not cover</h2>
+        <p>It covers drinking, food preparation and basic sanitation for a person who is not exerting themselves, in ordinary weather. It does not cover toilet flushing at anything like a normal frequency, laundry, or the extra fluid that heat, illness, pregnancy and breastfeeding demand. Those are separate budgets, and the book treats them that way (Document 02, §2.9).</p>
+
+        <h2 class="g-h2">Why ninety days of it does not fit in an apartment</h2>
+        <p>Take a household of five at the working figure: <strong>900 gallons, about 3,400 litres</strong>. In the large 45-litre drums sold for exactly this purpose, that is <strong>75 drums</strong>. Water weighs 8.3 lb per gallon, so 900 gallons weighs <strong>about 7,500 lb — roughly 3,400 kg, or three mid-size cars</strong> — spread across the floor area you actually have. Residential floors are not designed for that, and stacking it in one corner of an upper floor is how people crack a ceiling. There is also the question of where seventy-five drums go in a flat that already contains furniture, a bed and a family (Document 02, §2.1).</p>
+        <div class="g-callout">
+          <p><strong>The book says it plainly: a household of four cannot store 720 gallons in an apartment, and a household of five certainly cannot store 900.</strong> Storage alone cannot solve ninety days of water, and any plan that claims it can is arithmetic theatre (Document 02, §2.1).</p>
+        </div>
+
+        <h2 class="g-h2">The four verbs that replace a bigger drum</h2>
+        <p>Instead of treating water as one substance with one storage requirement, the chapter splits it into four actions, in descending order of reliability (Document 02, §2.2).</p>
+
+        <h3 class="g-h3">1. Store — a counted buffer, not a fantasy</h3>
+        <p>The storage target is a <strong>14-day Grade A buffer at ¾ gallon per person per day</strong>, plus as much Grade B as the building allows. Grade A is potable — drinking, food preparation, teeth, dishes. Grade B is flushing, floors and cleaning, and it does not need to be drinkable (Document 02, §2.3.1).</p>
+        <table class="g-table">
+          <thead>
+            <tr><th>Household</th><th>Grade A, 14 days (¾ gal/person/day)</th><th>In 2-gal jugs</th><th>In 45-L drums</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1 adult</td><td>10.5 gal (40 L)</td><td>6</td><td>1</td></tr>
+            <tr><td>2 adults</td><td>21 gal (79 L)</td><td>11</td><td>2</td></tr>
+            <tr><td>4 people</td><td>42 gal (159 L)</td><td>21</td><td>4</td></tr>
+            <tr><td>5 people</td><td>52.5 gal (199 L)</td><td>27</td><td>5</td></tr>
+          </tbody>
+        </table>
+        <p>That table is a shopping list you can carry up a stairwell, and for most apartments it is about the honest limit of what a household will buy, fill, date and rotate. Water that has not been commercially bottled should be replaced every six months; put the date on the container in marker, because a container with no date is one you will not trust and will not drink (Document 02, §2.3.2).</p>
+
+        <h3 class="g-h3">2. Harvest — the water already in the building</h3>
+        <p>Everything here is a <strong>one-time draw</strong>. It does not refill, and it must be treated. Its purpose is to buy days while you solve the next problem (Document 02, §2.4).</p>
+        <ul>
+          <li><strong>The water heater tank</strong> — a genuine source, and a one-time draw of roughly <strong>30–50 gallons in a typical house</strong>, less in an apartment with a smaller tank. Shut off the power or gas before draining, and never drain a shared building system.</li>
+          <li><strong>The toilet tank, never the bowl</strong> — and only if the water is clear and has not been chemically treated with a cleaner tablet. A tank with a blue tablet is out.</li>
+          <li><strong>Rainwater</strong> — assume contamination and treat it hard.</li>
+          <li><strong>Pools and spas</strong> — personal hygiene and cleaning only, never drinking.</li>
+        </ul>
+        <p>And a short never-list: <strong>never</strong> water from radiators or heating boilers, the toilet bowl, or water with fuel, chemicals or floodwater in it. Boiling concentrates chemical contaminants rather than removing them (Document 02, §2.4.1).</p>
+        <p>One building fact changes the arithmetic: above roughly the sixth floor, the taps die with the power, because city pressure needs a booster pump. The building's water is still there and you cannot reach it — so a high-floor household's buffer is worth more than a ground-floor household's, and the book adds two days to the Grade A target above the sixth floor (Document 02, §2.4.2).</p>
+
+        <h3 class="g-h3">3. Treat — four methods, with their real figures</h3>
+        <ul>
+          <li><strong>Boiling is the safest method</strong> — a rolling boil for <strong>1 full minute</strong> at ordinary altitude, and <strong>3 minutes above 5,000 ft</strong> on the EPA's figure. CDC puts the altitude line at 6,500 ft instead; the book prints both and uses the more conservative one. A local boil-water advisory overrides every number in the chapter (Document 02, §2.5).</li>
+          <li><strong>Bleach, with the right column.</strong> EPA's dose is <strong>8 drops of 6% bleach per gallon</strong>, or <strong>6 drops of 8.25%</strong>; 2 gallons is 16 drops (¼ teaspoon) at 6% and 12 drops (⅛ teaspoon) at 8.25%. The two concentrations are not interchangeable — 8.25% bleach dosed at the 6% rate is an overdose — so read the label, and if it states no percentage, do not use that bottle for water. Stir and let stand 30 minutes; if there is no slight bleach odour, repeat the dose and wait 15 minutes; if there is still nothing, discard the water and find another source (Document 02, §2.6).</li>
+          <li><strong>Filters, honestly.</strong> A filter of the right pore size removes parasites and bacteria — <strong>0.3 micron absolute or smaller for bacteria, 1 micron or smaller for parasites</strong> — and it <strong>does not remove viruses</strong>. Filter, then disinfect or boil (Document 02, §2.7).</li>
+          <li><strong>SODIS, the last resort.</strong> Clear plastic bottles, clear water, laid on their side in the sun: <strong>6 hours if sunny, 2 full days if cloudy</strong>. It is a reduction method, not sterilisation, and it removes nothing chemical (Document 02, §2.8).</li>
+        </ul>
+
+        <h3 class="g-h3">4. Ration by activity — the free half of the plan</h3>
+        <p>Water is not one budget, it is a stack of budgets, and the drinking budget is the only one that cannot move. <strong>Drinking fluid is ¾ gallon per person per day and is never rationed</strong> — not for children, not for anyone ill, not for anyone's medication (Document 02, §2.9.2).</p>
+        <p>The biggest lever is the one everybody underestimates. <strong>Toilet flushing consumes more water per person per day than drinking does, in a household with a conventional toilet.</strong> One flush is on the order of one to two gallons; four people flushing four times a day is sixteen to thirty-two gallons — the entire stored drinking budget for four people, spent on urine. So the ration rule is one sentence: <strong>Grade A never touches a toilet.</strong> Bucket-flush from Grade B, from the tub, from the water heater, from rain (Document 02, §2.9).</p>
+        <p>A household that has a modest buffer, knows where the building's water is, can boil and dose, and rations by activity will outlast a household with twice the storage and no method.</p>
+
+        <h2 class="g-h2">What this page will not tell you</h2>
+        <div class="g-callout">
+          <p><strong>No household greywater reuse rules.</strong> No federal source retrieved for the program gives the dosing, storage limits or permitted uses, so it prints plain reasoning instead of invented numbers — and the plain reasoning is more conservative than anything you will find online (Document 02, §2.10).</p>
+          <p><strong>No household method for chemically contaminated water.</strong> Boiling and bleach handle microbiological danger; for chemical danger the answer is a different source (Document 02, §2.5).</p>
+          <p><strong>No pool-chlorine or calcium-hypochlorite recipe, and no iodine.</strong> Ready.gov states iodine products are not recommended and should not be used, and pool chlorine is not authorised for drinking water at all (Document 02, §2.6.5).</p>
+          <p><strong>No fuel quantity for boiling ninety days of water.</strong> Document 11 prints none, and explains why; a household planning to boil its way through is planning a fuel problem it has not solved (Document 02, §2.5).</p>
+        </div>
+      </article>
+
+      <section class="g-free">
+        <span class="g-free-eyebrow">🎁 Free — no email, no signup</span>
+        <h2 class="g-free-title">The 72-Hour No-Utilities Drill</h2>
+        <p>A two-page printable checklist for the first 72 hours with no power and no running water. It has a slot for your Grade A count in gallons, the ¾-gallon drinking allocation and the ¼-gallon food-prep line, your days-of-supply figure, the water heater as a one-time draw, and the rule that Grade A never touches a toilet — each line with its chapter and section cited.</p>
+        <p>Print it, fill in your own numbers, and you will know more about your household's water than most people who own seventy-five drums.</p>
+        <p><a href="/downloads/72-hour-no-utilities-drill.pdf" class="g-free-btn" download>⬇ Download the free drill (PDF)</a></p>
+        <p class="g-free-note">PDF · 2 pages · free forever · no signup</p>
+      </section>
+
+      <section class="g-paid">
+        <h2>The program behind it — NOBODY RUNS, $39</h2>
+        <p>The free drill is three days. <strong>NOBODY RUNS — The 90-Day Urban Family Preparedness Program</strong> is the ninety-day version: 16 documents, print-ready PDFs and large-print variants, 39 modules, assessments with answer keys, printable forms and a household competency record. The water chapter alone carries four hands-on modules — store the buffer, boil, dose bleach with both columns, and find the water inside your own building — each with a pass standard and a witness. Weapons use and weapons construction are out of scope.</p>
+        <div class="g-paid-btns">
+          <a href="https://microventurelabs.gumroad.com/l/kttygj" target="_blank" rel="noopener" class="btn-primary btn-large">Buy on Gumroad — $39 →</a>
+          <a href="https://buy.stripe.com/28E4gzaOweZIdli5iK0ZW0d" target="_blank" rel="noopener" class="btn-secondary btn-large">Buy on Stripe — $39 →</a>
+        </div>
+      </section>
+
+      <nav class="g-more">
+        <h2>More guides</h2>
+        <ul>
+          <li><a href="power-outage-food-safety.html">How long food stays safe in a power outage</a></li>
+          <li><a href="power-outage-elderly-parent.html">The power is out and an elderly parent is at home</a></li>
+          <li><a href="72-hour-blackout-checklist.html">A practical 72-hour blackout checklist</a></li>
+          <li><a href="nobody-runs.html">NOBODY RUNS — the 90-day program</a></li>
+        </ul>
+      </nav>
+
+      <p class="g-disclaimer">Preparedness education only — not medical, legal or tactical advice. This is a study aid, not a substitute for your local water authority, your health department or your clinician. In an emergency call your local emergency number. Follow your local health authority's guidance over anything on this page — a local boil-water advisory always wins. Version 1.0 · Errata date 2026-11-02. Written for households in the United States.</p>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>Built by <a href="index.html">MicroVenture Labs</a> — <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Support our work</a></p>
+        <div class="footer-links">
+          <a href="index.html">📚 Study Hub</a>
+          <a href="focus-flow.html">🧭 Focus &amp; Flow</a>
+          <a href="nobody-runs.html">🛡️ NOBODY RUNS</a>
+          <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Buy us a coffee</a>
+        </div>
+      </div>
+      <div class="footer-guides">
+        <strong>Guides:</strong>
+        <a href="power-outage-food-safety.html">Food safety in a power outage</a>
+        <a href="power-outage-elderly-parent.html">An elderly parent in a blackout</a>
+        <a href="how-much-water-to-store.html">How much water to store</a>
+        <a href="72-hour-blackout-checklist.html">72-hour blackout checklist</a>
+      </div>
+      <div class="footer-legal">
+        <p class="footer-about">MicroVenture Labs is a micro-venture studio building digital study tools, guides, art and free web apps.</p>
+        <div class="footer-legal-row">
+          <a href="mailto:support@microventurelabs.com">📧 Contact</a>
+          <details>
+            <summary>↩ Refund</summary>
+            <p>NOBODY RUNS: 30 days, no interrogation — refund through the channel you bought it on (the refund link on your Gumroad receipt, or a reply to your receipt email). Other digital products are delivered instantly, so sales are final — but if a file is broken or you can't access it, email us within 14 days and we'll fix or refund it.</p>
+          </details>
+          <details>
+            <summary>🔒 Privacy</summary>
+            <p>We don't sell your data. Payments are processed securely by Stripe or Gumroad.</p>
+          </details>
+          <details>
+            <summary>📄 Terms</summary>
+            <p>NOBODY RUNS is preparedness education only — not medical, legal or tactical advice, and not an accredited qualification. Weapons use, weapons handling and weapons construction are out of scope.</p>
+          </details>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
