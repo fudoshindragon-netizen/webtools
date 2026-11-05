@@ -125,6 +125,23 @@ async function alreadySentToday(campaignName, apiKey) {
 export default async function handler(req, res) {
   const now = new Date();
 
+  // ?dryRun=1 — report which quote today resolves to and where the data file was
+  // found, without touching MailerLite. Safe: no env needed, nothing is sent.
+  const dryRun = req.query && String(req.query.dryRun || '') === '1';
+  if (dryRun) {
+    const { quotes, source } = loadQuotes();
+    const doy = dayOfYearUTC(now);
+    const quote = quotes.length > 0 ? quotes[(doy - 1) % quotes.length] : null;
+    return res.status(200).json({
+      ok: quotes.length > 0,
+      dryRun: true,
+      dayOfYear: doy,
+      quoteCount: quotes.length,
+      source,
+      quote,
+    });
+  }
+
   const missing = REQUIRED.filter((key) => !String(process.env[key] || '').trim());
   if (missing.length > 0) {
     console.warn(`[daily-quote] not configured — missing ${missing.join(', ')}. Nothing created, nothing sent.`);
