@@ -11,6 +11,7 @@
     <meta property="og:url" content="https://generationwealthforever.com/72-hour-blackout-checklist.html" />
     <meta property="og:type" content="article" />
     <link rel="canonical" href="https://generationwealthforever.com/72-hour-blackout-checklist.html" />
+    <link rel="stylesheet" href="/quote-signup.css" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>" />
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -176,6 +177,23 @@
       </nav>
 
       <p class="g-disclaimer">Preparedness education only — not medical, legal or tactical advice. This is a study aid, not a substitute for your own course, your clinician or your local authority. In an emergency call your local emergency number. Follow your local health authority's guidance over anything on this page. Version 1.0 · Errata date 2026-11-02. Written for households in the United States.</p>
+      <!-- ===== DAILY QUOTE SIGN-UP ===== -->
+      <section class="qsignup" aria-label="Daily quote email sign-up">
+        <div class="qsignup-inner">
+          <span class="qsignup-eyebrow">📬 Daily quote email</span>
+          <p class="qsignup-copy">One short quote a day. Practical, not motivational filler. Unsubscribe any time.</p>
+          <form class="qsignup-form" data-quote-signup novalidate>
+            <label class="qsignup-label" for="qsignup-email">Email address</label>
+            <div class="qsignup-row">
+              <input class="qsignup-input" id="qsignup-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required />
+              <button class="qsignup-btn" type="submit">Send me the daily quote</button>
+            </div>
+            <p class="qsignup-msg" data-quote-signup-msg role="status" aria-live="polite"></p>
+            <p class="qsignup-note">Free. One line a day, sent by the people who write NOBODY RUNS.</p>
+          </form>
+        </div>
+      </section>
+
     </div>
 
     <footer>
@@ -214,5 +232,6 @@
         </div>
       </div>
     </footer>
+      <script src="/quote-signup.js" defer></script>
   </body>
 </html>
