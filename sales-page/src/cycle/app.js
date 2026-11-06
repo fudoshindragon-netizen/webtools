@@ -15,6 +15,7 @@ import {
 import {
   isNativeApp, apiUrl, prepareNativeShell, enableReminders, refreshNativeReminders, clearNativeReminders,
 } from './native.js';
+import { blocksFromPassages, latestGuideResult, renderGuideBlocks, renderMarkdownSafe } from './guide.js';
 
 const VIEWS = [
   ['calendar', 'Calendar'],
@@ -51,9 +52,10 @@ const ui = {
   lookup: null,
   lookupError: '',
   analyte: 'ferritin',
-  chat: loadChat(),
   assistantStatus: '',
   reminderStatus: '',
+  guide: loadGuide(),
+  guideTicket: 0,
 };
 
 const app = document.querySelector('#app');
@@ -396,7 +398,7 @@ function viewAssistant() {
       ${['fishy odor after sex', 'brown blood at the end of my period', 'coconut oil and a latex condom', 'toy was not cleaned', 'antibacterial soap', 'burning when I pee'].map((prompt) => `<button type="button" data-action="prompt" data-prompt="${esc(prompt)}">${esc(prompt)}</button>`).join('')}
     </div>
     <div class="cy-chat" style="margin-top:12px" aria-live="polite">
-      ${ui.chat.map((message) => `<div class="cy-bubble ${esc(message.role)}">${linkify(message.text)}</div>`).join('')}
+      ${renderCurrentGuide()}
     </div>`;
 }
 
@@ -547,7 +549,8 @@ function onSubmit(event) {
     state.logs = [];
     state.medications = [];
     state.labs = [];
-    ui.chat = [];
+    ui.guide = null;
+    saveGuide();
     announce('Data on this device was deleted.');
     render();
   }
@@ -736,50 +739,53 @@ async function lookupDrug(name) {
   render();
 }
 
-function libraryAnswer(question) {
-  const passages = searchPassages(symptomsDoc.passages, question, 3);
-  if (!passages.length) {
-    return 'The library does not have a passage that matches that question. It covers discharge, odor, period-blood color, soap and douching, lube, toys, yeast and BV care, and urinary burning. For fever, pelvic pain, heavy bleeding, pregnancy, or a possible STI, contact a clinician.';
-  }
-  return passages.map((passage) => {
-    const sources = passage.sourceIds.map((id) => `${meta.sources[id].publisher}: ${meta.sources[id].url}`).join('\n');
-    const see = passage.clinicianIf?.length ? `\nSee a clinician if: ${passage.clinicianIf.join(' ')}` : '';
-    return `${passage.title}\n${passage.body}${see}\n${sources}`;
-  }).join('\n\n');
+function libraryBlocks(question) {
+  return blocksFromPassages(searchPassages(symptomsDoc.passages, question, 3));
+}
+
+function renderCurrentGuide() {
+  const guide = ui.guide;
+  if (!guide) return '';
+  const blocks = guide.blocks.length
+    ? renderGuideBlocks(guide.blocks, (ids) => sourceLinks(ids))
+    : renderMarkdownSafe(`**No matching topic**\n\nThe library does not have a passage that matches that question. It covers discharge, odor, period-blood color, soap and douching, lube, toys, yeast and BV care, and urinary burning. For fever, pelvic pain, heavy bleeding, pregnancy, or a possible STI, contact a clinician.`);
+  const hosted = guide.model ? `<div class="cy-bubble model"><p class="cy-muted">Hosted assistant, this question only</p>${renderMarkdownSafe(guide.model)}</div>` : '';
+  return `<p class="cy-muted">Results for “${esc(guide.question)}”</p>${blocks}${hosted}`;
 }
 
 async function ask(question, mode) {
   const text = question.trim();
   if (!text) return;
-  ui.chat.push({ role: 'user', text });
-  const grounded = libraryAnswer(text);
-  if (mode === 'hosted') {
-    ui.assistantStatus = 'Sending the question only.';
-    ui.chat.push({ role: 'library', text: grounded });
-    saveChat();
-    render();
-    try {
-      const response = await fetch(apiUrl('/api/cycle-assistant'), {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ messages: ui.chat.filter((message) => message.role === 'user').slice(-6).map((message) => ({ role: 'user', content: message.text })) }),
-      });
-      const body = await response.json();
-      if (body.mode === 'model' && body.answer) {
-        ui.chat.push({ role: 'model', text: body.answer });
-        ui.assistantStatus = 'Hosted answer added under the library text.';
-      } else {
-        ui.assistantStatus = body.setup || body.warning || 'Hosted assistant is not available. The library answer above is the one to use.';
-      }
-    } catch (error) {
-      ui.assistantStatus = `The hosted assistant could not be reached (${error.message}). The library answer is still above.`;
-    }
-  } else {
-    ui.chat.push({ role: 'library', text: grounded });
+  const ticket = ++ui.guideTicket;
+  const blocks = libraryBlocks(text);
+  ui.guide = latestGuideResult(text, blocks, '');
+  saveGuide();
+  if (mode !== 'hosted') {
     ui.assistantStatus = 'Answered from the on-device library. Nothing was sent.';
+    render();
+    return;
   }
-  ui.chat = ui.chat.slice(-12);
-  saveChat();
+  ui.assistantStatus = 'Sending this question only. The previous answer was cleared.';
+  render();
+  try {
+    const response = await fetch(apiUrl('/api/cycle-assistant'), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: [{ role: 'user', content: text }] }),
+    });
+    const body = await response.json();
+    if (ticket !== ui.guideTicket) return;
+    if (body.mode === 'model' && body.answer) {
+      ui.guide = latestGuideResult(text, blocks, body.answer);
+      ui.assistantStatus = 'Hosted answer is for this question only.';
+    } else {
+      ui.assistantStatus = body.setup || body.warning || 'Hosted assistant is not available. The library answer above is the one to use.';
+    }
+  } catch (error) {
+    if (ticket !== ui.guideTicket) return;
+    ui.assistantStatus = `The hosted assistant could not be reached (${error.message}). The library answer above is the one to use.`;
+  }
+  saveGuide();
   render();
 }
 
@@ -888,22 +894,21 @@ function esc(value) {
   return String(value ?? '').replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 }
 
-function linkify(value) {
-  return esc(value).replace(/https:\/\/[^\s<]+/g, (url) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`);
-}
-
-function loadChat() {
+function loadGuide() {
   try {
-    const parsed = JSON.parse(sessionStorage.getItem('gwf.cycleChat.v1') || '[]');
-    return Array.isArray(parsed) ? parsed.slice(-12) : [];
+    sessionStorage.removeItem('gwf.cycleChat.v1');
+    const parsed = JSON.parse(sessionStorage.getItem('gwf.cycleGuide.v1') || 'null');
+    if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return null;
+    return latestGuideResult(parsed.question, Array.isArray(parsed.blocks) ? parsed.blocks : [], parsed.model || '');
   } catch {
-    return [];
+    return null;
   }
 }
 
-function saveChat() {
+function saveGuide() {
   try {
-    sessionStorage.setItem('gwf.cycleChat.v1', JSON.stringify(ui.chat));
+    if (!ui.guide) sessionStorage.removeItem('gwf.cycleGuide.v1');
+    else sessionStorage.setItem('gwf.cycleGuide.v1', JSON.stringify(ui.guide));
   } catch {
     /* ignore quota */
   }

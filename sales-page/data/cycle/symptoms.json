@@ -72,6 +72,20 @@
       "title": "Water-based, silicone, and oil-based lube, including coconut oil",
       "keywords": ["lube", "lubricant", "coconut", "oil", "silicone", "water-based", "glycerin", "glycerine", "condom", "latex", "ph"],
       "body": "Cornell Health divides lubricants into water-based, silicone-based, and oil-based. Water-based lubes are the usual all-purpose choice: they do not break down latex, and they wash off. Cornell notes that people who get vaginal infections may want to avoid glycerin, because it may encourage yeast; that is a practical caution, not a measured risk percentage. Silicone lube lasts longer, is condom-compatible, and can damage silicone toys. Oil-based products, including massage oils and coconut oil, weaken latex condoms, dams, and diaphragms, so they raise the chance a latex condom breaks. Cornell also says oil can leave a coating in the vagina or rectum that can contribute to bacterial or other infection, which is why they do not recommend oil-based lube for sex with a partner. Mayo Clinic Press says to pick a lubricant with as few additives as possible and a pH close to the vagina's, often 3.8 to 4.5. Hormonal birth control does not make an oil-based lube safe with latex.",
+      "sections": [
+        {
+          "title": "Water-based lube",
+          "body": "Cornell Health calls water-based lubricant the usual all-purpose choice. It does not break down latex, and it washes off. Cornell notes that people who get vaginal infections may want to avoid glycerin, because it may encourage yeast. That is a practical caution, not a measured risk percentage. Mayo Clinic Press says to pick a lubricant with as few additives as possible and a pH close to the vagina's, often 3.8 to 4.5."
+        },
+        {
+          "title": "Silicone-based lube",
+          "body": "Cornell Health says silicone lubricant lasts longer than water-based lubricant and is compatible with condoms. It can damage silicone toys."
+        },
+        {
+          "title": "Oil-based lube (including coconut oil)",
+          "body": "Cornell Health says oil-based products, including massage oils and coconut oil, weaken latex condoms, dams, and diaphragms, so a latex condom is more likely to break. Oil can also leave a coating in the vagina or rectum that can contribute to bacterial or other infection, which is why Cornell does not recommend oil-based lubricant for sex with a partner. Hormonal birth control does not make an oil-based lubricant safe to use with latex."
+        }
+      ],
       "clinicianIf": ["Irritation, itching, or a new odor started after a new lube and is not settling.", "A condom broke while you were using oil. That is an emergency-contraception question as well as an STI question."],
       "sourceIds": ["cornell-lube", "mayo-ph"]
     },

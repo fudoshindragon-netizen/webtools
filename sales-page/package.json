@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test src/cycle/logic.test.js src/cycle/reminders.test.js",
+    "test": "node --test src/cycle/logic.test.js src/cycle/reminders.test.js src/cycle/guide.test.js",
     "refresh-health-data": "node scripts/refresh-health-data.mjs",
     "build:app": "npm run build && node scripts/prepare-app-dist.mjs",
     "cap:sync": "node scripts/write-capacitor-config.mjs && npm run build:app && cap sync",

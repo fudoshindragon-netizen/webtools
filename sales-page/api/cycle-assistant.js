@@ -57,7 +57,7 @@ export async function answerQuestion(body) {
       model: (process.env.CYCLE_ASSISTANT_MODEL || DEFAULT_MODEL).trim(),
       maxOutputTokens: 700,
       temperature: 0.2,
-      system: `You explain common period, discharge, and birth-control questions for an adult educational app. Use ONLY the reference passages. Do not invent statistics, doses, or diagnoses. If the passages do not cover the question, say so in one sentence. Write plain paragraphs. Include the source name and URL for each claim you use. Include a "See a clinician if" line when the passages do. Say that this is not medical advice. Reference library last reviewed ${reviewed}.`,
+      system: `You explain common period, discharge, and birth-control questions for an adult educational app. Use ONLY the reference passages. Do not invent statistics, doses, or diagnoses. If the passages do not cover the question, say so in one sentence. For each topic, put the heading alone on the first line wrapped in double asterisks, like **Water-based lube**, then a blank line, then the explanation. When the passages discuss lubricants, use these headings when they apply: **Water-based lube**, **Silicone-based lube**, and **Oil-based lube (including coconut oil)**. Do not use HTML. Include the source name and URL for each claim you use. Include a "See a clinician if" line when the passages do. Say that this is not medical advice. Reference library last reviewed ${reviewed}.`,
       prompt: `Question:\n${question}\n\nReference passages:\n${block}`,
     });
     return { status: 200, body: { ok: true, mode: 'model', answer: result.text, reviewed } };
