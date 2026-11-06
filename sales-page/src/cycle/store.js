@@ -1,3 +1,5 @@
+import appConfig from '../../app.config.json' with { type: 'json' };
+
 const KEY = 'gwf.cycleTracker.v1';
 
 export function emptyState() {
@@ -10,6 +12,8 @@ export function emptyState() {
       anchorDate: '',
       years: 8,
       reminder: '',
+      reminderHour: Number(appConfig.reminderHour) || 9,
+      reminderMinute: Number(appConfig.reminderMinute) || 0,
     },
     periods: [],
     logs: [],
@@ -76,6 +80,8 @@ export function sanitizeImport(raw) {
   next.profile.anchorDate = cleanDate(profile.anchorDate);
   next.profile.years = clamp(profile.years, 1, 15, 8);
   next.profile.reminder = cleanText(profile.reminder, 40);
+  next.profile.reminderHour = clamp(profile.reminderHour, 0, 23, next.profile.reminderHour);
+  next.profile.reminderMinute = clamp(profile.reminderMinute, 0, 59, next.profile.reminderMinute);
 
   next.periods = (Array.isArray(raw.periods) ? raw.periods : []).slice(0, 400).map((period) => ({
     id: cleanText(period.id, 40) || asId(),
@@ -169,6 +175,8 @@ export function exampleState(today) {
     anchorDate: shift(today, -10),
     years: 8,
     reminder: 'daily-pill',
+    reminderHour: 9,
+    reminderMinute: 0,
   };
   const starts = [shift(today, -84), shift(today, -56), shift(today, -28)];
   state.periods = starts.map((start, index) => ({

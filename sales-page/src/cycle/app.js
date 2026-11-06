@@ -12,6 +12,9 @@ import {
   loadState, saveState, clearState, sanitizeImport, newId, exampleState,
   FLOW, SYMPTOMS, MOODS, MUCUS,
 } from './store.js';
+import {
+  isNativeApp, apiUrl, prepareNativeShell, enableReminders, refreshNativeReminders, clearNativeReminders,
+} from './native.js';
 
 const VIEWS = [
   ['calendar', 'Calendar'],
@@ -50,6 +53,7 @@ const ui = {
   analyte: 'ferritin',
   chat: loadChat(),
   assistantStatus: '',
+  reminderStatus: '',
 };
 
 const app = document.querySelector('#app');
@@ -60,7 +64,14 @@ app.addEventListener('submit', onSubmit);
 app.addEventListener('change', onChange);
 window.addEventListener('hashchange', render);
 
+if (isNativeApp()) document.body.classList.add('is-native');
 render();
+void prepareNativeShell();
+void refreshNativeReminders(state.profile).then((result) => {
+  if (!result?.message) return;
+  ui.reminderStatus = result.message;
+  if (!location.hash || location.hash === '#calendar') render();
+});
 
 function render() {
   const current = view();
@@ -114,6 +125,16 @@ function viewCalendar() {
       ${stat('Estimated fertile days', forecast.fertileStart ? `${pretty(forecast.fertileStart)} – ${pretty(forecast.fertileEnd)}` : '—', 'Nine days ending 14 days before the next predicted period. CDC says a regular cycle has about nine or more fertile days and does not assign these dates.')}
       ${stat('Method', methodById(state.profile.methodId)?.name || 'None chosen', state.profile.anchorDate ? `Anchor ${pretty(state.profile.anchorDate)}` : 'Set a start date on the Methods tab.')}
     </div>
+    <form id="reminder-time" class="cy-card" style="margin-top:12px">
+      <h2>Reminder time</h2>
+      <p class="cy-muted">${isNativeApp() ? 'Allow notifications to schedule a pill, patch, ring, or shot reminder on this phone. The log still works if you decline.' : 'This website only reminds you while the page is open. The Android and iPhone app uses this time for a notification that stays on the phone.'}</p>
+      <div class="cy-row">
+        <div class="cy-field"><label for="reminder-clock">Time</label><input id="reminder-clock" name="reminderTime" type="time" required value="${esc(clockValue(state.profile))}"></div>
+        <button class="primary" type="submit">Save time</button>
+        ${isNativeApp() ? '<button type="button" data-action="allow-reminders">Allow phone reminders</button>' : ''}
+      </div>
+      ${ui.reminderStatus ? `<p class="cy-muted">${esc(ui.reminderStatus)}</p>` : ''}
+    </form>
     <p class="cy-muted" style="margin:12px 0">${forecast.irregular ? 'Recent cycles vary by more than a week, so this shading is a rough sketch.' : 'Days outside the blue mark are not safe days. This is a calendar estimate, not an ovulation test.'}</p>
     <div class="cy-grid-2">
       <section class="cy-card" aria-labelledby="cal-title">
@@ -385,6 +406,7 @@ function viewPrivacy() {
       <h2>What stays here</h2>
       <p>Period logs, the method you picked, medications, and lab numbers are stored in localStorage on this device. There is no account. This page does not load analytics. Export and import are JSON files you keep.</p>
       <p>A label lookup sends the drug name. The hosted assistant sends the question you submit. If you type a lab value or a story into that box, that text is included, because you put it there.</p>
+      <p><a href="privacy.html">Privacy policy and educational terms</a></p>
       <div class="cy-row">
         <button type="button" class="primary" data-action="export">Export JSON</button>
         <button type="button" data-action="example">Load example data</button>
@@ -449,6 +471,12 @@ function onClick(event) {
     if (box) box.value = button.dataset.prompt;
   } else if (action === 'export') {
     exportJson();
+  } else if (action === 'allow-reminders') {
+    void enableReminders(state.profile).then((result) => {
+      ui.reminderStatus = result.message;
+      announce(result.message);
+      render();
+    });
   } else if (action === 'example') {
     const sample = exampleState(today);
     Object.assign(state, sample);
@@ -484,6 +512,7 @@ function onSubmit(event) {
   if (form.id === 'quick-flow') saveFlow(ui.selected, String(data.get('flow') || 'none'));
   if (form.id === 'log-form') saveLog(data);
   if (form.id === 'method-form') saveMethod(data);
+  if (form.id === 'reminder-time') saveReminderTime(data);
   if (form.id === 'missed-form') {
     readMissed(form);
     ui.missed.ready = true;
@@ -511,6 +540,7 @@ function onSubmit(event) {
       return;
     }
     clearState();
+    void clearNativeReminders();
     const blank = emptyFromClear();
     state.profile = blank.profile;
     state.periods = [];
@@ -619,7 +649,28 @@ function saveMethod(data) {
   ui.missed.methodId = method.id;
   saveState(state);
   announce(`${method.name} saved on this device.`);
+  void refreshNativeReminders(state.profile).then((result) => {
+    if (result?.message) ui.reminderStatus = result.message;
+  });
   render();
+}
+
+function saveReminderTime(data) {
+  const [hour, minute] = String(data.get('reminderTime') || '09:00').split(':').map(Number);
+  state.profile.reminderHour = Number.isFinite(hour) ? hour : 9;
+  state.profile.reminderMinute = Number.isFinite(minute) ? minute : 0;
+  saveState(state);
+  void refreshNativeReminders(state.profile).then((result) => {
+    ui.reminderStatus = result?.message || 'Reminder time saved on this device.';
+    announce(ui.reminderStatus);
+    render();
+  });
+}
+
+function clockValue(profile) {
+  const hour = String(profile.reminderHour ?? 9).padStart(2, '0');
+  const minute = String(profile.reminderMinute ?? 0).padStart(2, '0');
+  return `${hour}:${minute}`;
 }
 
 function readMissed(form) {
@@ -675,7 +726,7 @@ async function lookupDrug(name) {
   announce('Looking up the public label.');
   render();
   try {
-    const response = await fetch(`/api/drug-lookup?q=${encodeURIComponent(name)}`);
+    const response = await fetch(apiUrl(`/api/drug-lookup?q=${encodeURIComponent(name)}`));
     const body = await response.json();
     if (!response.ok || body.ok === false) throw new Error(body.message || 'Label lookup failed.');
     ui.lookup = body;
@@ -708,7 +759,7 @@ async function ask(question, mode) {
     saveChat();
     render();
     try {
-      const response = await fetch('/api/cycle-assistant', {
+      const response = await fetch(apiUrl('/api/cycle-assistant'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messages: ui.chat.filter((message) => message.role === 'user').slice(-6).map((message) => ({ role: 'user', content: message.text })) }),

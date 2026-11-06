@@ -60,6 +60,7 @@ export default defineConfig({
         nobodyRuns: fileURLToPath(new URL('./nobody-runs.html', import.meta.url)),
         nobodyRunsDownload: fileURLToPath(new URL('./nobody-runs-download.html', import.meta.url)),
         cycle: fileURLToPath(new URL('./cycle.html', import.meta.url)),
+        privacy: fileURLToPath(new URL('./privacy.html', import.meta.url)),
       },
     },
   },

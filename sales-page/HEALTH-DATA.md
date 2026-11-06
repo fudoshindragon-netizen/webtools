@@ -1,5 +1,7 @@
 # Cycle tracker — data, environment, and refresh
 
+The Android and iPhone app is documented in `APP-RELEASE.md`. Inside the app, the hosted assistant and openFDA lookup use the absolute origin in `app.config.json` (`apiBase`). The website keeps using relative `/api` paths.
+
 The tracker is a page on the existing Vite site (`cycle.html`), deployed with the rest of `sales-page` on Vercel. Personal logs stay in the browser. Two serverless routes live next to the quote routes:
 
 - `GET /api/drug-lookup?q=` proxies [openFDA](https://api.fda.gov/drug/label.json) label text.

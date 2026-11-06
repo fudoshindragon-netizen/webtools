@@ -212,6 +212,13 @@
   color: var(--text-muted);
   font-size: 13px;
 }
+body.is-native .site-nav,
+body.is-native footer .footer-links,
+body.is-native footer .footer-content p {
+  display: none;
+}
+body.is-native .cy { padding-top: 12px; }
+
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; transition: none !important; }
 }

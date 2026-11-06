@@ -153,7 +153,7 @@ export function reminderFor(profile, logs, today) {
     if (logged?.adherence === 'taken') {
       return { tone: 'ok', title: 'Today’s pill is logged', detail: 'Stored only on this device.' };
     }
-    return { tone: 'due', title: 'No pill logged today', detail: 'Combined pills and mini-pills are taken every day. This reminder is not a notification after you close the page.' };
+    return { tone: 'due', title: 'No pill logged today', detail: 'Combined pills and mini-pills are taken every day. This note is only on screen. The phone app can also notify you at the time you set.' };
   }
 
   if (kind === 'weekly-patch') {
