@@ -1,0 +1,27 @@
+name: Refresh health reference data
+
+on:
+  schedule:
+    # Mondays 15:00 UTC. Flags drift; does not rewrite clinical numbers.
+    - cron: '0 15 * * 1'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: sales-page
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Re-check cited pages and openFDA labels
+        run: node scripts/refresh-health-data.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: health-data-refresh-report
+          path: sales-page/data/cycle/refresh-report.json
+          if-no-files-found: warn

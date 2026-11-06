@@ -1,0 +1,457 @@
+{
+  "version": "2026-11-06.1",
+  "lastReviewed": "2026-11-06",
+  "intro": "Failure rates below are the share of people who become pregnant during the first year of use. Typical use includes missed or late use. Perfect use means the method was used correctly every time. CDC's current public methods page and the older Trussell table republished by CDC in 2013 do not always use the same typical-use number. Both are shown, with the source on each figure. None of these methods except condoms are described by CDC as protection from sexually transmitted infections.",
+  "methods": [
+    {
+      "id": "combined-pill",
+      "name": "Combined pill",
+      "group": "Short-acting hormonal",
+      "aka": "COC, the pill",
+      "how": "A daily pill with an estrogen and a progestin. CDC describes inhibition of ovulation as the main way combined pills work. Packs are usually taken for 21 to 24 hormone days, then 4 to 7 hormone-free days.",
+      "tracking": "One hormonal pill a day, around the same time. Placebo pills do not contain the hormones the missed-pill rules apply to.",
+      "reminder": "daily-pill",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "7%",
+          "note": "About 7 out of 100 combined-pill users become pregnant in the first year. The same 7% is what CDC's 2024 SPR states for combined hormonal contraceptives as a group (pill, patch, and ring).",
+          "sourceIds": ["cdc-about", "cdc-spr-chc"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "0.3%",
+          "note": "0.3 out of 100 in the first year. In that same 2011 table, typical use for the combined pill was 9%, which is older than the 7% on CDC's current page.",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs. CDC advises condoms as well if STI protection is needed.",
+      "sourceIds": ["cdc-about", "cdc-spr-chc"]
+    },
+    {
+      "id": "pop-traditional",
+      "name": "Progestin-only pill (norethindrone or norgestrel)",
+      "group": "Short-acting hormonal",
+      "aka": "Mini-pill, POP",
+      "how": "A daily pill with a progestin and no estrogen. CDC states these pills inhibit ovulation in about half of cycles, and that the rate varies widely. Cervical mucus effects are the other part of how they work. A dose is missed if it is more than 3 hours late. Serum levels are near baseline by 24 hours.",
+      "tracking": "One pill every day, within a 3-hour window of the usual time. There is no hormone-free week for these older mini-pills.",
+      "reminder": "daily-pill",
+      "effectiveness": [
+        {
+          "label": "Typical use",
+          "value": "7%",
+          "note": "About 7 out of 100 users in the first year, on both CDC's current methods page and the 2024 SPR. The 2013 Trussell table grouped the progestin-only pill with the combined pill at 9% typical use and 0.3% perfect use.",
+          "sourceIds": ["cdc-about", "cdc-spr-pop", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "0.3%",
+          "note": "Published for combined and progestin-only pills together, not as a separate mini-pill trial.",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["cdc-spr-pop", "cdc-about"]
+    },
+    {
+      "id": "pop-drospirenone",
+      "name": "Drospirenone progestin-only pill",
+      "group": "Short-acting hormonal",
+      "aka": "DRSP POP, Slynd is one brand",
+      "how": "A progestin-only pill whose main effect is inhibition of ovulation, which CDC says makes it more like a combined pill than like norethindrone or norgestrel pills. The labeled cycle is 24 active days and 4 placebo days. In one study CDC cites, no one among 27 users met normal ovulatory criteria over two treatment cycles.",
+      "tracking": "One pill a day. A single pill taken less than 48 hours late does not, in CDC's rule, need backup. Two or more pills missed (48 hours or more) does.",
+      "reminder": "daily-pill",
+      "effectiveness": [
+        {
+          "label": "Typical use, all progestin-only pills",
+          "value": "7%",
+          "note": "CDC reports this for progestin-only pills as a group. A separate first-year percentage for the drospirenone pill alone is not on that page.",
+          "sourceIds": ["cdc-spr-pop", "cdc-about"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["cdc-spr-pop"]
+    },
+    {
+      "id": "patch",
+      "name": "Contraceptive patch",
+      "group": "Short-acting hormonal",
+      "aka": "Xulane, and the older Evra name in the 2011 table",
+      "how": "A combined hormonal patch worn on the skin (not on the breasts). It releases a progestin and an estrogen. A new patch goes on once a week for three weeks. The fourth week is patch-free.",
+      "tracking": "Change day once a week for three weeks, then one week off. Check that the patch is fully stuck.",
+      "reminder": "weekly-patch",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "7%",
+          "note": "The 2013 Trussell table listed the Evra patch at 9% typical use and 0.3% perfect use.",
+          "sourceIds": ["cdc-about", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "0.3%",
+          "note": "Paired in that table with a 9% typical-use figure.",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["cdc-about", "cdc-spr-chc", "xulane-label"]
+    },
+    {
+      "id": "ring-nuvaring",
+      "name": "Etonogestrel vaginal ring (NuvaRing)",
+      "group": "Short-acting hormonal",
+      "aka": "NuvaRing and generics",
+      "how": "A flexible ring in the vagina that releases etonogestrel and ethinyl estradiol. It stays in for three weeks, comes out for one week, and then a new ring goes in. The FDA label says the exact position in the vagina is not critical.",
+      "tracking": "In for 21 days, out for 7. One ring is used for one cycle. Check that it is still in, including after sex.",
+      "reminder": "ring-21-7",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "7%",
+          "note": "The 2013 Trussell table listed NuvaRing at 9% typical use and 0.3% perfect use.",
+          "sourceIds": ["cdc-about", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "0.3%",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["cdc-about", "nuvaring-label", "cdc-spr-chc"]
+    },
+    {
+      "id": "ring-annovera",
+      "name": "Segesterone vaginal ring (Annovera)",
+      "group": "Short-acting hormonal",
+      "aka": "Annovera",
+      "how": "A reusable ring that releases segesterone acetate and ethinyl estradiol. The same ring is used for up to 13 cycles. Each cycle is 21 days in and 7 days out. CDC says its missed-ring algorithm is for the etonogestrel ring; Annovera dosing errors follow the package label.",
+      "tracking": "21 days in, 7 days out, same ring washed and stored during the week out, for up to 13 cycles.",
+      "reminder": "ring-21-7",
+      "effectiveness": [
+        {
+          "label": "Typical use, vaginal ring on the current CDC page",
+          "value": "7%",
+          "note": "CDC's public methods page gives 7% for the hormonal vaginal ring and describes the three-weeks-in schedule. It does not print a separate Annovera percentage. The 0.3% perfect-use figure in the 2013 table is for NuvaRing, not Annovera.",
+          "sourceIds": ["cdc-about", "cdc-spr-chc"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["annovera-label", "cdc-spr-chc"]
+    },
+    {
+      "id": "depo",
+      "name": "Depo-Provera shot",
+      "group": "Injectable",
+      "aka": "DMPA, depot medroxyprogesterone acetate",
+      "how": "An injection of progestin in a muscle (150 mg) or under the skin (104 mg). CDC says to repeat it every 3 months (13 weeks). It can be given up to 2 weeks late (15 weeks from the last injection) without extra contraception, in the 2024 U.S. SPR.",
+      "tracking": "Date of the last injection. Next dose at 13 weeks. Grace period through 15 weeks.",
+      "reminder": "shot-13",
+      "effectiveness": [
+        {
+          "label": "Typical use",
+          "value": "4%",
+          "note": "About 4 out of 100 users in the first year, on CDC's current methods page and the 2024 SPR. The 2013 Trussell table listed 6% typical use.",
+          "sourceIds": ["cdc-about", "cdc-spr-inject", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "0.2%",
+          "note": "Paired in that table with a 6% typical-use figure.",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["cdc-spr-inject", "cdc-about"]
+    },
+    {
+      "id": "implant",
+      "name": "Contraceptive implant",
+      "group": "Long-acting",
+      "aka": "Nexplanon; Implanon in the 2011 table",
+      "how": "A single thin rod under the skin of the upper arm. It releases a progestin. CDC says it works for 3 years.",
+      "tracking": "Insertion date and the 3-year replacement date. No daily action. Feel for the rod only as your clinician taught you.",
+      "reminder": "long-acting",
+      "years": 3,
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "0.1%",
+          "note": "The 2013 Trussell table listed Implanon at 0.05% for both typical and perfect use.",
+          "sourceIds": ["cdc-about", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013 (Implanon)",
+          "value": "0.05%",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["cdc-about"]
+    },
+    {
+      "id": "lng-iud",
+      "name": "Hormonal IUD (levonorgestrel)",
+      "group": "Long-acting",
+      "aka": "Mirena, Liletta, Kyleena, Skyla",
+      "how": "A small T-shaped device placed in the uterus by a clinician. It releases a small amount of levonorgestrel. CDC says it stays in for up to 3 to 8 years, depending on the device. Use the years printed for your device, not a single number for every brand.",
+      "tracking": "Insertion date, the labeled duration you were given, and string checks if your clinician recommended them.",
+      "reminder": "long-acting",
+      "years": 8,
+      "yearsNote": "Default of 8 matches the top of CDC's '3 to 8 years, depending on the device' range. Change it to the years on your own device.",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "0.1–0.4%",
+          "note": "The range covers more than one levonorgestrel device. The 2013 table listed Mirena alone at 0.2% typical and 0.2% perfect use.",
+          "sourceIds": ["cdc-about", "cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["cdc-about"]
+    },
+    {
+      "id": "copper-iud",
+      "name": "Copper IUD",
+      "group": "Long-acting",
+      "aka": "ParaGard, Copper T",
+      "how": "A T-shaped copper device placed in the uterus. It does not release a hormone. CDC says it can stay in for up to 10 years. It can also be placed as emergency contraception.",
+      "tracking": "Insertion date and the 10-year date, unless your clinician gave you a different labeled duration.",
+      "reminder": "long-acting",
+      "years": 10,
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "0.8%",
+          "sourceIds": ["cdc-about"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013 (ParaGard)",
+          "value": "0.6%",
+          "note": "That table lists typical use at 0.8%, the same as CDC's current page.",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["cdc-about"]
+    },
+    {
+      "id": "condom-external",
+      "name": "External (male) condom",
+      "group": "Barrier",
+      "aka": "Male condom",
+      "how": "A sheath worn on the penis that blocks sperm. Latex condoms also reduce the risk of HIV and other STIs. Lambskin condoms are not STI protection. Oil-based products weaken latex.",
+      "tracking": "There is no daily dose. Log the days you use one. Protection applies to that act, not the rest of the cycle.",
+      "reminder": "coital",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "13%",
+          "note": "Sundaram and colleagues, using the 2006–2010 NSFG, also estimated 13% for the male condom. The 2013 Trussell table listed 18% typical use.",
+          "sourceIds": ["cdc-about", "sundaram-2017", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "2%",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Latex and polyurethane condoms reduce STI risk when used correctly. Lambskin does not.",
+      "sourceIds": ["cdc-about", "cornell-lube"]
+    },
+    {
+      "id": "condom-internal",
+      "name": "Internal (female) condom",
+      "group": "Barrier",
+      "aka": "Female condom",
+      "how": "A pouch inserted into the vagina, with lubricant in the package. It can be put in up to 8 hours before sex. CDC says it might help prevent STIs.",
+      "tracking": "Log each use. No daily dose.",
+      "reminder": "coital",
+      "effectiveness": [
+        {
+          "label": "Typical use",
+          "value": "21%",
+          "note": "CDC's current page and the 2013 Trussell table both list 21% typical use.",
+          "sourceIds": ["cdc-about", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "5%",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "CDC says internal condoms might help prevent STIs, and that data are more limited than for external latex condoms.",
+      "sourceIds": ["cdc-about"]
+    },
+    {
+      "id": "diaphragm",
+      "name": "Diaphragm",
+      "group": "Barrier",
+      "how": "A dome used with spermicide, inserted before sex to cover the cervix. It is fitted or prescribed by a clinician.",
+      "tracking": "Used at the time of sex, with spermicide. No daily dose.",
+      "reminder": "coital",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "17%",
+          "note": "The 2013 Trussell table listed the diaphragm with spermicide at 12% typical use and 6% perfect use. Those are different estimates, so both are shown.",
+          "sourceIds": ["cdc-about", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "6%",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Not STI protection.",
+      "sourceIds": ["cdc-about"]
+    },
+    {
+      "id": "cervical-cap",
+      "name": "Cervical cap",
+      "group": "Barrier",
+      "how": "A cap used with spermicide, placed over the cervix before sex. Prescribed by a clinician.",
+      "tracking": "Used at the time of sex. No daily dose.",
+      "reminder": "coital",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "22%",
+          "note": "CDC's current page gives this typical-use figure. The 2013 Trussell table does not list a separate perfect-use percentage for the cap.",
+          "sourceIds": ["cdc-about"]
+        }
+      ],
+      "sti": "Not STI protection.",
+      "sourceIds": ["cdc-about"]
+    },
+    {
+      "id": "sponge",
+      "name": "Contraceptive sponge",
+      "group": "Barrier",
+      "how": "A soft sponge with spermicide, placed over the cervix. CDC says it works for up to 24 hours and must stay in for at least 6 hours after the last act of sex, then be thrown away.",
+      "tracking": "Used at the time of sex. No daily dose.",
+      "reminder": "coital",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "17%",
+          "note": "The 2013 Trussell table split the sponge by birth history: parous users 24% typical and 20% perfect; nulliparous users 12% typical and 9% perfect. CDC's current page gives a single 17% typical-use figure and does not repeat that split.",
+          "sourceIds": ["cdc-about", "cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Not STI protection.",
+      "sourceIds": ["cdc-about"]
+    },
+    {
+      "id": "spermicide",
+      "name": "Spermicide and vaginal pH regulators",
+      "group": "Barrier",
+      "how": "Foam, gel, cream, film, suppository, or tablet placed in the vagina. CDC says these products kill sperm or make it harder for sperm to reach the egg. They are placed no more than 1 hour before sex and left in place at least 6 to 8 hours after.",
+      "tracking": "Used with each act of sex. No daily dose.",
+      "reminder": "coital",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "21%",
+          "note": "The 2013 Trussell table listed spermicides at 28% typical use and 18% perfect use.",
+          "sourceIds": ["cdc-about", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "18%",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Not STI protection. Nonoxynol-9 is not recommended by public-health guidance as an STI-prevention product.",
+      "sourceIds": ["cdc-about"]
+    },
+    {
+      "id": "withdrawal",
+      "name": "Withdrawal",
+      "group": "Behavioral",
+      "aka": "Pulling out",
+      "how": "The penis is withdrawn before ejaculation so sperm is not released in the vagina. Pre-ejaculate can still contain sperm. It requires use at every act.",
+      "tracking": "There is nothing to take. If you use this method, the calendar's fertile-window estimate is the relevant view.",
+      "reminder": "coital",
+      "effectiveness": [
+        {
+          "label": "Typical use, NSFG 2006–2010",
+          "value": "20%",
+          "note": "Sundaram and colleagues. The 2013 Trussell table listed 22% typical use and 4% perfect use.",
+          "sourceIds": ["sundaram-2017", "cdc-2013-appendix-d"]
+        },
+        {
+          "label": "Perfect use, Trussell table via CDC 2013",
+          "value": "4%",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["sundaram-2017"]
+    },
+    {
+      "id": "fertility-awareness",
+      "name": "Fertility-awareness methods",
+      "group": "Behavioral",
+      "aka": "FABM, natural family planning",
+      "how": "You track cycle days, basal temperature, cervical mucus, or urinary hormones, and you avoid sex or use a barrier on fertile days. CDC says a regular cycle has about nine or more fertile days, and that typical-use failure across these methods ranges from 2% to 23%.",
+      "tracking": "Daily. This app can store period dates, optional temperature, and optional mucus. The shaded window is a calendar estimate, not a certified fertility-awareness device.",
+      "reminder": "fertility-awareness",
+      "effectiveness": [
+        {
+          "label": "Typical use, current CDC methods page",
+          "value": "2–23%",
+          "note": "A range, because the methods differ. CDC does not publish one typical-use number for every fertility-awareness method.",
+          "sourceIds": ["cdc-about"]
+        },
+        {
+          "label": "Perfect use by method, Trussell table via CDC 2013",
+          "value": "0.4–5%",
+          "note": "Standard Days 5%, TwoDay 4%, ovulation method 3%, symptothermal 0.4%. The group's typical-use figure in that older table was 24%, which sits just outside CDC's current 2–23% range.",
+          "sourceIds": ["cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["cdc-about", "cdc-2013-appendix-d"]
+    },
+    {
+      "id": "lam",
+      "name": "Lactational amenorrhea",
+      "group": "Behavioral",
+      "aka": "LAM",
+      "how": "A temporary method during exclusive or nearly exclusive breastfeeding, before periods return, in the first 6 months. CDC's 2013 appendix says another method is needed as soon as periods return, feeding drops, bottle feeds start, or the baby reaches 6 months.",
+      "tracking": "Log bleeding. This is not a method to rely on after 6 months or after periods return.",
+      "reminder": "fertility-awareness",
+      "effectiveness": [
+        {
+          "label": "Perfect use over six months, Guttmacher fact sheet",
+          "value": "Less than 2%",
+          "note": "Guttmacher states a six-month perfect-use failure rate under 2%, and lists the same conditions CDC describes. This is not a first-year rate and it is not typical use.",
+          "sourceIds": ["guttmacher-effectiveness", "cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Does not protect against STIs.",
+      "sourceIds": ["guttmacher-effectiveness", "cdc-2013-appendix-d"]
+    },
+    {
+      "id": "emergency",
+      "name": "Emergency contraception",
+      "group": "Emergency",
+      "aka": "Morning-after pill, copper IUD as EC",
+      "how": "Used after unprotected sex or a method failure. It is not a routine method. Levonorgestrel pills and ulipristal pills are taken as soon as possible. A copper IUD can be placed by a clinician within 5 days. See the missed-dose view for the published percentages and the timing rules.",
+      "tracking": "Log the date you took it or had an IUD placed. There is no daily dose.",
+      "reminder": "as-needed",
+      "effectiveness": [
+        {
+          "label": "How the figures differ from the table above",
+          "value": "Not a first-year rate",
+          "note": "CDC says emergency contraceptive pills, or placement of a copper IUD after unprotected sex, substantially reduce the chance of pregnancy. The trial and review percentages are on the missed-dose view because they measure a different thing than a year of typical use.",
+          "sourceIds": ["cdc-spr-ec", "cdc-2013-appendix-d"]
+        }
+      ],
+      "sti": "Emergency contraceptive pills do not protect against STIs. A copper IUD does not either.",
+      "sourceIds": ["cdc-spr-ec"]
+    }
+  ]
+}

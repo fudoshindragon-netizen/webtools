@@ -1,0 +1,780 @@
+{
+  "version": "2026-11-06.1",
+  "lastReviewed": "2026-11-06",
+  "intro": "Each result is the matching published instruction, plus the pregnancy or ovulation figures that source actually gives. CDC's review of missed combined pills found no direct evidence that assigns a pregnancy percentage to one missed pack. Those results say so, instead of filling in a number.",
+  "figures": {
+    "chc-typical-7": {
+      "label": "Combined pill, patch, and ring — typical use, first year",
+      "value": "7%",
+      "detail": "About 7 out of 100 users become pregnant in the first year with typical use. This is a year of use, not the chance from one missed dose.",
+      "sourceIds": ["cdc-about", "cdc-spr-chc"]
+    },
+    "coc-perfect-0-3": {
+      "label": "Combined pill, patch, and ring — perfect use, first year",
+      "value": "0.3%",
+      "detail": "From the Trussell table CDC republished in 2013. That table's typical-use column for these methods was 9%, which is older than the 7% on CDC's current page.",
+      "sourceIds": ["cdc-2013-appendix-d"]
+    },
+    "missed-coc-no-percent": {
+      "label": "Pregnancy chance from missed combined pills",
+      "value": "No single percentage published",
+      "detail": "CDC's systematic review found no direct evidence on the effect of missed pills on the risk of pregnancy. In studies that extended the hormone-free interval up to 14 days, follicle growth varied widely and ovulation risk was generally low; when ovulation happened, the cycle was usually abnormal. Ovulation was uncommon when pills were missed on days away from the hormone-free interval. CDC treats seven continuous days of combined hormones as what is needed to reliably prevent ovulation. Missing pills next to the hormone-free interval is called out as a particularly risky time.",
+      "sourceIds": ["cdc-spr-chc"]
+    },
+    "pop-typical-7": {
+      "label": "Progestin-only pills — typical use, first year",
+      "value": "7%",
+      "detail": "About 7 out of 100 users. Not the chance from one late pill.",
+      "sourceIds": ["cdc-spr-pop", "cdc-about"]
+    },
+    "pop-half-cycles": {
+      "label": "Ovulation on norethindrone or norgestrel pills",
+      "value": "About half of cycles",
+      "detail": "CDC states these pills inhibit ovulation in about half of cycles, and that the rate varies widely by person. No evidence was found on the effect of missed norethindrone or norgestrel pills on pregnancy, follicle growth, hormone levels, or cervical mucus. Peak levels are about 2 hours after a dose, and levels are near baseline by 24 hours. About 48 hours of correct use is what CDC treats as needed for the cervical-mucus effect.",
+      "sourceIds": ["cdc-spr-pop"]
+    },
+    "drsp-ovulation-delay": {
+      "label": "Ovulation after a 22–25 hour drospirenone-pill delay",
+      "value": "0.8% (95% CI 0–4.4%)",
+      "detail": "This is an ovulation incidence, not a pregnancy rate. CDC cites a randomized trial of 127 people who purposefully delayed pills by 22 to 25 hours on days 3, 6, 11, and 22. Escape ovulation occurred in one person over two cycles. A separate study of 27 people found that none met normal ovulatory criteria over two 24/4 cycles. Earliest ovulation after two completed cycles was day 9 (day 13 after the last active pill); the mean was 13.6 ± 3.8 days.",
+      "sourceIds": ["cdc-spr-pop"]
+    },
+    "depo-typical-4": {
+      "label": "DMPA shot — typical use, first year",
+      "value": "4%",
+      "detail": "About 4 out of 100 users. The 2013 Trussell table listed 6% typical use and 0.2% perfect use.",
+      "sourceIds": ["cdc-spr-inject", "cdc-about", "cdc-2013-appendix-d"]
+    },
+    "depo-grace-qualitative": {
+      "label": "Pregnancy during the 2-week late window",
+      "value": "Described as low; no single percentage",
+      "detail": "CDC says pregnancy rates were low during the 2 weeks after the reinjection date and through 4 weeks, but the data were sparse, and one study included many breastfeeding women. WHO allows a 4-week grace period on that basis. CDC kept a 2-week grace period because it did not consider that study generalizable to the United States. Time to ovulation after the last injection varied widely, mostly 15 to 49 weeks from the last injection in the studies CDC reviewed.",
+      "sourceIds": ["cdc-spr-inject"]
+    },
+    "planb-trial": {
+      "label": "Plan B One-Step trial, taken within 72 hours",
+      "value": "84% of expected pregnancies prevented; observed rate about 1%",
+      "detail": "The FDA label reports 16 pregnancies among 1,198 women who took a single 1.5 mg dose. 84% of expected pregnancies were prevented. The expected pregnancy rate of 8% with no contraception was reduced to approximately 1%. The label says to take it as soon as possible within 72 hours.",
+      "sourceIds": ["planb-label"]
+    },
+    "planb-plain": {
+      "label": "Plan B manufacturer plain-language summary",
+      "value": "About 7 out of 8",
+      "detail": "The product site says that, used as directed, about 7 out of every 8 women who could have gotten pregnant did not. The label's trial figure is 84% of expected pregnancies prevented. Those are the same kind of claim; the label is the one with the trial counts.",
+      "sourceIds": ["planb-faq", "planb-label"]
+    },
+    "cu-iud-ec": {
+      "label": "Copper IUD used as emergency contraception",
+      "value": "0.09%",
+      "detail": "A CDC slide set states that a systematic review of 42 studies found a pregnancy rate of 0.09% among people who used a copper IUD for emergency contraception. CDC's SPR calls the copper IUD highly effective as emergency contraception and says it may be placed within 5 days of the first act of unprotected sex. When ovulation day can be estimated, it may be placed later than 5 days after sex as long as placement is not more than 5 days after ovulation.",
+      "sourceIds": ["cdc-cu-iud-slide", "cdc-spr-ec"]
+    },
+    "ec-timing-qualitative": {
+      "label": "Ulipristal versus levonorgestrel pills, by day",
+      "value": "No single percentage on the CDC SPR page",
+      "detail": "CDC states that ulipristal and levonorgestrel pills have similar effectiveness within 3 days, and that ulipristal has been observed to be more effective than levonorgestrel from 3 to 5 days. The combined estrogen-progestin (Yuzpe) regimen is less effective and causes more nausea. Levonorgestrel might be less effective than ulipristal in people with obesity. A meta-analysis CDC cites found levonorgestrel pregnancy rates were low within 4 days and increased at 4 to 5 days. CDC does not print that meta-analysis's percentages on the SPR page, so they are not repeated here. U.S. MEC gives emergency contraceptive pills a category 2 (advantages outweigh risks) at BMI 30 or above, and says there is no safety concern, only a possible drop in effect.",
+      "sourceIds": ["cdc-spr-ec", "cdc-mec-ec"]
+    },
+    "upa-hormones": {
+      "label": "Starting hormones after ulipristal",
+      "value": "Ovulation percents in the studies CDC cites, not a pregnancy rate",
+      "detail": "Two studies found more ovulation when oral contraceptives were started within 5 days of ulipristal than when ulipristal was used alone (27% of the combined-pill-plus-ulipristal group versus 3% with ulipristal only; 45% of the progestin-pill-plus-ulipristal group versus 3% with placebo plus ulipristal). CDC's instruction is to start or resume hormonal contraception no sooner than 5 days after ulipristal, then use condoms or abstain for 7 days, or until the next period, whichever comes first. Any nonhormonal method can start immediately. CDC rates this evidence as very low to moderate and limited to specific pills and study populations.",
+      "sourceIds": ["cdc-spr-ec"]
+    },
+    "no-method-85": {
+      "label": "No method, first year",
+      "value": "85%",
+      "detail": "The 2013 Trussell table's estimate of pregnancy within a year among people using reversible methods if they stopped contraception. It is not the chance from a single act of sex. CDC does not publish one percentage for a single unprotected act, because that chance depends on the cycle day.",
+      "sourceIds": ["cdc-2013-appendix-d"]
+    },
+    "ring-studies-qualitative": {
+      "label": "Ring outages in the studies CDC reviewed",
+      "value": "No pregnancy increase for a 24 to under 48 hour delay in three studies",
+      "detail": "CDC says three studies of the etonogestrel ring found that an unplanned extension of the hormone-free interval by 24 to under 48 hours did not increase pregnancy risk. The product label uses a 3-hour out-of-vagina rule, which is stricter than this 48-hour CDC rule. Both are shown when they apply. CDC says the 48-hour ring rules are for the etonogestrel/ethinyl estradiol ring only.",
+      "sourceIds": ["cdc-spr-chc"]
+    }
+  },
+  "emergencyPanel": {
+    "title": "Emergency contraception options and timing",
+    "points": [
+      "Levonorgestrel 1.5 mg (Plan B One-Step and generics): FDA label says as soon as possible within 72 hours. Research cited in CDC's older effectiveness appendix found effect through 120 hours, with rates a bit higher after 3 days.",
+      "Ulipristal acetate 30 mg (ella): prescription. CDC says it works through 5 days and is more effective than levonorgestrel from day 3 to day 5.",
+      "Copper IUD: placed by a clinician, the most effective option CDC describes. See the 0.09% figure.",
+      "Do not use ulipristal as the emergency method if you have missed combined hormones and plan to restart them immediately. CDC's missed-pill, missed-patch, and missed-ring instructions say emergency contraception should be considered with the exception of ulipristal (UPA), because hormones can reduce ulipristal's effect.",
+      "After ulipristal, wait 5 days before starting or restarting hormonal birth control, and use condoms for 7 days after that start, or until the next period, whichever comes first."
+    ],
+    "figureIds": ["planb-trial", "planb-plain", "cu-iud-ec", "ec-timing-qualitative", "upa-hormones"]
+  },
+  "methods": {
+    "combined-pill": {
+      "situations": [
+        {
+          "id": "late-or-missed",
+          "label": "A hormonal pill was late or missed",
+          "help": "Count hours from the time you should have taken the pill. Placebo pills are not part of this rule. CDC defines two or more consecutive missed pills as 48 hours or more since a pill should have been taken.",
+          "fields": ["hours", "week", "sex"],
+          "authorities": [
+            {
+              "id": "cdc-spr",
+              "name": "CDC U.S. SPR, 2024",
+              "sourceId": "cdc-spr-chc",
+              "rules": [
+                {
+                  "id": "coc-under-48",
+                  "title": "One hormonal pill late (under 24 hours) or missed (24 to under 48 hours)",
+                  "match": { "hoursMaxExclusive": 48 },
+                  "actions": [
+                    "Take the late or missed pill as soon as possible.",
+                    "Keep taking the remaining pills at the usual time, even if that means two pills on the same day.",
+                    "No additional contraceptive protection is needed.",
+                    "Emergency contraception is not usually needed. It may be considered, except ulipristal, if hormonal pills were missed earlier in the cycle or in the last week of the previous cycle."
+                  ],
+                  "figureIds": ["missed-coc-no-percent", "chc-typical-7", "coc-perfect-0-3"]
+                },
+                {
+                  "id": "coc-48-or-more",
+                  "title": "Two or more consecutive hormonal pills missed (48 hours or more)",
+                  "match": { "hoursMin": 48 },
+                  "actions": [
+                    "Take the most recent missed pill as soon as possible. Discard any other missed pills.",
+                    "Keep taking the remaining pills at the usual time, even if that means two pills on the same day.",
+                    "Use condoms or abstain until hormonal pills have been taken for 7 days in a row.",
+                    "If the missed pills were in the last week of hormonal pills (days 15–21 in a 28-day pack): skip the hormone-free interval. Finish the hormonal pills and start a new pack the next day. If you cannot start a new pack right away, use condoms or abstain until hormonal pills from a new pack have been taken for 7 days in a row.",
+                    "Emergency contraception should be considered, except ulipristal, if the pills were missed in the first week and unprotected sex happened in the previous 5 days.",
+                    "Emergency contraception may also be considered, except ulipristal, at other times."
+                  ],
+                  "figureIds": ["missed-coc-no-percent", "chc-typical-7", "coc-perfect-0-3", "planb-trial", "cu-iud-ec", "upa-hormones"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "vomit-diarrhea",
+          "label": "Vomiting or severe diarrhea after a pill",
+          "help": "CDC based these steps on the missed-pill rules because it found no direct evidence about vomiting or diarrhea.",
+          "fields": ["hours", "week", "sex"],
+          "authorities": [
+            {
+              "id": "cdc-spr",
+              "name": "CDC U.S. SPR, 2024",
+              "sourceId": "cdc-spr-chc",
+              "rules": [
+                {
+                  "id": "gi-under-48",
+                  "title": "Vomiting or diarrhea within 24 hours of a pill, or continuing for 24 to under 48 hours",
+                  "match": { "hoursMaxExclusive": 48 },
+                  "actions": [
+                    "You do not need to take an extra pill.",
+                    "Keep taking a pill each day at the usual time if you can.",
+                    "No additional contraceptive protection is needed.",
+                    "Emergency contraception is not usually needed but may be considered, except ulipristal."
+                  ],
+                  "figureIds": ["missed-coc-no-percent"]
+                },
+                {
+                  "id": "gi-48-or-more",
+                  "title": "Vomiting or diarrhea continuing for 48 hours or more after a hormonal pill",
+                  "match": { "hoursMin": 48 },
+                  "actions": [
+                    "Keep taking a pill each day at the usual time if you can.",
+                    "Use condoms or abstain until hormonal pills have been taken for 7 days in a row after the vomiting or diarrhea has stopped.",
+                    "If this was during the last week of hormonal pills (days 15–21): skip the hormone-free interval and start a new pack the next day. If you cannot, use condoms or abstain until 7 hormonal pills from a new pack have been taken.",
+                    "Emergency contraception should be considered, except ulipristal, if this happened in the first week of a new pack and unprotected sex happened in the previous 5 days."
+                  ],
+                  "figureIds": ["missed-coc-no-percent", "planb-trial", "upa-hormones"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pop-traditional": {
+      "situations": [
+        {
+          "id": "late-pill",
+          "label": "A norethindrone or norgestrel pill was late",
+          "help": "CDC counts the dose as missed when more than 3 hours have passed since it should have been taken.",
+          "fields": ["hours", "sex"],
+          "authorities": [
+            {
+              "id": "cdc-spr",
+              "name": "CDC U.S. SPR, 2024",
+              "sourceId": "cdc-spr-pop",
+              "rules": [
+                {
+                  "id": "pop-on-time",
+                  "title": "Taken within 3 hours of the usual time",
+                  "match": { "hoursMax": 3 },
+                  "actions": [
+                    "This is inside the window CDC uses for norethindrone and norgestrel pills.",
+                    "Keep taking one pill a day at the same time."
+                  ],
+                  "figureIds": ["pop-typical-7", "pop-half-cycles"]
+                },
+                {
+                  "id": "pop-over-3",
+                  "title": "More than 3 hours late",
+                  "match": { "hoursMinExclusive": 3 },
+                  "actions": [
+                    "Take one pill as soon as possible.",
+                    "Keep taking one pill a day at the same time, even if that means two pills on the same day.",
+                    "Use condoms or abstain until pills have been taken on time for 2 days in a row.",
+                    "Emergency contraception should be considered, except ulipristal, if you have had unprotected sex."
+                  ],
+                  "figureIds": ["pop-half-cycles", "pop-typical-7", "planb-trial", "cu-iud-ec", "upa-hormones"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pop-drospirenone": {
+      "situations": [
+        {
+          "id": "late-or-missed",
+          "label": "A drospirenone pill was late or missed",
+          "help": "Hours since the pill should have been taken. CDC uses 48 hours as the cutoff, similar to combined pills.",
+          "fields": ["hours", "week", "sex"],
+          "authorities": [
+            {
+              "id": "cdc-spr",
+              "name": "CDC U.S. SPR, 2024",
+              "sourceId": "cdc-spr-pop",
+              "rules": [
+                {
+                  "id": "drsp-under-48",
+                  "title": "One hormonal pill late or missed (under 48 hours)",
+                  "match": { "hoursMaxExclusive": 48 },
+                  "actions": [
+                    "Take the late or missed pill as soon as possible.",
+                    "Keep taking one pill a day until the pack is finished.",
+                    "No additional contraceptive protection is needed."
+                  ],
+                  "figureIds": ["drsp-ovulation-delay", "pop-typical-7"]
+                },
+                {
+                  "id": "drsp-48-or-more",
+                  "title": "Two or more consecutive hormonal pills missed (48 hours or more)",
+                  "match": { "hoursMin": 48 },
+                  "actions": [
+                    "Take the last missed pill as soon as possible.",
+                    "Keep taking one pill a day until the pack is finished. Missed pills will still be left in the pack.",
+                    "Use condoms or abstain until hormonal pills have been taken for 7 days in a row.",
+                    "Emergency contraception should be considered, except ulipristal, if pills were missed in the first week and unprotected sex happened in the previous 5 days.",
+                    "Emergency contraception may also be considered, except ulipristal, at other times."
+                  ],
+                  "figureIds": ["drsp-ovulation-delay", "pop-typical-7", "planb-trial", "upa-hormones"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "patch": {
+      "situations": [
+        {
+          "id": "off-or-late",
+          "label": "The patch came off or the change was late",
+          "help": "The FDA Xulane label and the CDC SPR do not use the same cutoff. Both matches are shown. Hours means how long the patch has been off, or how late the new patch is.",
+          "fields": ["hours", "week", "sex", "unsure"],
+          "authorities": [
+            {
+              "id": "xulane-label",
+              "name": "Xulane FDA labeling",
+              "sourceId": "xulane-label",
+              "rules": [
+                {
+                  "id": "xulane-unsure",
+                  "title": "Not sure how long it was off",
+                  "match": { "unsure": true },
+                  "actions": [
+                    "The label groups 'not sure how long' with more than 1 day off.",
+                    "Apply a new patch and start a new 4-week cycle. Today becomes the new patch-change day.",
+                    "Use a non-hormonal backup (the label says condoms and spermicide, or a diaphragm and spermicide) for the first 7 days of the new cycle."
+                  ],
+                  "figureIds": ["chc-typical-7", "coc-perfect-0-3", "missed-coc-no-percent"]
+                },
+                {
+                  "id": "xulane-under-24",
+                  "title": "Off or partly off for less than 1 day",
+                  "match": { "hoursMaxExclusive": 24 },
+                  "actions": [
+                    "Try to reapply it. If it does not stick completely, apply a new patch immediately.",
+                    "No backup is needed. The patch-change day stays the same."
+                  ],
+                  "figureIds": ["chc-typical-7", "coc-perfect-0-3"]
+                },
+                {
+                  "id": "xulane-24-or-more",
+                  "title": "Off for more than 1 day",
+                  "match": { "hoursMin": 24 },
+                  "actions": [
+                    "The label says you may not be protected from pregnancy.",
+                    "Apply a new patch and start a new 4-week cycle. Today becomes the new patch-change day.",
+                    "Use non-hormonal backup for the first 7 days of the new cycle."
+                  ],
+                  "figureIds": ["chc-typical-7", "coc-perfect-0-3", "missed-coc-no-percent", "planb-trial"]
+                }
+              ]
+            },
+            {
+              "id": "cdc-spr",
+              "name": "CDC U.S. SPR, 2024",
+              "sourceId": "cdc-spr-chc",
+              "rules": [
+                {
+                  "id": "cdc-patch-unsure",
+                  "title": "Detached, and you are not sure when",
+                  "match": { "unsure": true },
+                  "actions": [
+                    "CDC says to treat an unknown detachment time as 48 hours or more.",
+                    "Apply a new patch as soon as possible and keep the same patch-change day.",
+                    "Use condoms or abstain until a patch has been worn for 7 days in a row.",
+                    "If this was the third patch week, skip the patch-free week and start a new patch immediately.",
+                    "Emergency contraception should be considered, except ulipristal, if this was the first week and unprotected sex happened in the previous 5 days."
+                  ],
+                  "figureIds": ["missed-coc-no-percent", "chc-typical-7", "planb-trial", "upa-hormones"]
+                },
+                {
+                  "id": "cdc-patch-under-48",
+                  "title": "Delayed application or detachment for under 48 hours",
+                  "match": { "hoursMaxExclusive": 48 },
+                  "actions": [
+                    "Apply a new patch as soon as possible. If it came off less than 24 hours after it was applied, try to reapply that patch or replace it.",
+                    "Keep the same patch-change day.",
+                    "No additional contraceptive protection is needed.",
+                    "Emergency contraception is not usually needed. It may be considered, except ulipristal, if the delay was earlier in the cycle or in the last week of the previous cycle."
+                  ],
+                  "figureIds": ["missed-coc-no-percent", "chc-typical-7", "coc-perfect-0-3"]
+                },
+                {
+                  "id": "cdc-patch-48-or-more",
+                  "title": "Delayed application or detachment for 48 hours or more",
+                  "match": { "hoursMin": 48 },
+                  "actions": [
+                    "Apply a new patch as soon as possible and keep the same patch-change day.",
+                    "Use condoms or abstain until a patch has been worn for 7 days in a row.",
+                    "If this happened during the third patch week, skip the patch-free week: finish the third week and apply a new patch immediately. If you cannot, use condoms or abstain until a new patch has been worn for 7 days.",
+                    "Emergency contraception should be considered, except ulipristal, if this was the first week and unprotected sex happened in the previous 5 days.",
+                    "Emergency contraception may also be considered, except ulipristal, at other times."
+                  ],
+                  "figureIds": ["missed-coc-no-percent", "chc-typical-7", "planb-trial", "cu-iud-ec", "upa-hormones"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "ring-nuvaring": {
+      "situations": [
+        {
+          "id": "out",
+          "label": "The ring came out during the 3 weeks it should be in",
+          "help": "The NuvaRing label uses 3 hours. CDC's SPR uses 48 hours for this ring and says three studies did not find a pregnancy increase for a delay under 48 hours. Both are shown. Week means which of the three weeks in the ring was out.",
+          "fields": ["hours", "week", "sex", "unsure"],
+          "authorities": [
+            {
+              "id": "nuvaring-label",
+              "name": "NuvaRing FDA label, 2024",
+              "sourceId": "nuvaring-label",
+              "rules": [
+                {
+                  "id": "nv-unknown",
+                  "title": "Out for an unknown time",
+                  "match": { "unsure": true },
+                  "actions": [
+                    "The label says to consider pregnancy and do a pregnancy test before inserting a new ring.",
+                    "Until you know the result, do not assume you are protected."
+                  ],
+                  "figureIds": ["chc-typical-7", "ring-studies-qualitative"]
+                },
+                {
+                  "id": "nv-under-3",
+                  "title": "Out for less than 3 hours",
+                  "match": { "hoursMaxExclusive": 3 },
+                  "actions": [
+                    "The label says contraceptive efficacy is not reduced.",
+                    "Rinse with cool to lukewarm water, not hot, and reinsert as soon as possible, at the latest within 3 hours.",
+                    "If the ring is lost, insert a new one and keep the same schedule."
+                  ],
+                  "figureIds": ["chc-typical-7", "coc-perfect-0-3"]
+                },
+                {
+                  "id": "nv-over-3-week-12",
+                  "title": "Out for more than 3 hours during week 1 or 2",
+                  "match": { "hoursMin": 3, "week": ["1", "2"] },
+                  "actions": [
+                    "The label says contraceptive efficacy may be reduced.",
+                    "Reinsert as soon as you remember.",
+                    "Use a barrier such as condoms with spermicide until the ring has been in continuously for 7 days."
+                  ],
+                  "figureIds": ["chc-typical-7", "coc-perfect-0-3", "ring-studies-qualitative", "planb-trial"]
+                },
+                {
+                  "id": "nv-over-3-week-3",
+                  "title": "Out for more than 3 hours during week 3",
+                  "match": { "hoursMin": 3, "week": ["3"] },
+                  "actions": [
+                    "Discard that ring.",
+                    "Option 1: insert a new ring immediately. That starts the next 3-week period. You may not bleed, and spotting can happen.",
+                    "Option 2: insert a new ring no later than 7 days from when the ring came out, only if the ring had already been in continuously for at least 7 days. You may have a withdrawal bleed.",
+                    "Either way, use a barrier such as condoms with spermicide until the new ring has been in continuously for 7 days."
+                  ],
+                  "figureIds": ["chc-typical-7", "ring-studies-qualitative", "planb-trial"]
+                },
+                {
+                  "id": "nv-over-3-week-unsure",
+                  "title": "Out for 3 hours or more, and the week is unclear",
+                  "match": { "hoursMin": 3 },
+                  "actions": [
+                    "The label's backup instruction depends on the week. If you are not sure which week it was, the week-3 instructions are the stricter published option: discard the ring and use a barrier until a new ring has been in for 7 days.",
+                    "The label also says an unknown time out calls for a pregnancy test before a new ring."
+                  ],
+                  "figureIds": ["chc-typical-7", "ring-studies-qualitative"]
+                }
+              ]
+            },
+            {
+              "id": "cdc-spr",
+              "name": "CDC U.S. SPR, 2024 (etonogestrel ring)",
+              "sourceId": "cdc-spr-chc",
+              "rules": [
+                {
+                  "id": "cdc-ring-unsure",
+                  "title": "Removed, and you are not sure when",
+                  "match": { "unsure": true },
+                  "actions": [
+                    "CDC says to treat an unknown removal time as 48 hours or more.",
+                    "Put a ring in as soon as possible and keep it until the scheduled removal day.",
+                    "Use condoms or abstain until a ring has been used for 7 days in a row.",
+                    "Emergency contraception should be considered, except ulipristal, if this was the first week and unprotected sex happened in the previous 5 days."
+                  ],
+                  "figureIds": ["ring-studies-qualitative", "missed-coc-no-percent", "planb-trial", "upa-hormones"]
+                },
+                {
+                  "id": "cdc-ring-under-48",
+                  "title": "Delayed placement or replacement for under 48 hours",
+                  "match": { "hoursMaxExclusive": 48 },
+                  "actions": [
+                    "Put the ring in as soon as possible.",
+                    "Keep it in until the scheduled removal day.",
+                    "No additional contraceptive protection is needed.",
+                    "Emergency contraception is not usually needed. It may be considered, except ulipristal, if the delay was earlier in the cycle or in the last week of the previous cycle."
+                  ],
+                  "figureIds": ["ring-studies-qualitative", "chc-typical-7", "coc-perfect-0-3"]
+                },
+                {
+                  "id": "cdc-ring-48-or-more",
+                  "title": "Delayed placement or replacement for 48 hours or more",
+                  "match": { "hoursMin": 48 },
+                  "actions": [
+                    "Put the ring in as soon as possible and keep it until the scheduled removal day.",
+                    "Use condoms or abstain until a ring has been used for 7 days in a row.",
+                    "If the ring came out during the third week, skip the ring-free week and start a new ring immediately. If you cannot, use condoms or abstain until a new ring has been used for 7 days.",
+                    "Emergency contraception should be considered, except ulipristal, if this was the first week and unprotected sex happened in the previous 5 days."
+                  ],
+                  "figureIds": ["ring-studies-qualitative", "chc-typical-7", "planb-trial", "cu-iud-ec", "upa-hormones"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "left-in",
+          "label": "The ring was left in longer than 3 weeks",
+          "help": "Enter how many days the same ring has been in. The label uses 4 weeks (28 days) as the line.",
+          "fields": ["days"],
+          "authorities": [
+            {
+              "id": "nuvaring-label",
+              "name": "NuvaRing FDA label, 2024",
+              "sourceId": "nuvaring-label",
+              "rules": [
+                {
+                  "id": "nv-left-through-28",
+                  "title": "Left in for up to 4 weeks (28 days)",
+                  "match": { "daysMax": 28 },
+                  "actions": [
+                    "The label says you are still protected if the ring has been left in for up to one extra week (up to four weeks).",
+                    "Remove it, wait 1 week, and insert a new ring."
+                  ],
+                  "figureIds": ["chc-typical-7", "coc-perfect-0-3"]
+                },
+                {
+                  "id": "nv-left-over-28",
+                  "title": "Left in for more than 4 weeks (more than 28 days)",
+                  "match": { "daysMinExclusive": 28 },
+                  "actions": [
+                    "The label says you may not be protected. See a clinician to be sure you are not pregnant.",
+                    "Until you know the pregnancy-test result, use a backup such as condoms with spermicide.",
+                    "After a new ring is inserted, keep using backup until it has been in for 7 days in a row."
+                  ],
+                  "figureIds": ["chc-typical-7", "planb-trial"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ring-free",
+          "label": "The ring-free week went long",
+          "help": "Enter how many days the ring has been out for the scheduled break. The usual break is 7 days.",
+          "fields": ["days"],
+          "authorities": [
+            {
+              "id": "nuvaring-label",
+              "name": "NuvaRing FDA label, 2024",
+              "sourceId": "nuvaring-label",
+              "rules": [
+                {
+                  "id": "nv-free-ok",
+                  "title": "Out for 7 days or less",
+                  "match": { "daysMax": 7 },
+                  "actions": [
+                    "A 7-day ring-free interval is the labeled schedule.",
+                    "Insert the next ring on time."
+                  ],
+                  "figureIds": ["chc-typical-7"]
+                },
+                {
+                  "id": "nv-free-long",
+                  "title": "Ring-free interval longer than 7 days",
+                  "match": { "daysMinExclusive": 7 },
+                  "actions": [
+                    "Consider the possibility of pregnancy.",
+                    "Use a backup such as condoms with spermicide until a new ring has been in continuously for 7 days."
+                  ],
+                  "figureIds": ["chc-typical-7", "ring-studies-qualitative", "missed-coc-no-percent", "planb-trial"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "ring-annovera": {
+      "situations": [
+        {
+          "id": "out",
+          "label": "Annovera came out during the 21 days it should be in",
+          "help": "The label uses 2 hours, including hours that add up across more than one expulsion. CDC's 48-hour ring rule is for the etonogestrel ring, not Annovera.",
+          "fields": ["hours", "sex"],
+          "authorities": [
+            {
+              "id": "annovera-label",
+              "name": "Annovera FDA labeling",
+              "sourceId": "annovera-label",
+              "rules": [
+                {
+                  "id": "an-within-2",
+                  "title": "Out once and replaced within 2 hours",
+                  "match": { "hoursMax": 2 },
+                  "actions": [
+                    "The label says contraceptive efficacy should not be reduced and no backup is needed.",
+                    "Wash with mild soap and warm water, rinse, pat dry, and replace it."
+                  ],
+                  "figureIds": ["chc-typical-7"]
+                },
+                {
+                  "id": "an-over-2",
+                  "title": "Out more than 2 continuous hours, or more than 2 hours added up",
+                  "match": { "hoursMinExclusive": 2 },
+                  "actions": [
+                    "Use backup such as condoms or spermicide until the ring has been in the vagina for 7 days in a row.",
+                    "The label says not to use a combined hormonal emergency contraceptive (one that contains estrogen) while using Annovera."
+                  ],
+                  "figureIds": ["chc-typical-7", "planb-trial", "cu-iud-ec"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "out-long",
+          "label": "The ring was out for more than 7 days in the cycle",
+          "help": "The label separates a short expulsion from a break longer than 7 days.",
+          "fields": ["days"],
+          "authorities": [
+            {
+              "id": "annovera-label",
+              "name": "Annovera FDA labeling",
+              "sourceId": "annovera-label",
+              "rules": [
+                {
+                  "id": "an-under-7-days",
+                  "title": "Out for less than 7 days in a 28-day cycle",
+                  "match": { "daysMax": 7 },
+                  "actions": [
+                    "The label says a deviation that leaves Annovera out for less than 7 days will not increase pregnancy risk.",
+                    "If the out-of-vagina time was still more than 2 hours during the 21 days in, the 2-hour expulsion rule above still calls for 7 days of backup. Use the expulsion situation if that is what happened."
+                  ],
+                  "figureIds": ["chc-typical-7"]
+                },
+                {
+                  "id": "an-over-7-days",
+                  "title": "Out for more than 7 days",
+                  "match": { "daysMinExclusive": 7 },
+                  "actions": [
+                    "The label says this increases pregnancy risk.",
+                    "Use backup such as condoms or spermicide until the ring has been in for 7 days in a row.",
+                    "Do not use an estrogen-containing emergency contraceptive with Annovera."
+                  ],
+                  "figureIds": ["chc-typical-7", "planb-trial", "cu-iud-ec"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "left-in",
+          "label": "Annovera was left in longer than 21 days",
+          "fields": ["days"],
+          "authorities": [
+            {
+              "id": "annovera-label",
+              "name": "Annovera FDA labeling",
+              "sourceId": "annovera-label",
+              "rules": [
+                {
+                  "id": "an-left-in",
+                  "title": "Left in more than 21 days",
+                  "match": { "daysMinExclusive": 21 },
+                  "actions": [
+                    "Remove it for 7 days, then reinsert it for 21 days, and return to the 21/7 schedule."
+                  ],
+                  "figureIds": ["chc-typical-7"]
+                },
+                {
+                  "id": "an-not-yet",
+                  "title": "Still within 21 days",
+                  "match": { "daysMax": 21 },
+                  "actions": [
+                    "21 days in is the labeled schedule. Leave it in until day 21, then take it out for 7 days."
+                  ],
+                  "figureIds": ["chc-typical-7"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "depo": {
+      "situations": [
+        {
+          "id": "late-shot",
+          "label": "The repeat shot is late",
+          "help": "Enter weeks since the last injection. 13 weeks is the scheduled interval. 15 weeks is the end of CDC's grace period.",
+          "fields": ["weeks", "sex"],
+          "authorities": [
+            {
+              "id": "cdc-spr",
+              "name": "CDC U.S. SPR, 2024",
+              "sourceId": "cdc-spr-inject",
+              "rules": [
+                {
+                  "id": "depo-on-time",
+                  "title": "Within 13 weeks of the last injection",
+                  "match": { "weeksMax": 13 },
+                  "actions": [
+                    "This is within the scheduled 13-week interval. CDC also says a repeat injection may be given early when needed.",
+                    "No extra contraception is required for timing alone."
+                  ],
+                  "figureIds": ["depo-typical-4", "depo-grace-qualitative"]
+                },
+                {
+                  "id": "depo-grace",
+                  "title": "More than 13 weeks and up to 15 weeks",
+                  "match": { "weeksMinExclusive": 13, "weeksMax": 15 },
+                  "actions": [
+                    "CDC says the repeat injection may be given up to 2 weeks late (15 weeks from the last injection) without additional contraceptive protection."
+                  ],
+                  "figureIds": ["depo-grace-qualitative", "depo-typical-4"]
+                },
+                {
+                  "id": "depo-late",
+                  "title": "More than 15 weeks since the last injection",
+                  "match": { "weeksMinExclusive": 15 },
+                  "actions": [
+                    "The injection can be given if it is reasonably certain you are not pregnant.",
+                    "Use condoms or abstain for the next 7 days.",
+                    "Emergency contraception may be considered, except ulipristal, if appropriate."
+                  ],
+                  "figureIds": ["depo-grace-qualitative", "depo-typical-4", "planb-trial", "cu-iud-ec", "upa-hormones"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "condom-external": {
+      "situations": [
+        {
+          "id": "break-or-none",
+          "label": "A condom broke, slipped, or was not used",
+          "help": "This is an emergency-contraception question, not a missed hormone. There is no published single percentage for one act of unprotected sex.",
+          "fields": ["sex"],
+          "authorities": [
+            {
+              "id": "cdc-ec",
+              "name": "CDC U.S. SPR emergency contraception, and the FDA Plan B label",
+              "sourceId": "cdc-spr-ec",
+              "rules": [
+                {
+                  "id": "condom-ec",
+                  "title": "Unprotected sex or a condom failure",
+                  "match": {},
+                  "actions": [
+                    "Emergency contraception is time-sensitive. Sooner works better.",
+                    "Levonorgestrel pills: FDA label says as soon as possible within 72 hours. CDC discusses use through 5 days, with a drop-off later in that window.",
+                    "Ulipristal is the pill CDC describes as more effective from 3 to 5 days. It needs a prescription.",
+                    "A copper IUD placed by a clinician is the option CDC describes as highly effective, within 5 days.",
+                    "If you use ulipristal, do not start hormonal birth control for 5 days, then use condoms for 7 days or until your next period, whichever comes first.",
+                    "Condoms are the method that also reduces STI risk. A broken condom is a reason to ask about STI testing, not only pregnancy."
+                  ],
+                  "figureIds": ["no-method-85", "planb-trial", "planb-plain", "cu-iud-ec", "ec-timing-qualitative", "upa-hormones"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "emergency": {
+      "situations": [
+        {
+          "id": "after-sex",
+          "label": "I need emergency contraception timing",
+          "fields": ["sex"],
+          "authorities": [
+            {
+              "id": "cdc-ec",
+              "name": "CDC U.S. SPR, 2024, and the FDA Plan B label",
+              "sourceId": "cdc-spr-ec",
+              "rules": [
+                {
+                  "id": "ec-timing",
+                  "title": "After unprotected sex",
+                  "match": {},
+                  "actions": [
+                    "Take levonorgestrel as soon as possible. The FDA label's window is 72 hours. CDC discusses effectiveness through 5 days, with higher pregnancy rates later in that window.",
+                    "Ulipristal can be used through 5 days and, in CDC's summary, is more effective than levonorgestrel after 3 days.",
+                    "A copper IUD can be placed within 5 days and is the most effective option described.",
+                    "If the condom or another method also failed, read that method's situation too. Hormonal methods and ulipristal interfere with each other."
+                  ],
+                  "figureIds": ["planb-trial", "planb-plain", "cu-iud-ec", "ec-timing-qualitative", "upa-hormones", "no-method-85"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

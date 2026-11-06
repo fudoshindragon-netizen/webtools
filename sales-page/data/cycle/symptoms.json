@@ -1,0 +1,111 @@
+{
+  "version": "2026-11-06.1",
+  "lastReviewed": "2026-11-06",
+  "intro": "Short reference passages for the symptom explainer. The on-device answer quotes these passages. The hosted model, when configured, is instructed to stay inside them.",
+  "passages": [
+    {
+      "id": "normal-discharge",
+      "title": "What ordinary discharge does",
+      "keywords": ["discharge", "normal", "white", "clear", "wet", "cycle", "leukorrhea", "odor mild"],
+      "body": "ACOG says that from puberty the vagina makes discharge, mostly water plus beneficial microorganisms, and that this discharge carries dead cells out. The amount and makeup change through the cycle. Normal discharge is clear to white and does not have a noticeable odor. A change in color, odor, amount, or consistency from what is usual for you is the signal ACOG says to pay attention to. Mayo Clinic describes the same idea: discharge can be whitish and sticky or clear and watery depending on the cycle day, and that variation is common. Estrogen keeps the lining thick and encourages lactobacilli. Those bacteria make the vagina slightly acidic, which is one way yeast and other organisms are held in check.",
+      "clinicianIf": ["The discharge is new for you and comes with itching, pain, sores, or a strong odor.", "You could be pregnant, or you may have been exposed to an STI."],
+      "sourceIds": ["acog-vulvovaginal", "mayo-discharge"]
+    },
+    {
+      "id": "ph-and-lactobacilli",
+      "title": "Vaginal pH, lactobacilli, soap, and douching",
+      "keywords": ["ph", "soap", "antibacterial", "douche", "douching", "lactobacilli", "wash", "scented", "acidic", "balance"],
+      "body": "Mayo Clinic Press describes a typical vaginal pH as slightly acidic, often between 3.8 and 4.5, a range that keeps lactobacilli and yeast in balance. The same article says pH-changing soaps and some medicines can let bacteria or yeast overgrow, and that warm water is enough for cleaning. The vagina is lined to clean itself. Mayo Clinic's bacterial-vaginosis page says to wash the genitals with warm water only, that scented soaps can inflame tissue, and that douching disrupts vaginal flora and raises infection risk. It does not clear an infection and can make one worse. CDC lists douching among the things that can upset the mix of vaginal bacteria and raise BV risk, and lists 'not douching' as a basic prevention step. NHS also advises against douching. Antibacterial soap is a harsh, pH-altering wash in this same category: it is for skin, not for the inside of the vagina, and it is not a treatment for odor.",
+      "clinicianIf": ["Odor, itching, or irritation continues after you stop the soap or douche.", "You have pelvic pain or fever."],
+      "sourceIds": ["mayo-ph", "mayo-bv", "cdc-bv", "nhs-bv", "acog-vulvovaginal"]
+    },
+    {
+      "id": "bv",
+      "title": "Bacterial vaginosis: odor and thin discharge",
+      "keywords": ["bv", "bacterial vaginosis", "fishy", "fish", "odor", "smell", "grey", "gray", "after sex", "thin discharge"],
+      "body": "CDC describes BV as an imbalance of vaginal bacteria, more common in people who are sexually active. Many people have no symptoms. When symptoms happen they can include a thin white or gray discharge, pain, itching, or burning in the vagina, a strong fish-like odor especially after sex, burning when urinating, and itching outside the vagina. Douching, not using condoms, and new or multiple sex partners can raise risk. Mayo Clinic adds that BV discharge may be gray, white, or green, and that the fishy odor is the usual clue. Cleveland Clinic notes that BV bacteria can flourish when they meet blood or semen, which is one reason odor is more obvious after sex or around a period, and that BV discharge can look brownish once it dries. BV is treated with prescription medicine such as metronidazole or clindamycin. It is not a yeast infection, and antifungal cream does not treat it.",
+      "clinicianIf": ["A fishy odor or thin gray discharge is new.", "Symptoms are still there after any treatment you were given.", "You are pregnant, or you have pelvic pain or fever."],
+      "sourceIds": ["cdc-bv", "mayo-bv", "cleveland-brown"]
+    },
+    {
+      "id": "yeast",
+      "title": "Yeast: itch, thick discharge, and OTC azoles",
+      "keywords": ["yeast", "candida", "monistat", "miconazole", "clotrimazole", "tioconazole", "itch", "cottage", "thick", "white", "otc", "antifungal"],
+      "body": "Yeast can live in a healthy vagina. Symptoms of a yeast infection are itching, irritation, and a thick white discharge. ACOG notes that the vagina's acidity is part of what keeps yeast from overgrowing. CDC's treatment guidelines list over-the-counter intravaginal azoles — clotrimazole, miconazole (the ingredient in Monistat), and tioconazole — for uncomplicated vulvovaginal candidiasis. The package states whether that product is a 1-day, 3-day, or 7-day course. Follow the package. A fishy odor without much itch is more consistent with BV than with yeast, and an azole will not fix BV. CDC's consumer page says that if symptoms return, do not improve, or get worse, a clinician may change the medicine.",
+      "clinicianIf": ["This is your first time with these symptoms, so it is worth confirming the cause.", "Symptoms are not improving after the OTC course.", "You have fever, pelvic pain, sores, or a bad odor.", "You are pregnant."],
+      "sourceIds": ["cdc-candidiasis", "cdc-candidiasis-consumer", "acog-vulvovaginal", "mayo-vagina"]
+    },
+    {
+      "id": "boric-acid",
+      "title": "Boric acid suppositories",
+      "keywords": ["boric", "boric acid", "suppository", "recurrent yeast", "non-albicans"],
+      "body": "CDC's STI treatment guidelines list boric acid 600 mg in a gelatin capsule, placed in the vagina once a day for 3 weeks, if non-albicans yeast continues after a longer course of a non-fluconazole azole. The studies they cite had clinical and mycologic cure rates of about 70%. It is not the first treatment for an ordinary yeast infection. The consumer CDC page describes boric acid as something a clinician may use in the vagina if symptoms do not improve on the usual medicine. Do not swallow it. Do not use it as a douche or as a way to 'reset' pH after sex. If you are pregnant, do not start it on your own.",
+      "clinicianIf": ["You are pregnant or trying to conceive.", "You have already used an OTC azole and you are not better.", "You cannot use a vaginal capsule safely."],
+      "sourceIds": ["cdc-candidiasis", "cdc-candidiasis-consumer"]
+    },
+    {
+      "id": "ph-kits",
+      "title": "Home vaginal pH kits",
+      "keywords": ["ph kit", "ph test", "test kit", "strip", "vaginal ph"],
+      "body": "Mayo Clinic Press puts a typical vaginal pH around 3.8 to 4.5. A home pH kit is a screen, not a diagnosis. BV and trichomoniasis tend to raise pH; uncomplicated yeast usually does not, which is why a normal pH does not prove 'it's just yeast' and a high pH does not name the organism. CDC still defines BV by the clinical picture, not by a home strip. Use a kit only as a clue to take to a clinician, and do not douche or use antibacterial soap before you test or you will change the result you are trying to read.",
+      "clinicianIf": ["The result worries you, or symptoms are present whatever the strip says.", "You have pain, fever, or bleeding that is not a period."],
+      "sourceIds": ["mayo-ph", "cdc-bv"]
+    },
+    {
+      "id": "blood-color",
+      "title": "Period blood color and clots",
+      "keywords": ["blood", "color", "brown", "black", "pink", "red", "clot", "consistency", "oxidized", "old blood", "end of period"],
+      "body": "Cleveland Clinic says period blood normally runs from pink to red to brown. The color depends on how long the blood has been in the uterus and vagina. The longer it sits, the more it oxidizes and the darker it gets. Brown blood is common at the end of a period, when the last of the lining comes out and mixes with discharge. Small clots can happen. Cleveland Clinic says to talk with a clinician about clots the size of a quarter or larger, a new pattern of clots, soaking a pad or tampon every hour for at least two hours, periods that are much longer or more often than usual for you, or cramps that are severe. Color alone is a weak signal compared with the amount and the pain.",
+      "clinicianIf": ["You soak through a pad or tampon every hour for two hours or more.", "Clots are quarter-sized or larger, or clots are new for you.", "Bleeding is heavier than your usual period, or you feel faint."],
+      "sourceIds": ["cleveland-color"]
+    },
+    {
+      "id": "brown-after",
+      "title": "Brown discharge after a period, after sex, or between periods",
+      "keywords": ["brown", "spotting", "after period", "after sex", "postcoital", "between periods", "old blood"],
+      "body": "Cleveland Clinic says normal brown discharge often shows up at the end of a period, or a day or two later, because a little blood is left and has had time to darken. Blood mixed with vaginal fluid looks brown. The cervix is fragile and can spot. Spotting between periods happens, especially in the first years of menstruating, and it also happens with infections. Brown discharge with a fishy odor can be BV, because those bacteria flourish around blood and semen. Trichomoniasis can irritate tissue and leave flecks of blood that look brown by the time they come out. Bleeding after sex that keeps happening needs a clinician, because the cause can be benign and it can also be something that should be seen. Mayo Clinic notes that brown or blood-tinged discharge is rarely a sign of cervical cancer, and that 'rarely' is not the same as 'never check.'",
+      "clinicianIf": ["Bleeding after sex happens more than once.", "Spotting between periods is new or getting heavier.", "You have pain, a new odor, or you could be pregnant.", "Bleeding after menopause."],
+      "sourceIds": ["cleveland-brown", "mayo-discharge"]
+    },
+    {
+      "id": "lube",
+      "title": "Water-based, silicone, and oil-based lube, including coconut oil",
+      "keywords": ["lube", "lubricant", "coconut", "oil", "silicone", "water-based", "glycerin", "glycerine", "condom", "latex", "ph"],
+      "body": "Cornell Health divides lubricants into water-based, silicone-based, and oil-based. Water-based lubes are the usual all-purpose choice: they do not break down latex, and they wash off. Cornell notes that people who get vaginal infections may want to avoid glycerin, because it may encourage yeast; that is a practical caution, not a measured risk percentage. Silicone lube lasts longer, is condom-compatible, and can damage silicone toys. Oil-based products, including massage oils and coconut oil, weaken latex condoms, dams, and diaphragms, so they raise the chance a latex condom breaks. Cornell also says oil can leave a coating in the vagina or rectum that can contribute to bacterial or other infection, which is why they do not recommend oil-based lube for sex with a partner. Mayo Clinic Press says to pick a lubricant with as few additives as possible and a pH close to the vagina's, often 3.8 to 4.5. Hormonal birth control does not make an oil-based lube safe with latex.",
+      "clinicianIf": ["Irritation, itching, or a new odor started after a new lube and is not settling.", "A condom broke while you were using oil. That is an emergency-contraception question as well as an STI question."],
+      "sourceIds": ["cornell-lube", "mayo-ph"]
+    },
+    {
+      "id": "toys",
+      "title": "Toys, cleaning, and symptoms afterward",
+      "keywords": ["toy", "toys", "vibrator", "silicone toy", "clean", "cleaning", "not cleaned", "shared", "uti", "after toy"],
+      "body": "Mayo Clinic says that if you use sex toys, clean them after every use, and lists that next to condom use as part of safer sex. A toy that was not cleaned, or that was shared without a new condom on it, can move bacteria from skin, the anus, or a previous use onto the vulva and into the vagina or toward the urethra. That is a plausible setup for BV, a yeast flare, or urinary burning. It does not tell you which one you have. Non-porous toys (silicone, stainless steel, glass) can be washed with warm water and a mild unscented soap, then dried. Porous toys are harder to get clean and are a poor choice to share. Do not use antibacterial soap inside the vagina to 'fix' a toy problem; that is the same flora disruption described for douching. Silicone lube can degrade silicone toys. A condom on a shared toy is the practical barrier.",
+      "clinicianIf": ["Burning when you urinate, pelvic pain, fever, or a new fishy odor or itch after a toy was used.", "Symptoms are not improving.", "The toy was shared and STI exposure is possible."],
+      "sourceIds": ["mayo-vagina", "mayo-bv", "cdc-bv", "cornell-lube"]
+    },
+    {
+      "id": "uti-azo",
+      "title": "Urinary burning, AZO, and urine test strips",
+      "keywords": ["uti", "azo", "phenazopyridine", "burning pee", "urinate", "urinary", "test strip", "nitrite", "leukocyte"],
+      "body": "Burning when you urinate can be a urinary tract infection, and it can also be vulvar irritation or an STI. MedlinePlus describes phenazopyridine, the drug in AZO Urinary Pain Relief, as a medicine that relieves pain, burning, and discomfort from urinary irritation. It is not an antibiotic and it does not cure an infection. Urine turns orange or red, and that dye can stain. OTC labeling limits use to two days without medical advice, because the pain relief can hide an infection that still needs treatment. Home urine strips are a simplified look at findings a urinalysis can include, such as nitrite and leukocyte esterase. MedlinePlus describes those as lab findings, not a diagnosis you make at home. A strip does not replace a culture. Drinking water does not treat a kidney infection. Fever, back or side pain, vomiting, or symptoms that are not easing are reasons to be seen.",
+      "clinicianIf": ["Fever, back or flank pain, vomiting, or blood in the urine.", "Burning is not clearly better, or you are pregnant.", "You needed phenazopyridine for more than two days."],
+      "sourceIds": ["medlineplus-phenazopyridine", "medlineplus-urinalysis", "medlineplus-uti"]
+    },
+    {
+      "id": "after-sex-symptoms",
+      "title": "Symptoms that show up after sex",
+      "keywords": ["after sex", "post sex", "semen", "condom", "irritation", "soreness", "bleeding after sex"],
+      "body": "Semen is alkaline compared with the vagina, and Cleveland Clinic notes that BV bacteria can become more active when they meet semen, which is why a fishy odor may be obvious after sex. Friction without enough lubrication causes soreness and small splits that sting when urine hits them; that can feel like a UTI and not be one. A condom, a new lube, or a toy can also be the irritant. Bleeding once, in a small amount, can be a fragile cervix. Bleeding that repeats needs an exam. None of this diagnoses an STI, and new partners are a reason to test rather than to guess from discharge alone. Condoms reduce that exposure. Oil on a latex condom is a break risk, not a remedy.",
+      "clinicianIf": ["Bleeding after sex more than once.", "Pelvic pain, fever, or sores.", "A partner has an STI, or you have a new partner and new discharge.", "Symptoms suggest pregnancy might also be possible."],
+      "sourceIds": ["cleveland-brown", "cdc-bv", "cornell-lube", "mayo-vagina"]
+    },
+    {
+      "id": "when-to-be-seen",
+      "title": "When to stop self-treating",
+      "keywords": ["fever", "pelvic pain", "see a doctor", "clinician", "heavy bleeding", "pregnant", "sti", "not improving"],
+      "body": "Self-care for an ordinary odor, a short yeast-type itch, or period-colored blood has a limit. Be seen if you have fever, pelvic pain, pain with sex that is new, vomiting, or pain in the back or side. Be seen if an OTC yeast treatment is not helping, if discharge has a fishy odor, if urinary burning is not settling within a couple of days, or if you might be pregnant. Heavy bleeding — soaking a pad or tampon every hour for at least two hours, or quarter-sized clots — is a same-day reason to contact a clinician. Possible STI exposure is a testing question, not a lube or soap question. This library cannot tell those apart from a description.",
+      "clinicianIf": ["Any of the situations in this passage."],
+      "sourceIds": ["cleveland-color", "cdc-bv", "cdc-candidiasis-consumer", "medlineplus-uti"]
+    }
+  ]
+}
