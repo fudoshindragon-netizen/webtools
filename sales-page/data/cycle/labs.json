@@ -1,0 +1,97 @@
+{
+  "version": "2026-11-06.1",
+  "lastReviewed": "2026-11-06",
+  "intro": "Enter the number, unit, and reference range printed on your own report. This app does not supply a universal normal range. A single result cannot be read without the lab's range, the cycle day, and the medicines you take. The notes below are general orientation from public lab references.",
+  "analytes": [
+    {
+      "id": "estradiol",
+      "name": "Estradiol",
+      "short": "E2",
+      "suggestedUnit": "pg/mL",
+      "about": "Estradiol is the main estrogen before menopause. Levels are lower in the early follicular phase, rise as a follicle grows, peak just before ovulation, fall, and rise again in the luteal phase. Combined hormonal birth control suppresses the brain signals that drive that ovulatory rise, so a mid-cycle peak may not appear while you are on it. A value means little without the cycle day and the lab's range.",
+      "cycleNote": "Ask which cycle day the blood was drawn. The same number can be expected or unexpected depending on that day, and on whether ovulation is being suppressed.",
+      "sourceIds": ["medlineplus-estradiol"]
+    },
+    {
+      "id": "progesterone",
+      "name": "Progesterone",
+      "short": "P4",
+      "suggestedUnit": "ng/mL",
+      "about": "Progesterone stays low before ovulation and rises after the ovary releases an egg, made by the corpus luteum. A higher mid-luteal level is one way clinicians look for ovulation. If combined hormones or the shot are suppressing ovulation, that luteal rise may not happen. That is an effect of the method, not automatically a problem.",
+      "cycleNote": "A progesterone draw is usually timed about a week before the next period when the question is ovulation. On hormonal birth control, ask whether the test is even informative.",
+      "sourceIds": ["medlineplus-progesterone"]
+    },
+    {
+      "id": "lh",
+      "name": "Luteinizing hormone",
+      "short": "LH",
+      "suggestedUnit": "IU/L",
+      "about": "LH is a pituitary hormone. A surge helps trigger ovulation. Urine LH kits look for that surge. Combined hormonal methods suppress the surge. A single blood LH, without FSH and without cycle timing, is easy to over-read.",
+      "cycleNote": "The surge is brief. A test a day away from it can look low in a cycle that still ovulates.",
+      "sourceIds": ["medlineplus-lh"]
+    },
+    {
+      "id": "fsh",
+      "name": "Follicle-stimulating hormone",
+      "short": "FSH",
+      "suggestedUnit": "IU/L",
+      "about": "FSH from the pituitary helps a follicle grow. It is often higher early in the cycle and higher around menopause. Combined hormonal contraception can suppress FSH, so a result while you are on the pill, patch, or ring is not a clean measure of ovarian reserve.",
+      "cycleNote": "Clinicians often draw FSH early in the cycle, off hormonal contraception, when the question is ovarian function.",
+      "sourceIds": ["medlineplus-fsh"]
+    },
+    {
+      "id": "testosterone",
+      "name": "Testosterone",
+      "short": "T",
+      "suggestedUnit": "ng/dL",
+      "about": "People who menstruate make testosterone in the ovaries and adrenal glands. Labs may report total testosterone, free testosterone, or both, and the ranges differ. Some combined pills raise sex hormone-binding globulin, which changes how much testosterone is free. Compare only results that use the same assay, and use the range on that report.",
+      "cycleNote": "Time of day and the lab method change the number. Do not stack results from two labs as if they were one series unless the units and assays match.",
+      "sourceIds": ["medlineplus-testosterone"]
+    },
+    {
+      "id": "tsh",
+      "name": "Thyroid-stimulating hormone",
+      "short": "TSH",
+      "suggestedUnit": "mIU/L",
+      "about": "TSH is a pituitary signal to the thyroid. It is not a cycle hormone. Both an underactive and an overactive thyroid can change periods, fertility, and how tired or cold or anxious you feel. The range on your report is the one that applies. Pregnancy and some medicines move TSH.",
+      "cycleNote": "A TSH trend between visits is reasonable to plot. It should not be interpreted against the menstrual calendar the way estradiol is.",
+      "sourceIds": ["medlineplus-tsh"]
+    },
+    {
+      "id": "prolactin",
+      "name": "Prolactin",
+      "short": "PRL",
+      "suggestedUnit": "ng/mL",
+      "about": "Prolactin supports milk production. High levels can suppress ovulation and stop periods. Stress, a recent breast exam, some medicines (including some antipsychotics), and hypothyroidism can also raise it. One mildly high value is often repeated before anyone calls it a diagnosis.",
+      "cycleNote": "If you are breastfeeding, a higher prolactin can be expected and is part of how lactational amenorrhea works, only while the other LAM conditions hold.",
+      "sourceIds": ["medlineplus-prolactin"]
+    },
+    {
+      "id": "hcg",
+      "name": "hCG",
+      "short": "hCG",
+      "suggestedUnit": "mIU/mL",
+      "about": "Human chorionic gonadotropin is the hormone pregnancy tests detect. A blood test can find it earlier than a urine test and can be repeated to see if it is rising. A negative test too soon after sex can be a false negative. Hormonal birth control does not make hCG positive. A positive test means pregnancy until a clinician says otherwise, including ectopic pregnancy.",
+      "cycleNote": "Do not use this chart to decide you are not pregnant. If pregnancy is possible and you have pain, bleeding, or a late period, contact a clinician.",
+      "sourceIds": ["medlineplus-hcg"]
+    },
+    {
+      "id": "ferritin",
+      "name": "Ferritin",
+      "short": "Ferritin",
+      "suggestedUnit": "ng/mL",
+      "about": "Ferritin reflects iron stores. Heavy periods are a common reason stores fall. A low ferritin can show up before hemoglobin falls. Inflammation can raise ferritin, so a normal number does not always rule out low iron.",
+      "cycleNote": "Plot ferritin across visits if you are being treated for heavy bleeding or iron deficiency. The range on each report still governs that draw.",
+      "sourceIds": ["medlineplus-ferritin"]
+    },
+    {
+      "id": "hemoglobin",
+      "name": "Hemoglobin",
+      "short": "Hb",
+      "suggestedUnit": "g/dL",
+      "about": "Hemoglobin is the oxygen-carrying protein in red blood cells. Heavy menstrual bleeding can lower it over time. Symptoms people notice include fatigue, shortness of breath, and looking pale, but those symptoms have many causes. The number belongs next to ferritin and the bleeding history, not by itself.",
+      "cycleNote": "A dropping hemoglobin across cycles of heavy bleeding is a reason to contact the clinician who ordered the test, not a reason to self-adjust iron.",
+      "sourceIds": ["medlineplus-hemoglobin"]
+    }
+  ]
+}

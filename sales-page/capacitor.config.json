@@ -1,0 +1,19 @@
+{
+  "appId": "com.microventurelabs.lunacycle",
+  "appName": "Luna Cycle",
+  "webDir": "app-dist",
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_notify",
+      "iconColor": "#ff6b9d"
+    },
+    "SplashScreen": {
+      "launchAutoHide": true,
+      "backgroundColor": "#0a0a12",
+      "showSpinner": false
+    }
+  }
+}

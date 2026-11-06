@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-11-06T04:11:04.935Z",
+  "openfda": {
+    "nuvaring": {
+      "label": "NuvaRing",
+      "search": "openfda.brand_name:\"NuvaRing\"",
+      "sha256": "37f8125b96de9eb69fb11c4513bb0bd8922120cefee4ee7c7db9426512400667",
+      "chars": 14089
+    },
+    "depo-provera": {
+      "label": "Depo-Provera",
+      "search": "openfda.brand_name:\"Depo-Provera\"",
+      "sha256": "9bcfee2c1818c6b0eea1522d37d7029b633240bebd1681c05c8d95f07294e909",
+      "chars": 2220
+    },
+    "xulane": {
+      "label": "Xulane",
+      "search": "openfda.brand_name:\"Xulane\"",
+      "sha256": "2d9441dcacb295d944d8160a7b3c91ebf077e5e04defbcea0bf63c63c8e5e38f",
+      "chars": 15589
+    },
+    "annovera": {
+      "label": "Annovera",
+      "search": "segesterone",
+      "sha256": "862300799e9b0c56698ca06c47ee3298498cad40ddb6a1321bf47ad85d2e0586",
+      "chars": 7463
+    },
+    "plan-b": {
+      "label": "Plan B One-Step",
+      "search": "openfda.brand_name:\"Plan B One-Step\"",
+      "sha256": "39b24b7ed5e960bfb828d9dcae138e070c2da2e2d86239b17d31307da00d5af1",
+      "chars": 129
+    }
+  }
+}
