@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- PLACEHOLDER: replace title/description when final book title & author are chosen -->
+    <title>[Book Title] — From the Yawning Gulf unto the Renewal of the Earth | MicroVenture Labs</title>
+    <meta name="description" content="A retelling of the Norse myths in the ancient, scriptural voice: Ymir and the void, Odin and the Nine Worlds, Loki's children, the death of Baldr, Ragnarök — and the quiet morning that follows. Fifty short chapters. EPUB + PDF, DRM-free." />
+    <meta name="author" content="[Author Name]" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content="[Book Title] — From the Yawning Gulf unto the Renewal of the Earth" />
+    <meta property="og:description" content="The Norse myths, told in the ancient voice — and what comes after the end. Fifty short chapters. EPUB + PDF, DRM-free." />
+    <!-- PLACEHOLDER: update og:url when the final path is chosen -->
+    <meta property="og:url" content="https://generationwealthforever.com/norse-book.html" />
+    <meta property="og:type" content="book" />
+    <!-- PLACEHOLDER cover art (no title text yet) -->
+    <meta property="og:image" content="https://generationwealthforever.com/images/norse-book-cover-placeholder.jpg" />
+    <link rel="canonical" href="https://generationwealthforever.com/norse-book.html" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --bg: #0a0a12; --bg-card: #12121e; --bg-alt: #0e0e1a; --border: #1e1e32;
+        --text: #b8b8d0; --text-heading: #e8e8f0; --text-muted: #7c7c9a;
+        --accent: #ff6b9d; --accent-hover: #ff8ab0; --accent-glow: rgba(255,107,157,0.3);
+        --neon-blue: #6bc5ff; --neon-purple: #b06bff; --green: #4ade80;
+        --radius: 12px; --radius-sm: 8px;
+        --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font: 16px/1.6 var(--sans); color: var(--text); background: var(--bg);
+        -webkit-font-smoothing: antialiased; scroll-behavior: smooth;
+      }
+      body { min-height: 100vh; overflow-x: hidden; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: var(--accent-hover); }
+      .site-nav { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+      .site-brand { font-size: 18px; font-weight: 800; color: var(--text-heading) !important; text-decoration: none; letter-spacing: -0.3px; }
+      .site-brand:hover { color: var(--accent) !important; }
+      .site-nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+      .site-nav-link { padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--text-muted) !important; border: 1px solid var(--border); text-decoration: none; transition: all 0.2s; }
+      .site-nav-link:hover { border-color: var(--accent); color: var(--text-heading) !important; }
+      .float-support { position: fixed; bottom: 24px; right: 24px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; font-size: 28px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(255,107,157,0.4); transition: all 0.3s; text-decoration: none !important; }
+      .float-support:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(255,107,157,0.6); }
+      .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 700; background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
+      .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 600; background: transparent; color: var(--text-heading) !important; border: 1px solid var(--border); cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .btn-secondary:hover { border-color: var(--accent); color: var(--accent) !important; }
+      .btn-large { font-size: 18px; padding: 16px 40px; }
+      .btn-disabledish { opacity: 0.95; }
+
+      .g-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 72px; }
+      .g-eyebrow { display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: rgba(176,107,255,0.12); color: var(--neon-purple); border: 1px solid rgba(176,107,255,0.35); margin-bottom: 16px; }
+      .g-title { font-size: 38px; line-height: 1.14; font-weight: 800; letter-spacing: -1px; color: var(--text-heading); margin-bottom: 10px; }
+      @media (max-width: 600px) { .g-title { font-size: 28px; } }
+      .g-subhead { font-size: 18px; font-style: italic; color: var(--text); margin-bottom: 8px; }
+      .g-tagline { font-size: 16px; color: var(--text-muted); margin-bottom: 18px; }
+      .g-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 22px; }
+      .g-hero { padding: 44px 0 8px; }
+      .g-h2 { font-size: 24px; font-weight: 700; color: var(--text-heading); margin: 34px 0 12px; }
+      .g-body p { margin-bottom: 16px; line-height: 1.75; }
+      .g-body ul, .g-body ol { margin: 0 0 18px 0; padding-left: 22px; }
+      .g-body li { margin-bottom: 9px; line-height: 1.65; }
+      .g-body li strong, .g-body p strong { color: var(--text-heading); }
+
+      .hero-grid { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: start; }
+      @media (max-width: 700px) { .hero-grid { grid-template-columns: 1fr; } }
+      .cover-wrap { position: relative; width: 100%; max-width: 240px; }
+      .cover-wrap img { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); display: block; background: var(--bg-card); aspect-ratio: 1 / 1; object-fit: cover; }
+      .cover-badge { position: absolute; top: 10px; left: 10px; background: rgba(10,10,18,0.85); color: #fbbf24; border: 1px solid rgba(251,191,36,0.5); font-size: 11px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; padding: 5px 9px; border-radius: 999px; }
+      .buy-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0 10px; }
+      .price-note { font-size: 14px; color: var(--text-muted); }
+      .todo-banner { background: rgba(251,191,36,0.08); border: 1px dashed rgba(251,191,36,0.45); border-radius: var(--radius); padding: 12px 14px; margin: 16px 0 0; font-size: 13px; color: #fbbf24; line-height: 1.5; }
+      .todo-banner code { color: var(--text-heading); }
+
+      .excerpt { background: var(--bg-card); border-left: 3px solid var(--neon-purple); border-radius: 0 var(--radius) var(--radius) 0; padding: 18px 20px; margin: 16px 0 22px; }
+      .excerpt p { font-size: 15.5px; line-height: 1.7; color: var(--text-heading); margin: 0; font-style: italic; }
+      .excerpt cite { display: block; margin-top: 12px; font-size: 13px; color: var(--text-muted); font-style: normal; }
+
+      details.chapters { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 18px; margin: 12px 0 24px; }
+      details.chapters summary { cursor: pointer; font-weight: 700; color: var(--text-heading); list-style: none; }
+      details.chapters summary::-webkit-details-marker { display: none; }
+      details.chapters ol { margin: 14px 0 4px 0; padding-left: 22px; columns: 2; gap: 24px; }
+      @media (max-width: 600px) { details.chapters ol { columns: 1; } }
+      details.chapters li { margin-bottom: 6px; font-size: 14px; break-inside: avoid; }
+
+      .g-paid { background: linear-gradient(135deg, rgba(255,107,157,0.10), rgba(107,197,255,0.08)); border: 1px solid rgba(255,107,157,0.35); border-radius: var(--radius); padding: 30px; margin: 28px 0 0; }
+      .g-paid h2 { font-size: 22px; color: var(--text-heading); margin-bottom: 8px; }
+      .g-paid p { font-size: 15px; line-height: 1.65; margin-bottom: 16px; }
+      .g-paid-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+      .g-disclaimer { border-top: 1px solid var(--border); margin-top: 32px; padding-top: 20px; font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+
+      footer { border-top: 1px solid var(--border); padding: 32px 20px; }
+      .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--text-muted); flex-wrap: wrap; gap: 16px; }
+      .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+      .footer-links a { color: var(--text-muted); }
+      .footer-links a:hover { color: var(--text-heading); }
+      .footer-legal { max-width: 1200px; margin: 24px auto 0; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+      .footer-about { margin-bottom: 12px; line-height: 1.5; }
+      .footer-legal-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: baseline; }
+      .footer-legal-row a { color: var(--text-muted); }
+      .footer-legal-row a:hover { color: var(--text-heading); }
+      .footer-legal-row summary { cursor: pointer; color: var(--text-muted); list-style: none; }
+      .footer-legal-row summary::-webkit-details-marker { display: none; }
+      .footer-legal-row details p { margin-top: 8px; max-width: 460px; line-height: 1.5; color: var(--text); }
+      .ph { background: rgba(251,191,36,0.12); color: #fbbf24; padding: 0 4px; border-radius: 4px; }
+    </style>
+  </head>
+  <body>
+    <!--
+      PLACEHOLDER CONSTANTS (swap these before publishing):
+      BOOK_TITLE   = [Book Title]
+      AUTHOR_NAME  = [Author Name]
+      BUY_URL      = Buy Me a Coffee PRODUCT listing URL (NOT the shop home — create the product first)
+      COVER_SRC    = /images/norse-book-cover-placeholder.jpg|webp  → replace with final cover
+      PRICE        = $5.99 (proposal; range $4.99–$7.99)
+      Do NOT host EPUB/PDF/ZIP on this site — delivery is via BMC/Gumroad after purchase.
+    -->
+
+    <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener" class="float-support" aria-label="Support us on Buy Me a Coffee">☕</a>
+
+    <nav class="site-nav">
+      <a href="index.html" class="site-brand">🚀 MicroVenture Labs</a>
+      <div class="site-nav-links">
+        <a href="index.html" class="site-nav-link">📚 Study Hub</a>
+        <a href="focus-flow.html" class="site-nav-link">🧭 Focus &amp; Flow</a>
+        <a href="nobody-runs.html" class="site-nav-link">🛡️ NOBODY RUNS</a>
+      </div>
+    </nav>
+
+    <div class="g-wrap">
+      <header class="g-hero">
+        <span class="g-eyebrow">Book · Draft page (unlinked)</span>
+        <div class="hero-grid">
+          <div class="cover-wrap">
+            <!-- PLACEHOLDER: cover art — square 1024 illustration, no title typography yet -->
+            <span class="cover-badge">Placeholder cover</span>
+            <picture>
+              <source type="image/webp" srcset="/images/norse-book-cover-placeholder.webp" />
+              <img
+                src="/images/norse-book-cover-placeholder.jpg"
+                width="1024"
+                height="1024"
+                alt="Placeholder cover art for [Book Title] — replace before publish"
+              />
+            </picture>
+          </div>
+          <div>
+            <!-- PLACEHOLDER: BOOK_TITLE -->
+            <h1 class="g-title"><span class="ph">[Book Title]</span></h1>
+            <p class="g-subhead">From the Yawning Gulf unto the Renewal of the Earth</p>
+            <p class="g-tagline">The Norse myths, told in the ancient voice — and what comes after the end.</p>
+            <!-- PLACEHOLDER: AUTHOR_NAME -->
+            <p class="g-meta">By <span class="ph">[Author Name]</span> · 50 short chapters · ~24,800 words · EPUB + 6×9 PDF · DRM-free</p>
+
+            <div class="buy-row">
+              <!--
+                TODO / PLACEHOLDER: BUY_URL
+                Replace href with the real Buy Me a Coffee *product* URL after the owner creates the listing.
+                Do not invent a checkout URL. Shop home is only a temporary stand-in.
+              -->
+              <a
+                id="buy-primary"
+                class="btn-primary btn-large btn-disabledish"
+                href="https://www.buymeacoffee.com/microventurelabs"
+                target="_blank"
+                rel="noopener"
+                data-placeholder-buy="true"
+                title="PLACEHOLDER — paste BMaC product URL when ready"
+              >Get the book — $5.99 →</a>
+              <!-- PLACEHOLDER: optional free sample -->
+              <a class="btn-secondary" href="#excerpt-1" title="PLACEHOLDER — optional free-sample URL later">Read an excerpt</a>
+            </div>
+            <p class="price-note">Instant download after purchase (EPUB + PDF). Delivery via Buy Me a Coffee — files are <strong>not</strong> hosted on this site.</p>
+            <p class="todo-banner">
+              <strong>Owner TODO:</strong> set final title &amp; author · replace placeholder cover · create BMaC digital product · paste product URL into <code>#buy-primary</code> · confirm price (proposal <strong>$5.99</strong>) · then link from nav/sitemap when ready.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section class="g-body">
+        <h2 class="g-h2">About the book</h2>
+        <p>A retelling of the Norse myths in the ancient, scriptural voice: Ymir and the void, Odin and the Nine Worlds, Loki's children, the death of Baldr, Ragnarök — and the quiet morning that follows. Fifty short chapters. EPUB + PDF, DRM-free.</p>
+
+        <h2 class="g-h2">What's inside</h2>
+        <ul>
+          <li><strong>EPUB</strong> — phones, tablets, Kindle-via-email conversion, Apple Books, Kobo, Calibre (EPUBCheck validated).</li>
+          <li><strong>PDF, 6 × 9 in</strong> — bookmarked table of contents; reads well on screens and prints cleanly.</li>
+          <li><strong>~24,800 words · 50 chapters</strong> — DRM-free, personal-use licence. Audiobook: not available yet.</li>
+          <li><strong>Honesty note:</strong> chapters 1–11 follow the Eddic myths; chapters 12–50 are an original continuation after Ragnarök. <!-- PLACEHOLDER: AI-use disclosure if applicable — owner decision --></li>
+        </ul>
+
+        <h2 class="g-h2" id="excerpt-1">Excerpt — the opening (Ch. 1)</h2>
+        <blockquote class="excerpt">
+          <p>In the beginning there was no sand, nor sea, nor cool waves, neither earth beneath nor heaven above. There was only the great yawning gulf, which is called Ginnungagap, and it was without form and void, a magical emptiness stretching between that which was not yet. And to the north of the gulf lay Niflheim, the world of mist and of freezing cold. In that dark realm was the well called Hvergelmir, and from it flowed eleven rivers of bitter venom. These rivers ran southward into Ginnungagap, and their waters hardened into ice and poisonous rime that filled the northern part of the void with grinding cold.</p>
+          <cite>Chapter 1 — The Void and the First Beings</cite>
+        </blockquote>
+
+        <h2 class="g-h2">The story</h2>
+        <p>In the beginning there was no sand, nor sea, nor cool waves — only the yawning gulf of Ginnungagap, where the ice of Niflheim met the fire of Muspelheim and the first giant, Ymir, drew breath.</p>
+        <p>This book retells the Norse myths in a deliberately ancient, scriptural voice, from the first melting of the ice to the last battle and beyond. Watch Odin, Vili and Vé slay Ymir and build the Nine Worlds from his body. Meet the Æsir and the Vanir, the Norns at the well of fate, and Loki with his terrible children: the wolf Fenrir, the Midgard Serpent and Hel. Follow the death of bright Baldr, the vengeance of Váli, Thor's journeys against the giants, the Fimbulwinter and the fall of the gods at Ragnarök.</p>
+        <p>Then the story keeps going where the old songs fall quiet. In the later chapters the green earth rises unsown, Baldr and Höðr sit together in the grass, Thor's sons keep the hammer Mjölnir, and a new generation learns why the tale must be told again every evening: that peace is bought at a price, and that a story kept open can still teach the living.</p>
+        <p>Fifty short chapters, each a single sitting. For readers of the Eddas, of mythology retellings, and of anyone who likes their old stories told plainly, with weight.</p>
+
+        <h2 class="g-h2">More from the text</h2>
+        <blockquote class="excerpt">
+          <p>He returned to the place where the gods were at their sport. There stood Höðr, the blind brother of Baldr, apart from the others, for he could not see to join the casting. Loki put the mistletoe dart into his hand and said, “Why do you not honor Baldr as the others do? I will guide your arm.” Höðr cast, and the mistletoe flew true and pierced Baldr through. Baldr fell dead upon the ground, and it was the greatest misfortune that had ever befallen gods or men.</p>
+          <cite>Chapter 6 — Baldr the Bright and the Great Sorrow</cite>
+        </blockquote>
+        <blockquote class="excerpt">
+          <p>The fiftieth evening ended as the first had begun — with the story intact and the choice to remember still being made. The thread held. The morning would come again.</p>
+          <cite>Chapter 50 — The Fiftieth Evening</cite>
+        </blockquote>
+
+        <h2 class="g-h2">Fifty chapters</h2>
+        <details class="chapters">
+          <summary>Show the full chapter list</summary>
+          <ol>
+            <li>1. The Void and the First Beings</li>
+            <li>2. The Shaping of the Worlds</li>
+            <li>3. The Coming of the Æsir</li>
+            <li>4. The Vanir and the Making of Peace</li>
+            <li>5. Loki and His Children</li>
+            <li>6. Baldr the Bright and the Great Sorrow</li>
+            <li>7. The Vengeance and the Binding</li>
+            <li>8. The Deeds of Thor and the Guarding of the Worlds</li>
+            <li>9. The Watchers and the Growing Shadow</li>
+            <li>10. The Signs and the Last Battle</li>
+            <li>11. The Renewal</li>
+            <li>12. The World That Follows</li>
+            <li>13. The Memory of the First Days</li>
+            <li>14. The Quiet Morning</li>
+            <li>15. The Names That Remain</li>
+            <li>16. The Unending Story</li>
+            <li>17. The Teaching of the New Age</li>
+            <li>18. The Keeping of the Hammer</li>
+            <li>19. The Brothers in the Grass</li>
+            <li>20. The Last Telling</li>
+            <li>21. The Open Page</li>
+            <li>22. The Weight of the Names</li>
+            <li>23. The Fields That Remember</li>
+            <li>24. The Hammer’s Shadow</li>
+            <li>25. The Circle Closed</li>
+            <li>26. The Light Without Shadow</li>
+            <li>27. The Watch That Remains</li>
+            <li>28. The Grain and the Story</li>
+            <li>29. The Names Given to Children</li>
+            <li>30. The Evening of the First Generation</li>
+            <li>31. The Keeper of the Hammer</li>
+            <li>32. The Story by the Fire</li>
+            <li>33. The Unbroken Thread</li>
+            <li>34. The Morning That Keeps Coming</li>
+            <li>35. The Book in Their Hands</li>
+            <li>36. The Choice to Remember</li>
+            <li>37. The Peace That Knows Its Price</li>
+            <li>38. The Last of the First Voices</li>
+            <li>39. The Voices That Remain</li>
+            <li>40. The Thread Holds</li>
+            <li>41. What the Children Still Ask</li>
+            <li>42. The Hammer and the Question</li>
+            <li>43. The Grass at the Place of Sitting</li>
+            <li>44. The Bread of the Renewed Earth</li>
+            <li>45. The Borders at Dawn</li>
+            <li>46. The Fire That Listens</li>
+            <li>47. The Names the River Knows</li>
+            <li>48. The Night the Hammer Was Almost Forgotten</li>
+            <li>49. The Teller Who Hesitated</li>
+            <li>50. The Fiftieth Evening</li>
+          </ol>
+        </details>
+
+        <h2 class="g-h2">About the author</h2>
+        <!-- PLACEHOLDER: AUTHOR_BIO -->
+        <p><span class="ph">[Author bio — owner to write]</span></p>
+
+        <h2 class="g-h2">FAQ</h2>
+        <ul>
+          <li><strong>Formats?</strong> EPUB + 6×9 PDF in one purchase (via Buy Me a Coffee digital delivery).</li>
+          <li><strong>Devices?</strong> Most e-readers, phones, tablets, and desktop readers. Kindle via “Send to Kindle” / email conversion from EPUB.</li>
+          <li><strong>Refunds?</strong> <span class="ph">[Owner refund policy — e.g. contact within 7 days if a file won't open]</span></li>
+          <li><strong>Audiobook / print?</strong> Not yet. Retailer links (Amazon, Google Play) will appear here when live.</li>
+          <li><strong>KDP Select?</strong> If enrolled, do not sell the EPUB/PDF on this site during exclusivity — owner decision.</li>
+        </ul>
+
+        <div class="g-paid">
+          <h2>Get <span class="ph">[Book Title]</span> — $5.99</h2>
+          <p>Instant download: EPUB + reader-friendly 6×9 PDF. Files delivered by Buy Me a Coffee after checkout — not offered as free downloads here.</p>
+          <div class="g-paid-btns">
+            <!-- PLACEHOLDER: same BUY_URL as #buy-primary -->
+            <a class="btn-primary btn-large" href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener" data-placeholder-buy="true">Get the book — $5.99 →</a>
+            <!-- PLACEHOLDER: newsletter -->
+            <a class="btn-secondary" href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener" title="PLACEHOLDER — newsletter / audiobook waitlist URL">☕ Support / follow on Buy Me a Coffee</a>
+          </div>
+        </div>
+
+        <div class="g-disclaimer">
+          <p>© <span class="ph">[Year]</span> <span class="ph">[Author Name]</span>. All rights reserved. Personal-use licence for purchased files. This draft page is not linked from the homepage or sitemap yet.</p>
+          <p>Preparedness and study products on this site are separate from this book. MicroVenture Labs shop: <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">buymeacoffee.com/microventurelabs</a>.</p>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>Built by <a href="index.html">MicroVenture Labs</a> — <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Support our work</a></p>
+        <div class="footer-links">
+          <a href="nobody-runs.html">🛡️ NOBODY RUNS</a>
+          <a href="index.html#study-hub">📚 Study Hub</a>
+          <a href="focus-flow.html">🧭 Focus &amp; Flow</a>
+          <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Buy us a coffee</a>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p class="footer-about">Draft book landing page — replace placeholders before public launch. Book files are sold via BMC/Gumroad, not served from this repo.</p>
+        <div class="footer-legal-row">
+          <a href="mailto:support@microventurelabs.com">📧 Contact</a>
+          <details>
+            <summary>↩ Refund</summary>
+            <p><span class="ph">[Owner book refund policy]</span> Other digital products on this site follow their own refund terms.</p>
+          </details>
+          <details>
+            <summary>🔒 Privacy</summary>
+            <p>We don't sell your data. Book checkout is processed by Buy Me a Coffee (and retailers when linked).</p>
+          </details>
+          <details>
+            <summary>📄 Terms</summary>
+            <p>Purchased files are for personal use. Do not redistribute. This page is a draft and may change.</p>
+          </details>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
