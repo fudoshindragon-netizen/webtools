@@ -7,7 +7,7 @@
   {
     "id": 2,
     "text": "The cheapest water you will ever store is the water already in your pipes.",
-    "note": "Fill the bathtub and every clean container the moment the power goes, not on day two."
+    "note": "Bath water is for flushing, not drinking. Shut the door, drain it after, and store drinking water in food-grade containers."
   },
   {
     "id": 3,
@@ -22,12 +22,12 @@
   {
     "id": 5,
     "text": "Store water where you will still be able to reach it when you are tired.",
-    "note": "Pick a shelf at waist height in the hall, not the top of a closet."
+    "note": "Pick a low, reachable shelf in the hall, not the top of a closet."
   },
   {
     "id": 6,
     "text": "Write down how much water your household actually drinks in a normal week.",
-    "note": "Then buy one more than that and label every bottle with the date."
+    "note": "Then buy one more week than that and label every bottle with the date."
   },
   {
     "id": 7,
@@ -42,7 +42,7 @@
   {
     "id": 9,
     "text": "Know which room in your flat stays warmest before you need to know it.",
-    "note": "Sit in each room for ten minutes tonight and notice the difference."
+    "note": "Test this on a cold evening with the heating off, or every room will read the same."
   },
   {
     "id": 10,
@@ -62,7 +62,7 @@
   {
     "id": 13,
     "text": "Keep copies of your papers somewhere that is not your only flat.",
-    "note": "Photograph your ID and lease today and send them to a relative you trust."
+    "note": "Photograph your ID and lease, then hand a printed copy over or lock the file."
   },
   {
     "id": 14,
@@ -71,13 +71,13 @@
   },
   {
     "id": 15,
-    "text": "A list of what your mother takes is worth more than a guess at a pharmacy.",
+    "text": "A list of what your parent takes is worth more than a guess at a pharmacy.",
     "note": "Write the names and the prescriber's phone number on paper and keep it in your bag."
   },
   {
     "id": 16,
     "text": "Keep the medication list where the ambulance crew would look, not in a drawer.",
-    "note": "Tape a copy inside the front door cupboard and tell one neighbour it is there."
+    "note": "With your parent's consent, tape a copy to the fridge and tell one neighbour it exists, not what it says."
   },
   {
     "id": 17,
@@ -87,17 +87,17 @@
   {
     "id": 18,
     "text": "Introduce yourself to the person across the hall before something goes wrong.",
-    "note": "Ask whether they have a car, a landline, or someone who checks on them."
+    "note": "Say hello once, then leave it — the point is that they know your face."
   },
   {
     "id": 19,
-    "text": "Practise the boring parts, because the exciting parts take care of themselves.",
-    "note": "Time yourself finding the fuse box and turning off the water main."
+    "text": "Know where the fuse box is and which switch turns off the whole flat.",
+    "note": "Open it once tonight with a torch in your other hand."
   },
   {
     "id": 20,
     "text": "A drill that takes an evening is cheaper than a week of learning in the dark.",
-    "note": "Pick one Saturday and turn the power off for three hours on purpose."
+    "note": "Turn it off in daylight, not a cold day; skip it if anyone needs powered medical equipment or a stairlift."
   },
   {
     "id": 21,
@@ -116,8 +116,8 @@
   },
   {
     "id": 24,
-    "text": "Sleep is not a luxury you can cut when the week gets strange.",
-    "note": "Set a fixed bedtime tonight and keep it even if the evening is unsettled."
+    "text": "Think about the toilet before it stops flushing, not after.",
+    "note": "Line a bucket with a bag and keep it with the bins, ready."
   },
   {
     "id": 25,
@@ -131,8 +131,8 @@
   },
   {
     "id": 27,
-    "text": "Ask your father what he would do if the lift stopped working today.",
-    "note": "Then ask who he would call, and make sure that number is written down."
+    "text": "Ask your parent what they would do if the lift stopped working today.",
+    "note": "Then ask who they would call, and make sure that number is written down."
   },
   {
     "id": 28,
@@ -147,17 +147,17 @@
   {
     "id": 30,
     "text": "Text messages queue and phone calls fail, so have more than one route.",
-    "note": "Learn where the nearest working payphone or library phone is, just in case."
+    "note": "Ask at the library, the building office, or a neighbour with a landline before you need them."
   },
   {
     "id": 31,
     "text": "Learn where the water shut-off valve is before it is spraying the hall.",
-    "note": "Find it tonight, turn it a quarter turn, and turn it back."
+    "note": "Learn where it is and which way closes it; never force a stiff valve — have someone check it first."
   },
   {
     "id": 32,
     "text": "Know how to open your own front door when the lock will not turn.",
-    "note": "Find the spare key you hid and either move it or tell one person."
+    "note": "Ask the building office who to call for a lock, and save that number."
   },
   {
     "id": 33,
@@ -176,8 +176,8 @@
   },
   {
     "id": 36,
-    "text": "An apartment has less storage than a house, so choose what earns its space.",
-    "note": "Empty one cupboard this weekend and put back only what you used."
+    "text": "Some medicine has to stay cold, so know your plan before the fridge stops.",
+    "note": "Ask the pharmacy how long it keeps without power and what to do."
   },
   {
     "id": 37,
@@ -202,12 +202,12 @@
   {
     "id": 41,
     "text": "Learn to shut off the gas yourself, and know when to leave it alone.",
-    "note": "Read the meter instructions once and take a photo of them."
+    "note": "Read the meter instructions once, then never turn the gas back on yourself; call the supplier."
   },
   {
     "id": 42,
-    "text": "A full fridge and an empty cupboard are two different kinds of hunger.",
-    "note": "Check what in your kitchen needs power and what does not."
+    "text": "Sort your kitchen into food that needs power and food that does not.",
+    "note": "Do it once, tonight, so you know what you can still cook on the third day."
   },
   {
     "id": 43,
@@ -247,22 +247,22 @@
   {
     "id": 50,
     "text": "Keep a paper map of your own neighbourhood, because you know it less well than you think.",
-    "note": "Mark the pharmacy, the school, the clinic and the nearest water tap."
+    "note": "Mark the pharmacy, the school, the clinic and the nearest drinking fountain."
   },
   {
     "id": 51,
-    "text": "Store water on the floor, not the top shelf, where a leak will not ruin everything.",
-    "note": "Put the heavy bottles low and keep a towel and a small bucket beside them."
+    "text": "Keep the heavy bottles low and reachable, where a leak will not ruin everything.",
+    "note": "Keep a towel and a small bucket beside them, and nothing stacked on top."
   },
   {
     "id": 52,
-    "text": "Ask yourself what you would do at nine in the evening with no lights and no lift.",
-    "note": "Sit with that question for five minutes and write the first answer."
+    "text": "Sit for a minute with the lights off and the lift out of order.",
+    "note": "Do it in daylight, then again when the hall is properly dark."
   },
   {
     "id": 53,
-    "text": "The best time to meet your neighbours is on a normal, unremarkable afternoon.",
-    "note": "Say hello to two people in the hall this week and learn one name."
+    "text": "Know how your city warns you when something big happens nearby.",
+    "note": "Sign up for the alerts tonight and check they arrive on your phone."
   },
   {
     "id": 54,
@@ -292,7 +292,7 @@
   {
     "id": 59,
     "text": "Know how long the water in your tank or boiler will last without power.",
-    "note": "Fill the kettle and a jug tonight and see how far it actually goes."
+    "note": "Time how long the hot tap runs before it goes cold, and write it down."
   },
   {
     "id": 60,
@@ -306,13 +306,13 @@
   },
   {
     "id": 62,
-    "text": "Paper beats a dead battery, so write the numbers you would need down.",
-    "note": "Copy the doctor, the pharmacy and one relative into the back of a notebook."
+    "text": "Keep the important numbers on a card in your wallet, not only in your phone.",
+    "note": "Write the doctor, the pharmacy and one relative on it tonight."
   },
   {
     "id": 63,
-    "text": "Practise carrying a full jug of water from the tap to the kitchen table.",
-    "note": "You will spill less on a normal day than on a bad one."
+    "text": "Never burn fuel indoors — no camping stove, no charcoal, no generator in a stairwell or on a balcony.",
+    "note": "A generator belongs outside and well away from doors, windows and vents; carbon monoxide kills quietly."
   },
   {
     "id": 64,
@@ -331,18 +331,18 @@
   },
   {
     "id": 67,
-    "text": "Buy a second can opener and keep it in the drawer you would actually reach for.",
-    "note": "Check the drawer now and buy the one thing that is missing."
+    "text": "Check that the can opener still works before the night you need it.",
+    "note": "Try it on one can this week and replace it if the wheel slips."
   },
   {
     "id": 68,
-    "text": "A battery you bought three years ago is a decoration, not a supply.",
-    "note": "Open the torch, look at the date on the batteries, and replace them."
+    "text": "Check the date on your batteries before you trust them, then test them.",
+    "note": "Alkaline cells keep for years; the printed date is a best-before, so test the torch rather than bin it."
   },
   {
     "id": 69,
-    "text": "Know where the nearest public tap or fountain is from your front door.",
-    "note": "Walk it once this week and time yourself on the way back."
+    "text": "Learn which taps in your flat still run when the mains pressure drops.",
+    "note": "Ask the building office, then label the one tap you can rely on."
   },
   {
     "id": 70,
@@ -351,8 +351,8 @@
   },
   {
     "id": 71,
-    "text": "A child who knows the plan is calmer than a child who is being protected from it.",
-    "note": "Explain the plan in plain words tonight and let them ask questions."
+    "text": "A child who knows what happens next is easier to calm than one who does not.",
+    "note": "Tell them the next few things you will do, in order, out loud."
   },
   {
     "id": 72,
@@ -391,8 +391,8 @@
   },
   {
     "id": 79,
-    "text": "Take the stairs once this week so you know how many there are.",
-    "note": "Count them, then decide whether you could do it carrying a bag."
+    "text": "Walk down the stairs once carrying what you would actually carry.",
+    "note": "Do it in daylight first, then again with the lights off."
   },
   {
     "id": 80,
@@ -421,8 +421,8 @@
   },
   {
     "id": 85,
-    "text": "The last thing you should be doing in the dark is looking for a torch.",
-    "note": "Fix one torch to the inside of the hall cupboard tonight."
+    "text": "Fix one light to the wall where your hand already goes in the dark.",
+    "note": "Stick a battery light by the door tonight and check it tomorrow."
   },
   {
     "id": 86,
