@@ -1,8 +1,9 @@
 /**
  * Algebra, Functions & Data Analysis (grade 11) — free single-page study app.
  * Loads content from content.json, renders topics + questions,
- * and persists progress in localStorage. No backend, no API keys, no
- * monetization (no upsell, no paid companion, no Stripe).
+ * and persists progress in localStorage. No backend, no API keys.
+ * An optional $15 Algebra Mastery Pack is offered below the drills; the
+ * checkout URL is a placeholder until the listing is created.
  *
  * Reuses the 8P2 electrical app architecture (which itself reused OChem).
  * Math "diagrams" are coordinate planes / graphs as original SVG, plus
@@ -13,6 +14,31 @@ const STORAGE_KEY = 'algebra-practice-progress-v1';
 
 let content = null;
 let currentTopicId = null;
+
+
+// ─── Monetization config ───────────────────────────────────────
+// Algebra Mastery Pack upsell. checkoutUrl is a clearly marked
+// placeholder until the owner creates the Gumroad / BMC listing.
+// When the listing is live, replace this URL only.
+const MASTERY_PACK = {
+  checkoutUrl: 'https://generationwealthforever.com/checkout-placeholder.html?product=algebra-mastery-pack',
+  price: '$15',
+  placeholder: true
+};
+
+function renderUpsell() {
+  const cta = document.getElementById('upsell-cta');
+  if (!cta) return;
+  const label = MASTERY_PACK.placeholder
+    ? `Get the Mastery Pack — ${MASTERY_PACK.price} (listing coming soon)`
+    : `Get the Mastery Pack — ${MASTERY_PACK.price}`;
+  if (MASTERY_PACK.checkoutUrl) {
+    cta.innerHTML = `<a class="upsell-btn" href="${MASTERY_PACK.checkoutUrl}" target="_blank" rel="noopener">${label}</a>`;
+  } else {
+    cta.innerHTML = `<span class="upsell-soon-note">Full pack coming soon — the drills stay free.</span>`;
+  }
+}
+
 
 // ─── State / localStorage ──────────────────────────────────────
 function loadProgress() {
@@ -322,6 +348,7 @@ function escapeHtml(s) {
 
 // ─── Init ───────────────────────────────────────────────────────
 function init() {
+  renderUpsell();
   fetch('content.json')
     .then((res) => {
       if (!res.ok) throw new Error('content.json failed to load');
