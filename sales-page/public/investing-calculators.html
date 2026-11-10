@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Investing Calculators — Compound Growth, Dividend Income, Position Size | MicroVenture Labs</title>
+    <meta name="description" content="Three free arithmetic calculators: compound growth, dividend income and position sizing. They do math on the numbers you type. They are not advice, not a recommendation, and no stock is named anywhere on this page." />
+    <meta name="author" content="MicroVenture Labs" />
+    <meta property="og:title" content="Free Investing Calculators — Compound Growth, Dividend Income, Position Size" />
+    <meta property="og:description" content="Arithmetic tools for your own numbers. Not advice, not a recommendation, no stock named anywhere." />
+    <meta property="og:url" content="https://generationwealthforever.com/investing-calculators.html" />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://generationwealthforever.com/investing-calculators.html" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --bg: #0a0a12; --bg-card: #12121e; --bg-alt: #0e0e1a; --border: #1e1e32;
+        --text: #b8b8d0; --text-heading: #e8e8f0; --text-muted: #7c7c9a;
+        --accent: #ff6b9d; --accent-hover: #ff8ab0; --accent-glow: rgba(255,107,157,0.3);
+        --neon-blue: #6bc5ff; --neon-purple: #b06bff; --green: #4ade80;
+        --radius: 12px; --radius-sm: 8px;
+        --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font: 16px/1.6 var(--sans); color: var(--text); background: var(--bg);
+        -webkit-font-smoothing: antialiased; scroll-behavior: smooth;
+      }
+      body { min-height: 100vh; overflow-x: hidden; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: var(--accent-hover); }
+      .site-nav { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+      .site-brand { font-size: 18px; font-weight: 800; color: var(--text-heading) !important; text-decoration: none; letter-spacing: -0.3px; }
+      .site-brand:hover { color: var(--accent) !important; }
+      .site-nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+      .site-nav-link { padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--text-muted) !important; border: 1px solid var(--border); text-decoration: none; transition: all 0.2s; }
+      .site-nav-link:hover { border-color: var(--accent); color: var(--text-heading) !important; }
+      .site-nav-link[aria-current="page"] { background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; border-color: transparent; }
+      .float-support { position: fixed; bottom: 24px; right: 24px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; font-size: 28px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(255,107,157,0.4); transition: all 0.3s; text-decoration: none !important; }
+      .float-support:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(255,107,157,0.6); }
+
+      .c-wrap { max-width: 860px; margin: 0 auto; padding: 0 20px 72px; }
+      .c-hero { padding: 44px 0 8px; }
+      .c-eyebrow { display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: rgba(107,197,255,0.12); color: var(--neon-blue); border: 1px solid rgba(107,197,255,0.35); margin-bottom: 16px; }
+      .c-title { font-size: 38px; line-height: 1.14; font-weight: 800; letter-spacing: -1px; color: var(--text-heading); margin-bottom: 14px; }
+      @media (max-width: 600px) { .c-title { font-size: 28px; } }
+      .c-standfirst { font-size: 18px; line-height: 1.65; color: var(--text); margin-bottom: 24px; }
+
+      .c-disclaimer { background: rgba(251,191,36,0.07); border: 1px solid rgba(251,191,36,0.3); border-radius: var(--radius); padding: 20px 22px; margin: 0 0 30px; }
+      .c-disclaimer p { margin-bottom: 10px; line-height: 1.65; font-size: 15px; }
+      .c-disclaimer p:last-child { margin-bottom: 0; }
+      .c-disclaimer strong { color: #fbbf24; }
+
+      .c-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 24px; margin-bottom: 22px; }
+      .c-card-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+      .c-card h2 { font-size: 22px; font-weight: 700; color: var(--text-heading); letter-spacing: -0.3px; }
+      .c-tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--neon-purple); border: 1px solid rgba(176,107,255,0.4); background: rgba(176,107,255,0.1); padding: 3px 9px; border-radius: 20px; }
+      .c-card p.c-lede { font-size: 14px; color: var(--text-muted); margin-bottom: 20px; line-height: 1.6; }
+
+      .c-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px 16px; margin-bottom: 18px; }
+      .c-field { display: flex; flex-direction: column; gap: 6px; }
+      .c-field label { font-size: 13px; font-weight: 600; color: var(--text-heading); }
+      .c-field .c-hint { font-size: 12px; color: var(--text-muted); }
+      .c-input-wrap { position: relative; display: flex; align-items: center; }
+      .c-input-wrap .c-pre, .c-input-wrap .c-post { position: absolute; font-size: 14px; color: var(--text-muted); pointer-events: none; }
+      .c-input-wrap .c-pre { left: 12px; }
+      .c-input-wrap .c-post { right: 12px; }
+      .c-field input { width: 100%; padding: 11px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-alt); color: var(--text-heading); font: inherit; font-size: 15px; font-weight: 600; transition: border-color 0.2s, box-shadow 0.2s; }
+      .c-field input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+      .c-field input.has-pre { padding-left: 28px; }
+      .c-field input.has-post { padding-right: 34px; }
+      .c-field input::-webkit-outer-spin-button, .c-field input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+      .c-field input[type="number"] { -moz-appearance: textfield; appearance: textfield; }
+
+      .c-out { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 16px 18px; display: grid; gap: 10px; }
+      .c-row { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; font-size: 15px; }
+      .c-row span:first-child { color: var(--text-muted); }
+      .c-row span:last-child { font-weight: 700; color: var(--text-heading); font-variant-numeric: tabular-nums; }
+      .c-row.c-primary { border-top: 1px solid var(--border); padding-top: 12px; margin-top: 2px; }
+      .c-row.c-primary span:first-child { color: var(--text); font-weight: 600; }
+      .c-row.c-primary span:last-child { font-size: 20px; color: var(--green); }
+      .c-note { font-size: 13px; color: var(--text-muted); margin-top: 12px; line-height: 1.6; }
+      .c-warn { font-size: 13px; color: #fbbf24; margin-top: 10px; line-height: 1.6; display: none; }
+      .c-warn.show { display: block; }
+
+      .c-how { margin-top: 14px; }
+      .c-how summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--neon-blue); list-style: none; }
+      .c-how summary::-webkit-details-marker { display: none; }
+      .c-how summary::before { content: "▸ "; }
+      .c-how[open] summary::before { content: "▾ "; }
+      .c-how p { font-size: 13px; color: var(--text-muted); margin-top: 8px; line-height: 1.65; }
+      .c-how code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; color: var(--text); background: var(--bg-card); padding: 1px 5px; border-radius: 4px; }
+
+      footer { border-top: 1px solid var(--border); margin-top: 40px; padding: 32px 24px 48px; }
+      .footer-content { max-width: 860px; margin: 0 auto; font-size: 14px; color: var(--text-muted); }
+      .footer-links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px; font-size: 13px; }
+      .footer-legal { max-width: 860px; margin: 20px auto 0; font-size: 13px; color: var(--text-muted); }
+      .footer-about { line-height: 1.65; }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener" class="float-support" aria-label="Support us on Buy Me a Coffee">☕</a>
+
+    <nav class="site-nav">
+      <a href="index.html" class="site-brand">🚀 MicroVenture Labs</a>
+      <div class="site-nav-links">
+        <a href="index.html" class="site-nav-link">📚 Study Hub</a>
+        <a href="focus-flow.html" class="site-nav-link">🧭 Focus &amp; Flow</a>
+        <a href="nobody-runs.html" class="site-nav-link">🛡️ NOBODY RUNS</a>
+        <a href="investing-calculators.html" class="site-nav-link" aria-current="page">🧮 Calculators</a>
+      </div>
+    </nav>
+
+    <div class="c-wrap">
+      <header class="c-hero">
+        <span class="c-eyebrow">🧮 Free tools</span>
+        <h1 class="c-title">Three investing calculators that only do arithmetic</h1>
+        <p class="c-standfirst">Type your own numbers. The page multiplies and compounds them and shows you the result. It does not know what you should buy, it does not tell you what anything will return, and it does not name a single stock.</p>
+      </header>
+
+      <div class="c-disclaimer">
+        <p><strong>These are arithmetic tools, not advice.</strong> Nothing on this page is financial, investment, tax or legal advice, and nothing here is a recommendation, a suggestion or an opinion about any security, fund, strategy or course of action.</p>
+        <p>Every number you type is your own assumption. The results are what the arithmetic produces from those assumptions — they are not forecasts, not expected returns, and not predictions of what will happen. Real investments can lose money, and past results never repeat reliably.</p>
+        <p><strong>No stock is named anywhere on this page</strong> — no tickers, no companies, no funds. The calculators work on share counts and prices you supply. Fees, taxes, inflation and price movement are not modelled. If you need advice about your own money, talk to a licensed professional who can see your full situation.</p>
+      </div>
+
+      <!-- 1. Compound growth -->
+      <section class="c-card" id="compound">
+        <div class="c-card-head">
+          <h2>1. Compound growth</h2>
+          <span class="c-tag">Balance over time</span>
+        </div>
+        <p class="c-lede">What a starting amount plus a fixed monthly contribution becomes after a number of years, at a rate you supply. Contributions are added at the end of each month.</p>
+        <div class="c-grid">
+          <div class="c-field">
+            <label for="cg-start">Starting amount</label>
+            <div class="c-input-wrap"><span class="c-pre">$</span><input class="has-pre" type="number" id="cg-start" value="1000" min="0" step="100" inputmode="decimal" /></div>
+          </div>
+          <div class="c-field">
+            <label for="cg-monthly">Monthly contribution</label>
+            <div class="c-input-wrap"><span class="c-pre">$</span><input class="has-pre" type="number" id="cg-monthly" value="200" min="0" step="25" inputmode="decimal" /></div>
+          </div>
+          <div class="c-field">
+            <label for="cg-rate">Annual rate <span class="c-hint">(your assumption)</span></label>
+            <div class="c-input-wrap"><input class="has-post" type="number" id="cg-rate" value="7" step="0.1" inputmode="decimal" /><span class="c-post">%</span></div>
+          </div>
+          <div class="c-field">
+            <label for="cg-years">Years</label>
+            <div class="c-input-wrap"><input class="has-post" type="number" id="cg-years" value="20" min="0" max="80" step="1" inputmode="numeric" /><span class="c-post">yr</span></div>
+          </div>
+        </div>
+        <div class="c-out">
+          <div class="c-row"><span>Total contributed (start + deposits)</span><span id="cg-contrib">—</span></div>
+          <div class="c-row"><span>Growth on top of contributions</span><span id="cg-growth">—</span></div>
+          <div class="c-row c-primary"><span>Final balance</span><span id="cg-final">—</span></div>
+        </div>
+        <p class="c-warn" id="cg-warn"></p>
+        <details class="c-how">
+          <summary>How this is calculated</summary>
+          <p>Monthly rate <code>i = rate ÷ 12 ÷ 100</code>; months <code>n = years × 12</code>. Final balance = <code>start × (1+i)<sup>n</sup> + monthly × ((1+i)<sup>n</sup> − 1) ÷ i</code>. Total contributed = <code>start + monthly × n</code>. Growth = final balance − total contributed. If the rate is 0 the balance is simply start + monthly × n.</p>
+        </details>
+      </section>
+
+      <!-- 2. Dividend income -->
+      <section class="c-card" id="dividend">
+        <div class="c-card-head">
+          <h2>2. Dividend income</h2>
+          <span class="c-tag">Income per year and per month</span>
+        </div>
+        <p class="c-lede">What a given share count pays per year and per month at a dividend you supply, and what it would pay after a number of years if that dividend grew at the rate you enter. Share count and dividend are held flat — no new buying, no cuts.</p>
+        <div class="c-grid">
+          <div class="c-field">
+            <label for="dv-shares">Shares</label>
+            <div class="c-input-wrap"><input type="number" id="dv-shares" value="100" min="0" step="1" inputmode="numeric" /></div>
+          </div>
+          <div class="c-field">
+            <label for="dv-price">Price per share</label>
+            <div class="c-input-wrap"><span class="c-pre">$</span><input class="has-pre" type="number" id="dv-price" value="50" min="0" step="0.01" inputmode="decimal" /></div>
+          </div>
+          <div class="c-field">
+            <label for="dv-dps">Dividend per share <span class="c-hint">(per year)</span></label>
+            <div class="c-input-wrap"><span class="c-pre">$</span><input class="has-pre" type="number" id="dv-dps" value="2" min="0" step="0.01" inputmode="decimal" /></div>
+          </div>
+          <div class="c-field">
+            <label for="dv-growth">Dividend growth <span class="c-hint">(per year)</span></label>
+            <div class="c-input-wrap"><input class="has-post" type="number" id="dv-growth" value="3" step="0.1" inputmode="decimal" /><span class="c-post">%</span></div>
+          </div>
+          <div class="c-field">
+            <label for="dv-years">Years</label>
+            <div class="c-input-wrap"><input class="has-post" type="number" id="dv-years" value="10" min="0" max="80" step="1" inputmode="numeric" /><span class="c-post">yr</span></div>
+          </div>
+        </div>
+        <div class="c-out">
+          <div class="c-row"><span>Position value at the price you entered</span><span id="dv-value">—</span></div>
+          <div class="c-row"><span>Yield on that price</span><span id="dv-yield">—</span></div>
+          <div class="c-row"><span>Income now — per year</span><span id="dv-annual">—</span></div>
+          <div class="c-row"><span>Income now — per month</span><span id="dv-monthly">—</span></div>
+          <div class="c-row c-primary"><span id="dv-later-label">After 10 years — per year</span><span id="dv-later-annual">—</span></div>
+          <div class="c-row"><span id="dv-later-monthly-label">After 10 years — per month</span><span id="dv-later-monthly">—</span></div>
+        </div>
+        <p class="c-warn" id="dv-warn"></p>
+        <details class="c-how">
+          <summary>How this is calculated</summary>
+          <p>Annual income = <code>shares × dividend per share</code>; monthly = annual ÷ 12. Position value = <code>shares × price</code>; yield = <code>dividend per share ÷ price × 100</code>. Later dividend per share = <code>dividend × (1 + growth ÷ 100)<sup>years</sup></code>, and later annual income is that × shares. Dividends are not compounded into more shares, and tax and withholding are not modelled.</p>
+        </details>
+      </section>
+
+      <!-- 3. Position sizing -->
+      <section class="c-card" id="position">
+        <div class="c-card-head">
+          <h2>3. Position sizing</h2>
+          <span class="c-tag">Shares and dollars at risk</span>
+        </div>
+        <p class="c-lede">How many shares fit inside a fixed risk budget, given an entry price and a stop price. Shares are rounded down to whole shares, so the actual risk never exceeds the budget you set.</p>
+        <div class="c-grid">
+          <div class="c-field">
+            <label for="ps-account">Account size</label>
+            <div class="c-input-wrap"><span class="c-pre">$</span><input class="has-pre" type="number" id="ps-account" value="10000" min="0" step="100" inputmode="decimal" /></div>
+          </div>
+          <div class="c-field">
+            <label for="ps-risk">Risk per trade</label>
+            <div class="c-input-wrap"><input class="has-post" type="number" id="ps-risk" value="1" min="0" max="100" step="0.1" inputmode="decimal" /><span class="c-post">%</span></div>
+          </div>
+          <div class="c-field">
+            <label for="ps-entry">Entry price</label>
+            <div class="c-input-wrap"><span class="c-pre">$</span><input class="has-pre" type="number" id="ps-entry" value="25" min="0" step="0.01" inputmode="decimal" /></div>
+          </div>
+          <div class="c-field">
+            <label for="ps-stop">Stop price</label>
+            <div class="c-input-wrap"><span class="c-pre">$</span><input class="has-pre" type="number" id="ps-stop" value="23" min="0" step="0.01" inputmode="decimal" /></div>
+          </div>
+        </div>
+        <div class="c-out">
+          <div class="c-row"><span>Dollar risk budget</span><span id="ps-budget">—</span></div>
+          <div class="c-row"><span>Risk per share (entry − stop)</span><span id="ps-pershare">—</span></div>
+          <div class="c-row"><span>Position size — shares</span><span id="ps-shares">—</span></div>
+          <div class="c-row"><span>Position size — dollars</span><span id="ps-dollars">—</span></div>
+          <div class="c-row c-primary"><span>Actual risk at that size</span><span id="ps-actual">—</span></div>
+        </div>
+        <p class="c-warn" id="ps-warn"></p>
+        <details class="c-how">
+          <summary>How this is calculated</summary>
+          <p>Dollar risk = <code>account × risk% ÷ 100</code>. Risk per share = <code>|entry − stop|</code>. Shares = <code>floor(dollar risk ÷ risk per share)</code>. Position dollars = <code>shares × entry</code>. Actual risk = <code>shares × risk per share</code> — always at or below the budget because of the rounding. A stop price is not a guarantee of the price you get filled at: gaps and slippage can lose more than the number shown.</p>
+        </details>
+      </section>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>Built by <a href="index.html">MicroVenture Labs</a> — <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Support our work</a></p>
+        <div class="footer-links">
+          <a href="index.html">📚 Study Hub</a>
+          <a href="focus-flow.html">🧭 Focus &amp; Flow</a>
+          <a href="nobody-runs.html">🛡️ NOBODY RUNS</a>
+          <a href="investing-calculators.html">🧮 Calculators</a>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p class="footer-about">MicroVenture Labs is a micro-venture studio building digital study tools, guides, art and free web apps. These calculators are free educational arithmetic tools. They are not financial advice, not a recommendation, and they name no security. They do not model fees, taxes, inflation or market prices. Past performance does not predict future results.</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        'use strict';
+
+        var $ = function (id) { return document.getElementById(id); };
+
+        function num(id, fallback) {
+          var el = $(id);
+          var v = parseFloat(el.value);
+          return isFinite(v) ? v : (fallback || 0);
+        }
+
+        function money(n) {
+          if (!isFinite(n)) return '—';
+          return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+        }
+
+        function money0(n) {
+          if (!isFinite(n)) return '—';
+          return '$' + Math.round(n).toLocaleString('en-US');
+        }
+
+        function pct(n) {
+          if (!isFinite(n)) return '—';
+          return n.toFixed(2) + '%';
+        }
+
+        function warn(id, msg) {
+          var el = $(id);
+          if (msg) { el.textContent = msg; el.classList.add('show'); }
+          else { el.textContent = ''; el.classList.remove('show'); }
+        }
+
+        // ---------- 1. Compound growth ----------
+        function calcCompound() {
+          var start = Math.max(0, num('cg-start'));
+          var monthly = Math.max(0, num('cg-monthly'));
+          var rate = num('cg-rate');
+          var years = Math.min(80, Math.max(0, num('cg-years')));
+          var n = Math.round(years * 12);
+          var i = rate / 12 / 100;
+
+          var final;
+          if (i === 0) {
+            final = start + monthly * n;
+          } else {
+            var growthFactor = Math.pow(1 + i, n);
+            final = start * growthFactor + monthly * ((growthFactor - 1) / i);
+          }
+
+          var contributed = start + monthly * n;
+          var growth = final - contributed;
+
+          $('cg-contrib').textContent = money(contributed);
+          $('cg-growth').textContent = money(growth);
+          $('cg-final').textContent = money(final);
+
+          var msgs = [];
+          if (rate < 0) msgs.push('A negative rate shrinks the balance: this is the arithmetic of a loss, not a projection.');
+          if (rate > 15) msgs.push('A rate above 15% a year is a very aggressive assumption. The page is doing the multiplication you asked for — it is not saying that rate is realistic.');
+          warn('cg-warn', msgs.join(' '));
+        }
+
+        // ---------- 2. Dividend income ----------
+        function calcDividend() {
+          var shares = Math.max(0, num('dv-shares'));
+          var price = Math.max(0, num('dv-price'));
+          var dps = Math.max(0, num('dv-dps'));
+          var growth = num('dv-growth');
+          var years = Math.min(80, Math.max(0, num('dv-years')));
+
+          var value = shares * price;
+          var annual = shares * dps;
+          var monthly = annual / 12;
+          var yieldPct = price > 0 ? (dps / price) * 100 : NaN;
+
+          var laterDps = dps * Math.pow(1 + growth / 100, years);
+          var laterAnnual = shares * laterDps;
+          var laterMonthly = laterAnnual / 12;
+
+          $('dv-value').textContent = money(value);
+          $('dv-yield').textContent = isFinite(yieldPct) ? pct(yieldPct) : '—';
+          $('dv-annual').textContent = money(annual);
+          $('dv-monthly').textContent = money(monthly);
+
+          var label = years === 1 ? 'After 1 year' : 'After ' + years + ' years';
+          $('dv-later-label').textContent = label + ' — per year';
+          $('dv-later-monthly-label').textContent = label + ' — per month';
+          $('dv-later-annual').textContent = money(laterAnnual);
+          $('dv-later-monthly').textContent = money(laterMonthly);
+
+          var msgs = [];
+          if (growth < 0) msgs.push('A negative growth rate assumes the dividend is cut each year.');
+          if (growth > 10) msgs.push('Double-digit dividend growth every year for the whole period is a strong assumption; the page is not claiming it is likely.');
+          if (price === 0 && shares > 0) msgs.push('Price per share is zero, so position value and yield cannot be shown.');
+          warn('dv-warn', msgs.join(' '));
+        }
+
+        // ---------- 3. Position sizing ----------
+        function calcPosition() {
+          var account = Math.max(0, num('ps-account'));
+          var riskPct = Math.min(100, Math.max(0, num('ps-risk')));
+          var entry = num('ps-entry');
+          var stop = num('ps-stop');
+
+          var budget = account * riskPct / 100;
+          var perShare = Math.abs(entry - stop);
+          var shares = perShare > 0 ? Math.floor(budget / perShare) : 0;
+          var dollars = shares * entry;
+          var actual = shares * perShare;
+
+          $('ps-budget').textContent = money(budget);
+          $('ps-pershare').textContent = money(perShare);
+          $('ps-shares').textContent = shares.toLocaleString('en-US');
+          $('ps-dollars').textContent = money(dollars);
+          $('ps-actual').textContent = money(actual);
+
+          var msgs = [];
+          if (perShare === 0) msgs.push('Entry and stop are the same price, so there is no risk per share to divide by. Enter a different stop price.');
+          else if (shares === 0) msgs.push('Your risk budget is smaller than the risk on a single share. No whole-share position fits inside it.');
+          if (dollars > account) msgs.push('This position is larger than your account size — that would require leverage, which this calculator does not model.');
+          if (entry > 0 && stop > entry) msgs.push('The stop is above the entry, which sizes a short position. The arithmetic is the same, but check that this is what you meant.');
+          warn('ps-warn', msgs.join(' '));
+        }
+
+        function recalcAll() {
+          calcCompound();
+          calcDividend();
+          calcPosition();
+        }
+
+        var ids = ['cg-start', 'cg-monthly', 'cg-rate', 'cg-years',
+                   'dv-shares', 'dv-price', 'dv-dps', 'dv-growth', 'dv-years',
+                   'ps-account', 'ps-risk', 'ps-entry', 'ps-stop'];
+
+        ids.forEach(function (id) {
+          var el = $(id);
+          if (!el) return;
+          el.addEventListener('input', recalcAll);
+          el.addEventListener('change', recalcAll);
+        });
+
+        recalcAll();
+      })();
+    </script>
+  </body>
+</html>
