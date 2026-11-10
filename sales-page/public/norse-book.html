@@ -100,6 +100,18 @@
       .footer-legal-row summary::-webkit-details-marker { display: none; }
       .footer-legal-row details p { margin-top: 8px; max-width: 460px; line-height: 1.5; color: var(--text); }
       .ph { background: rgba(251,191,36,0.12); color: #fbbf24; padding: 0 4px; border-radius: 4px; }
+
+      .trailer { margin: 28px 0 8px; }
+      .trailer video {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        border-radius: var(--radius);
+        border: 1px solid var(--border);
+        background: var(--bg-card);
+        aspect-ratio: 16 / 9;
+      }
     </style>
   </head>
   <body>
@@ -186,6 +198,23 @@
           </div>
         </div>
       </header>
+
+      <section class="trailer" aria-labelledby="trailer-heading">
+        <h2 class="g-h2" id="trailer-heading">Watch the trailer</h2>
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          poster="/images/cover-square-1200.jpg"
+          width="1280"
+          height="720"
+          aria-label="Trailer for The Void to the Renewal: A Norse Mythology Novel by Fenris"
+        >
+          <source src="/media/void-to-renewal-trailer.mp4" type="video/mp4" />
+          Your browser does not support embedded video.
+          <a href="/media/void-to-renewal-trailer.mp4">Download the trailer</a>.
+        </video>
+      </section>
 
       <section class="g-body">
         <h2 class="g-h2">About the book</h2>
