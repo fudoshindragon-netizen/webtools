@@ -33,6 +33,12 @@ export const TEMPLATES = [
   { id: 'focus-os', title: 'Focus OS', subtitle: 'Printable Productivity System for Solopreneurs', desc: 'A weekly planner, daily priorities sheet, goal tracker, weekly review, and second-brain guide. Print it or fill it on a tablet — no app required.', price: '$15', img: '/images/focus-os.png', href: 'https://buy.stripe.com/cNi7sL5uc8Bk80YbH80ZW02', badge: 'Printable Planner' },
 ];
 
+
+// ─── FOCUS & FLOW · Printable journals ───────────────────────────
+export const JOURNALS = [
+  { id: 'quote-journal', title: '90-Day Quote Journal', subtitle: 'Printable 6x9 household journal', desc: 'Ninety short quotes, ninety plain prompts, ninety pages with room to write. A 6x9 journal you can print at home. One page a day: you read one line, you answer one question, you keep the page. No app, no account, no subscription.', note: 'A journal, not safety, medical or professional advice. Digital download — no physical book is shipped.', price: '$7', img: '/images/90-day-quote-journal.png', href: 'https://microventurelabs.gumroad.com/l/oxckfw', badge: 'Printable Journal' },
+];
+
 // ─── FOCUS & FLOW · Art collections (Watercolor Wisdom leads) ────
 export const ART_COLLECTIONS = [
   { id: 'ghibli-wisdom', title: 'Watercolor Wisdom', subtitle: 'Watercolor Art & Mentorship Bundle', desc: '9 enchanting hand-painted watercolor pieces inspired by classic anime. Gentle wisdom for your digital space.', price: '$19', img: '/images/ghibli-wisdom.png', href: 'https://buy.stripe.com/00w3cvaOwcRA80Y26y0ZW01', badge: 'Digital Art' },
