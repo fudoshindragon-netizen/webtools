@@ -722,13 +722,11 @@ function runAnalyze() {
 
 
 // ─── Monetization config ───────────────────────────────────────
-// Quadratic Practice Workbook upsell. checkoutUrl is a clearly marked
-// placeholder until the owner creates the Gumroad / BMC listing.
-// When the listing is live, replace this URL only.
+// Quadratic Practice Workbook upsell. Live Gumroad listing.
 const WORKBOOK = {
-  checkoutUrl: 'https://generationwealthforever.com/checkout-placeholder.html?product=quadratic-workbook',
+  checkoutUrl: 'https://microventurelabs.gumroad.com/l/quadratic-workbook',
   price: '$9',
-  placeholder: true
+  placeholder: false
 };
 
 function renderUpsell() {

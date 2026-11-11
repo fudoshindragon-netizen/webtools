@@ -2,8 +2,7 @@
  * Algebra, Functions & Data Analysis (grade 11) — free single-page study app.
  * Loads content from content.json, renders topics + questions,
  * and persists progress in localStorage. No backend, no API keys.
- * An optional $15 Algebra Mastery Pack is offered below the drills; the
- * checkout URL is a placeholder until the listing is created.
+ * An optional $15 Algebra Mastery Pack is offered below the drills.
  *
  * Reuses the 8P2 electrical app architecture (which itself reused OChem).
  * Math "diagrams" are coordinate planes / graphs as original SVG, plus
@@ -17,13 +16,11 @@ let currentTopicId = null;
 
 
 // ─── Monetization config ───────────────────────────────────────
-// Algebra Mastery Pack upsell. checkoutUrl is a clearly marked
-// placeholder until the owner creates the Gumroad / BMC listing.
-// When the listing is live, replace this URL only.
+// Algebra Mastery Pack upsell. Live Gumroad listing.
 const MASTERY_PACK = {
-  checkoutUrl: 'https://generationwealthforever.com/checkout-placeholder.html?product=algebra-mastery-pack',
+  checkoutUrl: 'https://microventurelabs.gumroad.com/l/algebra-mastery-pack',
   price: '$15',
-  placeholder: true
+  placeholder: false
 };
 
 function renderUpsell() {
