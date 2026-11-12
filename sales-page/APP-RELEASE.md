@@ -4,9 +4,9 @@ The Android and iPhone apps are a Capacitor shell around the cycle tracker. The 
 
 Suggested store listing name: **Luna Cycle**. Bundle id: **`com.microventurelabs.lunacycle`**. Both are in `app.config.json`, which `capacitor.config.js` reads. The hosted assistant and openFDA calls from the app use `apiBase` in that same file (default `https://generationwealthforever.com`). Change `apiBase` if the site’s origin changes, then run `npm run cap:sync`.
 
-The icon and splash in `resources/` are generated placeholders in the site’s dark background (`#0a0a12`) and pink (`#ff6b9d`). They are not a finished logo. Replace those two PNGs and run `npx @capacitor/assets generate`.
+The store icon is the owner’s final artwork. `resources/play-store-icon-512.png` is the 512×512 full-bleed image to upload as the Play high-res icon. `resources/icon.png` is the 2048×2048 source used for the Android launcher (including adaptive icon densities), the iOS app icon, and the cycle-tracker favicon. `resources/luna-icon-512-border.png` is the same mark with a pale border, kept for reference. The splash is that artwork centered on the dark site background.
 
-Privacy policy to paste into both stores: `https://generationwealthforever.com/privacy.html`. The contact address on that page is `privacy@microventurelabs.com`. Confirm that inbox exists, or change the address in `privacy.html`, before review.
+Privacy policy to paste into both stores: `https://generationwealthforever.com/privacy.html`. The privacy contact is `microventurelabs@gmail.com`.
 
 ## What you must do yourself
 
@@ -14,8 +14,7 @@ Privacy policy to paste into both stores: `https://generationwealthforever.com/p
 - A signing key you create and store offline. Do not commit it.
 - A Mac with Xcode, or a Mac build service, for the iOS binary. This repository can produce the iOS project on Linux. It cannot compile it here.
 - Screenshots from a phone or simulator for the store listings.
-- Replace the placeholder icon if you do not want to ship the generated mark.
-- Confirm `privacy@microventurelabs.com`.
+- The upload keystore, created on your own machine with the `keytool` command below. Do not commit the keystore or `android/key.properties`.
 
 ## 1. Build the web bundle the app ships
 
@@ -40,33 +39,49 @@ npm run android:debug
 
 The APK is `android/app/build/outputs/apk/debug/app-debug.apk`. A GitHub Action (`.github/workflows/android-debug.yml`) builds this same debug APK and uploads it as an artifact. Debug APKs are signed with the debug keystore only. Do not upload a debug APK to production.
 
-Release bundle:
+### Create the upload keystore on your machine
+
+Run this on the computer you will keep the key on. Do not run it inside a shared checkout, and do not commit the file it writes. `*.keystore`, `*.jks`, and `android/key.properties` are gitignored.
 
 ```bash
-keytool -genkeypair -v -keystore luna-cycle-release.keystore -alias lunacycle \
-  -keyalg RSA -keysize 2048 -validity 10000
+mkdir -p "$HOME/keystores"
+keytool -genkeypair -v \
+  -keystore "$HOME/keystores/luna-cycle-upload.keystore" \
+  -alias lunacycle \
+  -keyalg RSA -keysize 2048 -validity 10000 \
+  -dname "CN=MicroVenture Labs, OU=Luna Cycle, O=MicroVenture Labs, C=US"
 ```
 
-Keep the keystore and the passwords outside the repo. Create `android/key.properties` (gitignored):
+`keytool` asks for a store password and a key password. Write both down and store them with the keystore file. A backup of this file is the only way to ship later updates if Play App Signing is not enrolled yet. After Play App Signing is on, Google holds the app-signing key and this file is only the upload key. If you lose the upload key, Play support can reset it. If you lose the keystore before enrollment, you cannot update the same app.
+
+In `sales-page/android/key.properties` (this path is gitignored):
 
 ```
-storeFile=/absolute/path/luna-cycle-release.keystore
+storeFile=/absolute/path/to/luna-cycle-upload.keystore
 storePassword=YOUR_STORE_PASSWORD
 keyAlias=lunacycle
 keyPassword=YOUR_KEY_PASSWORD
 ```
 
-`android/app/build.gradle` already reads that file when it exists and signs `bundleRelease`. Then:
+`storeFile` must be an absolute path, or a path relative to `sales-page/android/app`.
+
+### Build the signed AAB
+
+`android/app/build.gradle` reads `android/key.properties` when that file exists and applies it only to the release build. Without the file, `bundleRelease` still produces an unsigned AAB, which Play Console will not accept.
 
 ```bash
+cd sales-page
+npm ci
 npm run cap:sync
 cd android
 ./gradlew bundleRelease
 ```
 
-The file to upload is `android/app/build/outputs/bundle/release/app-release.aab`.
+Upload `sales-page/android/app/build/outputs/bundle/release/app-release.aab`.
 
-Play App Signing: enroll when the console asks. Google holds the app-signing key. You still need the upload key above. Losing the upload key means you cannot ship updates until Play support resets it, so keep a backup.
+Enroll in Play App Signing when the console asks. Let Google generate the app-signing key, and use the keystore above as the upload key. Do not download a signing key into this repository.
+
+Play listing icon: upload `sales-page/resources/play-store-icon-512.png` (512×512). Privacy contact for the listing and the policy URL: `microventurelabs@gmail.com` and `https://generationwealthforever.com/privacy.html`.
 
 ### Play Console
 
