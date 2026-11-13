@@ -17,8 +17,8 @@ export const STUDY_PRODUCTS = [
 export const FREE_STUDY_APPS = [
   { id: 'ochem', variant: 'ochem', badge: '🧪 Free Study Tool', title: 'Free Organic Chemistry Practice', desc: 'Concept summaries, 64 practice questions with worked solutions, and real molecule diagrams — free, no signup.', href: 'https://ochem-app.vercel.app', cta: 'Start Practicing Free →' },
   { id: 'electrical', variant: 'electrical', badge: '⚡ Free Study Tool', title: 'Free Electrical Controls & Power Practice', desc: '14 topics and 77 practice questions with worked solutions covering electrical controls and power systems — free, no signup.', href: 'https://8p2-app.vercel.app', cta: 'Start Practicing Free →' },
-  { id: 'algebra', variant: 'algebra', badge: '📐 Free Study Tool', title: 'Free Algebra, Functions & Data Analysis Practice', desc: '12 topics and 64 practice questions with step-by-step METHOD blocks, source-verified references, and high-contrast neurodivergent-friendly styling. 100% free — no signup, no upsell.', href: 'https://algebra-app-seven.vercel.app', cta: 'Start Practicing Free →' },
-  { id: 'quadratic', variant: 'quadratic', badge: '📈 Free Interactive Tool', title: 'Quadratic Functions & Transformations Explainer', desc: 'Type any quadratic equation and get a full breakdown — vertical scale, shifts, vertex, axis of symmetry, domain, range, and increasing/decreasing intervals — with a live graph and "why" explanations. 100% free, no signup.', href: 'https://quadratic-app.vercel.app', cta: 'Try It Free →' },
+  { id: 'algebra', variant: 'algebra', badge: '📐 Free Study Tool', title: 'Free Algebra, Functions & Data Analysis Practice', desc: '12 topics and 64 practice questions with step-by-step METHOD blocks, source-verified references, and high-contrast neurodivergent-friendly styling. 100% free — no signup. A $15 printable mastery pack is offered separately.', href: 'https://algebra-app-seven.vercel.app', cta: 'Start Practicing Free →' },
+  { id: 'quadratic', variant: 'quadratic', badge: '📈 Free Interactive Tool', title: 'Quadratic Functions & Transformations Explainer', desc: 'Type any quadratic equation and get a full breakdown — vertical scale, shifts, vertex, axis of symmetry, domain, range, and increasing/decreasing intervals — with a live graph and "why" explanations. 100% free, no signup. A $9 printable workbook is offered separately.', href: 'https://quadratic-app.vercel.app', cta: 'Try It Free →' },
 ];
 
 // ─── STUDY HUB · Free cheat-sheet resources ──────────────────────
@@ -31,6 +31,12 @@ export const FREE_STUDY_RESOURCES = [
 export const TEMPLATES = [
   { id: 'viralflow', title: 'ViralFlow', subtitle: 'Faceless Content Calendar & Operations Pack', desc: 'A content calendar, 60-hook library, trend tracker, and publishing checklist for TikTok, Shorts, and Reels — CSVs and guides, no app lock-in.', price: '$19', img: '/images/viralflow.png', href: 'https://buy.stripe.com/cNi5kD9KsdVEgxuaD40ZW03', badge: 'Content Pack' },
   { id: 'focus-os', title: 'Focus OS', subtitle: 'Printable Productivity System for Solopreneurs', desc: 'A weekly planner, daily priorities sheet, goal tracker, weekly review, and second-brain guide. Print it or fill it on a tablet — no app required.', price: '$15', img: '/images/focus-os.png', href: 'https://buy.stripe.com/cNi7sL5uc8Bk80YbH80ZW02', badge: 'Printable Planner' },
+];
+
+
+// ─── FOCUS & FLOW · Printable journals ───────────────────────────
+export const JOURNALS = [
+  { id: 'quote-journal', title: '90-Day Quote Journal', subtitle: 'Printable 6x9 household journal', desc: 'Ninety short quotes, ninety plain prompts, ninety pages with room to write. A 6x9 journal you can print at home. One page a day: you read one line, you answer one question, you keep the page. No app, no account, no subscription.', note: 'A journal, not safety, medical or professional advice. Digital download — no physical book is shipped.', price: '$7', img: '/images/90-day-quote-journal.png', href: 'https://microventurelabs.gumroad.com/l/oxckfw', badge: 'Printable Journal' },
 ];
 
 // ─── FOCUS & FLOW · Art collections (Watercolor Wisdom leads) ────
@@ -47,6 +53,6 @@ export const CREATOR_FREE = [
   { id: 'productivity', title: 'The Solopreneur Daily System', desc: 'A one-page productivity framework for solo founders. Plan your week, track priorities, and get more done without burnout.', icon: '⚡', href: '/downloads/solopreneur-daily-system.md', cta: '📥 Download Free System', external: false },
   { id: 'md-to-html', title: 'Markdown → HTML Converter', desc: 'Paste Markdown, get clean HTML. Copy to clipboard or download as an .html file. Free, no signup.', icon: '📝', href: 'https://md-to-html-one.vercel.app', cta: '🚀 Open Tool', external: true },
   { id: 'yt-optimizer', title: 'YouTube Title Optimizer', desc: 'Get 5 optimized title suggestions + trending hashtags for any video topic. Built for creators.', icon: '🎬', href: 'https://yt-title-optimizer.vercel.app', cta: '🚀 Open Tool', external: true },
-  { id: 'faceless-channel', title: 'How to Start a Faceless Channel in 2026', desc: 'A practical guide to scripting, producing, and publishing faceless content at scale.', icon: '🎥', href: 'https://www.buymeacoffee.com/microventurelabs', cta: '📖 Read Guide →', external: true },
-  { id: 'notion-organization', title: '5 Notion Organization Ideas for Busy Creators', desc: 'Simple database views, linked databases, and automation tricks every Notion user should know.', icon: '📘', href: 'https://www.buymeacoffee.com/microventurelabs', cta: '📖 Read Guide →', external: true },
+  { id: 'faceless-channel', title: 'How to Start a Faceless Channel in 2026', desc: 'Support MicroVenture Labs on Buy Me a Coffee — more creator guides land here as they ship.', icon: '🎥', href: 'https://www.buymeacoffee.com/microventurelabs', cta: '☕ Support on Buy Me a Coffee →', external: true },
+  { id: 'notion-organization', title: '5 Notion Organization Ideas for Busy Creators', desc: 'Support MicroVenture Labs on Buy Me a Coffee — Notion organization notes publish there when ready.', icon: '📘', href: 'https://www.buymeacoffee.com/microventurelabs', cta: '☕ Support on Buy Me a Coffee →', external: true },
 ];

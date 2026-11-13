@@ -7,11 +7,446 @@
   {
     "id": 2,
     "text": "The cheapest water you will ever store is the water already in your pipes.",
-    "note": "Fill the bathtub and every clean container the moment the power goes, not on day two."
+    "note": "Bath water is for flushing, not drinking. Shut the door, drain it after, and store drinking water in food-grade containers."
   },
   {
     "id": 3,
     "text": "Nobody panics about the thing they already know how to do.",
     "note": "Competence is the sedative. Practise the small tasks so the big day feels familiar."
+  },
+  {
+    "id": 4,
+    "text": "Count how many steps from your door to the stairwell in the dark tonight.",
+    "note": "Walk it once with a hand on the rail and note where the light switches are."
+  },
+  {
+    "id": 5,
+    "text": "Store water where you will still be able to reach it when you are tired.",
+    "note": "Pick a low, reachable shelf in the hall, not the top of a closet."
+  },
+  {
+    "id": 6,
+    "text": "Write down how much water your household actually drinks in a normal week.",
+    "note": "Then buy one more week than that and label every bottle with the date."
+  },
+  {
+    "id": 7,
+    "text": "A pantry you cannot cook from is storage, not food.",
+    "note": "Cook one full meal tonight using only what is in the cupboard and nothing else."
+  },
+  {
+    "id": 8,
+    "text": "Buy the food you already eat, then eat it and buy it again.",
+    "note": "Rotate one shelf this week so nothing in the cupboard outlives its date."
+  },
+  {
+    "id": 9,
+    "text": "Know which room in your flat stays warmest before you need to know it.",
+    "note": "Test this on a cold evening with the heating off, or every room will read the same."
+  },
+  {
+    "id": 10,
+    "text": "Blankets work better than bravado when the heating stops on a cold night.",
+    "note": "Wash the spare blankets now so they are clean and dry when you want them."
+  },
+  {
+    "id": 11,
+    "text": "A torch you cannot find in the dark is a torch you do not own.",
+    "note": "Put one torch in the drawer you actually open when you walk in."
+  },
+  {
+    "id": 12,
+    "text": "Charge the things you would miss first, not the things you use most.",
+    "note": "Make a short list tonight of what needs charging and in what order."
+  },
+  {
+    "id": 13,
+    "text": "Keep copies of your papers somewhere that is not your only flat.",
+    "note": "Photograph your ID and lease, then hand a printed copy over or lock the file."
+  },
+  {
+    "id": 14,
+    "text": "A document you cannot find is the same as a document you never had.",
+    "note": "Spend ten minutes naming your scans properly so you can search them later."
+  },
+  {
+    "id": 15,
+    "text": "A list of what your parent takes is worth more than a guess at a pharmacy.",
+    "note": "Write the names and the prescriber's phone number on paper and keep it in your bag."
+  },
+  {
+    "id": 16,
+    "text": "Keep the medication list where the ambulance crew would look, not in a drawer.",
+    "note": "With your parent's consent, tape a copy to the fridge and tell one neighbour it exists, not what it says."
+  },
+  {
+    "id": 17,
+    "text": "The neighbour who knows your name is worth more than a full cupboard.",
+    "note": "Knock on one door this week and swap phone numbers with no other agenda."
+  },
+  {
+    "id": 18,
+    "text": "Introduce yourself to the person across the hall before something goes wrong.",
+    "note": "Say hello once, then leave it — the point is that they know your face."
+  },
+  {
+    "id": 19,
+    "text": "Know where the fuse box is and which switch turns off the whole flat.",
+    "note": "Open it once tonight with a torch in your other hand."
+  },
+  {
+    "id": 20,
+    "text": "A drill that takes an evening is cheaper than a week of learning in the dark.",
+    "note": "Turn it off in daylight, not a cold day; skip it if anyone needs powered medical equipment or a stairlift."
+  },
+  {
+    "id": 21,
+    "text": "Keep a small amount of cash at home in notes you can actually spend.",
+    "note": "Break a note into smaller ones this week and put them somewhere dry."
+  },
+  {
+    "id": 22,
+    "text": "Cards fail when the network fails, and the queue at the machine will be long.",
+    "note": "Check what is in your wallet right now and whether any of it is paper."
+  },
+  {
+    "id": 23,
+    "text": "You will make worse decisions tired, so protect the sleep you can get.",
+    "note": "Keep earplugs and an eye mask in the bedside drawer where you can find them."
+  },
+  {
+    "id": 24,
+    "text": "Think about the toilet before it stops flushing, not after.",
+    "note": "Line a bucket with a bag and keep it with the bins, ready."
+  },
+  {
+    "id": 25,
+    "text": "Children cope better with a plan they helped make than one handed to them.",
+    "note": "Ask your child tonight what they would pack and write down their answer."
+  },
+  {
+    "id": 26,
+    "text": "Give a child a job in a hard week and they stop being only frightened.",
+    "note": "Let them own the torch, the list, or the door checking, and mean it."
+  },
+  {
+    "id": 27,
+    "text": "Ask your parent what they would do if the lift stopped working today.",
+    "note": "Then ask who they would call, and make sure that number is written down."
+  },
+  {
+    "id": 28,
+    "text": "An older parent on the fourth floor has a different plan from yours.",
+    "note": "Walk their building this month and find the stairwell light and the exit."
+  },
+  {
+    "id": 29,
+    "text": "Agree on one person outside the city who everyone will call.",
+    "note": "Write that number on paper for every adult in the household this week."
+  },
+  {
+    "id": 30,
+    "text": "Text messages queue and phone calls fail, so have more than one route.",
+    "note": "Ask at the library, the building office, or a neighbour with a landline before you need them."
+  },
+  {
+    "id": 31,
+    "text": "Learn where the water shut-off valve is before it is spraying the hall.",
+    "note": "Learn where it is and which way closes it; never force a stiff valve — have someone check it first."
+  },
+  {
+    "id": 32,
+    "text": "Know how to open your own front door when the lock will not turn.",
+    "note": "Ask the building office who to call for a lock, and save that number."
+  },
+  {
+    "id": 33,
+    "text": "A hand-crank radio is only useful if you know which station to find.",
+    "note": "Tune it this week and write the frequency on a card beside it."
+  },
+  {
+    "id": 34,
+    "text": "Fill the freezer with ice now and it will keep food cold later.",
+    "note": "Freeze a few bottles of water tonight and leave space around them."
+  },
+  {
+    "id": 35,
+    "text": "Cook once, portion twice, and the freezer becomes your second pantry.",
+    "note": "Double tonight's dinner and label the extra portion with the date."
+  },
+  {
+    "id": 36,
+    "text": "Some medicine has to stay cold, so know your plan before the fridge stops.",
+    "note": "Ask the pharmacy how long it keeps without power and what to do."
+  },
+  {
+    "id": 37,
+    "text": "The bag by the door should be small enough to carry down four flights.",
+    "note": "Weigh it or walk it down the stairs and see how it feels."
+  },
+  {
+    "id": 38,
+    "text": "Write the plan down because you will not remember it under pressure.",
+    "note": "Put one page in the kitchen drawer and one in the hallway cupboard."
+  },
+  {
+    "id": 39,
+    "text": "A list on your phone dies with the battery, so keep paper too.",
+    "note": "Print the one page that matters most and fold it into your wallet."
+  },
+  {
+    "id": 40,
+    "text": "Check your smoke alarm batteries on a date you will not forget.",
+    "note": "Pick a birthday or a new year and test every alarm in the flat."
+  },
+  {
+    "id": 41,
+    "text": "Learn to shut off the gas yourself, and know when to leave it alone.",
+    "note": "Read the meter instructions once, then never turn the gas back on yourself; call the supplier."
+  },
+  {
+    "id": 42,
+    "text": "Sort your kitchen into food that needs power and food that does not.",
+    "note": "Do it once, tonight, so you know what you can still cook on the third day."
+  },
+  {
+    "id": 43,
+    "text": "Buy the manual can opener, because the electric one only works sometimes.",
+    "note": "Find it in the drawer and open one can with it tonight."
+  },
+  {
+    "id": 44,
+    "text": "Keep a pair of shoes by the bed that you could walk a mile in.",
+    "note": "Not slippers. Put real shoes there tonight before you sleep."
+  },
+  {
+    "id": 45,
+    "text": "A phone with no charge is a paperweight with a screen and a battery.",
+    "note": "Charge it before dinner, not before bed, and keep a cable by the door."
+  },
+  {
+    "id": 46,
+    "text": "Keep a spare charger and a power bank where you sleep, not where you work.",
+    "note": "Check the bank holds a charge and put it back where it belongs."
+  },
+  {
+    "id": 47,
+    "text": "Write down the three things you would take, then check the list honestly.",
+    "note": "If the list does not fit in one bag, cut it down tonight."
+  },
+  {
+    "id": 48,
+    "text": "A neighbour with a spare key is a plan; a spare key under a mat is a hope.",
+    "note": "Give the key to someone in the building and tell them when to use it."
+  },
+  {
+    "id": 49,
+    "text": "Learn the sound your building makes when the power goes out.",
+    "note": "Notice whether the hallway lights stay on and where the emergency lights are."
+  },
+  {
+    "id": 50,
+    "text": "Keep a paper map of your own neighbourhood, because you know it less well than you think.",
+    "note": "Mark the pharmacy, the school, the clinic and the nearest drinking fountain."
+  },
+  {
+    "id": 51,
+    "text": "Keep the heavy bottles low and reachable, where a leak will not ruin everything.",
+    "note": "Keep a towel and a small bucket beside them, and nothing stacked on top."
+  },
+  {
+    "id": 52,
+    "text": "Sit for a minute with the lights off and the lift out of order.",
+    "note": "Do it in daylight, then again when the hall is properly dark."
+  },
+  {
+    "id": 53,
+    "text": "Know how your city warns you when something big happens nearby.",
+    "note": "Sign up for the alerts tonight and check they arrive on your phone."
+  },
+  {
+    "id": 54,
+    "text": "Keep the children's shoes and coats together so a cold exit is fast.",
+    "note": "Move them to one hook by the door and put a torch beside them."
+  },
+  {
+    "id": 55,
+    "text": "A written plan with names on it is a plan; the rest is a mood.",
+    "note": "Write who does what on the back of the plan and sign it."
+  },
+  {
+    "id": 56,
+    "text": "Check the expiry dates on the food you are keeping for an emergency.",
+    "note": "Pull the oldest items to the front and cook one of them this week."
+  },
+  {
+    "id": 57,
+    "text": "Give every adult in the flat the same information, not slightly different versions.",
+    "note": "Read the plan aloud together and let each person correct you."
+  },
+  {
+    "id": 58,
+    "text": "An emergency contact should be someone who answers on the first ring.",
+    "note": "Call yours today and ask whether the number still works."
+  },
+  {
+    "id": 59,
+    "text": "Know how long the water in your tank or boiler will last without power.",
+    "note": "Time how long the hot tap runs before it goes cold, and write it down."
+  },
+  {
+    "id": 60,
+    "text": "A blanket, a torch and a radio will solve more nights than anything you can buy.",
+    "note": "Put all three in one basket tonight so you stop hunting for them."
+  },
+  {
+    "id": 61,
+    "text": "Ask the pharmacy how they would reach you if their systems went down.",
+    "note": "Make sure they have a phone number that is not only your mobile."
+  },
+  {
+    "id": 62,
+    "text": "Keep the important numbers on a card in your wallet, not only in your phone.",
+    "note": "Write the doctor, the pharmacy and one relative on it tonight."
+  },
+  {
+    "id": 63,
+    "text": "Never burn fuel indoors — no camping stove, no charcoal, no generator in a stairwell or on a balcony.",
+    "note": "A generator belongs outside and well away from doors, windows and vents; carbon monoxide kills quietly."
+  },
+  {
+    "id": 64,
+    "text": "Learn which of your neighbours has a car and which would need a lift.",
+    "note": "Ask directly, once, and offer the same favour back without being asked."
+  },
+  {
+    "id": 65,
+    "text": "A household that has talked about the hard week handles it better.",
+    "note": "Have that conversation over dinner this week, before anything happens."
+  },
+  {
+    "id": 66,
+    "text": "Keep the bin empty and the sink clear, because mess makes every problem worse.",
+    "note": "Spend ten minutes tonight on the sink and the bin and nothing else."
+  },
+  {
+    "id": 67,
+    "text": "Check that the can opener still works before the night you need it.",
+    "note": "Try it on one can this week and replace it if the wheel slips."
+  },
+  {
+    "id": 68,
+    "text": "Check the date on your batteries before you trust them, then test them.",
+    "note": "Alkaline cells keep for years; the printed date is a best-before, so test the torch rather than bin it."
+  },
+  {
+    "id": 69,
+    "text": "Learn which taps in your flat still run when the mains pressure drops.",
+    "note": "Ask the building office, then label the one tap you can rely on."
+  },
+  {
+    "id": 70,
+    "text": "Write the plan for the person who is not you, because you may not be home.",
+    "note": "Leave a copy where a babysitter or a relative would look first."
+  },
+  {
+    "id": 71,
+    "text": "A child who knows what happens next is easier to calm than one who does not.",
+    "note": "Tell them the next few things you will do, in order, out loud."
+  },
+  {
+    "id": 72,
+    "text": "Keep one warm layer per person where you sleep, not in the hallway cupboard.",
+    "note": "Put a jumper on every bed tonight and see whether anyone objects."
+  },
+  {
+    "id": 73,
+    "text": "Keep a little cash where you can reach it without power or a network.",
+    "note": "Count it tonight and replace anything you borrowed from it."
+  },
+  {
+    "id": 74,
+    "text": "Check what your insurance covers before you need to make a claim.",
+    "note": "Find the policy number today and put it with your other documents."
+  },
+  {
+    "id": 75,
+    "text": "A phone tree with three names on it beats a group chat in a crisis.",
+    "note": "Write the order down and tell each person who they call next."
+  },
+  {
+    "id": 76,
+    "text": "Learn how to turn your phone into a hotspot before the wifi dies.",
+    "note": "Try it once tonight and note how much battery it burns."
+  },
+  {
+    "id": 77,
+    "text": "Keep a written list of what is in the freezer, because a cold box hides things.",
+    "note": "Tape the list to the door and cross items off as you use them."
+  },
+  {
+    "id": 78,
+    "text": "A quiet household is not a prepared one; check the things nobody has touched.",
+    "note": "Open the cupboard nobody opens and see what is actually in it."
+  },
+  {
+    "id": 79,
+    "text": "Walk down the stairs once carrying what you would actually carry.",
+    "note": "Do it in daylight first, then again with the lights off."
+  },
+  {
+    "id": 80,
+    "text": "Keep one folder for everyone's health paperwork and label it clearly.",
+    "note": "Put the children's cards and the adults' cards in separate sleeves today."
+  },
+  {
+    "id": 81,
+    "text": "Ring the bell of the person who lives alone and ask if they are alright.",
+    "note": "Do it this week and leave your number on a slip of paper."
+  },
+  {
+    "id": 82,
+    "text": "Preparedness is mostly knowing where things are and who to call.",
+    "note": "Pick one thing you cannot find right now and give it a home."
+  },
+  {
+    "id": 83,
+    "text": "A plan that depends on one person is a single point of failure.",
+    "note": "Teach one other adult the water valve and the fuse box this month."
+  },
+  {
+    "id": 84,
+    "text": "Write down what you would do first, second and third, then argue with it.",
+    "note": "Read it back tonight and cut anything that needs two people."
+  },
+  {
+    "id": 85,
+    "text": "Fix one light to the wall where your hand already goes in the dark.",
+    "note": "Stick a battery light by the door tonight and check it tomorrow."
+  },
+  {
+    "id": 86,
+    "text": "Learn the difference between a problem you can fix and one you should leave.",
+    "note": "If you smell gas, leave, and call from outside rather than investigating."
+  },
+  {
+    "id": 87,
+    "text": "Keep the hallway clear, because the exit is the part you cannot replace.",
+    "note": "Move the buggy and the boxes tonight so the door opens fully."
+  },
+  {
+    "id": 88,
+    "text": "A household budget that ignores the odd week is a budget for good weather.",
+    "note": "Add one line tonight for the things you would buy in a bad week."
+  },
+  {
+    "id": 89,
+    "text": "Teach the children how to call for help and what to say when they do.",
+    "note": "Practise the address and the phone number out loud tonight, once."
+  },
+  {
+    "id": 90,
+    "text": "The point of a plan is not to be ready for everything, only for the first hour.",
+    "note": "Write what you would do in the first hour and keep it to one page."
   }
 ]

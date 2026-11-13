@@ -720,7 +720,30 @@ function runAnalyze() {
   }
 }
 
+
+// ─── Monetization config ───────────────────────────────────────
+// Quadratic Practice Workbook upsell. Live Gumroad listing.
+const WORKBOOK = {
+  checkoutUrl: 'https://microventurelabs.gumroad.com/l/quadratic-workbook',
+  price: '$9',
+  placeholder: false
+};
+
+function renderUpsell() {
+  const cta = document.getElementById('upsell-cta');
+  if (!cta) return;
+  const label = WORKBOOK.placeholder
+    ? `Get the Workbook — ${WORKBOOK.price} (listing coming soon)`
+    : `Get the Workbook — ${WORKBOOK.price}`;
+  if (WORKBOOK.checkoutUrl) {
+    cta.innerHTML = `<a class="upsell-btn" href="${WORKBOOK.checkoutUrl}" target="_blank" rel="noopener">${label}</a>`;
+  } else {
+    cta.innerHTML = `<span class="upsell-soon-note">Workbook coming soon — this explainer stays free.</span>`;
+  }
+}
+
 function init() {
+  renderUpsell();
   document.getElementById('app-disclaimer').textContent = DISCLAIMER;
   document.getElementById('parent-graph').innerHTML = buildParentSVG();
 

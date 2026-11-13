@@ -12,5 +12,6 @@
       "path": "/api/daily-quote",
       "schedule": "0 13 * * *"
     }
-  ]
+  ],
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- ."
 }
