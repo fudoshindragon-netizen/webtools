@@ -1,0 +1,365 @@
+{
+  "dataset": "cycle-reference",
+  "version": "2026-11-06.1",
+  "lastReviewed": "2026-11-06",
+  "reviewNote": "Figures were copied from the public pages listed below on this date. Where a source gives a range or a qualitative finding instead of a single pregnancy percentage, the data file keeps it that way. Nothing here is medical advice.",
+  "disclaimer": "Educational information compiled from public sources. It is not medical advice, a diagnosis, or a personal risk calculation. Confirm missed-dose and medication decisions with your clinician or pharmacist.",
+  "sources": {
+    "cdc-about": {
+      "title": "Contraception and Birth Control Methods",
+      "publisher": "U.S. Centers for Disease Control and Prevention",
+      "url": "https://www.cdc.gov/contraception/about/",
+      "accessed": "2026-11-06",
+      "mustContain": ["Typical use failure rate: 7%", "Typical use failure rate: 13%", "2-23%"]
+    },
+    "cdc-2013-appendix-d": {
+      "title": "Appendix D: Contraceptive Effectiveness (U.S. MEC, 2013), adapted from Trussell, Contraceptive Technology, 20th revised edition, 2011",
+      "publisher": "CDC MMWR",
+      "url": "https://www.cdc.gov/mmwr/preview/mmwrhtml/rr6304a5.htm",
+      "accessed": "2026-11-06",
+      "mustContain": ["0.3", "Perfect use", "85"]
+    },
+    "cdc-spr-2024": {
+      "title": "U.S. Selected Practice Recommendations for Contraceptive Use, 2024",
+      "publisher": "CDC MMWR",
+      "url": "https://www.cdc.gov/mmwr/volumes/73/rr/rr7303a1.htm",
+      "accessed": "2026-11-06",
+      "mustContain": ["Selected Practice Recommendations"]
+    },
+    "cdc-spr-chc": {
+      "title": "U.S. SPR: Combined Hormonal Contraceptives",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/combined-hormonal-contraceptives.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["No direct evidence on the effect of missed pills", "seven out of 100"]
+    },
+    "cdc-spr-pop": {
+      "title": "U.S. SPR: Progestin-Only Pills",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/progestin-only-pills.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["about half of cycles", "0.8%"]
+    },
+    "cdc-spr-inject": {
+      "title": "U.S. SPR: Injectables",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/injectables.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["15 weeks", "four out of 100"]
+    },
+    "cdc-spr-ec": {
+      "title": "U.S. SPR: Emergency Contraception",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/contraception/hcp/usspr/emergency-contraception.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["no sooner than 5 days", "ulipristal"]
+    },
+    "cdc-mec-summary": {
+      "title": "U.S. MEC 2024 Appendix K: Summary of classifications",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/contraception/hcp/usmec/summary-contraceptive.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["Rifampin", "Lamotrigine", "St. John"]
+    },
+    "cdc-mec-chc": {
+      "title": "U.S. MEC 2024 Appendix D: Classifications for combined hormonal contraceptives",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/contraception/hcp/usmec/combined-hormonal-contraceptives.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["Broad-spectrum antibiotics", "lamotrigine"]
+    },
+    "cdc-mec-ec": {
+      "title": "U.S. MEC 2024 Appendix J: Emergency contraception",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/contraception/hcp/usmec/emergency-contraception.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["BMI"]
+    },
+    "cdc-cu-iud-slide": {
+      "title": "CDC slide set: pregnancy rate among emergency copper-IUD users, citing a 42-study systematic review",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/reproductivehealth/contraception/unintendedpregnancy/pdf/Teen_Pregnancy_SlideSet_2016.pdf",
+      "accessed": "2026-11-06",
+      "mustContain": ["0.09"]
+    },
+    "sundaram-2017": {
+      "title": "Sundaram A, et al. Contraceptive failure in the United States: estimates from the 2006–2010 National Survey of Family Growth. Perspectives on Sexual and Reproductive Health, 2017.",
+      "publisher": "Peer-reviewed (PMC)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5363251/",
+      "checkUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=PMCID:PMC5363251&resultType=core&format=json",
+      "accessed": "2026-11-06",
+      "mustContain": ["13%", "20%"]
+    },
+    "guttmacher-effectiveness": {
+      "title": "Contraceptive Effectiveness in the United States",
+      "publisher": "Guttmacher Institute",
+      "url": "https://www.guttmacher.org/fact-sheet/contraceptive-effectiveness-united-states",
+      "accessed": "2026-11-06",
+      "mustContain": ["less than 2%"]
+    },
+    "nuvaring-label": {
+      "title": "NuvaRing (etonogestrel/ethinyl estradiol) prescribing information, revised 2024",
+      "publisher": "FDA label",
+      "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/021187s041lbl.pdf",
+      "accessed": "2026-11-06",
+      "mustContain": ["three hours", "four weeks"]
+    },
+    "annovera-label": {
+      "title": "ANNOVERA (segesterone acetate and ethinyl estradiol) prescribing information",
+      "publisher": "DailyMed / FDA label",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=eb18194f-2021-41fa-8bdf-31e0c0eb646b",
+      "accessed": "2026-11-06",
+      "mustContain": ["2 continuous hours", "7 consecutive days"]
+    },
+    "xulane-label": {
+      "title": "Xulane (norelgestromin and ethinyl estradiol) transdermal system labeling",
+      "publisher": "DailyMed / FDA label",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=f7848550-086a-43d8-8ae5-047f4b9e4382",
+      "accessed": "2026-11-06",
+      "mustContain": ["more than 1 Day", "7 days"]
+    },
+    "planb-label": {
+      "title": "Plan B One-Step (levonorgestrel) tablet prescribing information",
+      "publisher": "DailyMed / FDA label",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=e17b3ec0-7739-4775-b7a2-a262f4f3a836",
+      "accessed": "2026-11-06",
+      "mustContain": ["84%", "1,198"]
+    },
+    "planb-faq": {
+      "title": "Plan B One-Step frequently asked questions",
+      "publisher": "Plan B One-Step (manufacturer)",
+      "url": "https://www.planbonestep.com/faqs/",
+      "accessed": "2026-11-06",
+      "mustContain": ["7 out of every 8"]
+    },
+    "vandijke-1984": {
+      "title": "van Dijke CP, Weber JC. Interaction between oral contraceptives and griseofulvin. BMJ, 1984.",
+      "publisher": "Peer-reviewed",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1441383/",
+      "checkUrl": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID:6424759&format=json",
+      "accessed": "2026-11-06",
+      "mustContain": ["griseofulvin"]
+    },
+    "hse-griseofulvin": {
+      "title": "Griseofulvin drug interactions table (product-information summary)",
+      "publisher": "Ireland HSE",
+      "url": "https://assets.hse.ie/media/documents/Griseofulvin_drug_interactions.pdf",
+      "accessed": "2026-11-06",
+      "mustContain": ["Oral contraceptives"]
+    },
+    "cdc-bv": {
+      "title": "About bacterial vaginosis",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/bacterial-vaginosis/about/",
+      "accessed": "2026-11-06",
+      "mustContain": ["douching", "fish"]
+    },
+    "cdc-candidiasis": {
+      "title": "Vulvovaginal candidiasis — STI treatment guidelines",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/std/treatment-guidelines/candidiasis.htm",
+      "accessed": "2026-11-06",
+      "mustContain": ["boric acid", "600"]
+    },
+    "cdc-candidiasis-consumer": {
+      "title": "Treatment of candidiasis",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/candidiasis/treatment/index.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["boric acid"]
+    },
+    "mayo-bv": {
+      "title": "Bacterial vaginosis — symptoms and causes",
+      "publisher": "Mayo Clinic",
+      "url": "https://www.mayoclinic.org/diseases-conditions/bacterial-vaginosis/symptoms-causes/syc-20352279",
+      "accessed": "2026-11-06",
+      "mustContain": ["Douche"]
+    },
+    "mayo-vagina": {
+      "title": "Vagina: What's typical, what's not",
+      "publisher": "Mayo Clinic",
+      "url": "https://www.mayoclinic.org/healthy-lifestyle/womens-health/in-depth/vagina/art-20046562",
+      "accessed": "2026-11-06",
+      "mustContain": ["sex toys"]
+    },
+    "mayo-ph": {
+      "title": "The dos and don'ts of vaginal health",
+      "publisher": "Mayo Clinic Press",
+      "url": "https://mcpress.mayoclinic.org/women-health/the-dos-and-donts-of-vaginal-health/",
+      "accessed": "2026-11-06",
+      "mustContain": ["3.8", "4.5"]
+    },
+    "mayo-discharge": {
+      "title": "Vaginal discharge — causes",
+      "publisher": "Mayo Clinic",
+      "url": "https://www.mayoclinic.org/symptoms/vaginal-discharge/basics/causes/sym-20050825",
+      "accessed": "2026-11-06",
+      "mustContain": ["discharge"]
+    },
+    "cleveland-color": {
+      "title": "Period blood color: what it means",
+      "publisher": "Cleveland Clinic",
+      "url": "https://health.clevelandclinic.org/what-does-the-color-of-your-period-mean",
+      "accessed": "2026-11-06",
+      "mustContain": ["oxid"]
+    },
+    "cleveland-brown": {
+      "title": "Brown discharge: causes",
+      "publisher": "Cleveland Clinic",
+      "url": "https://health.clevelandclinic.org/brown-vaginal-discharge",
+      "accessed": "2026-11-06",
+      "mustContain": ["brown"]
+    },
+    "acog-vulvovaginal": {
+      "title": "Vulvovaginal health FAQ",
+      "publisher": "American College of Obstetricians and Gynecologists",
+      "url": "https://www.acog.org/womens-health/faqs/vulvovaginal-health",
+      "accessed": "2026-11-06",
+      "mustContain": ["lactobacilli"]
+    },
+    "cornell-lube": {
+      "title": "Condoms and lubricants",
+      "publisher": "Cornell Health",
+      "url": "https://health.cornell.edu/sites/health/files/pdf-library/Condoms_Lube.pdf",
+      "accessed": "2026-11-06",
+      "mustContain": ["oil-based"]
+    },
+    "medlineplus-phenazopyridine": {
+      "title": "Phenazopyridine",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/druginfo/meds/a682231.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["not an antibiotic"]
+    },
+    "medlineplus-urinalysis": {
+      "title": "Urinalysis",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/ency/article/003579.htm",
+      "accessed": "2026-11-06",
+      "mustContain": ["nitrite"]
+    },
+    "medlineplus-uti": {
+      "title": "Urinary tract infections",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/urinarytractinfections.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["urinary"]
+    },
+    "medlineplus-estradiol": {
+      "title": "Estradiol blood test",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/ency/article/003711.htm",
+      "accessed": "2026-11-06",
+      "mustContain": ["estradiol"]
+    },
+    "medlineplus-progesterone": {
+      "title": "Progesterone test",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/progesterone-test/",
+      "accessed": "2026-11-06",
+      "mustContain": []
+    },
+    "medlineplus-lh": {
+      "title": "Luteinizing hormone (LH) levels test",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/luteinizing-hormone-lh-levels-test/",
+      "accessed": "2026-11-06",
+      "mustContain": []
+    },
+    "medlineplus-fsh": {
+      "title": "Follicle-stimulating hormone (FSH) levels test",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/follicle-stimulating-hormone-fsh-levels-test/",
+      "accessed": "2026-11-06",
+      "mustContain": []
+    },
+    "medlineplus-testosterone": {
+      "title": "Testosterone levels test",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/testosterone-levels-test/",
+      "accessed": "2026-11-06",
+      "mustContain": []
+    },
+    "medlineplus-tsh": {
+      "title": "TSH test",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/tsh-thyroid-stimulating-hormone-test/",
+      "accessed": "2026-11-06",
+      "mustContain": ["thyroid"]
+    },
+    "medlineplus-prolactin": {
+      "title": "Prolactin levels",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/prolactin-levels/",
+      "accessed": "2026-11-06",
+      "mustContain": []
+    },
+    "medlineplus-hcg": {
+      "title": "Pregnancy test",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/pregnancy-test/",
+      "accessed": "2026-11-06",
+      "mustContain": []
+    },
+    "medlineplus-ferritin": {
+      "title": "Ferritin blood test",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/ferritin-blood-test/",
+      "accessed": "2026-11-06",
+      "mustContain": []
+    },
+    "medlineplus-hemoglobin": {
+      "title": "Hemoglobin test",
+      "publisher": "MedlinePlus",
+      "url": "https://medlineplus.gov/lab-tests/hemoglobin-test/",
+      "accessed": "2026-11-06",
+      "mustContain": []
+    },
+    "nhs-bv": {
+      "title": "Bacterial vaginosis",
+      "publisher": "NHS",
+      "url": "https://www.nhs.uk/conditions/bacterial-vaginosis/",
+      "accessed": "2026-11-06",
+      "mustContain": ["douche"]
+    },
+    "hiv-guidelines-note": {
+      "title": "U.S. MEC 2024 tells clinicians to use the adult antiretroviral guidelines on clinicalinfo.hiv.gov for HIV drug interactions. That site blocks this checker, so the category numbers are cited from the MEC summary instead.",
+      "publisher": "CDC",
+      "url": "https://www.cdc.gov/contraception/hcp/usmec/summary-contraceptive.html",
+      "accessed": "2026-11-06",
+      "mustContain": ["clinicalinfo.hiv.gov"]
+    }
+  },
+  "openFdaWatch": [
+    {
+      "id": "nuvaring",
+      "label": "NuvaRing",
+      "search": "openfda.brand_name:\"NuvaRing\"",
+      "fields": ["dosage_and_administration", "drug_interactions"]
+    },
+    {
+      "id": "depo-provera",
+      "label": "Depo-Provera",
+      "search": "openfda.brand_name:\"Depo-Provera\"",
+      "fields": ["dosage_and_administration"]
+    },
+    {
+      "id": "xulane",
+      "label": "Xulane",
+      "search": "openfda.brand_name:\"Xulane\"",
+      "fields": ["dosage_and_administration"]
+    },
+    {
+      "id": "annovera",
+      "label": "Annovera",
+      "search": "segesterone",
+      "fields": ["dosage_and_administration"]
+    },
+    {
+      "id": "plan-b",
+      "label": "Plan B One-Step",
+      "search": "openfda.brand_name:\"Plan B One-Step\"",
+      "fields": ["indications_and_usage", "clinical_studies"]
+    }
+  ]
+}

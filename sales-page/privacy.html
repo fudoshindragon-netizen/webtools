@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy policy and educational terms | MicroVenture Labs</title>
+    <meta name="description" content="How the Luna Cycle tracker handles data on the website and in the Android and iPhone apps, and the educational limits of that information." />
+    <link rel="canonical" href="https://generationwealthforever.com/privacy.html" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      .policy { max-width: 760px; margin: 0 auto; padding: 28px 20px 72px; }
+      .policy h1 { color: var(--text-heading); font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.5px; margin: 12px 0; }
+      .policy h2 { color: var(--text-heading); font-size: 22px; margin: 28px 0 8px; }
+      .policy p, .policy li { color: var(--text); }
+      .policy ul { padding-left: 20px; margin: 8px 0 16px; }
+      .policy li { margin: 6px 0; }
+      .policy .note { color: var(--text-muted); font-size: 14px; }
+    </style>
+  </head>
+  <body>
+    <nav class="site-nav">
+      <a href="index.html" class="site-brand">🚀 MicroVenture Labs</a>
+      <div class="site-nav-links">
+        <a href="index.html" class="site-nav-link">🛡️ NOBODY RUNS</a>
+        <a href="index.html#study-hub" class="site-nav-link">📚 Study Hub</a>
+        <a href="focus-flow.html" class="site-nav-link">🧭 Focus &amp; Flow</a>
+        <a href="cycle.html" class="site-nav-link">💗 Cycle tracker</a>
+        <a href="privacy.html" class="site-nav-link" aria-current="page">Privacy</a>
+      </div>
+    </nav>
+    <article class="policy">
+      <p class="note">Last updated 12 November 2026. This page covers the cycle tracker on generationwealthforever.com and the Luna Cycle apps for Android and iPhone.</p>
+      <h1>Privacy policy</h1>
+      <p>MicroVenture Labs publishes the cycle tracker. The name and bundle id of the phone apps are set in <code>app.config.json</code> (currently Luna Cycle, <code>com.microventurelabs.lunacycle</code>).</p>
+      <p>Contact: <a href="mailto:microventurelabs@gmail.com">microventurelabs@gmail.com</a></p>
+
+      <h2>What stays on your device</h2>
+      <p>The tracker does not have accounts. Period dates, flow, symptoms, mood, notes, the birth-control method you pick, reminder time, medications you save, and lab numbers are stored in local storage on the website, or in the app’s on-device storage. They are not uploaded to our server. There is no analytics script on the tracker pages or in the app.</p>
+      <p>You can export that information as a JSON file, import a file you already have, or delete all of it with “Delete all my data.” Deleting removes the on-device log and, in the app, cancels reminders this app scheduled. We do not keep a copy.</p>
+
+      <h2>What can leave the device, and only if you ask</h2>
+      <ul>
+        <li><strong>Hosted symptom assistant.</strong> The library answer is produced on the device and is not sent anywhere. If you press “Also ask the hosted assistant,” the text you typed in that box is sent to our server at generationwealthforever.com (the app uses the absolute address in <code>app.config.json</code>), which sends it to the Vercel AI Gateway and the model configured there. Tracker logs, saved medications, and lab tables are not attached. Do not include a name, address, or other identifier unless you mean to. The provider processes the question to write a reply. We do not add that question to an account, because there is no account.</li>
+        <li><strong>Medication label lookup.</strong> If you press “Look up label,” the drug name is sent to our server, which requests the public openFDA label. The drug name is the only field sent. Your cycle log is not.</li>
+      </ul>
+      <p>Both calls need a network. Everything else in the tracker works offline in the app, including logging, the calendar, method pages, missed-dose figures, the curated interaction list, lab charts, and the on-device symptom library.</p>
+
+      <h2>Reminders</h2>
+      <p>The phone app asks, with the system permission dialog, before it schedules a local notification. Reminders are stored by the phone’s notification system. They are not sent through our server. You can refuse permission and keep using the tracker. The website cannot deliver a notification after you close the tab.</p>
+
+      <h2>Payments on the rest of the site</h2>
+      <p>NOBODY RUNS and other products are sold by Stripe or Gumroad. Those checkouts are separate from the tracker. The tracker does not process payment and does not see your card.</p>
+
+      <h2>Children</h2>
+      <p>The tracker is written for adults. It is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
+
+      <h2>Educational terms, not medical advice</h2>
+      <p>The cycle tracker, including missed-dose figures, effectiveness numbers, medication flags, lab notes, and the symptom guide, is educational information compiled from public sources such as CDC, FDA labels, and peer-reviewed summaries. It is not medical advice, not a diagnosis, not a pregnancy test, and not a personal risk calculation. It does not replace a clinician, a pharmacist, or emergency care.</p>
+      <p>Numbers are shown the way the cited source published them. Where a source gives a range or says that no percentage was found, the tracker says that. A yearly failure rate is not the chance from one missed pill. Confirm medication and missed-dose decisions with your pharmacist or clinician.</p>
+      <p>See a clinician for fever, pelvic pain, symptoms that are not improving, possible pregnancy, possible STI exposure, or heavy bleeding. If you may be having a medical emergency, contact local emergency services.</p>
+      <p>The phone apps are general-purpose education and personal record tools. They are not a medical device and are not cleared or approved by the FDA to diagnose, treat, or prevent disease.</p>
+    </article>
+    <footer>
+      <div class="footer-content">
+        <p>Built by <a href="index.html">MicroVenture Labs</a></p>
+        <div class="footer-links">
+          <a href="cycle.html">💗 Cycle tracker</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="mailto:microventurelabs@gmail.com">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+{
+  "version": "2026-11-06.1",
+  "lastReviewed": "2026-11-06",
+  "intro": "Categories are the U.S. Medical Eligibility Criteria, 2024. Category 1 means no restriction. Category 2 means advantages generally outweigh risks. Category 3 means risks usually outweigh advantages. For several drugs the 'risk' is a loss of contraceptive effect, not a dangerous reaction. Category 1 does not mean the drug is the best choice, and a missing drug is not a clean bill of health. Confirm with your pharmacist.",
+  "categoryLegend": {
+    "1": "U.S. MEC 1 — no restriction for that method.",
+    "2": "U.S. MEC 2 — advantages of the method generally outweigh theoretical or proven risks.",
+    "3": "U.S. MEC 3 — theoretical or proven risks usually outweigh the advantages."
+  },
+  "entries": [
+    {
+      "id": "rifampin",
+      "name": "Rifampin",
+      "aliases": ["rifampin", "rifampicin", "rifadin", "rimactane"],
+      "flag": "interaction",
+      "summary": "CDC lists rifampin or rifabutin as category 3 for combined hormonal contraceptives and progestin-only pills, category 2 for the implant, and category 1 for the shot and for both copper and hormonal IUDs. The interaction is not described as harmful in itself. It is likely to reduce the effect of combined hormones. CDC encourages a different contraceptive for people who will take rifampin or rifabutin long term. If a combined pill is still chosen, CDC says to use one with at least 30 micrograms of ethinyl estradiol. Evidence that rifampin reduces combined-pill effectiveness is what CDC calls the balance of the evidence. Data on rifabutin are limited; its effect on pill metabolism is less than rifampin's, and small studies did not show ovulation.",
+      "methods": { "CHC": "3", "POP": "3", "implant": "2", "DMPA": "1", "LNG-IUD": "1", "Cu-IUD": "1" },
+      "sourceIds": ["cdc-mec-summary", "cdc-mec-chc"]
+    },
+    {
+      "id": "rifabutin",
+      "name": "Rifabutin",
+      "aliases": ["rifabutin", "mycobutin"],
+      "flag": "interaction",
+      "summary": "Grouped with rifampin in the 2024 U.S. MEC. Same categories: 3 for combined hormones and progestin-only pills, 2 for the implant, 1 for the shot and IUDs. CDC notes that rifabutin data are limited and the effect on pill metabolism looks smaller than with rifampin.",
+      "methods": { "CHC": "3", "POP": "3", "implant": "2", "DMPA": "1", "LNG-IUD": "1", "Cu-IUD": "1" },
+      "sourceIds": ["cdc-mec-summary", "cdc-mec-chc"]
+    },
+    {
+      "id": "enzyme-anticonvulsants",
+      "name": "Enzyme-inducing anticonvulsants",
+      "aliases": ["phenytoin", "dilantin", "carbamazepine", "tegretol", "carbatrol", "phenobarbital", "primidone", "mysoline", "topiramate", "topamax", "oxcarbazepine", "trileptal", "oxtellar"],
+      "flag": "interaction",
+      "summary": "CDC's 2024 list is phenytoin, carbamazepine, barbiturates, primidone, topiramate, and oxcarbazepine. Categories: 3 for combined hormonal contraceptives and progestin-only pills, 2 for the implant, 1 for the shot and for copper and hormonal IUDs. CDC says the interaction is not harmful but is likely to reduce combined-hormone effectiveness, and that another method should be encouraged for long-term use. If a combined pill is chosen, use at least 30 micrograms of ethinyl estradiol. The 2024 table does not add a dose cutoff for topiramate. Whether the patch and the ring behave exactly like the pill is described as unclear.",
+      "methods": { "CHC": "3", "POP": "3", "implant": "2", "DMPA": "1", "LNG-IUD": "1", "Cu-IUD": "1" },
+      "sourceIds": ["cdc-mec-summary", "cdc-mec-chc"]
+    },
+    {
+      "id": "lamotrigine",
+      "name": "Lamotrigine",
+      "aliases": ["lamotrigine", "lamictal"],
+      "flag": "two-way",
+      "summary": "This is a two-way issue, and the direction that CDC rates as category 3 is the seizure medicine, not a loss of contraceptive effect. Lamotrigine monotherapy plus combined hormonal contraceptives is category 3. Pharmacokinetic studies show lamotrigine levels fall during combined-pill use, and one trial found more seizures in some women using both. During the hormone-free week, levels can rise again. CDC says the category 3 rating is only for lamotrigine taken alone with combined pills. Regimens that combine lamotrigine with a non-enzyme-inducing antiepileptic drug, such as sodium valproate, do not interact with combined pills. Progestin-only pills, the implant, the shot, and IUDs are category 1. Do not change a lamotrigine dose because of something you read here.",
+      "methods": { "CHC": "3", "POP": "1", "implant": "1", "DMPA": "1", "LNG-IUD": "1", "Cu-IUD": "1" },
+      "sourceIds": ["cdc-mec-summary", "cdc-mec-chc"]
+    },
+    {
+      "id": "st-johns-wort",
+      "name": "St. John's wort",
+      "aliases": ["st johns wort", "st john's wort", "hypericum", "hypericum perforatum"],
+      "flag": "interaction",
+      "summary": "U.S. MEC category 2 for combined hormonal contraceptives, progestin-only pills, and the implant, and category 1 for the shot and IUDs. Clinical data are limited. Pharmacokinetic studies raise concern that it might lower hormone effectiveness, with more breakthrough bleeding and ovulation, and that the effect may depend on the dose and on how much active ingredient a given product contains. CDC cites a 2016 systematic review by Berry-Bibee and colleagues.",
+      "methods": { "CHC": "2", "POP": "2", "implant": "2", "DMPA": "1", "LNG-IUD": "1", "Cu-IUD": "1" },
+      "sourceIds": ["cdc-mec-summary", "cdc-mec-chc"]
+    },
+    {
+      "id": "efavirenz",
+      "name": "Efavirenz",
+      "aliases": ["efavirenz", "sustiva"],
+      "flag": "interaction",
+      "summary": "U.S. MEC category 2 for combined hormonal contraceptives, progestin-only pills, and the implant, and category 1 for the shot. IUD initiation is 1 or 2 and continuation is 1, with a star telling clinicians to read the appendix. CDC points HIV drug interactions to the adult antiretroviral guidelines and the perinatal guidelines on clinicalinfo.hiv.gov rather than treating the MEC table as the last word. Ask the clinician who manages the HIV medicine before relying on a hormonal method.",
+      "methods": { "CHC": "2", "POP": "2", "implant": "2", "DMPA": "1", "LNG-IUD": "1 or 2 at initiation, 1 to continue", "Cu-IUD": "1 or 2 at initiation, 1 to continue" },
+      "sourceIds": ["cdc-mec-summary", "hiv-guidelines-note"]
+    },
+    {
+      "id": "fosamprenavir",
+      "name": "Fosamprenavir",
+      "aliases": ["fosamprenavir", "lexiva", "fosamprenavir calcium"],
+      "flag": "interaction",
+      "summary": "Without ritonavir, fosamprenavir is U.S. MEC category 3 for combined hormonal contraceptives. The concern CDC records is that hormone use can lower fosamprenavir levels and weaken the HIV medicine, not only the reverse. The implant, the shot, and progestin-only pills are category 2. With ritonavir boosting, combined hormones move to category 2. IUDs stay category 1 or 2 at initiation and 1 for continuation.",
+      "methods": { "CHC": "3 without ritonavir; 2 if ritonavir-boosted", "POP": "2", "implant": "2", "DMPA": "2 without ritonavir; 1 if ritonavir-boosted", "LNG-IUD": "1 or 2 at initiation, 1 to continue", "Cu-IUD": "1 or 2 at initiation, 1 to continue" },
+      "sourceIds": ["cdc-mec-summary", "cdc-mec-chc"]
+    },
+    {
+      "id": "ritonavir-boosted-pis",
+      "name": "Some ritonavir-boosted protease inhibitors",
+      "aliases": ["atazanavir ritonavir", "reyataz", "darunavir", "prezista", "lopinavir", "kaletra", "saquinavir", "tipranavir", "aptivus", "ritonavir"],
+      "flag": "interaction",
+      "summary": "CDC rates several ritonavir-boosted protease inhibitors category 2 for combined hormones, progestin-only pills, and the implant, because hormone levels can change. Lopinavir/ritonavir is category 1 for those methods in the summary table. The shot is category 1 for this group. This row is a prompt to check the specific medicine on clinicalinfo.hiv.gov. Do not treat every HIV medicine as the same interaction.",
+      "methods": { "CHC": "2 for several boosted PIs; 1 for lopinavir/ritonavir", "POP": "2 for several; 1 for lopinavir/ritonavir", "implant": "2 for several; 1 for lopinavir/ritonavir", "DMPA": "1", "LNG-IUD": "1 or 2 at initiation, 1 to continue", "Cu-IUD": "1 or 2 at initiation, 1 to continue" },
+      "sourceIds": ["cdc-mec-summary", "hiv-guidelines-note"]
+    },
+    {
+      "id": "integrase-no-flag",
+      "name": "Dolutegravir, raltegravir, and several other HIV drugs CDC rates category 1",
+      "aliases": ["dolutegravir", "tivicay", "raltegravir", "isentress", "bictegravir", "emtricitabine", "tenofovir", "lamivudine", "abacavir"],
+      "flag": "no-known-interaction",
+      "summary": "In the 2024 summary table, dolutegravir and raltegravir are category 1 for combined hormones, progestin-only pills, the implant, and the shot. The nucleoside reverse transcriptase inhibitors abacavir, tenofovir, zidovudine, lamivudine, and emtricitabine are also category 1 for those hormonal methods. IUD initiation is listed as 1 or 2 because of infection-risk considerations at insertion, not because these drugs cancel the IUD. Bictegravir is not given its own row in that summary table; check the current HIV guidelines for combinations that include it. Category 1 is not a promise about your whole regimen.",
+      "methods": { "CHC": "1", "POP": "1", "implant": "1", "DMPA": "1", "LNG-IUD": "1 or 2 at initiation, 1 to continue", "Cu-IUD": "1 or 2 at initiation, 1 to continue" },
+      "sourceIds": ["cdc-mec-summary", "hiv-guidelines-note"]
+    },
+    {
+      "id": "broad-spectrum-antibiotics",
+      "name": "Most broad-spectrum antibiotics",
+      "aliases": ["amoxicillin", "ampicillin", "doxycycline", "azithromycin", "ciprofloxacin", "levofloxacin", "metronidazole", "clindamycin", "cephalexin", "nitrofurantoin", "trimethoprim", "sulfamethoxazole", "penicillin"],
+      "flag": "no-known-interaction",
+      "summary": "U.S. MEC category 1. CDC says most broad-spectrum antibiotics do not affect the contraceptive effectiveness of combined pills, the patch, or the ring. Rifampin and rifabutin are the antimicrobial exception in this dataset. A short course of a common antibiotic is not, by itself, a reason in the CDC table to add backup birth control.",
+      "methods": { "CHC": "1", "POP": "1", "implant": "1", "DMPA": "1", "LNG-IUD": "1", "Cu-IUD": "1" },
+      "sourceIds": ["cdc-mec-summary", "cdc-mec-chc"]
+    },
+    {
+      "id": "common-antifungals",
+      "name": "Fluconazole and other antifungals studied with pills",
+      "aliases": ["fluconazole", "diflucan", "itraconazole", "ketoconazole", "miconazole", "clotrimazole"],
+      "flag": "no-known-interaction",
+      "summary": "U.S. MEC groups antifungals as category 1 for combined hormones, progestin-only pills, the implant, the shot, and IUDs. The evidence note says studies of antifungal agents did not show a clinically significant pharmacokinetic interaction with combined pills or the ring. Griseofulvin is a separate, older drug and is not what that category-1 statement was written to clear. See the griseofulvin entry.",
+      "methods": { "CHC": "1", "POP": "1", "implant": "1", "DMPA": "1", "LNG-IUD": "1", "Cu-IUD": "1" },
+      "sourceIds": ["cdc-mec-summary", "cdc-mec-chc"]
+    },
+    {
+      "id": "griseofulvin",
+      "name": "Griseofulvin",
+      "aliases": ["griseofulvin", "gris-peg", "fulvicin", "grifulvin"],
+      "flag": "interaction",
+      "summary": "CDC's 2024 table does not give griseofulvin its own category. Antifungals as a group are category 1, based on studies that did not find a clinically significant interaction. Griseofulvin is older, and case reports describe breakthrough bleeding and pregnancies in people taking it with oral contraceptives (van Dijke and Weber, BMJ, 1984). An Irish HSE table that summarizes product information says oral-contraceptive effect is reduced during griseofulvin and for four weeks after stopping, and that extra barrier contraception should be used. It also says griseofulvin may reduce the effect of the etonogestrel implant and of ulipristal. This flag comes from those reports and that product-information summary, not from a CDC category 3 rating.",
+      "methods": { "CHC": "Not given a separate U.S. MEC number", "POP": "Not given a separate U.S. MEC number", "implant": "HSE product-information summary advises an alternative", "DMPA": "Not rated in the sources used here", "LNG-IUD": "Not described as affected", "Cu-IUD": "Not described as affected" },
+      "sourceIds": ["cdc-mec-chc", "vandijke-1984", "hse-griseofulvin"]
+    },
+    {
+      "id": "ulipristal",
+      "name": "Ulipristal acetate",
+      "aliases": ["ulipristal", "ulipristal acetate", "ella", "ellaone"],
+      "flag": "interaction",
+      "summary": "Ulipristal is an emergency contraceptive and a progesterone-receptor modulator. CDC says starting a hormonal method within 5 days can reduce ulipristal's ability to delay ovulation. In the studies CDC summarizes, ovulation was 27% when a combined pill was started with ulipristal versus 3% with ulipristal alone, and 45% when a progestin-only pill was started with ulipristal versus 3% with placebo plus ulipristal. The instruction is to wait 5 days after ulipristal before starting or restarting hormonal contraception, then use condoms or abstain for 7 days, or until the next period, whichever comes first. Any nonhormonal method can start immediately. For a method that needs a visit, such as the shot, implant, or IUD, starting at the same time may be considered, weighing the drop in ulipristal's effect against the chance of not starting a regular method. Enzyme-inducing drugs, including rifampin, carbamazepine, and St. John's wort, are also a reason CDC gives to be cautious with ulipristal emergency contraception.",
+      "methods": { "CHC": "Wait 5 days after ulipristal", "POP": "Wait 5 days after ulipristal", "implant": "Same-day start is a clinician judgment", "DMPA": "Same-day start is a clinician judgment", "LNG-IUD": "Nonhormonal methods can start immediately; a hormonal IUD is a clinician judgment", "Cu-IUD": "Can be used as emergency contraception itself" },
+      "sourceIds": ["cdc-spr-ec", "cdc-mec-ec"]
+    }
+  ]
+}
