@@ -37,7 +37,7 @@ Debug APK, unsigned by a release key, for sideloading onto your own phone:
 npm run android:debug
 ```
 
-The APK is `android/app/build/outputs/apk/debug/app-debug.apk`. A GitHub Action (`.github/workflows/android-debug.yml`) builds this same debug APK and uploads it as an artifact. Debug APKs are signed with the debug keystore only. Do not upload a debug APK to production.
+The APK is `android/app/build/outputs/apk/debug/app-debug.apk`. The GitHub Action (`.github/workflows/android-debug.yml`) builds this same debug APK and uploads it as `luna-cycle-debug.apk`. It is signed with the Android debug keystore only, so it can be sideloaded for a personal test. Do not upload a debug APK to production.
 
 ### Create the upload keystore on your machine
 
@@ -87,7 +87,7 @@ Play listing icon: upload `sales-page/resources/play-store-icon-512.png` (512×5
 
 1. Create the app. Name: Luna Cycle. Default language: English. App or game: App. Free.
 2. Category: Health & fitness. The tracker is education and a personal log. It is not a medical device. The privacy page says that.
-3. Store listing: short description, full description, and a link to `https://generationwealthforever.com/privacy.html`. You need phone screenshots. A feature graphic is 1024×500.
+3. Store listing: short description, full description, and a link to `https://generationwealthforever.com/privacy.html`. Phone screenshots (1080×1920 PNG, fictional example data) are in `sales-page/store-assets/screenshots/`. The 1024×500 feature graphic is `sales-page/store-assets/feature-graphic-1024x500.png`. The 512×512 listing icon is `sales-page/resources/play-store-icon-512.png`.
 4. Content rating questionnaire: answer from the real behavior. No violence, no sexual content as pornography, no user-generated public posts, no unrestricted web browsing as the product. Health and fitness questions: it lets someone record menstrual and contraceptive information for themselves. It does not provide a diagnosis.
 5. Target audience: 18 and older. The privacy page says the tracker is not directed at children under 13.
 6. Ads: No. The tracker has no ad SDK and no analytics.

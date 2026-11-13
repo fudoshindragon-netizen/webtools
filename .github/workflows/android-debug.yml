@@ -53,9 +53,11 @@ jobs:
           npx cap sync android
           printf 'sdk.dir=%s\n' "$ANDROID_HOME" > android/local.properties
       - name: Assemble debug APK
-        run: chmod +x android/gradlew && android/gradlew -p android assembleDebug --no-daemon
+        run: |
+          chmod +x android/gradlew && android/gradlew -p android assembleDebug --no-daemon
+          cp android/app/build/outputs/apk/debug/app-debug.apk android/app/build/outputs/apk/debug/luna-cycle-debug.apk
       - uses: actions/upload-artifact@v4
         with:
-          name: luna-cycle-debug-apk
-          path: sales-page/android/app/build/outputs/apk/debug/app-debug.apk
+          name: luna-cycle-debug
+          path: sales-page/android/app/build/outputs/apk/debug/luna-cycle-debug.apk
           if-no-files-found: error
