@@ -1,3 +1,8 @@
 node_modules
 dist
 .DS_Store
+
+# Play upload keys and signing passwords. Never commit these.
+*.jks
+*.keystore
+key.properties

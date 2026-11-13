@@ -39,31 +39,24 @@ npm run android:debug
 
 The APK is `android/app/build/outputs/apk/debug/app-debug.apk`. The GitHub Action (`.github/workflows/android-debug.yml`) builds this same debug APK and uploads it as `luna-cycle-debug.apk`. It is signed with the Android debug keystore only, so it can be sideloaded for a personal test. Do not upload a debug APK to production.
 
-### Create the upload keystore on your machine
+### Upload key
 
-Run this on the computer you will keep the key on. Do not run it inside a shared checkout, and do not commit the file it writes. `*.keystore`, `*.jks`, and `android/key.properties` are gitignored.
+The Play upload key is already created. It is an RSA 2048 key, valid for 10000 days, alias `luna-upload`, distinguished name `CN=MicroVenture Labs, O=MicroVenture Labs, C=US`. The keystore file and its passwords are not in git. Keep the delivered `luna-upload.jks` and the credentials file in private storage. Do not generate a second keystore. A new key is a different certificate, and Play will reject it for updates to this app.
 
-```bash
-mkdir -p "$HOME/keystores"
-keytool -genkeypair -v \
-  -keystore "$HOME/keystores/luna-cycle-upload.keystore" \
-  -alias lunacycle \
-  -keyalg RSA -keysize 2048 -validity 10000 \
-  -dname "CN=MicroVenture Labs, OU=Luna Cycle, O=MicroVenture Labs, C=US"
-```
+`*.keystore`, `*.jks`, and `key.properties` are gitignored at the repo root and in `sales-page/`.
 
-`keytool` asks for a store password and a key password. Write both down and store them with the keystore file. A backup of this file is the only way to ship later updates if Play App Signing is not enrolled yet. After Play App Signing is on, Google holds the app-signing key and this file is only the upload key. If you lose the upload key, Play support can reset it. If you lose the keystore before enrollment, you cannot update the same app.
-
-In `sales-page/android/key.properties` (this path is gitignored):
+To sign another release, put that same keystore on disk and create `sales-page/android/key.properties` (this path is gitignored):
 
 ```
-storeFile=/absolute/path/to/luna-cycle-upload.keystore
+storeFile=/absolute/path/to/luna-upload.jks
 storePassword=YOUR_STORE_PASSWORD
-keyAlias=lunacycle
+keyAlias=luna-upload
 keyPassword=YOUR_KEY_PASSWORD
 ```
 
-`storeFile` must be an absolute path, or a path relative to `sales-page/android/app`.
+`storeFile` must be an absolute path, or a path relative to `sales-page/android/app`. `android/app/build.gradle` reads this file when it exists and applies it only to the release build.
+
+After Play App Signing is on, Google holds the app-signing key and this file is only the upload key. If you lose the upload key, Play support can reset it. If you lose the keystore before enrollment, you cannot update the same app. Enroll this certificate as the upload key. Do not let Play replace it with a different upload key unless you intend to reset it.
 
 ### Build the signed AAB
 
