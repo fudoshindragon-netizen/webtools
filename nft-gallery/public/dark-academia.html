@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Academia Wisdom — Moody Art & Literature Collection</title>
+    <meta name="description" content="Discover 9 high-resolution Dark Academia digital art pieces with moody vintage aesthetics and powerful literary quotes." />
+    <link rel="stylesheet" href="/src/style.css" />
+    <style>
+      :root {
+        --primary: #5c1a1a;
+        --primary-light: #8b3a3a;
+        --accent: #c9a84c;
+        --bg-dark: #1a1210;
+        --bg-card: #2a1f1a;
+        --text-light: #e8ddd0;
+        --text-muted: #a09080;
+      }
+      .hero-bg { background: linear-gradient(135deg, #1a1210, #3a2020, #1a1510); }
+      .nft-card { border-color: #4a3020; }
+      .nft-card:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(201, 168, 76, 0.2); }
+      .btn-buy { background: var(--accent); color: #1a1210; }
+      .btn-buy:hover { background: #dcc060; transform: translateY(-2px); }
+      .hero-badge { background: rgba(201, 168, 76, 0.2); color: var(--accent); border: 1px solid rgba(201, 168, 76, 0.3); }
+      footer { background: #0f0a08; }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="hero-badge">Digital Art Collection</span>
+        <h1>Dark Academia Wisdom</h1>
+        <p class="hero-subtitle">9 high-resolution digital art pieces — moody vintage aesthetics meets timeless literary wisdom</p>
+        <a href="https://buy.stripe.com/dRmeVdbSA18SgxuaD40ZW07" target="_blank" class="btn-buy">🛍️ Buy the Collection — $15</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery-section">
+        <h2>The Collection</h2>
+        <p class="section-sub">Click any piece to explore the wisdom within</p>
+        <div id="gallery-grid" class="gallery-grid"></div>
+      </section>
+
+      <section class="cta-section">
+        <h2>Ready to Own the Collection?</h2>
+        <p>9 premium digital art pieces. One low price. Instant download.</p>
+        <a href="https://buy.stripe.com/dRmeVdbSA18SgxuaD40ZW07" target="_blank" class="btn-buy btn-buy-large">🛍️ Buy Now — Instant Delivery $15</a>
+      </section>
+    </main>
+
+    <div id="lightbox" class="lightbox hidden">
+      <div class="lightbox-overlay" id="lightbox-close"></div>
+      <div class="lightbox-content">
+        <button id="lightbox-close-btn" class="lightbox-close" aria-label="Close">&times;</button>
+        <div class="lightbox-image-wrapper">
+          <img id="lightbox-image" src="" alt="" />
+        </div>
+        <div class="lightbox-info">
+          <h3 id="lightbox-title"></h3>
+          <p class="lightbox-quote" id="lightbox-quote"></p>
+          <p class="lightbox-desc" id="lightbox-desc"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>A MicroVenture Labs creation • <a href="https://buy.stripe.com/dRmeVdbSA18SgxuaD40ZW07" target="_blank">Buy Full Collection</a></p>
+        <div class="footer-links">
+          <a href="https://buy.stripe.com/dRmeVdbSA18SgxuaD40ZW07" target="_blank">🛍️ Buy Collection</a>
+          <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank">☕ Buy us a coffee</a>
+          <a href="./index.html" target="_blank">🌸 Anime Life Wisdom Gallery</a>
+          <a href="./steady-light.html">🔶 Steady Light Gallery</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const NFT_DATA = [
+        {
+          id: '01', title: 'Vintage Library',
+          quote: '"In the library, you find not just books, but the echoes of every mind that sought wisdom before you."',
+          desc: 'A grand vintage library with towering oak shelves, leather armchair, and golden lamplight — a sanctuary for every seeker of knowledge.',
+          file: '01-vintage-library.png'
+        },
+        {
+          id: '02', title: 'Tower Study',
+          quote: '"Knowledge is the only treasure that grows when shared."',
+          desc: 'A solitary writer by candlelight in a stone tower, surrounded by ancient maps and star charts — wisdom thrives in solitude and community.',
+          file: '02-tower-study.png'
+        },
+        {
+          id: '03', title: 'Courtyard',
+          quote: '"Education is not the filling of a pail, but the lighting of a fire."',
+          desc: 'A misty morning in an ancient university courtyard. Ivy-covered arches and gothic spires — the architecture of awakening minds.',
+          file: '03-courtyard.png'
+        },
+        {
+          id: '04', title: 'Typewriter Desk',
+          quote: '"Write what should not be forgotten."',
+          desc: 'A writer\'s desk frozen in time — vintage typewriter, handwritten letters, dried flowers between pages. Every story matters.',
+          file: '04-typewriter-desk.png'
+        },
+        {
+          id: '05', title: 'Coffee & Rain',
+          quote: '"Rainy days were made for good books and warm drinks."',
+          desc: 'A cozy café window seat during autumn rain. Steam rises from warm coffee as the world outside turns amber and gold.',
+          file: '05-coffee-rain.png'
+        },
+        {
+          id: '06', title: "Scholar's Circle",
+          quote: '"Great minds discuss ideas. Average minds discuss events. Small minds discuss people."',
+          desc: 'Scholars gathered around a candlelit oak table. Books, scrolls, and a globe — the birthplace of every great idea.',
+          file: '06-scholars-circle.png'
+        },
+        {
+          id: '07', title: 'Music Room',
+          quote: '"Music expresses that which cannot be put into words."',
+          desc: 'A grand piano in candlelight, sheet music scattered, velvet drapes — where emotion finds its voice beyond language.',
+          file: '07-music-room.png'
+        },
+        {
+          id: '08', title: 'Stargazing Tower',
+          quote: '"We are all made of star stuff. Look up, and remember how vast the universe truly is."',
+          desc: 'An ancient observatory tower under the stars. A brass telescope points at the cosmos — a reminder of our place in infinity.',
+          file: '08-stargazing-tower.png'
+        },
+        {
+          id: '09', title: 'Graduation Dreams',
+          quote: '"The beautiful thing about learning is that no one can take it away from you."',
+          desc: 'A graduate on a misty bridge, gothic spires in the distance. Autumn leaves swirl — the beginning of a lifelong journey.',
+          file: '09-graduation-dreams.png'
+        }
+      ];
+
+      function buildGallery() {
+        const grid = document.getElementById('gallery-grid');
+        grid.innerHTML = NFT_DATA.map(item => `
+          <div class="nft-card" data-id="${item.id}">
+            <img class="nft-card-image" src="/images/dark-academia/${item.file}" alt="${item.title} — ${item.quote}" loading="lazy" />
+            <div class="nft-card-info">
+              <div class="nft-card-number">${item.id.padStart(2, '0')}</div>
+              <div class="nft-card-title">${item.title}</div>
+              <div class="nft-card-quote">${item.quote}</div>
+            </div>
+          </div>
+        `).join('');
+        grid.addEventListener('click', (e) => {
+          const card = e.target.closest('.nft-card');
+          if (card) openLightbox(card.dataset.id);
+        });
+      }
+
+      function openLightbox(id) {
+        const item = NFT_DATA.find(d => d.id === id);
+        if (!item) return;
+        const lb = document.getElementById('lightbox');
+        document.getElementById('lightbox-image').src = `/images/dark-academia/${item.file}`;
+        document.getElementById('lightbox-image').alt = `${item.title} — ${item.quote}`;
+        document.getElementById('lightbox-title').textContent = item.title;
+        document.getElementById('lightbox-quote').textContent = item.quote;
+        document.getElementById('lightbox-desc').textContent = item.desc;
+        lb.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        document.getElementById('lightbox').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+      document.getElementById('lightbox-close-btn').addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+      document.addEventListener('DOMContentLoaded', buildGallery);
+    </script>
+  </body>
+</html>
