@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Interview Questions That Keep Coming Back — and How to Answer Them Out Loud | MicroVenture Labs</title>
+    <meta name="description" content="The eight JavaScript interview concepts that recur — closures, this, the event loop, promises, hoisting, == vs ===, array methods, prototypes — each as an answer you would say out loud, with the follow-up and its trap." />
+    <meta name="author" content="MicroVenture Labs" />
+    <meta property="og:title" content="The JavaScript interview questions that keep coming back" />
+    <meta property="og:description" content="Closures, this, the event loop, promises, hoisting, == vs ===, array methods and prototypes — answered out loud, with the follow-up and the trap inside it." />
+    <meta property="og:url" content="https://generationwealthforever.com/javascript-interview-questions.html" />
+    <meta property="og:type" content="article" />
+    <link rel="canonical" href="https://generationwealthforever.com/javascript-interview-questions.html" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --bg: #0a0a12; --bg-card: #12121e; --bg-alt: #0e0e1a; --border: #1e1e32;
+        --text: #b8b8d0; --text-heading: #e8e8f0; --text-muted: #7c7c9a;
+        --accent: #ff6b9d; --accent-hover: #ff8ab0; --accent-glow: rgba(255,107,157,0.3);
+        --neon-blue: #6bc5ff; --neon-purple: #b06bff; --green: #4ade80;
+        --radius: 12px; --radius-sm: 8px;
+        --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font: 16px/1.6 var(--sans); color: var(--text); background: var(--bg);
+        -webkit-font-smoothing: antialiased; scroll-behavior: smooth;
+      }
+      body { min-height: 100vh; overflow-x: hidden; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: var(--accent-hover); }
+      .site-nav { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+      .site-brand { font-size: 18px; font-weight: 800; color: var(--text-heading) !important; text-decoration: none; letter-spacing: -0.3px; }
+      .site-brand:hover { color: var(--accent) !important; }
+      .site-nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+      .site-nav-link { padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--text-muted) !important; border: 1px solid var(--border); text-decoration: none; transition: all 0.2s; }
+      .site-nav-link:hover { border-color: var(--accent); color: var(--text-heading) !important; }
+      .site-nav-link[aria-current="page"] { background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; border-color: transparent; }
+      .float-support { position: fixed; bottom: 24px; right: 24px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; font-size: 28px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(255,107,157,0.4); transition: all 0.3s; text-decoration: none !important; }
+      .float-support:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(255,107,157,0.6); }
+      .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 700; background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
+      .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 600; background: transparent; color: var(--text-heading) !important; border: 1px solid var(--border); cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .btn-secondary:hover { border-color: var(--accent); color: var(--accent) !important; }
+      .btn-large { font-size: 18px; padding: 16px 40px; }
+
+      .g-wrap { max-width: 780px; margin: 0 auto; padding: 0 20px 72px; }
+      .g-eyebrow { display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: rgba(107,197,255,0.12); color: var(--neon-blue); border: 1px solid rgba(107,197,255,0.35); margin-bottom: 16px; }
+      .g-title { font-size: 38px; line-height: 1.14; font-weight: 800; letter-spacing: -1px; color: var(--text-heading); margin-bottom: 14px; }
+      @media (max-width: 600px) { .g-title { font-size: 28px; } }
+      .g-standfirst { font-size: 18px; line-height: 1.65; color: var(--text); margin-bottom: 12px; }
+      .g-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; }
+      .g-hero { padding: 44px 0 8px; }
+      .g-h2 { font-size: 24px; font-weight: 700; color: var(--text-heading); margin: 34px 0 12px; }
+      .g-h3 { font-size: 18px; font-weight: 700; color: var(--text-heading); margin: 24px 0 8px; }
+      .g-body p { margin-bottom: 16px; line-height: 1.75; }
+      .g-body ul, .g-body ol { margin: 0 0 18px 0; padding-left: 22px; }
+      .g-body li { margin-bottom: 9px; line-height: 1.65; }
+      .g-body li strong, .g-body p strong { color: var(--text-heading); }
+      .g-cite { color: var(--text-muted); font-size: 14px; }
+      .g-table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 15px; }
+      .g-table th, .g-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+      .g-table th { color: var(--text-heading); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+      .g-callout { background: rgba(251,191,36,0.07); border: 1px solid rgba(251,191,36,0.3); border-radius: var(--radius); padding: 20px 22px; margin: 0 0 22px; }
+      .g-callout p { margin-bottom: 12px; }
+      .g-callout p:last-child { margin-bottom: 0; }
+      .g-callout strong { color: #fbbf24; }
+      .g-free { background: linear-gradient(135deg, rgba(74,222,128,0.12), rgba(107,197,255,0.07)); border: 1px solid rgba(74,222,128,0.45); border-radius: var(--radius); padding: 30px; margin: 36px 0 0; }
+      .g-free-eyebrow { display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.45); margin-bottom: 14px; }
+      .g-free-title { font-size: 24px; font-weight: 800; line-height: 1.2; color: var(--text-heading); margin-bottom: 10px; }
+      .g-free p { font-size: 15px; line-height: 1.65; margin-bottom: 14px; }
+      .g-free-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 30px; border-radius: var(--radius-sm); font-size: 17px; font-weight: 800; background: var(--green); color: #06121a !important; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .g-free-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(74,222,128,0.35); }
+      .g-free-note { font-size: 13px; color: var(--text-muted); }
+      .g-paid { background: linear-gradient(135deg, rgba(255,107,157,0.10), rgba(107,197,255,0.08)); border: 1px solid rgba(255,107,157,0.35); border-radius: var(--radius); padding: 30px; margin: 20px 0 0; }
+      .g-paid h2 { font-size: 22px; color: var(--text-heading); margin-bottom: 8px; }
+      .g-paid p { font-size: 15px; line-height: 1.65; margin-bottom: 16px; }
+      .g-paid-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+      .g-more { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 24px; }
+      .g-more h2 { font-size: 18px; color: var(--text-heading); margin-bottom: 12px; }
+      .g-more ul { list-style: none; padding: 0; margin: 0; }
+      .g-more li { margin-bottom: 8px; line-height: 1.6; }
+      .g-disclaimer { border-top: 1px solid var(--border); margin-top: 32px; padding-top: 20px; font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+      footer { border-top: 1px solid var(--border); padding: 32px 20px; }
+      .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--text-muted); flex-wrap: wrap; gap: 16px; }
+      .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+      .footer-links a { color: var(--text-muted); }
+      .footer-links a:hover { color: var(--text-heading); }
+      .footer-guides { max-width: 1200px; margin: 18px auto 0; font-size: 13px; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; align-items: baseline; }
+      .footer-guides strong { color: var(--text-heading); font-size: 13px; }
+      .footer-guides a { color: var(--text-muted); }
+      .footer-guides a:hover { color: var(--text-heading); }
+      .footer-legal { max-width: 1200px; margin: 24px auto 0; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+      .footer-about { margin-bottom: 12px; line-height: 1.5; }
+      .footer-legal-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: baseline; }
+      .footer-legal-row a { color: var(--text-muted); }
+      .footer-legal-row a:hover { color: var(--text-heading); }
+      .footer-legal-row summary { cursor: pointer; color: var(--text-muted); list-style: none; }
+      .footer-legal-row summary::-webkit-details-marker { display: none; }
+      .footer-legal-row summary:hover { color: var(--text-heading); }
+      .footer-legal-row details p { margin-top: 8px; max-width: 460px; line-height: 1.5; color: var(--text); }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener" class="float-support" aria-label="Support us on Buy Me a Coffee">☕</a>
+
+    <nav class="site-nav">
+      <a href="index.html" class="site-brand">🚀 MicroVenture Labs</a>
+      <div class="site-nav-links">
+        <a href="index.html" class="site-nav-link">📚 Study Hub</a>
+        <a href="focus-flow.html" class="site-nav-link">🧭 Focus &amp; Flow</a>
+        <a href="nobody-runs.html" class="site-nav-link">🛡️ NOBODY RUNS</a>
+      </div>
+    </nav>
+
+    <div class="g-wrap">
+      <header class="g-hero">
+        <span class="g-eyebrow">💻 Study guide · JavaScript</span>
+        <h1 class="g-title">The JavaScript interview questions that keep coming back — and how to answer them out loud</h1>
+        <p class="g-standfirst">A handful of concepts come up again and again in JavaScript interviews. Here they are, each written as an answer you would actually say in 90 seconds, with the follow-up question that comes next and the trap inside it.</p>
+        <p class="g-meta">Version 1.0 · Written 2026-11-14 · Study aid — not a hiring guarantee, not affiliated with any employer</p>
+      </header>
+
+      <article class="g-body">
+        <p>JavaScript interviews repeat themselves, and not out of laziness. A small set of concepts separates people who have <em>used</em> the language from people who <em>understand</em> it, and every one of those concepts shows up in real bugs. So the same handful of questions comes back — and the interview is won or lost on how you say the answer, not on whether you have read it.</p>
+        <p>Below are the eight that recur, each written as an answer you would actually <strong>say out loud</strong> in 60 to 90 seconds, then the follow-up that usually comes next and the trap inside it. All the questions and answers here are our own wording.</p>
+
+        <h2 class="g-h2">Why these eight keep coming back</h2>
+        <p>Closures, <code>this</code>, the event loop, promises versus async/await, hoisting, <code>==</code> versus <code>===</code>, array methods and prototypes. Between them they explain a good many of the JavaScript bugs that reach production: a stale value captured in a loop, a lost <code>this</code> in a callback, a request that runs after the component has gone, a comparison that is true when you did not expect it, a sort that quietly mutates the array.</p>
+        <p>Interviewers ask them because a definition can be memorised but a follow-up cannot. That is the whole shape of the exercise: give a clean answer, and be ready for one step further.</p>
+
+        <h2 class="g-h2">The eight, answered out loud</h2>
+
+        <h3 class="g-h3">1. What is a closure?</h3>
+        <p><strong>Say this:</strong> "A closure is a function together with the variables it had access to where it was defined. The function keeps those variables alive after the outer function has returned, so it can still read and write them. A counter is the standard example — the <code>count</code> variable is not global, but the returned function can still increment it, and nothing else can touch it."</p>
+        <p><strong>The follow-up:</strong> "What happens if you create functions inside a loop?"</p>
+        <p><strong>The trap:</strong> with <code>var</code>, every callback shares one binding, so they all see the final value. With <code>let</code>, each iteration gets a new binding, so each callback sees its own. Say both halves — naming <code>let</code> without explaining the shared binding sounds like folklore.</p>
+
+        <h3 class="g-h3">2. How does <code>this</code> work?</h3>
+        <p><strong>Say this:</strong> "It depends on how the function is called, not where it was defined. Called as a method, it is the object before the dot. Called as a plain function, it is undefined in strict mode and in modules, and the global object in sloppy mode. Called with <code>call</code>, <code>apply</code> or <code>bind</code>, it is whatever you pass. Called with <code>new</code>, it is the new object. Arrow functions are the exception: they take <code>this</code> from the enclosing scope and cannot be rebound."</p>
+        <p><strong>The follow-up:</strong> "So what does <code>this</code> print inside a <code>setTimeout</code> in an object method?"</p>
+        <p><strong>The trap:</strong> <code>setTimeout</code> calls the callback as a plain function, so <code>this</code> is lost — you get <code>undefined</code> in a module and the global object in a script, not the object. The fixes are an arrow function that captures the outer <code>this</code>, or <code>.bind(this)</code>. Say the failure mode, not just the fix.</p>
+
+        <h3 class="g-h3">3. Explain the event loop</h3>
+        <p><strong>Say this:</strong> "JavaScript runs one thing at a time on a call stack. Anything asynchronous — a timer, a network response — comes back through a queue. There are two queues that matter: the macrotask queue for timers and I/O callbacks, and the microtask queue for promise callbacks and <code>queueMicrotask</code>. When the stack empties, the entire microtask queue drains before the next macrotask runs. That is why a resolved promise always runs before a zero-millisecond timeout."</p>
+        <p><strong>The follow-up:</strong> "What order does this log — a <code>console.log</code>, a <code>Promise.resolve().then</code>, and a <code>setTimeout(fn, 0)</code>?"</p>
+        <p><strong>The trap:</strong> "zero milliseconds" does not mean immediately; it means "next macrotask". Answer with the order and the reason in one sentence: synchronous first, then the promise callback, then the timer.</p>
+
+        <h3 class="g-h3">4. Promises versus async/await</h3>
+        <p><strong>Say this:</strong> "A promise is a value that represents a future result, with three states — pending, fulfilled, rejected — and <code>then</code>, <code>catch</code> and <code>finally</code> to attach work to it. <code>async</code>/<code>await</code> is syntax over the same thing: an <code>async</code> function always returns a promise, and <code>await</code> pauses that one function until the promise settles, without blocking anything else. Same model, readable control flow."</p>
+        <p><strong>The follow-up:</strong> "How would you run three requests at the same time with async/await?"</p>
+        <p><strong>The trap:</strong> writing three <code>await</code>s in a row runs them one after another. Start them first, then await together: <code>Promise.all</code> for "all or nothing", <code>Promise.allSettled</code> when one failure should not lose the other results. Also mention that a missing <code>await</code> inside a <code>try</code> block will not be caught by that <code>catch</code> — a real bug and a favourite follow-up.</p>
+
+        <h3 class="g-h3">5. What is hoisting?</h3>
+        <p><strong>Say this:</strong> "Before a function runs, its declarations are processed. <code>var</code> declarations are hoisted and initialised to <code>undefined</code>, so reading one before its line gives <code>undefined</code>. <code>let</code> and <code>const</code> are also hoisted but sit in a temporal dead zone until their line runs, so reading one throws a <code>ReferenceError</code>. Function declarations are hoisted with their body and can be called earlier. Function expressions and classes are not callable before their line — the class name is in the dead zone too."</p>
+        <p><strong>The follow-up:</strong> "What does <code>typeof x</code> print before <code>let x</code>?"</p>
+        <p><strong>The trap:</strong> with <code>var</code> it prints <code>"undefined"</code>; with <code>let</code> it throws. The trick is that <code>typeof</code> is the one operator that normally does not throw on an undeclared name — the dead zone makes it throw anyway, and that is the point being tested.</p>
+
+        <h3 class="g-h3">6. <code>==</code> versus <code>===</code></h3>
+        <p><strong>Say this:</strong> "<code>===</code> compares type and value with no conversion. <code>==</code> converts first, following the coercion rules, which is why <code>1 == "1"</code> is true and <code>null == undefined</code> is true. I write <code>===</code> by default; the one place <code>==</code> earns its keep is <code>x == null</code>, which is a deliberate check for null or undefined in one go."</p>
+        <p><strong>The follow-up:</strong> "Is <code>[] == false</code> true?"</p>
+        <p><strong>The trap:</strong> it is true — the array becomes an empty string, the empty string becomes <code>0</code>, and <code>false</code> becomes <code>0</code>. Answer it, then say you would never write it. The question is testing whether you know the rules, not whether you use them.</p>
+
+        <h3 class="g-h3">7. Array methods</h3>
+        <p><strong>Say this:</strong> "<code>map</code> returns a new array of the same length; <code>filter</code> returns a shorter one; <code>reduce</code> folds to a single value; <code>forEach</code> returns <code>undefined</code> and is for side effects; <code>find</code> returns the first match, <code>some</code> and <code>every</code> return booleans. The two that bite: <code>sort</code> mutates in place and sorts by string by default, so <code>[10, 9, 1].sort()</code> gives <code>[1, 10, 9]</code> — you need a comparator. And <code>slice</code> copies while <code>splice</code> mutates."</p>
+        <p><strong>The follow-up:</strong> "Implement <code>map</code> using <code>reduce</code>", or "what is the difference between <code>find</code> and <code>filter</code>?"</p>
+        <p><strong>The trap:</strong> mutating the array you are mapping over, and forgetting the comparator in <code>sort</code>. If you are asked to implement <code>map</code> with <code>reduce</code>, say the accumulator is the new array and the callback pushes into it — then mention you would not do that in real code, because <code>map</code> exists and is clearer.</p>
+
+        <h3 class="g-h3">8. Prototypes</h3>
+        <p><strong>Say this:</strong> "Every object has a link to another object, its prototype, and property lookup walks that chain until it finds the property or reaches <code>Object.prototype</code>. Classes are syntax over the same mechanism: methods on a class go on the prototype, which is why they are shared rather than copied per instance. <code>instanceof</code> walks the chain to answer."</p>
+        <p><strong>The follow-up:</strong> "What is the difference between <code>prototype</code> and <code>__proto__</code>?"</p>
+        <p><strong>The trap:</strong> <code>prototype</code> is a property that <em>functions</em> have, used when the function is called with <code>new</code>. <code>__proto__</code> — better written <code>Object.getPrototypeOf(obj)</code> — is the link of an actual object. Arrow functions have no <code>prototype</code> and cannot be constructors. Getting this backwards is the most common wrong answer in the set.</p>
+
+        <h2 class="g-h2">The follow-up that follows every answer</h2>
+        <p>Notice the pattern above: after the definition, there is almost always a "so what happens here?" The interviewer is checking whether the answer was understood or memorised. So prepare a second sentence for each of the eight — one failure mode, one trade-off, or one place you have seen it break in real code.</p>
+        <p>That second sentence is also what makes an answer sound like experience rather than revision. "Closures keep variables alive, which is why a long-lived callback can hold a large object in memory" is a better answer than "closures keep variables alive", and it takes one extra breath to say.</p>
+
+        <h2 class="g-h2">How to practise: 90 seconds, out loud, recorded</h2>
+        <p>Reading the answers above will not make you able to say them. Speaking them will. The method:</p>
+        <ol>
+          <li><strong>Answer aloud in 90 seconds.</strong> Phone on the table, recording. No notes, no scrolling. Ninety seconds is roughly one answer plus one follow-up — the length of a real answer.</li>
+          <li><strong>Listen back and ask three questions.</strong> Did I give the definition before the example, or did I ramble into an example first? Did I say "it depends" without saying what it depends on? Did I stop at the definition, leaving no room for a follow-up?</li>
+          <li><strong>Write one line per question in a log:</strong> the question, your opening sentence, and whether the follow-up caught you. The log is the revision list — the questions that caught you are the only ones worth another pass.</li>
+          <li><strong>Do the eight, then widen.</strong> Eight answers spoken properly are worth more than 150 read once. Once the eight are fluent, work through a larger question bank and add the ones that catch you to the same log.</li>
+          <li><strong>Do at least one out loud to a person</strong> if you can — a friend, a colleague, anyone who will ask "why?". Speaking to a person is a different skill from speaking to a phone, and the interview is the former.</li>
+        </ol>
+
+        <h2 class="g-h2">What to say when you do not know</h2>
+        <p>You will get a question you cannot answer. What you do next is being assessed, and there is a version that scores:</p>
+        <ul>
+          <li><strong>Say that you do not know, then say how you would find out.</strong> "I have not used that in production. I would check whether it is a microtask or a macrotask first, because that decides the ordering — I would write a four-line test and log it." That is a better answer than a confident guess, because the guess is the thing the follow-up is designed to catch.</li>
+          <li><strong>Ask a clarifying question if the question is ambiguous.</strong> "Which runtime?" or "Do you mean at definition time or call time?" is not stalling — it is the same instinct that stops you writing the wrong fix.</li>
+          <li><strong>Reason from what you do know.</strong> Name the mental model you would test and the smallest experiment that would settle it. Interviewers hire people who can be wrong out loud and then correct themselves.</li>
+          <li><strong>When you are corrected, restate the correction in your own words.</strong> "So the promise callback runs before the timer because it is a microtask — got it." That closes the loop and shows the correction landed.</li>
+        </ul>
+
+        <h2 class="g-h2">What this page is not</h2>
+        <p>This is a study aid. It is not a hiring guarantee, not a promise of any particular outcome, and not affiliated with any employer, bootcamp or interviewer. No salary figures appear here because we have no source for any, and none would mean anything without knowing the role, the level and the market. Every question and answer on this page is written by us; we do not reproduce a real company's interview questions or attribute anything to a named employer.</p>
+      </article>
+
+      <section id="pack" class="g-paid">
+        <h2>When you want the whole bank — JS Interview Prep, $15</h2>
+        <p><strong>JS Interview Prep — 150-Question JavaScript Study Guide</strong> is the eight above plus the other 142, with worked answers, a snippet library you can read rather than retype, a study plan to work through them in order, and a printable progress tracker so the log described above has somewhere to live.</p>
+        <p>150 questions with worked answers is the thing you cannot assemble the night before an interview. The eight on this page are the ones to learn to say out loud first; the pack is what you work through once they are fluent.</p>
+        <div class="g-paid-btns">
+          <a href="https://microventurelabs.gumroad.com/l/rdkik" target="_blank" rel="noopener" class="btn-primary btn-large">Buy on Gumroad — $15 →</a>
+          <a href="index.html" class="btn-secondary btn-large">See the free study tools →</a>
+        </div>
+      </section>
+
+      <nav class="g-more">
+        <h2>More guides</h2>
+        <ul>
+          <li><a href="organic-chemistry-study-guide.html">How to study organic chemistry in four weeks</a></li>
+          <li><a href="family-emergency-plan-template.html">How to write a family emergency plan</a></li>
+          <li><a href="index.html">The Study Hub — all free study tools</a></li>
+        </ul>
+      </nav>
+
+      <p class="g-disclaimer">Study aid only. This page and JS Interview Prep are not a substitute for practice, a course or your own experience with the language, and they are not affiliated with any employer, bootcamp or interviewer. No hiring outcome, interview result or salary is promised or implied. Every question and answer here is our own wording. Version 1.0 · Written 2026-11-14.</p>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>Built by <a href="index.html">MicroVenture Labs</a> — <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Support our work</a></p>
+        <div class="footer-links">
+          <a href="index.html">📚 Study Hub</a>
+          <a href="focus-flow.html">🧭 Focus &amp; Flow</a>
+          <a href="nobody-runs.html">🛡️ NOBODY RUNS</a>
+          <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Buy us a coffee</a>
+        </div>
+      </div>
+      <div class="footer-guides">
+        <strong>Guides:</strong>
+        <a href="power-outage-food-safety.html">Food safety in a power outage</a>
+        <a href="power-outage-elderly-parent.html">An elderly parent in a blackout</a>
+        <a href="how-much-water-to-store.html">How much water to store</a>
+        <a href="72-hour-blackout-checklist.html">72-hour blackout checklist</a>
+        <a href="one-room-blackout-drill.html">One-room blackout drill</a>
+      </div>
+      <div class="footer-legal">
+        <p class="footer-about">MicroVenture Labs is a micro-venture studio building digital study tools, guides, art and free web apps.</p>
+        <div class="footer-legal-row">
+          <a href="mailto:support@microventurelabs.com">📧 Contact</a>
+          <details>
+            <summary>↩ Refund</summary>
+            <p>NOBODY RUNS: 30 days, no interrogation — refund through the channel you bought it on (the refund link on your Gumroad receipt, or a reply to your receipt email). Other digital products are delivered instantly, so sales are final — but if a file is broken or you can't access it, email us within 14 days and we'll fix or refund it.</p>
+          </details>
+          <details>
+            <summary>🔒 Privacy</summary>
+            <p>We don't sell your data. Payments are processed securely by Stripe or Gumroad.</p>
+          </details>
+          <details>
+            <summary>📄 Terms</summary>
+            <p>NOBODY RUNS is preparedness education only — not medical, legal or tactical advice, and not an accredited qualification. Weapons use, weapons handling and weapons construction are out of scope. Study packs are study aids, not accredited training.</p>
+          </details>
+        </div>
+      </div>
+    </footer>
+      <!-- Vercel Web Analytics (enable in project dashboard) + UTM checkout rewrite -->
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/utm.js" defer></script>
+  </body>
+</html>
