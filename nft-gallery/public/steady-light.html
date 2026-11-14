@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔶</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Steady Light — Flat Geometric Art Collection</title>
+    <meta name="description" content="Steady Light: three flat geometric posters on discipline, growth and resilience — deep teal, burnt orange and cream." />
+    <style>
+/* === Reset & Base === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #0a0a12;
+  --bg-card: #12121e;
+  --border: #1e1e32;
+  --text: #b8b8d0;
+  --text-heading: #e8e8f0;
+  --text-muted: #7c7c9a;
+  --accent: #ff6b9d;
+  --accent-hover: #ff8ab0;
+  --accent-glow: rgba(255, 107, 157, 0.3);
+  --neon-blue: #6bc5ff;
+  --neon-purple: #b06bff;
+  --radius: 12px;
+  --radius-sm: 8px;
+
+  --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font: 16px/1.6 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+body { min-height: 100vh; overflow-x: hidden; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); }
+
+/* === Hero === */
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(107, 197, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(255, 107, 157, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 80%, rgba(176, 107, 255, 0.06) 0%, transparent 60%);
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, rgba(255,107,157,0.15), rgba(107,197,255,0.15));
+  color: var(--accent);
+  border: 1px solid rgba(255,107,157,0.3);
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--text-heading);
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, var(--text-heading) 0%, var(--accent) 50%, var(--neon-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* === Buttons === */
+.btn-buy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: var(--radius-sm);
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--neon-purple));
+  color: #fff !important;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none !important;
+}
+
+.btn-buy:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px var(--accent-glow);
+}
+
+.btn-buy-large {
+  font-size: 18px;
+  padding: 16px 40px;
+}
+
+/* === Gallery === */
+.gallery-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.gallery-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-heading);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.section-sub {
+  text-align: center;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 700px) {
+  .gallery-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 36px; }
+  .hero { min-height: 60vh; }
+}
+
+/* === NFT Card === */
+.nft-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.nft-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.nft-card-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  background: var(--bg);
+}
+
+.nft-card-info {
+  padding: 16px 20px;
+}
+
+.nft-card-number {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+
+.nft-card-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 6px;
+}
+
+.nft-card-quote {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* === Lightbox === */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.lightbox:not(.hidden) {
+  animation: lb-fade-in 0.3s ease;
+}
+
+.lightbox.hidden {
+  display: none;
+}
+
+.lightbox-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(8px);
+}
+
+.lightbox-content {
+  position: relative;
+  display: flex;
+  gap: 32px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+@media (max-width: 700px) {
+  .lightbox-content {
+    flex-direction: column;
+    max-height: 90vh;
+  }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  color: var(--text-heading);
+  cursor: pointer;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.lightbox-image-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  min-width: 0;
+}
+
+.lightbox-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-height: 85vh;
+}
+
+.lightbox-info {
+  flex: 0 0 320px;
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 700px) {
+  .lightbox-image-wrapper img { max-height: 50vh; }
+  .lightbox-info { flex: 1; padding: 24px 20px; }
+}
+
+.lightbox-info h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 16px;
+}
+
+.lightbox-quote {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--accent);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  padding-left: 16px;
+  border-left: 3px solid var(--accent);
+}
+
+.lightbox-desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@keyframes lb-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* === CTA Section === */
+.cta-section {
+  text-align: center;
+  padding: 80px 20px;
+  background:
+    radial-gradient(ellipse at center, rgba(255,107,157,0.06) 0%, transparent 70%);
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 12px;
+}
+
+.cta-section p {
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+/* === Footer === */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 20px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 500px) {
+  .footer-content { flex-direction: column; text-align: center; }
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a { color: var(--text-muted); }
+.footer-links a:hover { color: var(--text-heading); }
+
+/* === Scrollbar === */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }    </style>
+    <style>
+      :root {
+        --primary: #14464a;
+        --primary-light: #1d6b70;
+        --accent: #e05a1e;
+        --bg-dark: #0b1f21;
+        --bg-card: #123033;
+        --text-light: #f2e6d2;
+        --text-muted: #a4b8b4;
+        --text-heading: #f6ecd9;
+      }
+      .hero-bg { background: linear-gradient(135deg, #0b1f21, #14464a, #3a2a1c); }
+      .nft-card { border-color: #1f474b; }
+      .nft-card:hover { border-color: var(--accent); box-shadow: 0 8px 24px rgba(224, 90, 30, 0.2); }
+      .btn-buy { background: var(--accent); color: #10201f; }
+      .btn-buy:hover { background: #f4702f; transform: translateY(-2px); }
+      .hero-badge { background: rgba(224, 90, 30, 0.18); color: #f0a071; border: 1px solid rgba(224, 90, 30, 0.3); }
+      footer { background: #081719; }
+    </style>
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <span class="hero-badge">Art Collection</span>
+        <h1>Steady Light</h1>
+        <p class="hero-subtitle">Three flat geometric posters — discipline, growth and resilience in deep teal, burnt orange and cream</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="gallery-section">
+        <h2>The Collection</h2>
+        <p class="section-sub">Click any piece to view it larger</p>
+        <div id="gallery-grid" class="gallery-grid"></div>
+      </section>
+
+      <section class="cta-section">
+        <h2>More From MicroVenture Labs</h2>
+        <p>Our other art collections, study packs and guides live in our Gumroad store.</p>
+        <a href="https://microventurelabs.gumroad.com" target="_blank" rel="noopener" class="btn-buy btn-buy-large">Visit Our Gumroad Store →</a>
+      </section>
+    </main>
+
+    <div id="lightbox" class="lightbox hidden">
+      <div class="lightbox-overlay" id="lightbox-close"></div>
+      <div class="lightbox-content">
+        <button id="lightbox-close-btn" class="lightbox-close" aria-label="Close">&times;</button>
+        <div class="lightbox-image-wrapper">
+          <img id="lightbox-image" src="" alt="" />
+        </div>
+        <div class="lightbox-info">
+          <h3 id="lightbox-title"></h3>
+          <p class="lightbox-quote" id="lightbox-quote"></p>
+          <p class="lightbox-desc" id="lightbox-desc"></p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>A MicroVenture Labs creation • <a href="https://microventurelabs.gumroad.com" target="_blank" rel="noopener">Our Gumroad Store</a></p>
+        <div class="footer-links">
+          <a href="https://microventurelabs.gumroad.com" target="_blank" rel="noopener">Visit Our Store</a>
+          <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Buy us a coffee</a>
+          <a href="./index.html">🌸 Anime Life Wisdom Gallery</a>
+          <a href="./dark-academia.html">📖 Dark Academia Wisdom Gallery</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const NFT_DATA = [
+        {
+          id: '01', title: 'Discipline',
+          quote: 'The climb is made of ordinary days.',
+          desc: 'An orange staircase rising past a burnt-orange sun toward a cream half-circle. Flat shapes, no shading — the shape of steady, unglamorous effort.',
+          file: 'art-01-discipline.png'
+        },
+        {
+          id: '02', title: 'Growth',
+          quote: 'Small roots, patient leaves.',
+          desc: 'A single plant in a two-tone pot against concentric cream and orange arches. A quiet poster about tending something until it holds its own weight.',
+          file: 'art-02-growth.png'
+        },
+        {
+          id: '03', title: 'Resilience',
+          quote: 'Light keeps arriving through the same arch.',
+          desc: 'A stone arch with cream and orange light falling through it, and a sharp orange wedge above. Built from blocks that stayed standing.',
+          file: 'art-03-resilience.png'
+        }
+      ];
+
+      function buildGallery() {
+        const grid = document.getElementById('gallery-grid');
+        grid.innerHTML = NFT_DATA.map(item => `
+          <div class="nft-card" data-id="${item.id}">
+            <img class="nft-card-image" src="/images/steady-light/${item.file}" alt="${item.title} — ${item.quote}" loading="lazy" />
+            <div class="nft-card-info">
+              <div class="nft-card-number">${item.id.padStart(2, '0')}</div>
+              <div class="nft-card-title">${item.title}</div>
+              <div class="nft-card-quote">${item.quote}</div>
+            </div>
+          </div>
+        `).join('');
+        grid.addEventListener('click', (e) => {
+          const card = e.target.closest('.nft-card');
+          if (card) openLightbox(card.dataset.id);
+        });
+      }
+
+      function openLightbox(id) {
+        const item = NFT_DATA.find(d => d.id === id);
+        if (!item) return;
+        const lb = document.getElementById('lightbox');
+        document.getElementById('lightbox-image').src = `/images/steady-light/${item.file}`;
+        document.getElementById('lightbox-image').alt = `${item.title} — ${item.quote}`;
+        document.getElementById('lightbox-title').textContent = item.title;
+        document.getElementById('lightbox-quote').textContent = item.quote;
+        document.getElementById('lightbox-desc').textContent = item.desc;
+        lb.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        document.getElementById('lightbox').classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+      document.getElementById('lightbox-close-btn').addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+      document.addEventListener('DOMContentLoaded', buildGallery);
+    </script>
+  </body>
+</html>
