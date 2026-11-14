@@ -694,8 +694,19 @@ function topicStats(progress, topicId, topic) {
     return { attempted: 0, correct: 0, total };
   }
   const attempted = Object.keys(record.answers).length;
-  const correct = Object.values(record.answers).filter(Boolean).length;
+  const correct = Object.values(record.answers).filter(isRecordedCorrect).length;
   return { attempted, correct, total };
+}
+
+// A stored answer is { value, correct }. Older saves stored a bare boolean.
+function isRecordedCorrect(entry) {
+  if (entry && typeof entry === 'object') return !!entry.correct;
+  return !!entry;
+}
+
+function recordedValue(entry) {
+  if (entry && typeof entry === 'object') return entry.value;
+  return entry;
 }
 
 function masteryBadge(percentCorrect, attempted) {
@@ -846,8 +857,10 @@ function renderQuestion(q, topicId, progress) {
   card.className = 'question-card';
   card.dataset.questionId = q.id;
 
-  const prevAnswer = progress.topics[topicId]?.answers?.[q.id];
-  const answered = prevAnswer !== undefined;
+  const storedAnswer = progress.topics[topicId]?.answers?.[q.id];
+  const answered = storedAnswer !== undefined;
+  const prevAnswer = answered ? recordedValue(storedAnswer) : undefined;
+  const prevCorrect = answered ? isRecordedCorrect(storedAnswer) : false;
 
   const typeLabel = q.type === 'multiple-choice' ? 'Multiple choice' : 'Short answer';
 
@@ -857,13 +870,13 @@ function renderQuestion(q, topicId, progress) {
       .map((opt, i) => {
         return `
           <label class="option" data-index="${i}">
-            <input type="radio" name="${q.id}" value="${i}" ${answered && prevAnswer === i ? 'checked' : ''} ${answered ? 'disabled' : ''} />
+            <input type="radio" name="${q.id}" value="${i}" ${answered && Number(prevAnswer) === i ? 'checked' : ''} ${answered ? 'disabled' : ''} />
             <span>${escapeHtml(opt)}</span>
           </label>`;
       })
       .join('')}</div>`;
   } else {
-    body = `<input type="text" class="short-answer-input" placeholder="Type your answer…" autocomplete="off" ${answered ? 'value="' + escapeHtml(String(prevAnswer)) + '" disabled' : ''} />`;
+    body = `<input type="text" class="short-answer-input" placeholder="Type your answer…" autocomplete="off" ${answered ? 'value="' + escapeHtml(String(prevAnswer ?? '')) + '" disabled' : ''} />`;
   }
 
   card.innerHTML = `
@@ -877,8 +890,7 @@ function renderQuestion(q, topicId, progress) {
 
   // If already answered, show the stored result immediately.
   if (answered) {
-    const correct = prevAnswer === q.answer;
-    showFeedback(q, correct, true);
+    showFeedback(q, prevCorrect, true, card);
   } else {
     card.querySelector('.check-btn').addEventListener('click', () => {
       handleAnswer(card, q, topicId);
@@ -931,20 +943,23 @@ function handleAnswer(card, q, topicId) {
   }
 
   card.querySelector('.check-btn').disabled = true;
-  showFeedback(q, isCorrect, false);
+  showFeedback(q, isCorrect, false, card);
 
-  // Persist progress.
+  // Persist progress. Store the learner's actual answer plus whether it was
+  // correct, so returning to the topic shows what they typed, not a boolean.
   const progress = loadProgress();
   if (!progress.topics[topicId]) progress.topics[topicId] = { answers: {} };
   if (!progress.topics[topicId].answers) progress.topics[topicId].answers = {};
-  progress.topics[topicId].answers[q.id] = isCorrect;
+  progress.topics[topicId].answers[q.id] = { value: userAnswer, correct: isCorrect };
   saveProgress(progress);
 
   updateOverallMastery();
 }
 
-function showFeedback(q, isCorrect, alreadyAnswered) {
-  const fb = document.getElementById('feedback-' + q.id);
+function showFeedback(q, isCorrect, alreadyAnswered, cardEl) {
+  const fb =
+    (cardEl && cardEl.querySelector('.feedback')) ||
+    document.getElementById('feedback-' + q.id);
   if (!fb) return;
   fb.className = 'feedback visible ' + (isCorrect ? 'correct' : 'wrong');
   const head = isCorrect ? '✓ Correct' : '✗ Not quite';

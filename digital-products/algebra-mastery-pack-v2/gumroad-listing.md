@@ -5,9 +5,9 @@
 - **Price:** $15
 - **Type:** Digital product, instant download
 - **Existing listing:** `microventurelabs.gumroad.com/l/algebra-mastery-pack` — update this listing with the copy below and the new file; the URL stays the same
-- **File to upload:** `Algebra-Mastery-Pack-v2.zip` (412 KB, 14 files)
+- **File to upload:** `Algebra-Mastery-Pack-v2.zip` — 417 KB (426,686 bytes). The zip holds 14 entries: 12 files plus two folders (`folder-edition/`, `practice-tests/`).
 - **Category:** Education → Math / Study aids
-- **Cover:** no cover ships in this folder — the listing still uses the existing $15 cover; update the counts on it to "18 topics · 112 questions · 3 practice tests" (square 1024 × 1024) when convenient. Not required for checkout.
+- **Cover:** no cover ships in this folder — the listing still uses the existing $15 cover. **Updating the cover is a required publish step, not an optional one:** replace it with a square 1024 × 1024 image carrying the counts "18 topics · 112 questions · 3 practice tests". Do not publish the new file while the cover still advertises the old 12 topics / 64 questions.
 
 ---
 
@@ -72,7 +72,7 @@ A free browser app covers twelve of these topics and sixty-four of these questio
 - This is a study aid, not a substitute for your course, teacher, textbook or curriculum, and it is not affiliated with or endorsed by any textbook publisher, OpenStax, Khan Academy or any other referenced site.
 - The worked steps show one valid method, not the only one. Follow your teacher's method and the course syllabus.
 - Every question was written for this pack from standard mathematical facts, and each answer was checked by substituting it back into the original problem. No publisher's text, examples or figures are reproduced.
-- The external links inside each topic (Purplemath, Khan Academy, Maths Is Fun) are free pages offered as a second explanation of the same method.
+- The external links inside each topic are free pages offered as a second explanation of the same method: Purplemath, Khan Academy, Maths Is Fun, OpenStax (free textbooks), Paul's Online Math Notes and the Desmos graphing calculator. All are free to read or use and none of them is required to use this pack.
 
 Refunds: 30 days, no questions asked.
 
@@ -88,8 +88,9 @@ Education → Math; digital download; no variants.
 
 ## Delivery checklist before publishing
 
-- [ ] Replace the product file with `Algebra-Mastery-Pack-v2.zip` (the old zip held 12 topics / 64 questions).
+- [ ] Replace the product file with `Algebra-Mastery-Pack-v2.zip` — 417 KB, 14 zip entries (12 files plus two folders).
 - [ ] Update the price to $15 and the title/summary to the copy above.
+- [ ] **Required before publishing:** replace the cover with a square 1024 × 1024 image reading "18 topics · 112 questions · 3 practice tests", so the cover no longer advertises 12 topics / 64 questions.
 - [ ] Open the product in the Gumroad editor and save it, so the public summary line ("N files") matches the attached zip.
 - [ ] Test the checkout download: unzip, open `Algebra-Mastery-Pack.html`, confirm the subtitle reads "18 topics, 112 questions" and that `practice-tests/` holds six PDFs.
 - [ ] Confirm the storefront links to the listing before it is promoted anywhere.

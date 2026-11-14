@@ -21,6 +21,9 @@ LETTERS = "ABCD"
 TESTS = [("A", 24), ("B", 24), ("C", 24)]
 QUESTIONS_PER_TEST = 24
 
+# Topics whose questions all read from the topic's shared table.
+TABLE_REFERRING_TOPICS = {"probability-two-way-tables"}
+
 CSS = """
 @page { size: A4; margin: 14mm 13mm 12mm 13mm; }
 * { box-sizing: border-box; }
@@ -53,11 +56,50 @@ h1 { font-family: "DejaVu Sans", Helvetica, Arial, sans-serif; font-size: 17pt; 
 .scoring ul { margin: 0 0 0 4mm; padding: 0; }
 .scoring li { margin: 0 0 1mm; }
 .foot { margin-top: 6mm; font-size: 8.6pt; color: #555; border-top: 1px solid #ccc; padding-top: 2mm; }
+.dtable { margin: 1mm 0 2.5mm 6mm; break-inside: avoid; page-break-inside: avoid; }
+.dcap { font-family: "DejaVu Sans", Helvetica, Arial, sans-serif; font-size: 9pt; color: #333; margin: 0 0 1.2mm; }
+.dtable table { border-collapse: collapse; font-family: "DejaVu Sans", Helvetica, Arial, sans-serif; font-size: 9.8pt; }
+.dtable th, .dtable td { border: 1px solid #444; padding: 1.2mm 3.5mm; text-align: center; }
+.dtable th { background: #eee; font-weight: bold; }
 """
 
 
 def e(text):
     return html.escape(str(text), quote=False)
+
+
+def needs_diagram(topic, q):
+    """A question that depends on the topic's table must have that table on the page.
+
+    Most topics keep one shared table diagram and the questions refer to it rather
+    than repeating it, so the printed paper has to print it above the question.
+    A prompt that says "the table" asks for it directly; every question in
+    TABLE_REFERRING_TOPICS reads from the table even when the wording does not say
+    so ("what is P(late)?" only makes sense with the survey table in front of you).
+    """
+    diagram = topic.get("diagram") or {}
+    if diagram.get("type") != "table":
+        return False
+    if topic.get("id") in TABLE_REFERRING_TOPICS:
+        return True
+    return "table" in (q.get("prompt") or "").lower()
+
+
+def table_html(diagram):
+    parts = ['<div class="dtable">']
+    if diagram.get("caption"):
+        parts.append(f'<div class="dcap">{e(diagram["caption"])}</div>')
+    parts.append("<table><thead><tr>")
+    for head in diagram.get("headers") or []:
+        parts.append(f"<th>{e(head)}</th>")
+    parts.append("</tr></thead><tbody>")
+    for row in diagram.get("rows") or []:
+        parts.append("<tr>")
+        for cell in row:
+            parts.append(f"<td>{e(cell)}</td>")
+        parts.append("</tr>")
+    parts.append("</tbody></table></div>")
+    return "".join(parts)
 
 
 def select_questions(topics):
@@ -108,6 +150,8 @@ def test_html(letter, items):
         parts.append(
             f'<div class="qhead">{n}. <span class="tag">[{e(topic["title"])}]</span></div>'
         )
+        if needs_diagram(topic, q):
+            parts.append(table_html(topic["diagram"]))
         parts.append(f'<div class="prompt">{e(q["prompt"])}</div>')
         if q["type"] == "multiple-choice":
             parts.append('<div class="opts">')
