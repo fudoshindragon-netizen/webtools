@@ -111,11 +111,19 @@
       .g-sheet-line { font-size: 14px; margin-bottom: 12px; color: #16161f; }
       .g-sheet-foot { font-size: 12px; color: #4a4a5a; margin-top: 18px; padding-top: 12px; border-top: 1px solid #b9b9c8; }
       @media print {
+        @page { margin: 12mm; }
         .site-nav, .float-support, footer, .g-hero, .g-free, .g-paid, .g-more, .g-disclaimer { display: none !important; }
-        .g-wrap { max-width: none; padding: 0; }
+        .g-wrap { max-width: none; padding: 0; margin: 0; }
         .g-body > *:not(#sheet) { display: none !important; }
         body { background: #fff !important; }
         .g-sheet { border: none; padding: 0; background: #fff; }
+        .g-sheet-title { font-size: 17px; margin-bottom: 3px; }
+        .g-sheet-sub { font-size: 10.5px; line-height: 1.35; margin-bottom: 9px; }
+        .g-sheet-group { font-size: 9.5px; margin: 8px 0 3px; }
+        .g-sheet-row { padding: 4px 0; }
+        .g-sheet-label { font-size: 12px; }
+        .g-sheet-line { font-size: 12px; margin-bottom: 7px; }
+        .g-sheet-foot { font-size: 10px; margin-top: 10px; padding-top: 7px; }
       }
     </style>
   </head>
@@ -152,7 +160,7 @@
         <table class="g-table">
           <tr><th>Contact</th><th>Why it earns a line</th></tr>
           <tr><td><strong>Household, one line each</strong></td><td>Five lines for the five people who live in the flat. If someone else picks the sheet up — a neighbour, a carer, a paramedic — this is how they know who lives here and who is missing.</td></tr>
-          <tr><td><strong>Out-of-area check-in</strong></td><td>One person outside the region. When local calls are not going through, an out-of-area number is the one that can relay news between everyone in your household, and it is the number everyone is told to ring. Our reason for the line, not a quoted rule: long-distance calls are often the ones that get through when the local ones do not.</td></tr>
+          <tr><td><strong>Out-of-area check-in</strong></td><td>One person outside the region. When local calls are not going through, an out-of-area number is the one that can relay news between everyone in your household, and it is the number everyone is told to ring. That is our reason for the line, not a quoted rule: it is a relay point that does not depend on anyone in the household getting through locally.</td></tr>
           <tr><td><strong>Two neighbours</strong></td><td>Two, not one, and one of them from a different floor or door. The first may be at work, on holiday, or away for the weekend; the second is who you ask when the first does not answer. This is also the line that makes a difference to an elderly parent who lives alone.</td></tr>
           <tr><td><strong>Doctor</strong></td><td>The practice number, not the hospital switchboard. A hospital cannot tell you anything about a patient; the practice can tell a pharmacist what a prescription was.</td></tr>
           <tr><td><strong>Pharmacy</strong></td><td>The one that is genuinely open late or at the weekend, with its address written out. In a power cut the pharmacy that matters is the one with power, which is not always the nearest.</td></tr>
