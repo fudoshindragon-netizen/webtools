@@ -65,8 +65,8 @@ async function ensureChannel(LocalNotifications) {
   try {
     await LocalNotifications.createChannel({
       id: 'cycle-reminders',
-      name: 'Method reminders',
-      description: 'Pill, patch, ring, and shot dates saved on this phone.',
+      name: 'Luna Cycle reminders',
+      description: 'Reminders saved on this phone.',
       importance: 4,
     });
   } catch {

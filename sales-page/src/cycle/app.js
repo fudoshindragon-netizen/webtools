@@ -17,16 +17,33 @@ import {
 } from './native.js';
 import { blocksFromPassages, latestGuideResult, renderGuideBlocks, renderMarkdownSafe } from './guide.js';
 
-const VIEWS = [
-  ['calendar', 'Calendar'],
-  ['log', 'Log'],
-  ['methods', 'Methods'],
-  ['missed', 'Missed dose'],
-  ['interactions', 'Medications'],
-  ['labs', 'Labs'],
-  ['assistant', 'Symptom guide'],
-  ['privacy', 'Privacy'],
+// Phone builds set VITE_LUNA_EDITION=lite. The website build leaves it unset.
+const LITE = import.meta.env.VITE_LUNA_EDITION === 'lite';
+
+const LITE_REMINDERS = [
+  ['', 'No reminder'],
+  ['daily-pill', 'Daily pill'],
+  ['weekly-patch', 'Weekly patch'],
+  ['ring-21-7', 'Ring in and out'],
+  ['shot-13', 'Shot date'],
 ];
+
+const VIEWS = LITE
+  ? [
+    ['calendar', 'Calendar'],
+    ['log', 'Log'],
+    ['privacy', 'Privacy'],
+  ]
+  : [
+    ['calendar', 'Calendar'],
+    ['log', 'Log'],
+    ['methods', 'Methods'],
+    ['missed', 'Missed dose'],
+    ['interactions', 'Medications'],
+    ['labs', 'Labs'],
+    ['assistant', 'Symptom guide'],
+    ['privacy', 'Privacy'],
+  ];
 
 const state = loadState();
 const today = todayISO();
@@ -77,21 +94,35 @@ void refreshNativeReminders(state.profile).then((result) => {
 
 function render() {
   const current = view();
-  app.innerHTML = `
+  const tabs = `<nav class="cy-tabs" aria-label="Tracker sections">
+        ${VIEWS.map(([id, label]) => `<a href="#${id}" ${current === id ? 'aria-current="page"' : ''}>${esc(label)}</a>`).join('')}
+      </nav>`;
+  app.innerHTML = LITE ? `
+    <div class="cy">
+      <p class="cy-kicker">On this phone</p>
+      <h1>Period tracker</h1>
+      <p class="cy-lead">Log your period and keep the calendar on this phone. Not medical advice and not birth control.</p>
+      ${tabs}
+      ${liteSection(current)}
+    </div>` : `
     <div class="cy">
       <p class="cy-kicker">On this device · educational</p>
       <h1>Cycle and birth-control tracker</h1>
       <p class="cy-lead">Log periods, symptoms, a birth-control method, medications, and lab results in one place. Predictions and missed-dose notes are compiled from public sources. They are not a diagnosis and not a personal risk score.</p>
       <p class="cy-reviewed">Reference data version ${esc(meta.version)}. Last reviewed ${esc(meta.lastReviewed)}. Nothing you type in the tracker is uploaded unless you choose a label lookup or the hosted symptom assistant.</p>
-      <nav class="cy-tabs" aria-label="Tracker sections">
-        ${VIEWS.map(([id, label]) => `<a href="#${id}" ${current === id ? 'aria-current="page"' : ''}>${esc(label)}</a>`).join('')}
-      </nav>
-      ${section(current)}
+      ${tabs}
+      ${fullSection(current)}
     </div>`;
-  requestAnimationFrame(drawCharts);
+  if (!LITE) requestAnimationFrame(drawCharts);
 }
 
-function section(current) {
+function liteSection(current) {
+  if (current === 'log') return viewLogLite();
+  if (current === 'privacy') return viewPrivacyLite();
+  return viewCalendarLite();
+}
+
+function fullSection(current) {
   if (current === 'calendar') return viewCalendar();
   if (current === 'log') return viewLog();
   if (current === 'methods') return viewMethods();
@@ -112,6 +143,127 @@ function prediction() {
     cycleLength: state.profile.cycleLength,
     periodLength: state.profile.periodLength,
   });
+}
+
+function reminderLabel(kind) {
+  return LITE_REMINDERS.find(([id]) => id === kind)?.[1] || 'Reminder';
+}
+
+function viewCalendarLite() {
+  const forecast = prediction();
+  const cells = monthGrid(ui.year, ui.month);
+  const monthLabel = new Date(ui.year, ui.month, 1).toLocaleString(undefined, { month: 'long', year: 'numeric' });
+  const selectedLog = state.logs.find((log) => log.date === ui.selected);
+  const reminderName = state.profile.reminder ? reminderLabel(state.profile.reminder) : 'None set';
+  return `
+    ${state.profile.reminder && state.profile.anchorDate ? banner({ tone: 'info', title: reminderName, detail: `Saved for ${pretty(state.profile.anchorDate)}. A notification you set on this phone, not medical advice.` }) : ''}
+    <div class="cy-stats">
+      ${stat('Next period', forecast.nextStart ? pretty(forecast.nextStart) : 'Log a period start', forecast.usingDefault ? 'Using a 28-day calendar until two periods are logged.' : `Average of ${forecast.sampleSize} cycle${forecast.sampleSize === 1 ? '' : 's'}: ${forecast.average} days.`)}
+      ${stat('Estimated fertile days', forecast.fertileStart ? `${pretty(forecast.fertileStart)} – ${pretty(forecast.fertileEnd)}` : '—', 'Nine days ending 14 days before the next predicted period. A calendar estimate, not a test.')}
+      ${stat('Reminder', reminderName, state.profile.anchorDate ? `From ${pretty(state.profile.anchorDate)}` : 'Optional. Set a date below.')}
+    </div>
+    <form id="reminder-setup" class="cy-card" style="margin-top:12px">
+      <h2>Reminder</h2>
+      <p class="cy-muted">Pick a daily pill, a weekly patch day, ring in and out dates, or a shot date. The log still works if you skip this or decline notifications.</p>
+      <div class="cy-row">
+        <div class="cy-field"><label for="reminder-kind">Reminder</label><select id="reminder-kind" name="reminder">${LITE_REMINDERS.map(([id, label]) => `<option value="${id}" ${state.profile.reminder === id ? 'selected' : ''}>${esc(label)}</option>`).join('')}</select></div>
+        <div class="cy-field"><label for="reminder-anchor">Date</label><input id="reminder-anchor" name="anchorDate" type="date" value="${esc(state.profile.anchorDate || '')}"></div>
+        <div class="cy-field"><label for="reminder-clock">Time</label><input id="reminder-clock" name="reminderTime" type="time" required value="${esc(clockValue(state.profile))}"></div>
+      </div>
+      <div class="cy-row" style="margin-top:8px">
+        <button class="primary" type="submit">Save reminder</button>
+        ${isNativeApp() ? '<button type="button" data-action="allow-reminders">Allow phone reminders</button>' : ''}
+      </div>
+      ${ui.reminderStatus ? `<p class="cy-muted">${esc(ui.reminderStatus)}</p>` : ''}
+    </form>
+    <p class="cy-muted" style="margin:12px 0">${forecast.irregular ? 'Recent cycles vary by more than a week, so this shading is a rough sketch.' : 'Days outside the blue mark are not safe days. This is a calendar estimate, not an ovulation test.'}</p>
+    <div class="cy-grid-2">
+      <section class="cy-card" aria-labelledby="cal-title">
+        <div class="cy-row" style="justify-content:space-between;margin-bottom:8px">
+          <button type="button" data-action="month" data-delta="-1" aria-label="Previous month">←</button>
+          <h2 id="cal-title">${esc(monthLabel)}</h2>
+          <button type="button" data-action="month" data-delta="1" aria-label="Next month">→</button>
+        </div>
+        <div class="cy-legend">
+          <span><i class="cy-swatch" style="background:rgba(255,107,157,.7)"></i>Period (P)</span>
+          <span><i class="cy-swatch" style="border:1px dashed #ff6b9d"></i>Predicted (~)</span>
+          <span><i class="cy-swatch" style="background:#6bc5ff"></i>Fertile estimate (F)</span>
+        </div>
+        <div class="cy-cal-head" aria-hidden="true">${['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map((day) => `<span>${day}</span>`).join('')}</div>
+        <div class="cy-cal-grid" role="grid" aria-label="${esc(monthLabel)}">
+          ${cells.map((iso) => iso ? dayButton(iso, forecast) : '<span></span>').join('')}
+        </div>
+      </section>
+      <section class="cy-card" aria-labelledby="day-title">
+        <h2 id="day-title">${pretty(ui.selected)}</h2>
+        <p>${selectedLog ? `Flow: ${esc(selectedLog.flow)}. ${esc((selectedLog.symptoms || []).join(', ') || 'No symptoms logged.')}` : 'Nothing logged.'}</p>
+        <div class="cy-row" style="margin-top:10px">
+          <button type="button" class="primary" data-action="start-period" data-date="${ui.selected}">Period started</button>
+          <button type="button" data-action="end-period" data-date="${ui.selected}">Period ended</button>
+          <a class="cy-btn" href="#log">Full log</a>
+        </div>
+        <form id="quick-flow" style="margin-top:12px">
+          <label for="quick-flow-select">Flow on this day</label>
+          <select id="quick-flow-select" name="flow">${FLOW.map((item) => `<option value="${item.id}" ${selectedLog?.flow === item.id ? 'selected' : ''}>${esc(item.label)}</option>`).join('')}</select>
+          <button class="primary" type="submit" style="margin-top:8px">Save flow</button>
+        </form>
+      </section>
+    </div>`;
+}
+
+function viewLogLite() {
+  const date = ui.selected || today;
+  const existing = state.logs.find((log) => log.date === date);
+  const logs = [...state.logs].sort((a, b) => b.date.localeCompare(a.date)).slice(0, 30);
+  return `
+    <form id="log-form" class="cy-card">
+      <h2>Day log</h2>
+      <div class="cy-row">
+        <div class="cy-field"><label for="log-date">Date</label><input id="log-date" name="date" type="date" required value="${esc(existing?.date || date)}"></div>
+        <div class="cy-field"><label for="log-flow">Flow</label><select id="log-flow" name="flow">${FLOW.map((item) => `<option value="${item.id}" ${(existing?.flow || 'none') === item.id ? 'selected' : ''}>${esc(item.label)}</option>`).join('')}</select></div>
+      </div>
+      <p style="margin-top:12px"><label>Symptoms</label></p>
+      <div class="cy-checks">${SYMPTOMS.map((item) => `<label><input type="checkbox" name="symptoms" value="${esc(item)}" ${(existing?.symptoms || []).includes(item) ? 'checked' : ''}> ${esc(item)}</label>`).join('')}</div>
+      <p style="margin-top:12px"><label>Mood</label></p>
+      <div class="cy-checks">${MOODS.map((item) => `<label><input type="checkbox" name="mood" value="${esc(item)}" ${(existing?.mood || []).includes(item) ? 'checked' : ''}> ${esc(item)}</label>`).join('')}</div>
+      <div class="cy-field" style="margin-top:12px"><label for="notes">Notes</label><textarea id="notes" name="notes" maxlength="2000">${esc(existing?.notes || '')}</textarea></div>
+      <div class="cy-row" style="margin-top:12px">
+        <button class="primary" type="submit">Save day</button>
+        <button type="button" data-action="start-period" data-date="${esc(date)}">Mark period start</button>
+        <button type="button" data-action="end-period" data-date="${esc(date)}">Mark period end</button>
+      </div>
+    </form>
+    <section class="cy-card" style="margin-top:14px">
+      <h2>Recent days</h2>
+      ${logs.length ? `<div class="cy-table-wrap"><table><thead><tr><th>Date</th><th>Flow</th><th>Symptoms</th><th>Mood</th><th></th></tr></thead><tbody>
+        ${logs.map((log) => `<tr><td><button type="button" data-action="edit-log" data-date="${log.date}">${pretty(log.date)}</button></td><td>${esc(log.flow)}</td><td>${esc((log.symptoms || []).join(', '))}</td><td>${esc((log.mood || []).join(', '))}</td><td><button type="button" data-action="delete-log" data-id="${esc(log.id)}">Delete</button></td></tr>`).join('')}
+      </tbody></table></div>` : '<p>No days logged yet.</p>'}
+      <h3 style="margin-top:16px">Periods</h3>
+      ${state.periods.length ? `<ul>${[...state.periods].sort((a, b) => b.start.localeCompare(a.start)).map((period) => `<li>${pretty(period.start)} – ${period.end ? pretty(period.end) : 'ongoing'} <button type="button" data-action="delete-period" data-id="${esc(period.id)}">Delete</button></li>`).join('')}</ul>` : '<p>No period start saved yet.</p>'}
+    </section>`;
+}
+
+function viewPrivacyLite() {
+  return `
+    <section class="cy-card">
+      <h2>What stays on this phone</h2>
+      <p>Period dates, flow, symptoms, mood, notes, and reminder settings stay on this phone. There is no account. This app does not send them anywhere.</p>
+      <p><a href="privacy.html">Privacy policy</a></p>
+      <div class="cy-row">
+        <button type="button" class="primary" data-action="export">Export JSON</button>
+        <button type="button" data-action="example">Load example data</button>
+      </div>
+      <form id="import-form" style="margin-top:12px">
+        <label for="import-file">Import a JSON file</label>
+        <input id="import-file" name="file" type="file" accept="application/json,.json">
+        <button type="submit">Replace data on this phone</button>
+      </form>
+    </section>
+    <form id="delete-form" class="cy-card" style="margin-top:14px">
+      <h2>Delete all my data</h2>
+      <label class="cy-checkline"><input type="checkbox" name="confirm"> I understand this removes the log and reminders from this phone.</label>
+      <button class="warn" type="submit" style="margin-top:8px">Delete all my data</button>
+    </form>`;
 }
 
 function viewCalendar() {
@@ -429,6 +581,41 @@ function viewPrivacy() {
 function onClick(event) {
   const button = event.target.closest('[data-action]');
   if (!button) return;
+  if (LITE) onClickLite(button);
+  else onClickFull(button);
+}
+
+function onClickLite(button) {
+  const action = button.dataset.action;
+  if (action === 'month' || action === 'select-day' || action === 'edit-log' || action === 'start-period' || action === 'end-period' || action === 'delete-log' || action === 'delete-period' || action === 'export' || action === 'allow-reminders' || action === 'example') {
+    onClickShared(button);
+  }
+}
+
+function onClickFull(button) {
+  const action = button.dataset.action;
+  if (action === 'open-method') {
+    ui.methodOpen = button.dataset.id;
+    render();
+  } else if (action === 'delete-med') {
+    state.medications = state.medications.filter((med) => med.id !== button.dataset.id);
+    saveState(state);
+    render();
+  } else if (action === 'lookup-med') {
+    lookupDrug(button.dataset.name);
+  } else if (action === 'delete-lab') {
+    state.labs = state.labs.filter((lab) => lab.id !== button.dataset.id);
+    saveState(state);
+    render();
+  } else if (action === 'prompt') {
+    const box = document.querySelector('#ask');
+    if (box) box.value = button.dataset.prompt;
+  } else {
+    onClickShared(button);
+  }
+}
+
+function onClickShared(button) {
   const action = button.dataset.action;
   if (action === 'month') {
     const next = new Date(ui.year, ui.month + Number(button.dataset.delta), 1);
@@ -455,22 +642,6 @@ function onClick(event) {
     state.periods = state.periods.filter((period) => period.id !== button.dataset.id);
     saveState(state);
     render();
-  } else if (action === 'open-method') {
-    ui.methodOpen = button.dataset.id;
-    render();
-  } else if (action === 'delete-med') {
-    state.medications = state.medications.filter((med) => med.id !== button.dataset.id);
-    saveState(state);
-    render();
-  } else if (action === 'lookup-med') {
-    lookupDrug(button.dataset.name);
-  } else if (action === 'delete-lab') {
-    state.labs = state.labs.filter((lab) => lab.id !== button.dataset.id);
-    saveState(state);
-    render();
-  } else if (action === 'prompt') {
-    const box = document.querySelector('#ask');
-    if (box) box.value = button.dataset.prompt;
   } else if (action === 'export') {
     exportJson();
   } else if (action === 'allow-reminders') {
@@ -491,6 +662,11 @@ function onClick(event) {
 }
 
 function onChange(event) {
+  if (LITE) return;
+  onChangeFull(event);
+}
+
+function onChangeFull(event) {
   if (event.target.id === 'm-method' || event.target.id === 'm-sit') {
     readMissed(event.target.form);
     ui.missed.ready = false;
@@ -511,6 +687,22 @@ function onSubmit(event) {
   if (!(form instanceof HTMLFormElement) || !app.contains(form)) return;
   event.preventDefault();
   const data = new FormData(form);
+  if (LITE) {
+    onSubmitLite(form, data);
+    return;
+  }
+  onSubmitFull(form, data, event);
+}
+
+function onSubmitLite(form, data) {
+  if (form.id === 'reminder-setup') saveLiteReminder(data);
+  if (form.id === 'quick-flow') saveFlow(ui.selected, String(data.get('flow') || 'none'));
+  if (form.id === 'log-form') saveLog(data);
+  if (form.id === 'import-form') importFile(data.get('file'));
+  if (form.id === 'delete-form') deleteAllData();
+}
+
+function onSubmitFull(form, data, event) {
   if (form.id === 'quick-flow') saveFlow(ui.selected, String(data.get('flow') || 'none'));
   if (form.id === 'log-form') saveLog(data);
   if (form.id === 'method-form') saveMethod(data);
@@ -536,24 +728,27 @@ function onSubmit(event) {
   if (form.id === 'lab-form') saveLab(data);
   if (form.id === 'ask-form') ask(String(data.get('question') || ''), event.submitter?.value || 'library');
   if (form.id === 'import-form') importFile(data.get('file'));
-  if (form.id === 'delete-form') {
-    if (!data.get('confirm')) {
-      announce('Check the box to confirm delete.');
-      return;
-    }
-    clearState();
-    void clearNativeReminders();
-    const blank = emptyFromClear();
-    state.profile = blank.profile;
-    state.periods = [];
-    state.logs = [];
-    state.medications = [];
-    state.labs = [];
-    ui.guide = null;
-    saveGuide();
-    announce('Data on this device was deleted.');
-    render();
+  if (form.id === 'delete-form') deleteAllData();
+}
+
+function deleteAllData() {
+  const form = document.querySelector('#delete-form');
+  if (form && !new FormData(form).get('confirm')) {
+    announce('Check the box to confirm delete.');
+    return;
   }
+  clearState();
+  void clearNativeReminders();
+  const blank = emptyFromClear();
+  state.profile = blank.profile;
+  state.periods = [];
+  state.logs = [];
+  state.medications = [];
+  state.labs = [];
+  ui.guide = null;
+  saveGuide();
+  announce('Data on this device was deleted.');
+  render();
 }
 
 function emptyFromClear() {
@@ -582,15 +777,16 @@ function saveFlow(date, flow) {
 function saveLog(data) {
   const date = String(data.get('date') || '');
   const flow = String(data.get('flow') || 'none');
+  const existing = state.logs.find((log) => log.date === date);
   upsertLog({
     date,
     flow,
     symptoms: data.getAll('symptoms').map(String),
     mood: data.getAll('mood').map(String),
     notes: String(data.get('notes') || ''),
-    adherence: String(data.get('adherence') || ''),
-    bbt: data.get('bbt') === '' ? '' : Number(data.get('bbt')),
-    mucus: String(data.get('mucus') || ''),
+    adherence: data.has('adherence') ? String(data.get('adherence') || '') : (existing?.adherence || ''),
+    bbt: data.has('bbt') ? (data.get('bbt') === '' ? '' : Number(data.get('bbt'))) : (existing?.bbt ?? ''),
+    mucus: data.has('mucus') ? String(data.get('mucus') || '') : (existing?.mucus || ''),
   });
   ui.selected = date;
   if (flow !== 'none') touchPeriod(date, flow);
@@ -656,6 +852,22 @@ function saveMethod(data) {
     if (result?.message) ui.reminderStatus = result.message;
   });
   render();
+}
+
+function saveLiteReminder(data) {
+  const kind = String(data.get('reminder') || '');
+  state.profile.reminder = LITE_REMINDERS.some(([id]) => id === kind) ? kind : '';
+  const anchor = String(data.get('anchorDate') || '');
+  state.profile.anchorDate = /^\d{4}-\d{2}-\d{2}$/.test(anchor) ? anchor : '';
+  const [hour, minute] = String(data.get('reminderTime') || '09:00').split(':').map(Number);
+  state.profile.reminderHour = Number.isFinite(hour) ? hour : 9;
+  state.profile.reminderMinute = Number.isFinite(minute) ? minute : 0;
+  saveState(state);
+  void refreshNativeReminders(state.profile).then((result) => {
+    ui.reminderStatus = result?.message || 'Reminder saved on this phone.';
+    announce(ui.reminderStatus);
+    render();
+  });
 }
 
 function saveReminderTime(data) {
