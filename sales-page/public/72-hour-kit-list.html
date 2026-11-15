@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>72-Hour Emergency Kit List: What Actually Goes in the Bag | MicroVenture Labs</title>
+    <meta name="description" content="Water, food, warmth, light, power, documents, medication, cash and sanitation in the order that matters, quantities quoted from Ready.gov, what a bag really weighs, and what to drop first." />
+    <meta name="author" content="MicroVenture Labs" />
+    <meta property="og:title" content="A 72-hour kit you can carry: the list, the weight, and what to leave out" />
+    <meta property="og:description" content="The list in the order that matters, Ready.gov quantities, the weight arithmetic, the urban flat problem, and the three-day test." />
+    <meta property="og:url" content="https://generationwealthforever.com/72-hour-kit-list.html" />
+    <meta property="og:type" content="article" />
+    <link rel="canonical" href="https://generationwealthforever.com/72-hour-kit-list.html" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎒</text></svg>" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      :root {
+        --bg: #0a0a12; --bg-card: #12121e; --bg-alt: #0e0e1a; --border: #1e1e32;
+        --text: #b8b8d0; --text-heading: #e8e8f0; --text-muted: #7c7c9a;
+        --accent: #ff6b9d; --accent-hover: #ff8ab0; --accent-glow: rgba(255,107,157,0.3);
+        --neon-blue: #6bc5ff; --neon-purple: #b06bff; --green: #4ade80;
+        --radius: 12px; --radius-sm: 8px;
+        --sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font: 16px/1.6 var(--sans); color: var(--text); background: var(--bg);
+        -webkit-font-smoothing: antialiased; scroll-behavior: smooth;
+      }
+      body { min-height: 100vh; overflow-x: hidden; }
+      a { color: var(--accent); text-decoration: none; }
+      a:hover { color: var(--accent-hover); }
+      .site-nav { max-width: 1200px; margin: 0 auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border-bottom: 1px solid var(--border); }
+      .site-brand { font-size: 18px; font-weight: 800; color: var(--text-heading) !important; text-decoration: none; letter-spacing: -0.3px; }
+      .site-brand:hover { color: var(--accent) !important; }
+      .site-nav-links { display: flex; gap: 8px; flex-wrap: wrap; }
+      .site-nav-link { padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--text-muted) !important; border: 1px solid var(--border); text-decoration: none; transition: all 0.2s; }
+      .site-nav-link:hover { border-color: var(--accent); color: var(--text-heading) !important; }
+      .site-nav-link[aria-current="page"] { background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; border-color: transparent; }
+      .float-support { position: fixed; bottom: 24px; right: 24px; z-index: 998; width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; font-size: 28px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(255,107,157,0.4); transition: all 0.3s; text-decoration: none !important; }
+      .float-support:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(255,107,157,0.6); }
+      .btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 700; background: linear-gradient(135deg, var(--accent), var(--neon-purple)); color: #fff !important; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
+      .btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px; border-radius: var(--radius-sm); font-size: 16px; font-weight: 600; background: transparent; color: var(--text-heading) !important; border: 1px solid var(--border); cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .btn-secondary:hover { border-color: var(--accent); color: var(--accent) !important; }
+      .btn-large { font-size: 18px; padding: 16px 40px; }
+
+      .g-wrap { max-width: 780px; margin: 0 auto; padding: 0 20px 72px; }
+      .g-eyebrow { display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: rgba(107,197,255,0.12); color: var(--neon-blue); border: 1px solid rgba(107,197,255,0.35); margin-bottom: 16px; }
+      .g-title { font-size: 38px; line-height: 1.14; font-weight: 800; letter-spacing: -1px; color: var(--text-heading); margin-bottom: 14px; }
+      @media (max-width: 600px) { .g-title { font-size: 28px; } }
+      .g-standfirst { font-size: 18px; line-height: 1.65; color: var(--text); margin-bottom: 12px; }
+      .g-meta { font-size: 13px; color: var(--text-muted); margin-bottom: 28px; }
+      .g-hero { padding: 44px 0 8px; }
+      .g-h2 { font-size: 24px; font-weight: 700; color: var(--text-heading); margin: 34px 0 12px; }
+      .g-h3 { font-size: 18px; font-weight: 700; color: var(--text-heading); margin: 24px 0 8px; }
+      .g-body p { margin-bottom: 16px; line-height: 1.75; }
+      .g-body ul, .g-body ol { margin: 0 0 18px 0; padding-left: 22px; }
+      .g-body li { margin-bottom: 9px; line-height: 1.65; }
+      .g-body li strong, .g-body p strong { color: var(--text-heading); }
+      .g-cite { color: var(--text-muted); font-size: 14px; }
+      .g-table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 15px; }
+      .g-table th, .g-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+      .g-table th { color: var(--text-heading); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+      .g-callout { background: rgba(251,191,36,0.07); border: 1px solid rgba(251,191,36,0.3); border-radius: var(--radius); padding: 20px 22px; margin: 0 0 22px; }
+      .g-callout p { margin-bottom: 12px; }
+      .g-callout p:last-child { margin-bottom: 0; }
+      .g-callout strong { color: #fbbf24; }
+      .g-free { background: linear-gradient(135deg, rgba(74,222,128,0.12), rgba(107,197,255,0.07)); border: 1px solid rgba(74,222,128,0.45); border-radius: var(--radius); padding: 30px; margin: 36px 0 0; }
+      .g-free-eyebrow { display: inline-block; padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; background: rgba(74,222,128,0.15); color: var(--green); border: 1px solid rgba(74,222,128,0.45); margin-bottom: 14px; }
+      .g-free-title { font-size: 24px; font-weight: 800; line-height: 1.2; color: var(--text-heading); margin-bottom: 10px; }
+      .g-free p { font-size: 15px; line-height: 1.65; margin-bottom: 14px; }
+      .g-free-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 30px; border-radius: var(--radius-sm); font-size: 17px; font-weight: 800; background: var(--green); color: #06121a !important; border: none; cursor: pointer; transition: all 0.2s; text-decoration: none !important; }
+      .g-free-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(74,222,128,0.35); }
+      .g-free-note { font-size: 13px; color: var(--text-muted); }
+      .g-paid { background: linear-gradient(135deg, rgba(255,107,157,0.10), rgba(107,197,255,0.08)); border: 1px solid rgba(255,107,157,0.35); border-radius: var(--radius); padding: 30px; margin: 20px 0 0; }
+      .g-paid h2 { font-size: 22px; color: var(--text-heading); margin-bottom: 8px; }
+      .g-paid p { font-size: 15px; line-height: 1.65; margin-bottom: 16px; }
+      .g-paid-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+      .g-more { border-top: 1px solid var(--border); margin-top: 40px; padding-top: 24px; }
+      .g-more h2 { font-size: 18px; color: var(--text-heading); margin-bottom: 12px; }
+      .g-more ul { list-style: none; padding: 0; margin: 0; }
+      .g-more li { margin-bottom: 8px; line-height: 1.6; }
+      .g-disclaimer { border-top: 1px solid var(--border); margin-top: 32px; padding-top: 20px; font-size: 13px; color: var(--text-muted); line-height: 1.7; }
+      footer { border-top: 1px solid var(--border); padding: 32px 20px; }
+      .footer-content { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-size: 14px; color: var(--text-muted); flex-wrap: wrap; gap: 16px; }
+      .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+      .footer-links a { color: var(--text-muted); }
+      .footer-links a:hover { color: var(--text-heading); }
+      .footer-guides { max-width: 1200px; margin: 18px auto 0; font-size: 13px; color: var(--text-muted); display: flex; gap: 16px; flex-wrap: wrap; align-items: baseline; }
+      .footer-guides strong { color: var(--text-heading); font-size: 13px; }
+      .footer-guides a { color: var(--text-muted); }
+      .footer-guides a:hover { color: var(--text-heading); }
+      .footer-legal { max-width: 1200px; margin: 24px auto 0; padding-top: 20px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-muted); }
+      .footer-about { margin-bottom: 12px; line-height: 1.5; }
+      .footer-legal-row { display: flex; gap: 18px; flex-wrap: wrap; align-items: baseline; }
+      .footer-legal-row a { color: var(--text-muted); }
+      .footer-legal-row a:hover { color: var(--text-heading); }
+      .footer-legal-row summary { cursor: pointer; color: var(--text-muted); list-style: none; }
+      .footer-legal-row summary::-webkit-details-marker { display: none; }
+      .footer-legal-row summary:hover { color: var(--text-heading); }
+      .footer-legal-row details p { margin-top: 8px; max-width: 460px; line-height: 1.5; color: var(--text); }
+    </style>
+
+  </head>
+  <body>
+    <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener" class="float-support" aria-label="Support us on Buy Me a Coffee">☕</a>
+
+    <nav class="site-nav">
+      <a href="index.html" class="site-brand">🚀 MicroVenture Labs</a>
+      <div class="site-nav-links">
+        <a href="index.html" class="site-nav-link">📚 Study Hub</a>
+        <a href="focus-flow.html" class="site-nav-link">🧭 Focus &amp; Flow</a>
+        <a href="nobody-runs.html" class="site-nav-link">🛡️ NOBODY RUNS</a>
+      </div>
+    </nav>
+
+    <div class="g-wrap">
+      <header class="g-hero">
+        <span class="g-eyebrow">🛡️ Guide · 72-hour kit</span>
+        <h1 class="g-title">A 72-hour kit you can carry: the list, the weight, and what to leave out</h1>
+        <p class="g-standfirst">Most kit lists are a shopping list. The useful version is a weight problem: what you can carry down six flights in the dark, in a building with no lift and no water pressure, while holding a torch and a stair rail. Here is the list in the order that matters, with every quantity traced to Ready.gov, and an honest account of what to drop first.</p>
+        <p class="g-meta">Version 1.0 · Written 2026-11-15 · Quantities checked against Ready.gov (FEMA), accessed 2026-11-15 · Written for households in the United States</p>
+      </header>
+
+      <article class="g-body">
+        <p>A 72-hour kit list is easy to find and hard to finish, because most lists answer the wrong question. They answer “what might be useful” instead of “what can I carry”. A flat in a city has no garage, no garden and no second car: the kit lives in a cupboard, and if it ever has to leave, it leaves in your hands and on your back, down a stairwell.</p>
+
+        <div class="g-callout">
+          <p><strong>Where the numbers come from.</strong> Every quantity below is quoted from Ready.gov (FEMA) — the <em>Build a Kit</em> supply list and the water guidance — read on 2026-11-15. Where a figure is arithmetic on a Ready.gov figure, the page says so. Where Ready.gov gives no figure, this page does not invent one. There are no affiliate or gear links on this page, and nothing on it earns us a commission.</p>
+        </div>
+
+        <h2 class="g-h2">The list, in the order that matters</h2>
+        <p>The order is not alphabetical and it is not by price. It is the order in which the absence of a thing starts to hurt: water, food, warmth, light, power, documents, medication, cash, sanitation. Everything after water is survivable for a day; water is not.</p>
+
+        <table class="g-table">
+          <tr><th>What</th><th>How much — and where the number comes from</th></tr>
+          <tr>
+            <td><strong>Water</strong></td>
+            <td>“One gallon per person per day for several days, for drinking and sanitation” — Ready.gov, <em>Build a Kit</em>. Ready.gov's water page adds that a normally active person needs about three quarters of a gallon of fluid daily, from water and other beverages, and that needs vary with age, health, physical condition, activity, diet and climate. Read 2026-11-15.</td>
+          </tr>
+          <tr>
+            <td><strong>Food</strong></td>
+            <td>“At least a several-day supply of non-perishable food” — Ready.gov. It also lists a manual can opener, which is the item most often left out and the one that makes tinned food worth carrying.</td>
+          </tr>
+          <tr>
+            <td><strong>Warmth</strong></td>
+            <td>A sleeping bag or warm blanket for each person, and a complete change of clothing appropriate for your climate with sturdy shoes — Ready.gov, additional supplies. In a flat that has lost heating, this is the item that decides whether the second night is bearable.</td>
+          </tr>
+          <tr>
+            <td><strong>Light</strong></td>
+            <td>A flashlight and extra batteries — Ready.gov, basic list. One per person, not one per household, and one that lives on you rather than only in the bag.</td>
+          </tr>
+          <tr>
+            <td><strong>Power</strong></td>
+            <td>A battery-powered or hand-crank radio and a NOAA Weather Radio with tone alert; a cell phone with chargers and a backup battery — Ready.gov, basic list. The radio is the one that still works when the phone network does not.</td>
+          </tr>
+          <tr>
+            <td><strong>Documents</strong></td>
+            <td>Copies of insurance policies, identification and bank account records, “saved electronically or in a waterproof, portable container” — Ready.gov, additional supplies. Copies, not originals: the originals stay in the folder, and the bag carries a waterproof copy.</td>
+          </tr>
+          <tr>
+            <td><strong>Medication</strong></td>
+            <td>Prescription medications, organised and protected, plus non-prescription medicines such as pain relievers, anti-diarrhea medication, antacids or laxatives, and prescription glasses with contact lens solution — Ready.gov, additional supplies. A printed list of what each person takes, and the dose, goes in with them.</td>
+          </tr>
+          <tr>
+            <td><strong>Cash</strong></td>
+            <td>Ready.gov lists “cash or traveler's checks” and gives no amount. We are not going to invent one: card readers and cash machines both need power, so the figure is a household decision, and small notes are more useful than one large one.</td>
+          </tr>
+          <tr>
+            <td><strong>Sanitation</strong></td>
+            <td>Moist towelettes, garbage bags and plastic ties for personal sanitation — Ready.gov, basic list. It also lists soap, hand sanitizer and disinfecting wipes, and feminine supplies and personal hygiene items, under additional supplies.</td>
+          </tr>
+        </table>
+
+        <p>The rest of Ready.gov's basic list belongs in the bag too, and it is short: a whistle to signal for help, a dust mask, plastic sheeting with scissors and duct tape to shelter in place, a wrench or pliers to turn off utilities, local maps, and a first aid kit. None of it is expensive and none of it is heavy, which is why it tends to be the first thing a “lighter bag” sheds and the last thing you want to be missing.</p>
+
+        <h2 class="g-h2">What it weighs, and what to drop first</h2>
+        <p>Water is the whole weight problem, and the arithmetic is the useful part. A US gallon of water weighs about 8.3 pounds. At Ready.gov's one gallon per person per day, a household of four is about 33 pounds of water for a single day, and about 100 pounds for three. Nobody carries that down a stairwell, and nobody should try.</p>
+        <p>So the kit splits in two. <strong>Water is stored at home</strong> — in the flat, in the containers you can actually lift, because the building you are sheltering in is the building with the taps. <strong>The bag carries a day of water at most</strong>, plus a way to collect and treat more. That is the honest version of “72-hour kit”: the 72 hours are spent at home, not on a road.</p>
+        <p>Weigh your bag on a bathroom scale rather than trusting the listing. There is no universal target, because the only meaningful test is yours: can you carry it down your own stairs and back up again, in the dark, without putting it down? If the answer is no, something has to go. What goes first, in order:</p>
+        <ol>
+          <li><strong>Bottled water beyond the first day.</strong> Weight for weight it is the worst thing in the bag, and it is already at home.</li>
+          <li><strong>Tinned food and the can opener.</strong> Heavy, wet, and it needs opening. A day of food that needs no water and no heat is lighter and better.</li>
+          <li><strong>Spare clothing beyond one change.</strong> One change, worn in layers, is a change; three changes are a wardrobe.</li>
+          <li><strong>Anything “just in case” with no job.</strong> The multi-tool with eleven functions you cannot name is one of them.</li>
+          <li><strong>Books and entertainment</strong>, unless there is a child, in which case one light thing for them is not a luxury — it is what keeps the second night calm.</li>
+        </ol>
+        <p>What does not come out, whatever it weighs: medication, documents, light, power, and the whistle. Those five are the ones you cannot improvise.</p>
+
+        <h2 class="g-h2">The urban problem: a flat, a stairwell and no water pressure</h2>
+        <p>The kit on this page is written for a household that is not walking to a cabin. It is written for a flat in a building, where the emergency is that the building has stopped working:</p>
+        <ul>
+          <li><strong>No lift.</strong> Six flights in the dark, with a bag in one hand and the rail in the other. This is the reason the weight test is a stair test and not a walking test, and the reason the bag has to be one you can carry in a single hand.</li>
+          <li><strong>No water pressure.</strong> When mains pressure goes, the taps give nothing and the toilet cistern stops refilling. Sanitation therefore matters earlier than it does in a house with a garden, and the bags, ties and wipes want to be somewhere you can find them without a light.</li>
+          <li><strong>No heating without power.</strong> A boiler that needs electricity is a boiler that is off. Warmth is not a spare blanket in the loft; it is the blanket in the bag.</li>
+          <li><strong>Nowhere to store a kit.</strong> A flat has no garage. The bag lives by the door, in a cupboard in the hall, somewhere it can be reached in one movement — not under a bed, not in a locked store room.</li>
+          <li><strong>An elderly parent in the same building or nearby.</strong> Their bag is not your bag. It carries their medication, their glasses and hearing-aid batteries, and it is small enough that they can move with it — because the honest planning assumption is that someone else carries it for them.</li>
+        </ul>
+        <p>If you have already read <a href="72-hour-blackout-checklist.html">our 72-hour blackout checklist</a>, that page is the hour-by-hour sequence — what to do first when the lights go. This page is only the bag: what is in it, what it weighs, and what comes out.</p>
+
+        <h2 class="g-h2">The three-day test</h2>
+        <p>A kit that has never been carried is a guess. The test costs an afternoon and it is the only part of this page that will actually change your list:</p>
+        <ol>
+          <li><strong>Pack the bag from the list</strong>, not from memory. Tick each line as it goes in.</li>
+          <li><strong>Weigh it</strong> on a bathroom scale, and write the number on a card in the bag so the next revision has something to beat.</li>
+          <li><strong>Carry it around the block.</strong> Then carry it down your own stairs and back up, in the dark if you can arrange it, one hand on the rail.</li>
+          <li><strong>Write down three things:</strong> what you took out at the front door, what you reached for and could not find, and what would not fit.</li>
+          <li><strong>Revise the list and re-test</strong> when the household changes — a new baby, a new medication, a parent who can no longer carry anything.</li>
+        </ol>
+        <p>Then do the same with the water: use a day of the stored water, refill the containers, and find out whether the containers, the tap and your back all agree. Stored water that has never been rotated is a decoration.</p>
+
+        <h2 class="g-h2">What this page is not</h2>
+        <p>This page is the list and the weight. It is not the plan for your building: your local emergency management office, your fire service and your landlord's instructions all override anything here, and the decision to stay or leave is theirs to make on the day. It is not medical advice — the medication line is a list of what to carry, not a recommendation about what to take. Weapons use, weapons handling and weapons construction are out of scope of everything we publish. And it is not a shopping list: almost everything above can be assembled from what a household already owns, plus a torch and a radio.</p>
+
+        <p class="g-cite">Sources: Ready.gov (FEMA), <em>Build a Kit</em> — https://www.ready.gov/kit — for the basic supply list, the additional supplies and the maintenance advice; Ready.gov, <em>Water</em> — https://www.ready.gov/water — for the one-gallon-per-person-per-day figure, the three-quarters-of-a-gallon note and the statement that needs vary with age, health, physical condition, activity, diet and climate. Both read 2026-11-15. The 8.3-pounds-per-gallon figure is a conversion, not a citation; the household totals are arithmetic on Ready.gov's per-person figure. The cash line carries no amount because Ready.gov gives none.</p>
+      </article>
+
+      <section class="g-free">
+        <span class="g-free-eyebrow">🎁 Free — no email, no signup</span>
+        <h2 class="g-free-title">The 72-Hour No-Utilities Drill</h2>
+        <p>A two-page printable checklist for the first 72 hours with no power and no running water. Run it once and you find out which parts of your kit are real and which parts are a shopping list you have not opened.</p>
+        <p><a href="/downloads/72-hour-no-utilities-drill.pdf" class="g-free-btn" download>⬇ Download the free drill (PDF)</a></p>
+        <p class="g-free-note">PDF · 2 pages · free forever · no signup</p>
+      </section>
+
+      <section id="guide" class="g-paid">
+        <h2>The plan for your building — 72-Hour Urban Blackout &amp; Go-Bag Guide, $9</h2>
+        <p><strong>72-Hour Urban Blackout &amp; Go-Bag Guide</strong> is the next step past the free checklist and past this list. It assumes what this page assumes: a city flat, a stairwell instead of a car, no lift, no water pressure, and at least one person in the household who cannot move fast or far.</p>
+        <p>A list is easy to find and a plan for your own building is not. $9 for the guide is cheaper than the wrong $100 of gear bought in a panic — and it is one step past the free drill you can download above.</p>
+        <div class="g-paid-btns">
+          <a href="https://microventurelabs.gumroad.com/l/rluxff" target="_blank" rel="noopener" class="btn-primary btn-large">Buy on Gumroad — $9 →</a>
+        </div>
+        <p style="text-align:center;margin:18px 0 0;">The rest of the ladder: the free drill, this <a href="https://microventurelabs.gumroad.com/l/rluxff" target="_blank" rel="noopener"><strong>$9 guide</strong></a>, the <a href="https://microventurelabs.gumroad.com/l/fgwidg" target="_blank" rel="noopener"><strong>Forms &amp; Checklists Pack — $12</strong></a>, the <a href="https://microventurelabs.gumroad.com/l/kttygj" target="_blank" rel="noopener"><strong>NOBODY RUNS 90-day program — $39</strong></a>, or the <a href="https://microventurelabs.gumroad.com/l/udfho" target="_blank" rel="noopener"><strong>program plus the forms — $45</strong></a>, which is $6 off the $51 the two cost separately.</p>
+      </section>
+
+      <nav class="g-more">
+        <h2>More guides</h2>
+        <ul>
+          <li><a href="72-hour-blackout-checklist.html">A practical 72-hour blackout checklist</a></li>
+          <li><a href="emergency-contact-list-printable.html">The emergency contact sheet: what to put on it</a></li>
+          <li><a href="how-much-water-to-store.html">How much water should you actually store?</a></li>
+          <li><a href="family-emergency-plan-template.html">How to write a family emergency plan</a></li>
+          <li><a href="one-room-blackout-drill.html">The one-room blackout drill</a></li>
+          <li><a href="nobody-runs.html">NOBODY RUNS — the 90-day program</a></li>
+        </ul>
+      </nav>
+
+      <p class="g-disclaimer">Preparedness education only — not medical, legal or tactical advice. Weapons use, weapons handling and weapons construction are out of scope. This page is not a substitute for your local emergency management office, your fire service or your clinician; follow their instructions over anything written here. In an emergency call your local emergency number. No affiliate links: nothing on this page earns us a commission. Version 1.0 · Written 2026-11-15 · Written for households in the United States.</p>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <p>Built by <a href="index.html">MicroVenture Labs</a> — <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Support our work</a></p>
+        <div class="footer-links">
+          <a href="index.html">📚 Study Hub</a>
+          <a href="focus-flow.html">🧭 Focus &amp; Flow</a>
+          <a href="nobody-runs.html">🛡️ NOBODY RUNS</a>
+          <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Buy us a coffee</a>
+        </div>
+      </div>
+      <div class="footer-guides">
+        <strong>Guides:</strong>
+        <a href="power-outage-food-safety.html">Food safety in a power outage</a>
+        <a href="power-outage-elderly-parent.html">An elderly parent in a blackout</a>
+        <a href="how-much-water-to-store.html">How much water to store</a>
+        <a href="72-hour-blackout-checklist.html">72-hour blackout checklist</a>
+        <a href="one-room-blackout-drill.html">One-room blackout drill</a>
+      </div>
+      <div class="footer-legal">
+        <p class="footer-about">MicroVenture Labs is a micro-venture studio building digital study tools, guides, art and free web apps.</p>
+        <div class="footer-legal-row">
+          <a href="mailto:support@microventurelabs.com">📧 Contact</a>
+          <details>
+            <summary>↩ Refund</summary>
+            <p>NOBODY RUNS: 30 days, no interrogation — refund through the channel you bought it on (the refund link on your Gumroad receipt, or a reply to your receipt email). Other digital products are delivered instantly, so sales are final — but if a file is broken or you can't access it, email us within 14 days and we'll fix or refund it.</p>
+          </details>
+          <details>
+            <summary>🔒 Privacy</summary>
+            <p>We don't sell your data. Payments are processed securely by Stripe or Gumroad.</p>
+          </details>
+          <details>
+            <summary>📄 Terms</summary>
+            <p>NOBODY RUNS is preparedness education only — not medical, legal or tactical advice, and not an accredited qualification. Weapons use, weapons handling and weapons construction are out of scope. Study packs are study aids, not accredited training.</p>
+          </details>
+        </div>
+      </div>
+    </footer>
+      <!-- Vercel Web Analytics (enable in project dashboard) + UTM checkout rewrite -->
+    <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/utm.js" defer></script>
+  </body>
+</html>
