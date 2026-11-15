@@ -352,3 +352,7 @@ footer a:hover { color: var(--text-heading); }
   font-style: italic;
   opacity: 0.5;
 }
+a.btn {
+  text-decoration: none !important;
+  color: inherit;
+}

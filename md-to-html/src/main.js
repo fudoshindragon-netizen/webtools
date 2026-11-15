@@ -192,14 +192,12 @@ console.log(greet('Creator'));
 
 ### Table
 
-| Feature | Free | Pro |
-|---------|------|-----|
-| Markdown → HTML | ✅ | ✅ |
-| Copy to clipboard | ✅ | ✅ |
-| Download as file | ✅ | ✅ |
-| Export as PDF | — | ✅ |
-| Custom CSS themes | — | ✅ |
-| Batch convert | — | ✅ |
+| Feature | Included |
+|---------|----------|
+| Markdown → HTML | ✅ |
+| Copy to clipboard | ✅ |
+| Download as file | ✅ |
+| Live preview | ✅ |
 
 ---
 
