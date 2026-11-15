@@ -108,14 +108,14 @@ export function planReminders(profile, today, options = {}) {
       notes.push(oneShot(1401, 'Shot due', `The 13-week date counted from the shot date in the app is ${due}.`, dueAt));
     }
     if (isFuture(warnAt, now)) {
-      notes.push(oneShot(1402, 'Shot window is ending', `The 15-week grace period described by CDC runs through ${grace}.`, warnAt));
+      notes.push(oneShot(1402, 'Shot window is ending', `The date 15 weeks after the shot date you saved is ${grace}.`, warnAt));
     }
     if (!notes.length) {
       const tomorrow = new Date(now.getTime());
       tomorrow.setDate(tomorrow.getDate() + 1);
       tomorrow.setHours(hour, minute, 0, 0);
       if (tomorrow.getTime() <= now.getTime()) tomorrow.setDate(tomorrow.getDate() + 1);
-      notes.push(oneShot(1401, 'Shot date has passed', 'The 15-week window counted from the date in the app has passed. Open the missed-dose view.', tomorrow));
+      notes.push(oneShot(1401, 'Shot date has passed', 'The date 15 weeks after the shot date you saved has passed. Open the app to check it.', tomorrow));
     }
     return notes;
   }

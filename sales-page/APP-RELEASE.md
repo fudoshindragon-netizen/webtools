@@ -1,6 +1,12 @@
 # Luna Cycle — store release guide
 
-The Android and iPhone apps are a Capacitor shell around the cycle tracker. The website build is unchanged: Vercel still publishes `dist/`, and `dist/index.html` is still the NOBODY RUNS page. The app build copies that output to `app-dist/` and replaces `index.html` with the tracker, so the app opens on the tracker.
+## Android 1.1 period tracker (this Play upload)
+
+Google Play personal accounts cannot publish medical-reference apps. Version **1.1** (`versionCode` **2**, package `com.microventurelabs.lunacycle`) is a period calendar only: log, prediction, a calendar-estimate fertile window, reminders, export, import, and delete. `npm run build:app` sets `VITE_LUNA_EDITION=lite`. The website `cycle.html` stays the full tracker (`npm run build`). The full phone app source as of the pre-lite main snapshot is the tag `luna-cycle-full-v1` and the branch `luna-cycle-full`. Rebuilding that tag without the lite flag produces the full app. `npm run build:app:full` on later commits also builds the full phone bundle.
+
+The lite app does not declare `INTERNET`. Listing copy is in `store-assets/play-listing-lite.md`. New phone screenshots are in `store-assets/screenshots/lite/`. Sign the release AAB on your own machine. Do not commit the upload keystore.
+
+The Android and iPhone shells are still Capacitor. The website build is unchanged: Vercel still publishes `dist/`, and `dist/index.html` is still the NOBODY RUNS page. The app build copies that output to `app-dist/` and replaces `index.html` with the tracker, so the app opens on the tracker.
 
 Suggested store listing name: **Luna Cycle**. Bundle id: **`com.microventurelabs.lunacycle`**. Both are in `app.config.json`, which `capacitor.config.js` reads. The hosted assistant and openFDA calls from the app use `apiBase` in that same file (default `https://generationwealthforever.com`). Change `apiBase` if the site’s origin changes, then run `npm run cap:sync`.
 

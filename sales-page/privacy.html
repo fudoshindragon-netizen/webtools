@@ -29,24 +29,26 @@
       </div>
     </nav>
     <article class="policy">
-      <p class="note">Last updated 12 November 2026. This page covers the cycle tracker on generationwealthforever.com and the Luna Cycle apps for Android and iPhone.</p>
+      <p class="note">Last updated 15 November 2026. This page covers the cycle tracker on generationwealthforever.com and the Luna Cycle Android app.</p>
       <h1>Privacy policy</h1>
-      <p>MicroVenture Labs publishes the cycle tracker. The name and bundle id of the phone apps are set in <code>app.config.json</code> (currently Luna Cycle, <code>com.microventurelabs.lunacycle</code>).</p>
+      <p>MicroVenture Labs publishes the cycle tracker. The Android app name and package are set in <code>app.config.json</code> (currently Luna Cycle, <code>com.microventurelabs.lunacycle</code>).</p>
       <p>Contact: <a href="mailto:microventurelabs@gmail.com">microventurelabs@gmail.com</a></p>
 
-      <h2>What stays on your device</h2>
-      <p>The tracker does not have accounts. Period dates, flow, symptoms, mood, notes, the birth-control method you pick, reminder time, medications you save, and lab numbers are stored in local storage on the website, or in the app’s on-device storage. They are not uploaded to our server. There is no analytics script on the tracker pages or in the app.</p>
-      <p>You can export that information as a JSON file, import a file you already have, or delete all of it with “Delete all my data.” Deleting removes the on-device log and, in the app, cancels reminders this app scheduled. We do not keep a copy.</p>
+      <h2>Android app, version 1.1</h2>
+      <p>The Android app on Google Play is a period calendar. It stores period dates, flow, symptoms, mood, notes, and reminder settings on the phone. It has no account. It does not send that information to us or to anyone else. It does not include a network permission, and the log works with the phone offline. Export writes a JSON file you keep. Import reads a file you choose. “Delete all my data” erases the on-phone log and cancels reminders this app scheduled. We do not keep a copy.</p>
+      <p>Reminders are local notifications. The app asks with the system permission dialog before it schedules one. You can refuse and keep using the log. Notifications are not sent through our server.</p>
+      <p>The Android app is not medical advice and not birth control. Period predictions and the shaded fertile days are a calendar estimate, not a test.</p>
 
-      <h2>What can leave the device, and only if you ask</h2>
+      <h2>What stays on your device on the website</h2>
+      <p>The tracker on this website does not have accounts. Period dates, flow, symptoms, mood, notes, the birth-control method you pick, reminder time, medications you save, and lab numbers are stored in local storage in the browser. They are not uploaded as a profile. There is no analytics script on the tracker pages or in the Android app.</p>
+      <p>You can export that information as a JSON file, import a file you already have, or delete all of it with “Delete all my data.” Deleting removes the on-device log. We do not keep a copy.</p>
+
+      <h2>What can leave the browser, and only if you ask on the website</h2>
       <ul>
-        <li><strong>Hosted symptom assistant.</strong> The library answer is produced on the device and is not sent anywhere. If you press “Also ask the hosted assistant,” the text you typed in that box is sent to our server at generationwealthforever.com (the app uses the absolute address in <code>app.config.json</code>), which sends it to the Vercel AI Gateway and the model configured there. Tracker logs, saved medications, and lab tables are not attached. Do not include a name, address, or other identifier unless you mean to. The provider processes the question to write a reply. We do not add that question to an account, because there is no account.</li>
-        <li><strong>Medication label lookup.</strong> If you press “Look up label,” the drug name is sent to our server, which requests the public openFDA label. The drug name is the only field sent. Your cycle log is not.</li>
+        <li><strong>Hosted symptom assistant, website only.</strong> The library answer is produced in the browser and is not sent anywhere. If you press “Also ask the hosted assistant,” the text you typed in that box is sent to our server at generationwealthforever.com, which sends it to the Vercel AI Gateway and the model configured there. Tracker logs, saved medications, and lab tables are not attached. Do not include a name, address, or other identifier unless you mean to. The provider processes the question to write a reply. We do not add that question to an account, because there is no account. The Android app does not have this button.</li>
+        <li><strong>Medication label lookup, website only.</strong> If you press “Look up label,” the drug name is sent to our server, which requests the public openFDA label. The drug name is the only field sent. Your cycle log is not. The Android app does not have this button.</li>
       </ul>
-      <p>Both calls need a network. Everything else in the tracker works offline in the app, including logging, the calendar, method pages, missed-dose figures, the curated interaction list, lab charts, and the on-device symptom library.</p>
-
-      <h2>Reminders</h2>
-      <p>The phone app asks, with the system permission dialog, before it schedules a local notification. Reminders are stored by the phone’s notification system. They are not sent through our server. You can refuse permission and keep using the tracker. The website cannot deliver a notification after you close the tab.</p>
+      <p>Both of those website buttons need a network. The Android app does not have them. The website cannot deliver a notification after you close the tab.</p>
 
       <h2>Payments on the rest of the site</h2>
       <p>NOBODY RUNS and other products are sold by Stripe or Gumroad. Those checkouts are separate from the tracker. The tracker does not process payment and does not see your card.</p>
@@ -55,10 +57,10 @@
       <p>The tracker is written for adults. It is not directed at children under 13, and we do not knowingly collect personal information from them.</p>
 
       <h2>Educational terms, not medical advice</h2>
-      <p>The cycle tracker, including missed-dose figures, effectiveness numbers, medication flags, lab notes, and the symptom guide, is educational information compiled from public sources such as CDC, FDA labels, and peer-reviewed summaries. It is not medical advice, not a diagnosis, not a pregnancy test, and not a personal risk calculation. It does not replace a clinician, a pharmacist, or emergency care.</p>
-      <p>Numbers are shown the way the cited source published them. Where a source gives a range or says that no percentage was found, the tracker says that. A yearly failure rate is not the chance from one missed pill. Confirm medication and missed-dose decisions with your pharmacist or clinician.</p>
+      <p>The website tracker, including missed-dose figures, effectiveness numbers, medication flags, lab notes, and the symptom guide, is educational information compiled from public sources such as CDC, FDA labels, and peer-reviewed summaries. It is not medical advice, not a diagnosis, not a pregnancy test, and not a personal risk calculation. It does not replace a clinician, a pharmacist, or emergency care. The Android app is only the period calendar described above. It is not medical advice and not birth control.</p>
+      <p>On the website, numbers are shown the way the cited source published them. Where a source gives a range or says that no percentage was found, the page says that. A yearly failure rate is not the chance from one missed pill. Confirm medication and missed-dose decisions with your pharmacist or clinician.</p>
       <p>See a clinician for fever, pelvic pain, symptoms that are not improving, possible pregnancy, possible STI exposure, or heavy bleeding. If you may be having a medical emergency, contact local emergency services.</p>
-      <p>The phone apps are general-purpose education and personal record tools. They are not a medical device and are not cleared or approved by the FDA to diagnose, treat, or prevent disease.</p>
+      <p>The Android app is a personal period log. It is not a medical device and is not cleared or approved by the FDA to diagnose, treat, or prevent disease.</p>
     </article>
     <footer>
       <div class="footer-content">
