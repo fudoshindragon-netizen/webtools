@@ -403,3 +403,12 @@ footer a:hover { color: var(--text-heading); }
     gap: 10px;
   }
 }
+.btn-secondary {
+  background: var(--bg-panel);
+  text-decoration: none !important;
+  color: var(--text) !important;
+}
+
+a.btn {
+  text-decoration: none !important;
+}

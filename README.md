@@ -11,7 +11,7 @@ Convert Markdown to HTML instantly. Live preview, copy, and export.
 - **Copy to clipboard** (full HTML document)
 - **Download** as standalone .html file
 - **Dark theme** with full Markdown rendering
-- **Pro version** ($9): PDF export, batch convert, custom CSS themes, API access
+- **Free** — no paid upgrade or Pro unlock for this tool
 
 ### 2. 🎬 YouTube Title & Hashtag Optimizer
 Generate optimized video titles and trending hashtags for any topic.
@@ -20,7 +20,7 @@ Generate optimized video titles and trending hashtags for any topic.
 - **10 trending hashtags** with view volumes across 10 niches
 - **Copy All** buttons for titles and hashtags
 - **Click to copy** individual items
-- **Pro version** ($12): 50 titles, competitor analysis, thumbnail tips, CSV export
+- **Free** — no paid upgrade or Pro unlock for this tool
 
 ## Tech Stack
 
