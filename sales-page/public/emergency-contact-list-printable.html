@@ -111,19 +111,19 @@
       .g-sheet-line { font-size: 14px; margin-bottom: 12px; color: #16161f; }
       .g-sheet-foot { font-size: 12px; color: #4a4a5a; margin-top: 18px; padding-top: 12px; border-top: 1px solid #b9b9c8; }
       @media print {
-        @page { margin: 12mm; }
+        @page { size: letter portrait; margin: 10mm; }
         .site-nav, .float-support, footer, .g-hero, .g-free, .g-paid, .g-more, .g-disclaimer { display: none !important; }
         .g-wrap { max-width: none; padding: 0; margin: 0; }
         .g-body > *:not(#sheet) { display: none !important; }
         body { background: #fff !important; }
-        .g-sheet { border: none; padding: 0; background: #fff; }
-        .g-sheet-title { font-size: 17px; margin-bottom: 3px; }
-        .g-sheet-sub { font-size: 10.5px; line-height: 1.35; margin-bottom: 9px; }
-        .g-sheet-group { font-size: 9.5px; margin: 8px 0 3px; }
-        .g-sheet-row { padding: 4px 0; }
-        .g-sheet-label { font-size: 12px; }
-        .g-sheet-line { font-size: 12px; margin-bottom: 7px; }
-        .g-sheet-foot { font-size: 10px; margin-top: 10px; padding-top: 7px; }
+        .g-sheet { border: none; padding: 0; margin: 0; background: #fff; break-inside: avoid; }
+        .g-sheet-title { font-size: 16px; margin-bottom: 2px; }
+        .g-sheet-sub { font-size: 10px; line-height: 1.3; margin-bottom: 6px; }
+        .g-sheet-group { font-size: 9.5px; margin: 6px 0 2px; break-after: avoid; }
+        .g-sheet-row { padding: 3px 0; break-inside: avoid; }
+        .g-sheet-label { font-size: 11.5px; }
+        .g-sheet-line { font-size: 11.5px; margin-bottom: 5px; }
+        .g-sheet-foot { font-size: 10px; margin-top: 7px; padding-top: 5px; break-inside: avoid; }
       }
     </style>
   </head>
@@ -143,15 +143,15 @@
       <header class="g-hero">
         <span class="g-eyebrow">🛡️ Guide · Household forms</span>
         <h1 class="g-title">The emergency contact sheet: what to put on it, and why 15 lines is enough</h1>
-        <p class="g-standfirst">A contact list is not a phone book. It is fifteen lines that still work when the power is out, the phones are jammed, and the person holding it is a neighbour who does not know your family. The sheet itself is on this page, free to print.</p>
+        <p class="g-standfirst">A contact list is not a phone book. It is fifteen lines that still work when the power is out, the phones are jammed, and the person holding it is a neighbor who does not know your family. The sheet itself is on this page, free to print.</p>
         <p class="g-meta">Version 1.0 · Written 2026-11-15 · Written for households in the United States</p>
       </header>
 
       <article class="g-body">
-        <p>A contact sheet usually fails in the same way. It gets written once, in a hurry, and it lists the numbers the person writing it already knows by heart — their own mobile, their partner's mobile, the number of the person they ring every day. The numbers that are actually hard to find are the ones that get left off: the pharmacy that is open on a Sunday, the neighbour's mobile, the cousin two hundred miles away who will answer at two in the morning.</p>
+        <p>A contact sheet usually fails in the same way. It gets written once, in a hurry, and it lists the numbers the person writing it already knows by heart — their own cell phone, their partner's cell phone, the number of the person they call every day. The numbers that are actually hard to find are the ones that get left off: the pharmacy that is open on a Sunday, the neighbor's cell phone, the cousin two hundred miles away who will answer at two in the morning.</p>
 
         <div class="g-callout">
-          <p><strong>The sheet on this page is free — not a sample, not a preview.</strong> Print it, fill it in, put it in a plastic sleeve and stick it up. Nothing on it is locked, and there is no email address to give us to get it. The paid pack further down exists because one sheet is not the whole job; it is the other fifteen forms that belong beside it.</p>
+          <p><strong>The sheet on this page is free — not a sample, not a preview.</strong> Print it, fill it in, put it in a sheet protector and stick it up. Nothing on it is locked, and there is no email address to give us to get it. The paid pack further down exists because one sheet is not the whole job; it is the other fifteen forms that belong beside it.</p>
         </div>
 
         <h2 class="g-h2">Which contacts actually matter</h2>
@@ -159,39 +159,39 @@
 
         <table class="g-table">
           <tr><th>Contact</th><th>Why it earns a line</th></tr>
-          <tr><td><strong>Household, one line each</strong></td><td>Five lines for the five people who live in the flat. If someone else picks the sheet up — a neighbour, a carer, a paramedic — this is how they know who lives here and who is missing.</td></tr>
-          <tr><td><strong>Out-of-area check-in</strong></td><td>One person outside the region. When local calls are not going through, an out-of-area number is the one that can relay news between everyone in your household, and it is the number everyone is told to ring. That is our reason for the line, not a quoted rule: it is a relay point that does not depend on anyone in the household getting through locally.</td></tr>
-          <tr><td><strong>Two neighbours</strong></td><td>Two, not one, and one of them from a different floor or door. The first may be at work, on holiday, or away for the weekend; the second is who you ask when the first does not answer. This is also the line that makes a difference to an elderly parent who lives alone.</td></tr>
-          <tr><td><strong>Doctor</strong></td><td>The practice number, not the hospital switchboard. A hospital cannot tell you anything about a patient; the practice can tell a pharmacist what a prescription was.</td></tr>
-          <tr><td><strong>Pharmacy</strong></td><td>The one that is genuinely open late or at the weekend, with its address written out. In a power cut the pharmacy that matters is the one with power, which is not always the nearest.</td></tr>
+          <tr><td><strong>Household, one line each</strong></td><td>Five lines for the five people who live in the apartment. If someone else picks the sheet up — a neighbor, a caregiver, a paramedic — this is how they know who lives here and who is missing.</td></tr>
+          <tr><td><strong>Out-of-area check-in</strong></td><td>One person outside the region. When local calls are not going through, an out-of-area number is the one that can relay news between everyone in your household, and it is the number everyone is told to call. That is our reason for the line, not a quoted rule: it is a relay point that does not depend on anyone in the household getting through locally.</td></tr>
+          <tr><td><strong>Two neighbors</strong></td><td>Two, not one, and one of them from a different floor or door. The first may be at work, on vacation, or away for the weekend; the second is who you ask when the first does not answer. This is also the line that makes a difference to an elderly parent who lives alone.</td></tr>
+          <tr><td><strong>Doctor</strong></td><td>The doctor's office number, not the hospital switchboard. A hospital cannot tell you anything about a patient; the doctor's office can tell a pharmacist what a prescription was.</td></tr>
+          <tr><td><strong>Pharmacy</strong></td><td>The one that is genuinely open late or on the weekend, with its address written out. In a blackout the pharmacy that matters is the one with power, which is not always the nearest.</td></tr>
           <tr><td><strong>Utility</strong></td><td>The outage line, plus the gas emergency line if you have gas, plus a note of where the shut-off is. The number is easy to find online and impossible to find when the internet is down.</td></tr>
-          <tr><td><strong>Insurance</strong></td><td>The claims line for home or renters cover. The policy number belongs on the copy in the folder, not on the one stuck to the fridge.</td></tr>
-          <tr><td><strong>School or nursery</strong></td><td>The main office number, and a note of who is authorised to collect. Schools do not release a child to an adult who is not on the list, however sensible the reason.</td></tr>
-          <tr><td><strong>Vet</strong></td><td>If there is an animal in the flat: the practice, and the 24-hour one, because a pet does not wait until Monday.</td></tr>
-          <tr><td><strong>Building contact</strong></td><td>The super, the management line, or whoever holds a spare key. In a block of flats this is the line that gets a door opened, and it is the one almost nobody writes down.</td></tr>
+          <tr><td><strong>Insurance</strong></td><td>The claims line for home or renters insurance. The policy number belongs on the copy in the folder, not on the one stuck to the fridge.</td></tr>
+          <tr><td><strong>School or daycare</strong></td><td>The main office number, and a note of who is authorized to pick up. Schools do not release a child to an adult who is not on the list, however sensible the reason.</td></tr>
+          <tr><td><strong>Vet</strong></td><td>If there is an animal in the apartment: the vet's office, and the 24-hour one, because a pet does not wait until Monday.</td></tr>
+          <tr><td><strong>Building contact</strong></td><td>The super, the management line, or whoever holds a spare key. In an apartment building this is the line that gets a door opened, and it is the one almost nobody writes down.</td></tr>
         </table>
-        <p>That is fifteen lines: five household, one out-of-area, two neighbours, seven services. If your household is smaller, leave the spare lines blank rather than filling them with numbers that do not matter — a short sheet that gets read beats a long one that gets skimmed.</p>
+        <p>That is fifteen lines: five household, one out-of-area, two neighbors, seven services. If your household is smaller, leave the spare lines blank rather than filling them with numbers that do not matter — a short sheet that gets read beats a long one that gets skimmed.</p>
 
         <h2 class="g-h2">Why “ICE” on a phone is not a plan</h2>
         <p>An “ICE” entry assumes four things at once: that the phone is charged, that it is unlocked or can be unlocked, that it is not cracked or lost, and that whoever finds it knows to go looking in your contacts. In the situation the sheet exists for, at least one of those is usually false. In a blackout the phone is the first thing to run out, and if the emergency is you, the person who needs a number is standing in your kitchen with no idea of your passcode.</p>
-        <p>A printed sheet in a plastic sleeve works with no battery, no signal and no password. A child can read it. A neighbour can photograph it and send it on. A paramedic can take it with them. It can be filled in with a pencil, which is the right instrument for a number that changes.</p>
+        <p>A printed sheet in a plastic sleeve works with no battery, no signal and no password. A child can read it. A neighbor can photograph it and send it on. A paramedic can take it with them. It can be filled in with a pencil, which is the right instrument for a number that changes.</p>
         <p>Keep the phone entry as well — it costs nothing. But the sheet is the copy that works when the phone does not, and it is the only one that works for a person who is not holding your phone.</p>
 
         <h2 class="g-h2">The medical line that matters, and the ones to leave off</h2>
-        <p>A fridge sheet is public to anyone who walks into the flat: a delivery driver, a carer, a landlord, a tradesman. That is the whole reason to keep it short. What earns a place on it:</p>
+        <p>A fridge sheet is public to anyone who walks into the apartment: a delivery driver, a caregiver, a landlord, a contractor. That is the whole reason to keep it short. What earns a place on it:</p>
         <ul>
           <li><strong>Drug allergies</strong>, written plainly — “penicillin”, not a diagnosis.</li>
           <li><strong>The medication list</strong> with doses, or a line saying where the list is if it is long. A paramedic can work with a list; they cannot work with “see the box in the bathroom”.</li>
           <li><strong>One named person to call</strong> for each member of the household, which is what the first group of lines already does.</li>
-          <li><strong>Anything that changes how you get someone out or how you speak to them</strong> — “uses a walking frame”, “hard of hearing, knock hard”, “non-verbal, will not answer a shout”. This is the line that is almost always missing and almost always useful.</li>
+          <li><strong>Anything that changes how you get someone out or how you speak to them</strong> — “uses a walker”, “hard of hearing, knock hard”, “non-verbal, will not answer a shout”. This is the line that is almost always missing and almost always useful.</li>
         </ul>
         <p>What stays off the fridge copy: diagnoses, medical history, mental-health details, insurance policy numbers, and any identity or document numbers. Keep the fuller medical log in the folder copy, where it is available to the household and not to everyone who knocks. This page is not medical advice; your clinician's instructions win over anything written here.</p>
 
         <h2 class="g-h2">Where the copies go, and when to reprint</h2>
         <ul>
-          <li><strong>One on the fridge</strong> — or inside a kitchen cupboard door, if your front door opens straight onto the room and the sheet would be visible from the hall.</li>
+          <li><strong>One on the fridge</strong> — or inside a kitchen cabinet door, if your front door opens straight onto the room and the sheet would be visible from the hallway.</li>
           <li><strong>One in each bag</strong>, in the same sleeve, so it is found without hunting.</li>
-          <li><strong>One in the car</strong>, as a photocopy. The original stays in the flat.</li>
+          <li><strong>One in the car</strong>, as a photocopy. The original stays in the apartment.</li>
           <li><strong>One in the folder</strong> with the documents, which is where the version with the policy numbers lives.</li>
         </ul>
         <p>Write the date on every copy. Reprint all of them when a number changes, when someone joins or leaves the household, when you change pharmacy, doctor, school or insurer, and at the twice-yearly review described in <a href="family-emergency-plan-template.html">the family emergency plan guide</a>. Pencil for the numbers likely to move; pen for the ones that will not.</p>
@@ -212,15 +212,15 @@
 
           <h3 class="g-sheet-group">People who are not us</h3>
           <div class="g-sheet-row"><span class="g-sheet-n">6</span><span class="g-sheet-label">Out-of-area check-in</span><span class="g-sheet-fill"></span></div>
-          <div class="g-sheet-row"><span class="g-sheet-n">7</span><span class="g-sheet-label">Neighbour (same floor)</span><span class="g-sheet-fill"></span></div>
-          <div class="g-sheet-row"><span class="g-sheet-n">8</span><span class="g-sheet-label">Neighbour (other floor or door)</span><span class="g-sheet-fill"></span></div>
+          <div class="g-sheet-row"><span class="g-sheet-n">7</span><span class="g-sheet-label">Neighbor (same floor)</span><span class="g-sheet-fill"></span></div>
+          <div class="g-sheet-row"><span class="g-sheet-n">8</span><span class="g-sheet-label">Neighbor (other floor or door)</span><span class="g-sheet-fill"></span></div>
 
           <h3 class="g-sheet-group">Services</h3>
-          <div class="g-sheet-row"><span class="g-sheet-n">9</span><span class="g-sheet-label">Doctor / practice</span><span class="g-sheet-fill"></span></div>
+          <div class="g-sheet-row"><span class="g-sheet-n">9</span><span class="g-sheet-label">Doctor / doctor's office</span><span class="g-sheet-fill"></span></div>
           <div class="g-sheet-row"><span class="g-sheet-n">10</span><span class="g-sheet-label">Pharmacy (late or weekend)</span><span class="g-sheet-fill"></span></div>
           <div class="g-sheet-row"><span class="g-sheet-n">11</span><span class="g-sheet-label">Utility outage line</span><span class="g-sheet-fill"></span></div>
           <div class="g-sheet-row"><span class="g-sheet-n">12</span><span class="g-sheet-label">Insurance claims</span><span class="g-sheet-fill"></span></div>
-          <div class="g-sheet-row"><span class="g-sheet-n">13</span><span class="g-sheet-label">School or nursery</span><span class="g-sheet-fill"></span></div>
+          <div class="g-sheet-row"><span class="g-sheet-n">13</span><span class="g-sheet-label">School or daycare</span><span class="g-sheet-fill"></span></div>
           <div class="g-sheet-row"><span class="g-sheet-n">14</span><span class="g-sheet-label">Vet / 24-hour vet</span><span class="g-sheet-fill"></span></div>
           <div class="g-sheet-row"><span class="g-sheet-n">15</span><span class="g-sheet-label">Building contact / spare key</span><span class="g-sheet-fill"></span></div>
 
@@ -234,7 +234,7 @@
         <p class="g-cite">The sheet is ours. It is free to print, copy and fill in for your own household, and it is not a sample of anything for sale.</p>
 
         <h2 class="g-h2">What the paid pack adds</h2>
-        <p>One sheet is the easy part, and it is the part most households finish. The rest of the paperwork is where it stalls: a roster of who lives here and who to call for each of them, a medication log with a date column so the refill does not creep up, the utility shut-off sheet with a diagram of your own flat, a meeting-place card for each bag.</p>
+        <p>One sheet is the easy part, and it is the part most households finish. The rest of the paperwork is where it stalls: a roster of who lives here and who to call for each of them, a medication log with a date column so the refill does not creep up, the utility shut-off sheet with a diagram of your own apartment, a meeting-place card for each bag.</p>
         <p><strong>NOBODY RUNS — Forms &amp; Checklists Pack</strong> is that set: 16 coded forms, 47 pages per edition, supplied in both US Letter and A4 so it prints properly wherever you are. The contact sheet above is the free one; the pack is the fifteen forms that go beside it.</p>
         <p>It sits in the middle of the ladder: the free 72-hour drill, then the $9 blackout guide, then this $12 forms pack, then the $39 program if you want the whole 90-day curriculum.</p>
       </article>
@@ -242,7 +242,7 @@
       <section class="g-free">
         <span class="g-free-eyebrow">🎁 Free — no email, no signup</span>
         <h2 class="g-free-title">Print the contact sheet</h2>
-        <p>The sheet above is a single page. The print button prints the sheet and nothing else — no navigation, no footer, no adverts, because there are none.</p>
+        <p>The sheet above is a single page. The print button prints the sheet and nothing else — no navigation, no footer, no ads, because there are none.</p>
         <p><button type="button" class="g-free-btn" onclick="window.print()">🖨 Print the contact sheet</button></p>
         <p class="g-free-note">One page · free forever · no signup · prints in black and white</p>
       </section>
