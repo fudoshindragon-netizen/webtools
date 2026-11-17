@@ -1,5 +1,5 @@
 /**
- * UTM first-touch (session) + NOBODY RUNS checkout link rewriting.
+ * UTM first-touch (session) + NOBODY RUNS Gumroad checkout link rewriting.
  * Safe when no UTMs are present. Custom va() events are best-effort (Pro plan).
  */
 (function () {
@@ -7,7 +7,6 @@
 
   var STORAGE_KEY = 'mvl_utm_v1';
   var GUMROAD = 'https://microventurelabs.gumroad.com/l/kttygj';
-  var STRIPE = 'https://buy.stripe.com/28E4gzaOweZIdli5iK0ZW0d';
   var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
 
   function readStored() {
@@ -94,28 +93,16 @@
         utm_term: utm.utm_term,
       });
     }
-    if (base === STRIPE || href.indexOf(STRIPE) === 0) {
-      var stripeParams = {
-        client_reference_id: buildClientReferenceId(utm),
-        utm_source: utm.utm_source,
-        utm_medium: utm.utm_medium,
-        utm_campaign: utm.utm_campaign,
-        utm_content: utm.utm_content,
-        utm_term: utm.utm_term,
-      };
-      return appendParams(STRIPE, stripeParams);
-    }
     return href;
   }
 
   function isCheckoutHref(href) {
     if (!href) return false;
-    return href.indexOf(GUMROAD) === 0 || href.indexOf(STRIPE) === 0;
+    return href.indexOf(GUMROAD) === 0;
   }
 
   function providerFromHref(href) {
     if (href.indexOf(GUMROAD) === 0) return 'gumroad';
-    if (href.indexOf(STRIPE) === 0) return 'stripe';
     return 'unknown';
   }
 
@@ -173,6 +160,5 @@
     rewriteHref: rewriteHref,
     buildClientReferenceId: buildClientReferenceId,
     GUMROAD: GUMROAD,
-    STRIPE: STRIPE,
   };
 })();
