@@ -20,3 +20,4 @@ ios/DerivedData
 
 # Paid deliverable used by /api/nr-download. Do not commit it.
 private/*.zip
+.env*
