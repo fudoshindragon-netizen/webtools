@@ -17,3 +17,6 @@ ios/App/build
 ios/App/App/public
 ios/App/App/capacitor.config.json
 ios/DerivedData
+
+# Paid deliverable used by /api/nr-download. Do not commit it.
+private/*.zip
