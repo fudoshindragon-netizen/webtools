@@ -1,3 +1,9 @@
 node_modules
 dist
 .DS_Store
+
+# Paid product deliverables live outside this public repo.
+# Rebuild or pull them from the private backup / storefront, then upload to Gumroad, Stripe, or BMC.
+digital-products/**/*.pdf
+digital-products/**/*.zip
+*.zip
