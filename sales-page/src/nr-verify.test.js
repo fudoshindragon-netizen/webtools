@@ -4,7 +4,7 @@ import {
   SESSION_ID_RE,
   evaluateSession,
   verifyAndAuthorize,
-} from './nr-verify.js';
+} from '../api/lib/nr-verify.js';
 
 const PAID = {
   object: 'checkout.session',
