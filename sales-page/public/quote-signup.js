@@ -48,10 +48,18 @@
       busy(form, true);
       say(form, 'One moment…', '');
 
+      var payload = { email: email };
+      var list = (form.getAttribute('data-list') || form.getAttribute('data-source') || '').trim();
+      if (!list) {
+        var hidden = form.querySelector('input[name="list"], input[name="source"]');
+        if (hidden && hidden.value) list = hidden.value.trim();
+      }
+      if (list) payload.list = list;
+
       fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: email })
+        body: JSON.stringify(payload)
       })
         .then(function (response) {
           return response.json().catch(function () {
