@@ -39,6 +39,7 @@
     }
     </script>
     <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/quote-signup.css" />
     <style>
       .nr-wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px 72px; }
       .nr-hero { display: grid; grid-template-columns: 300px 1fr; gap: 40px; align-items: start; padding: 48px 0 32px; }
@@ -163,6 +164,23 @@
       </section>
     </div>
 
+    <!-- ===== DAILY QUOTE SIGN-UP ===== -->
+    <section class="qsignup" aria-label="Daily quote email sign-up">
+      <div class="qsignup-inner">
+        <span class="qsignup-eyebrow">📬 Daily quote email</span>
+        <p class="qsignup-copy">One short quote a day. Practical, not motivational filler. Unsubscribe any time.</p>
+        <form class="qsignup-form" data-quote-signup data-list="buyers" novalidate>
+          <label class="qsignup-label" for="qsignup-email-survival">Email address</label>
+          <div class="qsignup-row">
+            <input class="qsignup-input" id="qsignup-email-survival" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required />
+            <button class="qsignup-btn" type="submit">Send me the daily quote</button>
+          </div>
+          <p class="qsignup-msg" data-quote-signup-msg role="status" aria-live="polite"></p>
+          <p class="qsignup-note">Free. One line a day, sent by the people who write NOBODY RUNS.</p>
+        </form>
+      </div>
+    </section>
+
     <footer>
       <div class="footer-content">
         <p>Built by <a href="index.html">MicroVenture Labs</a> — <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Support our work</a></p>
@@ -203,6 +221,7 @@
         </div>
       </div>
     </footer>
+    <script src="/quote-signup.js" defer></script>
     <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
     <script defer src="/_vercel/insights/script.js"></script>
     <script src="/utm.js" defer></script>

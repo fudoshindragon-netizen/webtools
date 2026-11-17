@@ -143,6 +143,7 @@
     }
     </script>
     <link rel="stylesheet" href="/src/style.css" />
+    <link rel="stylesheet" href="/quote-signup.css" />
   </head>
   <body>
     <!-- Floating Support Button -->
@@ -208,6 +209,23 @@
       </section>
     </main>
 
+    <!-- ===== DAILY QUOTE SIGN-UP ===== -->
+    <section class="qsignup" aria-label="Daily quote email sign-up">
+      <div class="qsignup-inner">
+        <span class="qsignup-eyebrow">📬 Daily quote email</span>
+        <p class="qsignup-copy">One short quote a day. Practical, not motivational filler. Unsubscribe any time.</p>
+        <form class="qsignup-form" data-quote-signup data-list="buyers" novalidate>
+          <label class="qsignup-label" for="qsignup-email-focus">Email address</label>
+          <div class="qsignup-row">
+            <input class="qsignup-input" id="qsignup-email-focus" name="email" type="email" inputmode="email" autocomplete="email" placeholder="you@example.com" required />
+            <button class="qsignup-btn" type="submit">Send me the daily quote</button>
+          </div>
+          <p class="qsignup-msg" data-quote-signup-msg role="status" aria-live="polite"></p>
+          <p class="qsignup-note">Free. One line a day, sent by the people who write NOBODY RUNS.</p>
+        </form>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer>
       <div class="footer-content">
@@ -245,6 +263,7 @@
     </footer>
 
     <script type="module" src="/src/focus-flow.js"></script>
+    <script src="/quote-signup.js" defer></script>
       <!-- Vercel Web Analytics (enable in project dashboard) + UTM checkout rewrite -->
     <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
     <script defer src="/_vercel/insights/script.js"></script>
