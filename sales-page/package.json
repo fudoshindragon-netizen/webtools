@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "node --test src/cycle/logic.test.js src/cycle/reminders.test.js src/cycle/guide.test.js",
+    "test": "node --test src/cycle/logic.test.js src/cycle/reminders.test.js src/cycle/guide.test.js src/nr-verify.test.js src/nr-checkout.test.js",
     "refresh-health-data": "node scripts/refresh-health-data.mjs",
     "build:app": "export VITE_LUNA_EDITION=lite && vite build && node scripts/prepare-app-dist.mjs",
     "build:app:full": "vite build && node scripts/prepare-app-dist.mjs",
