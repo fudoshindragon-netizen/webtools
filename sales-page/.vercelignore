@@ -1,0 +1,24 @@
+# Used by Vercel CLI uploads. Keep build artifacts and app trees out,
+# but allow private/*.zip so /api/nr-download can include the deliverable
+# on a preview or CLI deploy (the zip stays gitignored and is not in git).
+.vercel
+data/cycle/refresh-report.json
+app-dist
+android/.gradle
+android/build
+android/app/build
+android/local.properties
+android/app/src/main/assets/public
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+android/capacitor-cordova-android-plugins/build
+android/key.properties
+*.keystore
+*.jks
+ios/App/Pods
+ios/App/build
+ios/App/App/public
+ios/App/App/capacitor.config.json
+ios/DerivedData
+node_modules
+dist
