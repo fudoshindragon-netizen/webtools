@@ -3,21 +3,39 @@
 // Picks today's entry from data/quotes.json by day-of-year (UTC), builds a
 // one-quote email and sends it to the MailerLite group as an instant campaign.
 //
-// Env: MAILERLITE_API_KEY, MAILERLITE_GROUP_ID, MAILERLITE_SENDER_ID,
+// Env: CRON_SECRET (required; fail-closed — unauthenticated requests get 401),
+//      MAILERLITE_API_KEY, MAILERLITE_GROUP_ID, MAILERLITE_SENDER_ID,
 //      MAILING_ADDRESS (physical postal address — legally required in the
 //      footer of every commercial email), optional MAILERLITE_SENDER_NAME.
+//
+// Vercel Cron sends Authorization: Bearer ${CRON_SECRET} automatically when
+// that env var is set on the project. Do not invoke this path without auth;
+// a successful call can create and send a MailerLite campaign.
 //
 // Honest failure: if any of those four is missing we log exactly which ones and
 // return 200 without creating or sending anything, so the cron run is a no-op
 // rather than a silent success. Every email carries an unsubscribe link
 // ({$unsubscribe} — MailerLite fills it in) and the postal address.
 
+import { timingSafeEqual } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
 
 const MAILERLITE_API = 'https://connect.mailerlite.com/api';
 const SITE = 'https://generationwealthforever.com';
 const REQUIRED = ['MAILERLITE_API_KEY', 'MAILERLITE_GROUP_ID', 'MAILERLITE_SENDER_ID', 'MAILING_ADDRESS'];
+
+
+function isCronAuthorized(req) {
+  const secret = String(process.env.CRON_SECRET || '').trim();
+  if (!secret) return false;
+  const header = String(req.headers?.authorization || '');
+  const expected = `Bearer ${secret}`;
+  const headerBuf = Buffer.from(header);
+  const expectedBuf = Buffer.from(expected);
+  if (headerBuf.length !== expectedBuf.length) return false;
+  return timingSafeEqual(headerBuf, expectedBuf);
+}
 
 function loadQuotes() {
   const candidates = [
@@ -123,10 +141,14 @@ async function alreadySentToday(campaignName, apiKey) {
 }
 
 export default async function handler(req, res) {
+  if (!isCronAuthorized(req)) {
+    return res.status(401).json({ ok: false, reason: 'unauthorized' });
+  }
+
   const now = new Date();
 
   // ?dryRun=1 — report which quote today resolves to and where the data file was
-  // found, without touching MailerLite. Safe: no env needed, nothing is sent.
+  // found, without touching MailerLite. Still requires CRON_SECRET (see gate above).
   const dryRun = req.query && String(req.query.dryRun || '') === '1';
   if (dryRun) {
     const { quotes, source } = loadQuotes();
