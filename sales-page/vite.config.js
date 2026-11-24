@@ -62,6 +62,8 @@ export default defineConfig({
         cycle: fileURLToPath(new URL('./cycle.html', import.meta.url)),
         privacy: fileURLToPath(new URL('./privacy.html', import.meta.url)),
         survivalFieldLibrary: fileURLToPath(new URL('./survival-field-library.html', import.meta.url)),
+        voidToTheRenewal: fileURLToPath(new URL('./the-void-to-the-renewal.html', import.meta.url)),
+        electricalControlsPower: fileURLToPath(new URL('./electrical-controls-power-quick-reference.html', import.meta.url)),
       },
     },
   },

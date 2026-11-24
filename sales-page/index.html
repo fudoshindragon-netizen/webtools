@@ -95,6 +95,67 @@
             "price": "15",
             "availability": "https://schema.org/InStock"
           }
+        },
+        {
+          "@type": "Book",
+          "name": "The Void to the Renewal",
+          "alternateName": "The Void to the Renewal: A Norse Mythology Novel",
+          "author": { "@type": "Person", "name": "Fenris" },
+          "description": "The Norse myths in a deliberately ancient, scriptural voice, from the first melting of the ice to the last battle and beyond. Fifty short chapters by Fenris.",
+          "image": "https://generationwealthforever.com/images/void-to-renewal-cover-1200x1800.jpg",
+          "url": "https://generationwealthforever.com/the-void-to-the-renewal",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "DRM-free EPUB + PDF bundle",
+              "url": "https://microventurelabs.gumroad.com/l/sitpw",
+              "priceCurrency": "USD",
+              "price": "5.99",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Kindle edition",
+              "url": "https://www.amazon.com/dp/B0HRJ5LXH2",
+              "priceCurrency": "USD",
+              "price": "3.99",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Paperback",
+              "url": "https://www.amazon.com/dp/B0HRKDY55B",
+              "priceCurrency": "USD",
+              "price": "10.99",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
+        },
+        {
+          "@type": "Book",
+          "name": "Electrical Controls & Power Quick Reference",
+          "author": { "@type": "Organization", "name": "MicroVenture Labs" },
+          "description": "A compact, plain-English study guide and formula reference for electrical controls and power: 14 short chapters, 13 formula sheets, 77 practice questions with a complete answer key, and a 100-card flashcard drill.",
+          "image": "https://generationwealthforever.com/images/electrical-controls-power-cover-1200x1800.jpg",
+          "url": "https://generationwealthforever.com/electrical-controls-power-quick-reference",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Kindle edition",
+              "url": "https://www.amazon.com/dp/B0HRJ44P8T",
+              "priceCurrency": "USD",
+              "price": "6.99",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Paperback",
+              "url": "https://www.amazon.com/dp/B0HRJ3R3H2",
+              "priceCurrency": "USD",
+              "price": "11.99",
+              "availability": "https://schema.org/InStock"
+            }
+          ]
         }
       ]
     }
@@ -113,7 +174,7 @@
       .nr-price { font-size: 34px; font-weight: 800; color: var(--neon-blue); }
       .nr-price span { font-size: 14px; font-weight: 500; color: var(--text-muted); display: block; margin-top: 2px; }
       .nr-buy { display: flex; gap: 12px; flex-wrap: wrap; margin: 20px 0 8px; }
-      .nr-buy .btn-primary, .nr-buy .btn-secondary { width: auto; }
+      .nr-buy .btn-primary, .nr-buy .btn-secondary, .nr-buy .btn-outline { width: auto; }
       .nr-buy-note { font-size: 13px; color: var(--text-muted); }
       .nr-hero-free { margin-top: 18px; font-size: 14px; color: var(--text); }
       .nr-hero-free a { color: var(--green); font-weight: 700; }
@@ -348,6 +409,44 @@
     </div>
 
     <main id="study-hub">
+
+      <!-- ===== BOOKS ===== -->
+      <section class="nr-section" id="books">
+        <h2 class="nr-h2" style="text-align:center;">Books</h2>
+        <p class="section-sub">A Norse mythology novel by Fenris, and a compact electrical controls study guide — Kindle, paperback, and (for the novel) a DRM-free ebook bundle.</p>
+        <div class="product-grid" style="max-width:760px;margin:0 auto;">
+          <div class="product-card product-card--book">
+            <a href="the-void-to-the-renewal.html">
+              <img class="product-card-image" src="/images/void-to-renewal-cover-600x900.jpg" alt="Cover of The Void to the Renewal: A Norse Mythology Novel by Fenris" loading="lazy" width="600" height="900" />
+            </a>
+            <div class="product-card-info">
+              <span class="product-card-badge">Novel</span>
+              <h3 class="product-card-title"><a href="the-void-to-the-renewal.html">The Void to the Renewal</a></h3>
+              <p class="product-card-desc">A Norse mythology novel by Fenris: from Ginnungagap through Ragnarök and the quiet morning that follows. Fifty short chapters. 14 full-page color illustrations in the ebook and PDF; grayscale plates in the paperback.</p>
+              <p class="product-card-note">Chapters 1–11 follow the Eddic myths; chapters 12–50 are an original continuation. Cover and interior illustrations were created with AI image tools.</p>
+              <div class="product-card-price">From $3.99</div>
+              <a href="https://microventurelabs.gumroad.com/l/sitpw" target="_blank" rel="noopener" class="btn-buy">🛍️ Buy on Gumroad — $5.99</a>
+              <a href="https://www.amazon.com/dp/B0HRJ5LXH2" target="_blank" rel="noopener" class="btn-outline">Kindle $3.99</a>
+              <a href="https://www.amazon.com/dp/B0HRKDY55B" target="_blank" rel="noopener" class="btn-outline">Paperback $10.99</a>
+            </div>
+          </div>
+          <div class="product-card product-card--book">
+            <a href="electrical-controls-power-quick-reference.html">
+              <img class="product-card-image" src="/images/electrical-controls-power-cover-600x900.jpg" alt="Cover of Electrical Controls &amp; Power Quick Reference by MicroVenture Labs" loading="lazy" width="600" height="900" />
+            </a>
+            <div class="product-card-info">
+              <span class="product-card-badge">Study Guide</span>
+              <h3 class="product-card-title"><a href="electrical-controls-power-quick-reference.html">Electrical Controls &amp; Power Quick Reference</a></h3>
+              <p class="product-card-desc">A compact study guide and formula reference: 14 short chapters, 13 formula sheets, 77 practice questions with a full answer key, and a 100-card flashcard drill. For apprentices, trade students, and anyone starting out with motors, drives and PLCs.</p>
+              <p class="product-card-note">A study aid only — not a substitute for your course, employer training, or the governing standards. A different title from the $15 Electrical Safety Quick Reference Guide.</p>
+              <div class="product-card-price">Kindle $6.99 · Paperback $11.99</div>
+              <a href="https://www.amazon.com/dp/B0HRJ44P8T" target="_blank" rel="noopener" class="btn-buy">Kindle $6.99</a>
+              <a href="https://www.amazon.com/dp/B0HRJ3R3H2" target="_blank" rel="noopener" class="btn-outline">Paperback $11.99</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ======== STUDY PACKS & GUIDES (below the book) ======== -->
       <section id="study-products" class="section">
         <h2 class="section-title">📚 Study Packs &amp; Guides</h2>
@@ -446,6 +545,8 @@
         <div class="footer-links">
           <a href="nobody-runs.html">🛡️ NOBODY RUNS</a>
           <a href="survival-field-library.html">📁 Field Library</a>
+          <a href="the-void-to-the-renewal.html">📖 The Void to the Renewal</a>
+          <a href="electrical-controls-power-quick-reference.html">⚡ Electrical Controls Quick Reference</a>
           <a href="index.html#study-hub">📚 Study Hub</a>
           <a href="focus-flow.html">🧭 Focus &amp; Flow</a>
           <a href="cycle.html">💗 Cycle tracker</a>
