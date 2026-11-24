@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NOBODY RUNS delivery — MicroVenture Labs</title>
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="description" content="NOBODY RUNS is delivered by Gumroad. If you bought through our old checkout and need your copy, email us with your receipt." />
+    <meta name="description" content="Download NOBODY RUNS after a card payment, or buy on Gumroad. If you bought through our old checkout and need your copy, email us with your receipt." />
     <meta name="author" content="MicroVenture Labs" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧭</text></svg>" />
     <link rel="stylesheet" href="/src/style.css" />
@@ -49,22 +49,24 @@
     </nav>
 
     <div class="dl-wrap">
-      <h1 class="dl-title">NOBODY RUNS is now delivered by Gumroad</h1>
-      <p class="dl-lead">After you buy, Gumroad emails you the download. There is no file on this page.</p>
+      <h1 class="dl-title" id="nr-dl-title">NOBODY RUNS delivery</h1>
+      <p class="dl-lead" id="nr-dl-lead">Pay by card and your download starts here after checkout. Or buy on Gumroad and they email you the file. There is no public zip on this site.</p>
 
       <div class="dl-download">
-        <h2>Buy the program</h2>
-        <p>The $39 program is sold on Gumroad. After payment, Gumroad emails you the download.</p>
-        <a href="https://microventurelabs.gumroad.com/l/kttygj" target="_blank" rel="noopener" class="btn-primary btn-large">Buy on Gumroad — $39 →</a>
+        <h2 id="nr-download-heading">Buy the program — $39</h2>
+        <p id="nr-download-lead">Pay by card and you land back on this page with your download. Or buy on Gumroad and they email you the file.</p>
+        <a id="nr-download-btn" href="/api/nr-checkout" class="btn-primary btn-large">Buy with card — $39 →</a>
+        <p class="dl-file" id="nr-gumroad-alt"><a href="https://microventurelabs.gumroad.com/l/kttygj" target="_blank" rel="noopener">Or buy on Gumroad — $39</a></p>
       </div>
 
       <div class="dl-card">
         <h2>If you already bought it</h2>
+        <p>If you paid by card and were redirected here with a download button, use that button. If the button is missing, email <a href="mailto:microventurelabs@gmail.com">microventurelabs@gmail.com</a> with your receipt and we'll send the file.</p>
         <p>If you bought through Gumroad, use the download link in your Gumroad receipt email, or open your Gumroad library.</p>
-        <p>If you bought through our old checkout and need your copy, email <a href="mailto:microventurelabs@gmail.com">microventurelabs@gmail.com</a> with your receipt and we'll send it.</p>
+        <p>If you bought through our old Stripe Payment Link and never received a file, email the same address with your receipt.</p>
       </div>
 
-      <p class="dl-note">In an emergency, call your local emergency number. This page is not a download.</p>
+      <p class="dl-note">In an emergency, call your local emergency number. Bookmark this page: <a href="/nobody-runs-download.html">generationwealthforever.com/nobody-runs-download.html</a>.</p>
     </div>
 
     <footer>
@@ -82,5 +84,30 @@
     <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
     <script defer src="/_vercel/insights/script.js"></script>
     <script src="/utm.js" defer></script>
+  
+    <script>
+      // After a paid Stripe Checkout, this page is opened with ?session_id=cs_...
+      // The button then points at the gated /api/nr-download endpoint. Without a
+      // valid session_id there is no file on this page.
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var sessionId = params.get("session_id") || "";
+        if (!/^cs_(test|live)_[A-Za-z0-9]+$/.test(sessionId)) return;
+        var btn = document.getElementById("nr-download-btn");
+        if (!btn) return;
+        var title = document.getElementById("nr-dl-title");
+        var lead = document.getElementById("nr-dl-lead");
+        var heading = document.getElementById("nr-download-heading");
+        var sub = document.getElementById("nr-download-lead");
+        if (title) title.textContent = "Your NOBODY RUNS download is ready";
+        if (lead) lead.textContent = "Thanks for your purchase. Use the button below to download your copy. Keep this page or your receipt if you need the file again.";
+        if (heading) heading.textContent = "Download your copy";
+        if (sub) sub.textContent = "This link is tied to your payment. It is not a public file.";
+        btn.textContent = "Download NOBODY RUNS — ZIP →";
+        btn.href = "/api/nr-download?session_id=" + encodeURIComponent(sessionId);
+        btn.removeAttribute("target");
+        btn.removeAttribute("rel");
+      })();
+    </script>
   </body>
 </html>

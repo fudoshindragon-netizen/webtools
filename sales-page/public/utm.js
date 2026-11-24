@@ -1,5 +1,5 @@
 /**
- * UTM first-touch (session) + NOBODY RUNS Gumroad checkout link rewriting.
+ * UTM first-touch (session) + NOBODY RUNS Gumroad / card checkout link rewriting.
  * Safe when no UTMs are present. Custom va() events are best-effort (Pro plan).
  */
 (function () {
@@ -7,6 +7,7 @@
 
   var STORAGE_KEY = 'mvl_utm_v1';
   var GUMROAD = 'https://microventurelabs.gumroad.com/l/kttygj';
+  var STRIPE_CHECKOUT = '/api/nr-checkout';
   var UTM_KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term'];
 
   function readStored() {
@@ -74,11 +75,19 @@
   }
 
   function appendParams(url, params) {
-    var u = new URL(url);
+    var absolute = url.indexOf('://') !== -1;
+    var u = absolute ? new URL(url) : new URL(url, 'https://generationwealthforever.com');
     Object.keys(params).forEach(function (k) {
       if (params[k] != null && params[k] !== '') u.searchParams.set(k, params[k]);
     });
-    return u.toString();
+    if (absolute) return u.toString();
+    return u.pathname + u.search + u.hash;
+  }
+
+  function isStripeCheckoutHref(href) {
+    if (!href) return false;
+    var path = href.split('?')[0].split('#')[0];
+    return path === STRIPE_CHECKOUT || path.indexOf(STRIPE_CHECKOUT) !== -1;
   }
 
   function rewriteHref(href, utm) {
@@ -93,16 +102,27 @@
         utm_term: utm.utm_term,
       });
     }
+    if (isStripeCheckoutHref(href)) {
+      return appendParams(STRIPE_CHECKOUT, {
+        utm_source: utm.utm_source,
+        utm_medium: utm.utm_medium,
+        utm_campaign: utm.utm_campaign,
+        utm_content: utm.utm_content,
+        utm_term: utm.utm_term,
+        client_reference_id: buildClientReferenceId(utm),
+      });
+    }
     return href;
   }
 
   function isCheckoutHref(href) {
     if (!href) return false;
-    return href.indexOf(GUMROAD) === 0;
+    return href.indexOf(GUMROAD) === 0 || isStripeCheckoutHref(href);
   }
 
   function providerFromHref(href) {
     if (href.indexOf(GUMROAD) === 0) return 'gumroad';
+    if (isStripeCheckoutHref(href)) return 'stripe';
     return 'unknown';
   }
 
@@ -160,5 +180,6 @@
     rewriteHref: rewriteHref,
     buildClientReferenceId: buildClientReferenceId,
     GUMROAD: GUMROAD,
+    STRIPE_CHECKOUT: STRIPE_CHECKOUT,
   };
 })();
