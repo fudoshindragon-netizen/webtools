@@ -248,7 +248,7 @@ function viewPrivacyLite() {
     <section class="cy-card">
       <h2>What stays on this phone</h2>
       <p>Period dates, flow, symptoms, mood, notes, and reminder settings stay on this phone. There is no account. This app does not send them anywhere.</p>
-      <p><a href="privacy.html">Privacy policy</a></p>
+      <p><a href="/privacy">Privacy policy</a></p>
       <div class="cy-row">
         <button type="button" class="primary" data-action="export">Export JSON</button>
         <button type="button" data-action="example">Load example data</button>
@@ -560,7 +560,7 @@ function viewPrivacy() {
       <h2>What stays here</h2>
       <p>Period logs, the method you picked, medications, and lab numbers are stored in localStorage on this device. There is no account. This page does not load analytics. Export and import are JSON files you keep.</p>
       <p>A label lookup sends the drug name. The hosted assistant sends the question you submit. If you type a lab value or a story into that box, that text is included, because you put it there.</p>
-      <p><a href="privacy.html">Privacy policy and educational terms</a></p>
+      <p><a href="/privacy">Privacy policy and educational terms</a></p>
       <div class="cy-row">
         <button type="button" class="primary" data-action="export">Export JSON</button>
         <button type="button" data-action="example">Load example data</button>

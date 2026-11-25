@@ -160,6 +160,7 @@
       ]
     }
     </script>
+    <link rel="preload" as="image" type="image/webp" fetchpriority="high" imagesrcset="/images/nobody-runs-cover-500.webp 500w, /images/nobody-runs-cover-700.webp 700w" imagesizes="(max-width: 820px) 260px, 300px" />
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="stylesheet" href="/quote-signup.css" />
     <style>
@@ -218,20 +219,23 @@
 
     <!-- Shared Nav -->
     <nav class="site-nav">
-      <a href="index.html" class="site-brand">🚀 MicroVenture Labs</a>
+      <a href="/" class="site-brand">🚀 MicroVenture Labs</a>
       <div class="site-nav-links">
-        <a href="index.html" class="site-nav-link" aria-current="page">🛡️ NOBODY RUNS</a>
+        <a href="/" class="site-nav-link" aria-current="page">🛡️ NOBODY RUNS</a>
         <a href="#study-hub" class="site-nav-link">📚 Study Hub</a>
-        <a href="focus-flow.html" class="site-nav-link">🧭 Focus &amp; Flow</a>
-        <a href="cycle.html" class="site-nav-link">💗 Cycle tracker</a>
-        <a href="nobody-runs.html" class="site-nav-link">📖 Full program page</a>
+        <a href="/focus-flow" class="site-nav-link">🧭 Focus &amp; Flow</a>
+        <a href="/cycle" class="site-nav-link">💗 Cycle tracker</a>
+        <a href="/nobody-runs" class="site-nav-link">📖 Full program page</a>
       </div>
     </nav>
 
     <div class="nr-wrap">
       <!-- ===== HERO — THE BOOK ===== -->
       <header class="nr-hero">
-        <img src="/images/nobody-runs-cover.png" alt="NOBODY RUNS — The 90-Day Urban Family Preparedness Program cover" class="nr-cover" width="700" height="1050" />
+        <picture>
+          <source type="image/webp" srcset="/images/nobody-runs-cover-500.webp 500w, /images/nobody-runs-cover-700.webp 700w" sizes="(max-width: 820px) 260px, 300px" />
+          <img class="nr-cover" src="/images/nobody-runs-cover-700.jpg" srcset="/images/nobody-runs-cover-500.jpg 500w, /images/nobody-runs-cover-700.jpg 700w" sizes="(max-width: 820px) 260px, 300px" width="700" height="1050" alt="NOBODY RUNS — The 90-Day Urban Family Preparedness Program cover" fetchpriority="high" decoding="async" />
+        </picture>
         <div>
           <span class="nr-eyebrow">🛡️ 90-Day Program · Version 1.0</span>
           <h1 class="nr-title">NOBODY RUNS — The 90-Day Urban Family Preparedness Program</h1>
@@ -304,7 +308,7 @@
           <li><strong>The Customer README</strong> as the first thing you see, so the load, the refund policy and what the program refuses to cover are in front of you before you start.</li>
         </ul>
         <p>No app, no subscription, no login. Files you keep, print and reuse.</p>
-        <p class="nr-more"><a href="nobody-runs.html">Read the full program page — all 16 documents, honest notes and refunds →</a></p>
+        <p class="nr-more"><a href="/nobody-runs">Read the full program page — all 16 documents, honest notes and refunds →</a></p>
       </section>
 
       <!-- ===== BUY ===== -->
@@ -352,7 +356,7 @@
               <p class="product-card-note">An educational reference — not medical, legal or tactical advice. Some older manuals have outdated guidance; check current CDC, Red Cross and USDA advice. This is a separate product from the $39 program and the $9 Go-Bag Guide.</p>
               <div class="product-card-price">$9</div>
               <a href="https://microventurelabs.gumroad.com/l/survival-field-library" target="_blank" rel="noopener" class="btn-buy">🛍️ Buy Now — $9</a>
-              <p style="margin-top:10px;font-size:13px;"><a href="survival-field-library.html">Read what's in the library →</a></p>
+              <p style="margin-top:10px;font-size:13px;"><a href="/survival-field-library">Read what's in the library →</a></p>
             </div>
           </div>
         </div>
@@ -416,12 +420,15 @@
         <p class="section-sub">A Norse mythology novel by Fenris, and a compact electrical controls study guide — Kindle, paperback, and (for the novel) a DRM-free ebook bundle.</p>
         <div class="product-grid" style="max-width:760px;margin:0 auto;">
           <div class="product-card product-card--book">
-            <a href="the-void-to-the-renewal.html">
-              <img class="product-card-image" src="/images/void-to-renewal-cover-600x900.jpg" alt="Cover of The Void to the Renewal: A Norse Mythology Novel by Fenris" loading="lazy" width="600" height="900" />
+            <a href="/the-void-to-the-renewal">
+              <picture>
+                <source type="image/webp" srcset="/images/void-to-renewal-cover-600x900.webp 600w, /images/void-to-renewal-cover-800x1200.webp 800w" sizes="(max-width: 820px) 50vw, 360px" />
+                <img class="product-card-image" src="/images/void-to-renewal-cover-600x900.jpg" srcset="/images/void-to-renewal-cover-600x900.jpg 600w, /images/void-to-renewal-cover-800x1200.jpg 800w" sizes="(max-width: 820px) 50vw, 360px" alt="Cover of The Void to the Renewal: A Norse Mythology Novel by Fenris" loading="lazy" width="600" height="900" decoding="async" />
+              </picture>
             </a>
             <div class="product-card-info">
               <span class="product-card-badge">Novel</span>
-              <h3 class="product-card-title"><a href="the-void-to-the-renewal.html">The Void to the Renewal</a></h3>
+              <h3 class="product-card-title"><a href="/the-void-to-the-renewal">The Void to the Renewal</a></h3>
               <p class="product-card-desc">A Norse mythology novel by Fenris: from Ginnungagap through Ragnarök and the quiet morning that follows. Fifty short chapters. 14 full-page color illustrations in the ebook and PDF; grayscale plates in the paperback.</p>
               <p class="product-card-note">Chapters 1–11 follow the Eddic myths; chapters 12–50 are an original continuation. Cover and interior illustrations were created with AI image tools.</p>
               <div class="product-card-price">From $3.99</div>
@@ -433,12 +440,12 @@
             </div>
           </div>
           <div class="product-card product-card--book">
-            <a href="electrical-controls-power-quick-reference.html">
+            <a href="/electrical-controls-power-quick-reference">
               <img class="product-card-image" src="/images/electrical-controls-power-cover-600x900.jpg" alt="Cover of Electrical Controls &amp; Power Quick Reference by MicroVenture Labs" loading="lazy" width="600" height="900" />
             </a>
             <div class="product-card-info">
               <span class="product-card-badge">Study Guide</span>
-              <h3 class="product-card-title"><a href="electrical-controls-power-quick-reference.html">Electrical Controls &amp; Power Quick Reference</a></h3>
+              <h3 class="product-card-title"><a href="/electrical-controls-power-quick-reference">Electrical Controls &amp; Power Quick Reference</a></h3>
               <p class="product-card-desc">A compact study guide and formula reference: 14 short chapters, 13 formula sheets, 77 practice questions with a full answer key, and a 100-card flashcard drill. For apprentices, trade students, and anyone starting out with motors, drives and PLCs.</p>
               <p class="product-card-note">A study aid only — not a substitute for your course, employer training, or the governing standards. A different title from the $15 Electrical Safety Quick Reference Guide.</p>
               <div class="product-card-price">Kindle $6.99 · Paperback $11.99</div>
@@ -545,17 +552,17 @@
     <!-- Footer -->
     <footer>
       <div class="footer-content">
-        <p>Built by <a href="index.html">MicroVenture Labs</a> — <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Support our work</a></p>
+        <p>Built by <a href="/">MicroVenture Labs</a> — <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Support our work</a></p>
         <div class="footer-links">
-          <a href="nobody-runs.html">🛡️ NOBODY RUNS</a>
-          <a href="survival-field-library.html">📁 Field Library</a>
-          <a href="the-void-to-the-renewal.html">📖 The Void to the Renewal</a>
-          <a href="electrical-controls-power-quick-reference.html">⚡ Electrical Controls Quick Reference</a>
-          <a href="index.html#study-hub">📚 Study Hub</a>
-          <a href="focus-flow.html">🧭 Focus &amp; Flow</a>
-          <a href="cycle.html">💗 Cycle tracker</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="investing-calculators.html">🧮 Calculators</a>
+          <a href="/nobody-runs">🛡️ NOBODY RUNS</a>
+          <a href="/survival-field-library">📁 Field Library</a>
+          <a href="/the-void-to-the-renewal">📖 The Void to the Renewal</a>
+          <a href="/electrical-controls-power-quick-reference">⚡ Electrical Controls Quick Reference</a>
+          <a href="/#study-hub">📚 Study Hub</a>
+          <a href="/focus-flow">🧭 Focus &amp; Flow</a>
+          <a href="/cycle">💗 Cycle tracker</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/investing-calculators">🧮 Calculators</a>
           <a href="https://microventurelabs.gumroad.com/l/oxckfw" target="_blank" rel="noopener">📓 90-Day Quote Journal</a>
           <a href="https://www.buymeacoffee.com/microventurelabs" target="_blank" rel="noopener">☕ Buy us a coffee</a>
           <a href="https://twitter.com/intent/tweet?text=NOBODY%20RUNS%20%E2%80%94%20a%2090-day%20preparedness%20program%20for%20a%20household%20that%20cannot%20run&url=https%3A%2F%2Fgenerationwealthforever.com" target="_blank" rel="noopener">🐦 Share on Twitter</a>
@@ -563,11 +570,11 @@
       </div>
       <div class="footer-guides">
         <strong>Guides:</strong>
-        <a href="power-outage-food-safety.html">Food safety in a power outage</a>
-        <a href="power-outage-elderly-parent.html">An elderly parent in a blackout</a>
-        <a href="how-much-water-to-store.html">How much water to store</a>
-        <a href="72-hour-blackout-checklist.html">72-hour blackout checklist</a>
-        <a href="one-room-blackout-drill.html">One-room blackout drill</a>
+        <a href="/power-outage-food-safety">Food safety in a power outage</a>
+        <a href="/power-outage-elderly-parent">An elderly parent in a blackout</a>
+        <a href="/how-much-water-to-store">How much water to store</a>
+        <a href="/72-hour-blackout-checklist">72-hour blackout checklist</a>
+        <a href="/one-room-blackout-drill">One-room blackout drill</a>
       </div>
       <div class="footer-legal">
         <p class="footer-about">MicroVenture Labs is a micro-venture studio building digital preparedness programs, study tools, guides, art and free web apps.</p>
