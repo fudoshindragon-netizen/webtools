@@ -104,7 +104,13 @@
       .nr-buy .btn-primary, .nr-buy .btn-secondary, .nr-buy .btn-outline { width: auto; }
       @media (max-width: 600px) {
         .nr-buy { flex-direction: column; align-items: stretch; }
-        .nr-buy .btn-primary, .nr-buy .btn-secondary, .nr-buy .btn-outline { width: 100%; justify-content: center; }
+        .nr-buy .btn-primary, .nr-buy .btn-secondary, .nr-buy .btn-outline {
+          width: 100%;
+          min-height: 44px;
+          justify-content: center;
+          box-sizing: border-box;
+          flex-shrink: 0;
+        }
       }
       .nr-buy-note { font-size: 13px; color: var(--text-muted); }
       .nr-flags { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 28px 0 8px; }
